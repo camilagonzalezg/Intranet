@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntranetWeb", "IntranetWeb\IntranetWeb.csproj", "{2F988BD2-7439-4490-9AC6-1C2525BA5355}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntranetModel", "IntranetModel\IntranetModel.csproj", "{E6BD5FF6-7F2B-420F-BDA4-1D440C2FB212}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F988BD2-7439-4490-9AC6-1C2525BA5355}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F988BD2-7439-4490-9AC6-1C2525BA5355}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F988BD2-7439-4490-9AC6-1C2525BA5355}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F988BD2-7439-4490-9AC6-1C2525BA5355}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6BD5FF6-7F2B-420F-BDA4-1D440C2FB212}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6BD5FF6-7F2B-420F-BDA4-1D440C2FB212}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6BD5FF6-7F2B-420F-BDA4-1D440C2FB212}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6BD5FF6-7F2B-420F-BDA4-1D440C2FB212}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5936FBEA-50E1-4DBA-AE13-FA5C5EBA8DA1}
+	EndGlobalSection
+EndGlobal
