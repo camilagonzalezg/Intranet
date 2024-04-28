@@ -15,6 +15,10 @@ namespace IntranetWeb
             ContratoDdl.DataSource = contratos;
             ContratoDdl.DataBind();
 
+            string[] usuarios = { "Colaborador", "Administrador", "Gerencia" };
+            RolUsuarioDdl.DataSource = usuarios;
+            RolUsuarioDdl.DataBind();
+
         }
     }
 }

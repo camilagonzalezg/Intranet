@@ -32,6 +32,12 @@
                             <label class="form-label" for="RutTxt">RUT</label>
                         </div>
 
+                        <!-- Fecha nacimiento -->
+                        <div class="mb-4">
+                            <asp:Calendar runat="server" ID="FechaNacimientoDt" CssClass="form-select"></asp:Calendar>
+                            <label class="form-label" for="FechaNacimientoDt">Fecha Nacimiento</label>
+                        </div>
+
                         <!-- Text input -->
                         <div class="mb-4">
                             <asp:TextBox ID="CargoTxt" runat="server" CssClass="form-control"></asp:TextBox>
@@ -78,10 +84,16 @@
                             <label class="form-label" for="JefeDdl">Jefe</label>
                         </div>
 
-                        <!-- Fecha ingreso -->
-                        <div class="mb-4">
-                            <asp:Calendar runat="server" ID="FechaDp" CssClass="form-select"></asp:Calendar>
-                            <label class="form-label" for="FechaIngreso">Fecha Ingreso</label>
+                        <!-- 2 column grid layout with text inputs for the first and last names -->
+                        <div class="row mb-4">
+                            <div class="col">
+                                <asp:Calendar runat="server" ID="FechaIngresoDt" CssClass="form-select"></asp:Calendar>
+                                <label class="form-label" for="FechaIngresoDt">Fecha Ingreso</label>
+                            </div>
+                            <div class="col">
+                                <asp:Calendar runat="server" ID="FechaTerminoDt" CssClass="form-select"></asp:Calendar>
+                                <label class="form-label" for="FechaTerminoDt">Fecha Término</label>
+                            </div>
                         </div>
 
                         <!-- Tipo contrato -->
@@ -90,26 +102,33 @@
                             <label class="form-label" for="ContratoDdl">Tipo contrato</label>
                         </div>
 
+                        <!-- Rol de usuario -->
+                        <div class="mb-4">
+                            <asp:DropDownList runat="server" ID="RolUsuarioDdl" CssClass="form-select">
+                            </asp:DropDownList>
+                            <label class="form-label" for="RolUsuarioDdl">Rol de usuario</label>
+                        </div>
+
                         <!-- Email input -->
                         <div class="mb-4">
                             <asp:TextBox ID="EmailTxt" runat="server" CssClass="form-control"></asp:TextBox>
                             <label class="form-label" for="EmailTxt">Email</label>
                         </div>
 
-                        <!-- Number input -->
+                        <!-- Celular input -->
                         <div class="mb-4">
                             <asp:TextBox ID="CelularTxt" runat="server" CssClass="form-control"></asp:TextBox>
                             <label class="form-label" for="CelularTxt">Celular</label>
                         </div>
 
-                        <!-- Message input -->
+                        <!-- Info input -->
                         <div class="mb-4">
                             <asp:TextBox ID="InfoExtraTxt" runat="server" CssClass="form-control" Rows="4"></asp:TextBox>
                             <label class="form-label" for="InfoExtraTxt">Información Adicional</label>
                         </div>
 
                         <!-- Submit button -->
-                        <asp:Button ID="GuardarUsuarioBtn" runat="server" Text="Ingresar" CssClass="btn btn-primary btn-block mb-4"/>
+                        <asp:Button ID="GuardarUsuarioBtn" runat="server" Text="Ingresar" CssClass="btn btn-primary btn-block mb-4" />
                     </div>
                 </div>
             </div>
