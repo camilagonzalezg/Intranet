@@ -11,7 +11,7 @@ namespace IntranetModel.DAL
     {
         private List<Usuario> usuarios = new List<Usuario>(); // In-memory storage of users
 
-        // Create Method
+        // Crear usuario
         public string CreateUsuario(Usuario usuario)
         {
             if (usuarios.Any(u => u.RutUsuario == usuario.RutUsuario))
@@ -23,19 +23,19 @@ namespace IntranetModel.DAL
             return usuario.RutUsuario;
         }
 
-        // Read Method (Get all users)
+        // Obtener usuarios general
         public List<Usuario> GetUsuarios()
         {
             return new List<Usuario>(usuarios); // Return a copy to prevent direct modification
         }
 
-        // Read Method (Get user by RUT)
+        // Obtener usuarios por rut
         public Usuario GetUsuarioByRut(string rutUsuario)
         {
             return usuarios.FirstOrDefault(u => u.RutUsuario == rutUsuario);
         }
 
-        // Read Method (Search users)
+        // Buscar usuarios
         public List<Usuario> BuscarUsuarios(string searchTerm)
         {
             searchTerm = searchTerm.ToLower(); // Case-insensitive search
@@ -48,7 +48,7 @@ namespace IntranetModel.DAL
             ).ToList();
         }
 
-        // Update Method
+        // Actualizar usuarios
         public void UpdateUsuario(Usuario usuario)
         {
             int index = usuarios.FindIndex(u => u.RutUsuario == usuario.RutUsuario);
@@ -59,7 +59,7 @@ namespace IntranetModel.DAL
             }
         }
 
-        // Delete Method
+        // Borrar usuarios
         public void DeleteUsuario(string rutUsuario)
         {
             usuarios.RemoveAll(u => u.RutUsuario == rutUsuario);
