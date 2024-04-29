@@ -8,16 +8,6 @@ using System.Threading.Tasks;
 namespace IntranetModel.DTO
 {
 
-    public enum RolUsuario
-    {
-        Colaborador, Administrador, Gerencia
-    }
-
-    public enum TipoContrato
-    {
-        Indefinido, Definido
-    }
-
     public class Usuario
     {
         private string nombre;
@@ -29,8 +19,8 @@ namespace IntranetModel.DTO
         private string departamento;
         private string ubicacion;
         private string jefe;
-        private RolUsuario rolUsuario;
-        private TipoContrato tipoContrato;
+        private int rolUsuario;
+        private int tipoContrato;
         private DateTime fechaIngreso;
         private DateTime fechaTermino;
         private string email;
@@ -46,8 +36,8 @@ namespace IntranetModel.DTO
         public string Departamento { get => departamento; set => departamento = value; }
         public string Ubicacion { get => ubicacion; set => ubicacion = value; }
         public string Jefe { get => jefe; set => jefe = value; }
-        public RolUsuario RolUsuario { get => rolUsuario; set => rolUsuario = value; }
-        public TipoContrato TipoContrato { get => tipoContrato; set => tipoContrato = value; }
+        public int RolUsuario { get => rolUsuario; set => rolUsuario = value; }
+        public int TipoContrato { get => tipoContrato; set => tipoContrato = value; }
         public DateTime FechaIngreso { get => fechaIngreso; set => fechaIngreso = value; }
         public DateTime FechaTermino { get => fechaTermino; set => fechaTermino = value; }
         public string Email { get => email; set => email = value; }

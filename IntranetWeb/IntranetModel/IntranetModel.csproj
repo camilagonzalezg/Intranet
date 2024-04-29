@@ -43,10 +43,9 @@
   <ItemGroup>
     <Compile Include="DAL\UsuariosDAL.cs" />
     <Compile Include="DTO\Usuario.cs" />
+    <Compile Include="Partials\UsuarioParcial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Partials\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

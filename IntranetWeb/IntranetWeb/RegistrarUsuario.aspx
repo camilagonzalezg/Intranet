@@ -36,9 +36,10 @@
                         <div class="mb-4">
                             <label class="form-label" for="RutTxt">RUT</label>
                             <asp:TextBox ID="RutTxt" runat="server" CssClass="form-control"></asp:TextBox>
-                            <asp:RequiredFieldValidator runat="server" ErrorMessage="Debe ingresar el RUT"
-                                ControlToValidate="RutTxt" CssClass="text-danger">
-                            </asp:RequiredFieldValidator>
+                            <asp:CustomValidator ID="RutCV" runat="server" ValidateEmptyText="true" 
+                                CssClass="text-danger" ControlToValidate="RutTxt"
+                                OnServerValidate="RutCV_ServerValidate" ErrorMessage="CustomValidator">
+                            </asp:CustomValidator>
                         </div>
 
                         <!-- Fecha nacimiento -->
@@ -111,13 +112,19 @@
                         <!-- Tipo contrato -->
                         <div class="mb-4">
                             <label class="form-label" for="ContratoDdl">Tipo contrato</label>
-                            <asp:DropDownList runat="server" ID="ContratoDdl" CssClass="form-select"></asp:DropDownList>
+                            <asp:DropDownList runat="server" ID="ContratoDdl" CssClass="form-select">
+                                <asp:ListItem Value="1" Text="Indefinido"></asp:ListItem>
+                                <asp:ListItem Value="2" Text="Definido"></asp:ListItem>
+                            </asp:DropDownList>
                         </div>
 
                         <!-- Rol de usuario -->
                         <div class="mb-4">
                             <label class="form-label" for="RolUsuarioDdl">Rol de usuario</label>
                             <asp:DropDownList runat="server" ID="RolUsuarioDdl" CssClass="form-select">
+                                <asp:ListItem Value="1" Text="Colaborador"></asp:ListItem>
+                                <asp:ListItem Value="2" Text="Gerencia"></asp:ListItem>
+                                <asp:ListItem Value="3" Text="Administrador"></asp:ListItem>
                             </asp:DropDownList>
                         </div>
 
@@ -146,7 +153,9 @@
                         </div>
 
                         <!-- Submit button -->
-                        <asp:Button ID="GuardarUsuarioBtn" runat="server" Text="Ingresar" CssClass="btn btn-primary btn-block mb-4" />
+                        <asp:Button ID="GuardarUsuarioBtn" runat="server" Text="Ingresar Usuario"
+                            CssClass="btn btn-primary btn-block mb-4"
+                            OnClick="GuardarUsuarioBtn_Click" />
                     </div>
                 </div>
             </div>
