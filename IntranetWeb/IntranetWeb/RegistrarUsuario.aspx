@@ -113,8 +113,6 @@
                         <div class="mb-4">
                             <label class="form-label" for="ContratoDdl">Tipo contrato</label>
                             <asp:DropDownList runat="server" ID="ContratoDdl" CssClass="form-select">
-                                <asp:ListItem Value="1" Text="Indefinido"></asp:ListItem>
-                                <asp:ListItem Value="2" Text="Definido"></asp:ListItem>
                             </asp:DropDownList>
                         </div>
 

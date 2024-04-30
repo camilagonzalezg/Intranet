@@ -20,7 +20,7 @@ namespace IntranetModel.DTO
         private string ubicacion;
         private string jefe;
         private int rolUsuario;
-        private int tipoContrato;
+        private string tipoContrato;
         private DateTime fechaIngreso;
         private DateTime fechaTermino;
         private string email;
@@ -37,7 +37,7 @@ namespace IntranetModel.DTO
         public string Ubicacion { get => ubicacion; set => ubicacion = value; }
         public string Jefe { get => jefe; set => jefe = value; }
         public int RolUsuario { get => rolUsuario; set => rolUsuario = value; }
-        public int TipoContrato { get => tipoContrato; set => tipoContrato = value; }
+        public string TipoContrato { get => tipoContrato; set => tipoContrato = value; }
         public DateTime FechaIngreso { get => fechaIngreso; set => fechaIngreso = value; }
         public DateTime FechaTermino { get => fechaTermino; set => fechaTermino = value; }
         public string Email { get => email; set => email = value; }

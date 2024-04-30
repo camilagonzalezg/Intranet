@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\ContratosDAL.cs" />
     <Compile Include="DAL\UsuariosDAL.cs" />
+    <Compile Include="DTO\Contrato.cs" />
     <Compile Include="DTO\Usuario.cs" />
     <Compile Include="Partials\UsuarioParcial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
