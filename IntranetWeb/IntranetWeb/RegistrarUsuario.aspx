@@ -158,12 +158,6 @@
                             </asp:RequiredFieldValidator>
                         </div>
 
-                        <!-- Info extra input -->
-                        <div class="mb-4">
-                            <label class="form-label" for="InfoExtraTxt">Información Adicional</label>
-                            <asp:TextBox ID="InfoExtraTxt" runat="server" CssClass="form-control" Rows="4"></asp:TextBox>
-                        </div>
-
                         <!-- Submit button -->
                         <asp:Button ID="GuardarUsuarioBtn" runat="server" Text="Ingresar Usuario"
                             CssClass="btn btn-primary btn-block mb-4"

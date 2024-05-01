@@ -3,6 +3,7 @@ using IntranetModel.DTO;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -56,10 +57,12 @@ namespace IntranetWeb
             if (Page.IsValid)
             {
 
+
                 string nombre = NombreTxt.Text;
                 string apellido = ApellidoTxt.Text;
-                DateTime fechaNacimiento = FechaNacimientoDt.SelectedDate;
+                DateTime fechaNacimiento = FechaNacimientoDt.SelectedDate.Date;
                 string rutUsuario = RutTxt.Text;
+                string cargo = CargoTxt.Text;
                 string gerencia = GerenciaDdl.SelectedValue;
                 string subgerencia = SubgerenciaDdl.SelectedValue;
                 string departamento = DepartamentoDdl.SelectedValue;
@@ -67,16 +70,16 @@ namespace IntranetWeb
                 string jefe = JefeDdl.SelectedValue;
                 int rolUsuario = Convert.ToInt32(RolUsuarioDdl.SelectedValue);
                 string tipoContrato = ContratoDdl.SelectedValue;
-                DateTime fechaIngreso = FechaIngresoDt.SelectedDate;
+                DateTime fechaIngreso = FechaIngresoDt.SelectedDate.Date;
                 string email = EmailTxt.Text;
                 int celular = Convert.ToInt32(CelularTxt.Text);
-                string info = InfoExtraTxt.Text;
 
                 Usuario u = new Usuario();
                 u.Nombre = nombre;
                 u.Apellido = apellido;
                 u.FechaNacimiento = fechaNacimiento;
                 u.RutUsuario = rutUsuario;
+                u.Cargo = cargo;
                 u.Gerencia = gerencia;
                 u.Subgerencia = subgerencia;
                 u.Departamento = departamento;
@@ -87,15 +90,16 @@ namespace IntranetWeb
                 u.FechaIngreso = fechaIngreso;
                 u.Email = email;
                 u.Celular = celular;
-                u.Info = info;
 
                 UsuariosDAL usuariosDAL = new UsuariosDAL();
                 usuariosDAL.Add(u);
 
-                        // Establecer la bandera a true para indicar que se deshabilitaron los días futuros
-        diasFuturosDeshabilitados = true;
+                // Establecer la bandera a true para indicar que se deshabilitaron los días futuros
+                diasFuturosDeshabilitados = true;
 
-    }
+                // Redireccionar a la página VerUsuarios.aspx con el parámetro de mensaje
+                Response.Redirect("VerUsuarios.aspx?mensaje=AgregadoExitosamente");
+            }
             else
             {
 

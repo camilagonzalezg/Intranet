@@ -22,7 +22,14 @@ namespace IntranetModel.DAL
         {
             return usuarios;
         }
-       
+       //Borrar
+       public void Remove(String rut)
+        {
+            //busqueda
+            Usuario usu = usuarios.Find(u => u.RutUsuario == rut);
+            //eliminacion
+            usuarios.Remove(usu);
+        }
     }
 
 }

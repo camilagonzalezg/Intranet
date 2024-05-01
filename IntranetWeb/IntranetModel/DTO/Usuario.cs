@@ -13,6 +13,7 @@ namespace IntranetModel.DTO
         private string apellido;
         private DateTime fechaNacimiento;
         private string rutUsuario;
+        private string cargo;
         private string gerencia;
         private string subgerencia;
         private string departamento;
@@ -23,12 +24,12 @@ namespace IntranetModel.DTO
         private DateTime fechaIngreso;
         private string email;
         private int celular;
-        private string info;
 
         public string Nombre { get => nombre; set => nombre = value; }
         public string Apellido { get => apellido; set => apellido = value; }
         public DateTime FechaNacimiento { get => fechaNacimiento; set => fechaNacimiento = value; }
         public string RutUsuario { get => rutUsuario; set => rutUsuario = value; }
+        public string Cargo { get => cargo; set => cargo = value; }
         public string Gerencia { get => gerencia; set => gerencia = value; }
         public string Subgerencia { get => subgerencia; set => subgerencia = value; }
         public string Departamento { get => departamento; set => departamento = value; }
@@ -38,7 +39,9 @@ namespace IntranetModel.DTO
         public string TipoContrato { get => tipoContrato; set => tipoContrato = value; }
         public DateTime FechaIngreso { get => fechaIngreso; set => fechaIngreso = value; }
         public string Email { get => email; set => email = value; }
-        public int Celular { get => celular; set => celular = value; }
-        public string Info { get => info; set => info = value; }
+        public int Celular
+        {
+            get => celular; set => celular = value;
+        }
     }
 }
