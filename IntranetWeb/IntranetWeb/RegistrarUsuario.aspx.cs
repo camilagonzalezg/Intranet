@@ -2,6 +2,7 @@
 using IntranetModel.DTO;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -9,19 +10,45 @@ using System.Web.UI.WebControls;
 
 namespace IntranetWeb
 {
+
     public partial class RegistrarUsuario : System.Web.UI.Page
     {
+
+        // Variable para indicar si ya se deshabilitó la selección de días futuros
+        private bool diasFuturosDeshabilitados = false;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
+                //Verificar que es la primera vez que se muestra
+                FechaNacimientoDt.Visible = false;
+                FechaIngresoDt.Visible = false;
+
                 List<Contrato> contratos = new ContratosDAL().GetAll();
                 ContratoDdl.DataSource = contratos;
                 ContratoDdl.DataTextField = "Nombre";
                 ContratoDdl.DataValueField = "Nombre";
                 ContratoDdl.DataBind();
+
+                // Restablecer la bandera a false al cargar la página
+                diasFuturosDeshabilitados = false;
+       
+
             }
 
+        }
+
+        protected void VerCalendarioBtn_Click(object sender, EventArgs e)
+        {
+            // Mostrar o ocultar calendario
+            FechaNacimientoDt.Visible = !FechaNacimientoDt.Visible;
+
+        }
+
+        protected void VerCalendarioIngresoBtn_Click(object sender, EventArgs e)
+        {
+            // Mostrar o ocultar calendario
+            FechaIngresoDt.Visible = !FechaIngresoDt.Visible;
         }
 
         protected void GuardarUsuarioBtn_Click(object sender, EventArgs e)
@@ -41,7 +68,6 @@ namespace IntranetWeb
                 int rolUsuario = Convert.ToInt32(RolUsuarioDdl.SelectedValue);
                 string tipoContrato = ContratoDdl.SelectedValue;
                 DateTime fechaIngreso = FechaIngresoDt.SelectedDate;
-                DateTime fechaTermino = FechaTerminoDt.SelectedDate;
                 string email = EmailTxt.Text;
                 int celular = Convert.ToInt32(CelularTxt.Text);
                 string info = InfoExtraTxt.Text;
@@ -59,7 +85,6 @@ namespace IntranetWeb
                 u.RolUsuario = rolUsuario;
                 u.TipoContrato  = tipoContrato;
                 u.FechaIngreso = fechaIngreso;
-                u.FechaTermino = fechaTermino;
                 u.Email = email;
                 u.Celular = celular;
                 u.Info = info;
@@ -67,6 +92,8 @@ namespace IntranetWeb
                 UsuariosDAL usuariosDAL = new UsuariosDAL();
                 usuariosDAL.Add(u);
 
+                        // Establecer la bandera a true para indicar que se deshabilitaron los días futuros
+        diasFuturosDeshabilitados = true;
 
     }
             else
@@ -115,16 +142,36 @@ namespace IntranetWeb
                     RutCV.ErrorMessage = "Rut no posee el formato correcto";
                     args.IsValid = false;
                 }
-
-
-
             }
-
         }
 
-        protected void VerCalendarioBtn_Click(object sender, EventArgs e)
+        protected void FechaNacimientoDt_SelectionChanged(object sender, EventArgs e)
         {
-
+            FechaSeleccionadaTxt.Text = FechaNacimientoDt.SelectedDate.ToShortDateString();
         }
+
+        protected void FechaNacimientoDt_DayRender(object sender, DayRenderEventArgs e)
+        {
+            // Solo deshabilitar días futuros si la bandera indica que aún no se ha hecho
+            if (!diasFuturosDeshabilitados && e.Day.Date > DateTime.Today)
+            {
+                e.Day.IsSelectable = false; // Deshabilitar la selección de días futuros
+            }
+        }
+
+        protected void FechaIngresoDt_SelectionChanged(object sender, EventArgs e)
+        {
+            FechaSeleccionadaIngresoTxt.Text = FechaIngresoDt.SelectedDate.ToShortDateString();
+        }
+
+        protected void FechaIngresoDt_DayRender(object sender, DayRenderEventArgs e)
+        {
+            if (e.Day.Date > DateTime.Today)
+            {
+                e.Day.IsSelectable = false; // Deshabilitar la selección de días futuros
+            }
+        }
+
+
     }
 }

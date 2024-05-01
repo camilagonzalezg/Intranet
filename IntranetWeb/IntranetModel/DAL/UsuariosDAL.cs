@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace IntranetModel.DAL
 {
+
     public class UsuariosDAL
     {
         private static List<Usuario> usuarios = new List<Usuario>(); // In-memory storage of users
@@ -16,10 +17,12 @@ namespace IntranetModel.DAL
         {
             usuarios.Add(u);
         }
-
+        // Listar
+        public List<Usuario> GetAll()
+        {
+            return usuarios;
+        }
        
     }
-
-
 
 }

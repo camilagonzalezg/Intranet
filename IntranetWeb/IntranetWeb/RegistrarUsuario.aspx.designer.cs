@@ -132,6 +132,24 @@ namespace IntranetWeb
         protected global::System.Web.UI.WebControls.DropDownList JefeDdl;
 
         /// <summary>
+        /// Control FechaSeleccionadaIngresoTxt.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox FechaSeleccionadaIngresoTxt;
+
+        /// <summary>
+        /// Control VerCalendarioIngresoBtn.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button VerCalendarioIngresoBtn;
+
+        /// <summary>
         /// Control FechaIngresoDt.
         /// </summary>
         /// <remarks>
@@ -139,15 +157,6 @@ namespace IntranetWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Calendar FechaIngresoDt;
-
-        /// <summary>
-        /// Control FechaTerminoDt.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar FechaTerminoDt;
 
         /// <summary>
         /// Control ContratoDdl.

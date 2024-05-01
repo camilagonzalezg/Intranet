@@ -5,7 +5,7 @@
     <!-- Page content-->
     <section class="py-5">
         <div class="container px-5">
-            <!-- Contact form-->
+            <!-- Inicio formulario-->
             <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
                 <div class="text-center mb-5">
                     <h1 class="fw-bolder">Ingresar Usuario</h1>
@@ -14,7 +14,7 @@
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-8 col-xl-6">
 
-                        <!-- 2 column grid layout with text inputs for the first and last names -->
+                        <!-- Nombre y apellido -->
                         <div class="row mb-4">
                             <div class="col">
                                 <label class="form-label" for="NombreTxt">Nombres</label>
@@ -32,7 +32,7 @@
                             </div>
                         </div>
 
-                        <!-- Text input -->
+                        <!-- Rut -->
                         <div class="mb-4">
                             <label class="form-label" for="RutTxt">RUT</label>
                             <asp:TextBox ID="RutTxt" runat="server" CssClass="form-control"></asp:TextBox>
@@ -43,14 +43,22 @@
                         </div>
 
                         <!-- Fecha nacimiento -->
-                        <div class="mb-4">
-                            <label class="form-label" for="FechaNacimientoDt">Fecha Nacimiento</label>
-                            <asp:TextBox ID="FechaSeleccionadaTxt" runat="server" CssClass="form-control"></asp:TextBox>
-                            <asp:Button ID="VerCalendarioBtn" runat="server" Text="Ingresar fecha" CssClass="btn btn-primary btn-block mb-4" OnClick="VerCalendarioBtn_Click" />
-                            <asp:Calendar runat="server" ID="FechaNacimientoDt" CssClass="form-select"></asp:Calendar>
+                        <div class="row mb-4">
+                            <div class="col">
+                                <label class="form-label" for="FechaNacimientoDt">Fecha Nacimiento</label>
+                                <asp:TextBox ID="FechaSeleccionadaTxt" runat="server" CssClass="form-control"></asp:TextBox>
+                            </div>
+                            <div class="col">
+                                <asp:Button ID="VerCalendarioBtn" runat="server" Text="Ingresar fecha"
+                                    CssClass="btn btn-primary btn-block mb-4" OnClick="VerCalendarioBtn_Click" 
+                                    CausesValidation="false"/>
+                                <asp:Calendar runat="server" ID="FechaNacimientoDt"
+                                    CssClass="form-select" OnSelectionChanged="FechaNacimientoDt_SelectionChanged"
+                                    OnDayRender="FechaNacimientoDt_DayRender"></asp:Calendar>
+                            </div>
                         </div>
 
-                        <!-- Text input -->
+                        <!-- Cargo -->
                         <div class="mb-4">
                             <label class="form-label" for="CargoTxt">Cargo</label>
                             <asp:TextBox ID="CargoTxt" runat="server" CssClass="form-control"></asp:TextBox>
@@ -59,7 +67,7 @@
                             </asp:RequiredFieldValidator>
                         </div>
 
-                        <!-- 2 column grid layout with text inputs for the first and last names -->
+                        <!--Gerencia y subgerencia -->
                         <div class="row mb-4">
                             <div class="col">
                                 <label class="form-label" for="GerenciaDdl">Gerencia</label>
@@ -75,7 +83,7 @@
                             </div>
                         </div>
 
-                        <!-- 2 column grid layout with text inputs for the first and last names -->
+                        <!-- Departamento y ubicacion -->
                         <div class="row mb-4">
                             <div class="col">
                                 <label class="form-label" for="DepartamentoDdl">Departamento</label>
@@ -99,15 +107,19 @@
                             </asp:DropDownList>
                         </div>
 
-                        <!-- 2 column grid layout with text inputs for the first and last names -->
+                        <!-- Fecha Ingreso -->
                         <div class="row mb-4">
                             <div class="col">
                                 <label class="form-label" for="FechaIngresoDt">Fecha Ingreso</label>
-                                <asp:Calendar runat="server" ID="FechaIngresoDt" CssClass="form-select"></asp:Calendar>
+                                <asp:TextBox ID="FechaSeleccionadaIngresoTxt" runat="server" CssClass="form-control"></asp:TextBox>
                             </div>
                             <div class="col">
-                                <label class="form-label" for="FechaTerminoDt">Fecha Término</label>
-                                <asp:Calendar runat="server" ID="FechaTerminoDt" CssClass="form-select"></asp:Calendar>
+                                <asp:Button ID="VerCalendarioIngresoBtn" runat="server" Text="Ingresar fecha"
+                                    CssClass="btn btn-primary btn-block mb-4" OnClick="VerCalendarioIngresoBtn_Click"
+                                    CausesValidation="false" />
+                                <asp:Calendar runat="server" ID="FechaIngresoDt" CssClass="form-select"
+                                    OnSelectionChanged="FechaIngresoDt_SelectionChanged" 
+                                    OnDayRender="FechaIngresoDt_DayRender"></asp:Calendar>
                             </div>
                         </div>
 
@@ -146,7 +158,7 @@
                             </asp:RequiredFieldValidator>
                         </div>
 
-                        <!-- Info input -->
+                        <!-- Info extra input -->
                         <div class="mb-4">
                             <label class="form-label" for="InfoExtraTxt">Información Adicional</label>
                             <asp:TextBox ID="InfoExtraTxt" runat="server" CssClass="form-control" Rows="4"></asp:TextBox>
@@ -161,6 +173,4 @@
             </div>
         </div>
     </section>
-
-
 </asp:Content>
