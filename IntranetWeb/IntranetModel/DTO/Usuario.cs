@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 namespace IntranetModel.DTO
 {
-
     public class Usuario
     {
         private string nombre;

@@ -22,10 +22,6 @@ namespace IntranetWeb
                 ContratoDdl.DataBind();
             }
 
-            string[] usuarios = { "Colaborador", "Administrador", "Gerencia" };
-            RolUsuarioDdl.DataSource = usuarios;
-            RolUsuarioDdl.DataBind();
-
         }
 
         protected void GuardarUsuarioBtn_Click(object sender, EventArgs e)
@@ -69,9 +65,7 @@ namespace IntranetWeb
                 u.Info = info;
 
                 UsuariosDAL usuariosDAL = new UsuariosDAL();
-                UsuariosDAL.Add(u);
-
-
+                usuariosDAL.Add(u);
 
 
     }
@@ -125,6 +119,11 @@ namespace IntranetWeb
 
 
             }
+
+        }
+
+        protected void VerCalendarioBtn_Click(object sender, EventArgs e)
+        {
 
         }
     }

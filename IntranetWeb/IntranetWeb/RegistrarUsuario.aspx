@@ -36,7 +36,7 @@
                         <div class="mb-4">
                             <label class="form-label" for="RutTxt">RUT</label>
                             <asp:TextBox ID="RutTxt" runat="server" CssClass="form-control"></asp:TextBox>
-                            <asp:CustomValidator ID="RutCV" runat="server" ValidateEmptyText="true" 
+                            <asp:CustomValidator ID="RutCV" runat="server" ValidateEmptyText="true"
                                 CssClass="text-danger" ControlToValidate="RutTxt"
                                 OnServerValidate="RutCV_ServerValidate" ErrorMessage="CustomValidator">
                             </asp:CustomValidator>
@@ -45,6 +45,8 @@
                         <!-- Fecha nacimiento -->
                         <div class="mb-4">
                             <label class="form-label" for="FechaNacimientoDt">Fecha Nacimiento</label>
+                            <asp:TextBox ID="FechaSeleccionadaTxt" runat="server" CssClass="form-control"></asp:TextBox>
+                            <asp:Button ID="VerCalendarioBtn" runat="server" Text="Ingresar fecha" CssClass="btn btn-primary btn-block mb-4" OnClick="VerCalendarioBtn_Click" />
                             <asp:Calendar runat="server" ID="FechaNacimientoDt" CssClass="form-select"></asp:Calendar>
                         </div>
 
