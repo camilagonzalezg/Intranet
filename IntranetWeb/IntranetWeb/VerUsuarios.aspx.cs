@@ -24,26 +24,6 @@ namespace IntranetWeb
             {
                 CargarTabla(usuariosDAL.GetAll());
 
-
-                //if (Request.QueryString["mensaje"] != null)
-                //{
-                //    string mensaje = Request.QueryString["mensaje"];
-                //    // Mostrar el mensaje en algún lugar de tu página, por ejemplo:
-                //    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('" + mensaje + "');", true);
-                //}
-
-                //// Verificar si hay un parámetro en la URL
-                //string mensaje = Request.QueryString["mensaje"];
-                //if (!string.IsNullOrEmpty(mensaje))
-                //{
-                //    // Verificar el tipo de mensaje
-                //    if (mensaje.Equals("AgregadoExitosamente"))
-                //    {
-                //        // Mostrar el mensaje
-                //        MensajePanel.Visible = true;
-                //    }
-                //}
-
                 // Verificar si hay un parámetro en la URL
                 string mensaje = Request.QueryString["mensaje"];
                 if (!string.IsNullOrEmpty(mensaje))
@@ -69,7 +49,15 @@ namespace IntranetWeb
 
         protected void UsuariosGrid_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            if(e.CommandName == "eliminar")
+            if (e.CommandName == "editar")
+            {
+                // Obtener el rut del usuario seleccionado
+                string rutAEditar = e.CommandArgument.ToString();
+
+                // Redireccionar a la página de edición de usuario enviando el rut como parámetro
+                Response.Redirect("EditarUsuario.aspx?rut=" + rutAEditar);
+            }
+            else if (e.CommandName == "eliminar")
             {
                 String rutAEliminar = e.CommandArgument.ToString();
                 usuariosDAL.Remove(rutAEliminar);
