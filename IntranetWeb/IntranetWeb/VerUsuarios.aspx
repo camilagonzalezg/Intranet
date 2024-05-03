@@ -11,9 +11,10 @@
                     <h1 class="fw-bolder">Usuarios ingresados</h1>
                 </div>
                 <div class="bg-light rounded-3 py-2 px-4 mb-4 text-center">
-<asp:Panel ID="MensajePanel" runat="server" Visible="false" CssClass="alert alert-success" role="alert">
-    <asp:Label ID="MensajeLabel" runat="server" Text=""></asp:Label>
-</asp:Panel>
+                    <asp:Panel ID="MensajePanel" runat="server" Visible="false" CssClass="alert alert-success" 
+                        role="alert">
+                        <asp:Label ID="MensajeLabel" runat="server" Text=""></asp:Label>
+                    </asp:Panel>
 
                 </div>
                 <div class="row gx-1 justify-content-center">

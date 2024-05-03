@@ -33,8 +33,6 @@ namespace IntranetWeb
 
                 // Restablecer la bandera a false al cargar la página
                 diasFuturosDeshabilitados = false;
-       
-
             }
 
         }

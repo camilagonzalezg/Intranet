@@ -35,6 +35,12 @@ namespace IntranetWeb
                         MensajePanel.Visible = true;
                         MensajeLabel.Text = "Usuario agregado exitosamente";
                     }
+                    else if (mensaje.Equals("ActualizadoExitosamente"))
+                    {
+                        // Mostrar el mensaje de usuario eliminado exitosamente
+                        MensajePanel.Visible = true;
+                        MensajeLabel.Text = "Usuario actualizado exitosamente";
+                    }
                     else if (mensaje.Equals("EliminadoExitosamente"))
                     {
                         // Mostrar el mensaje de usuario eliminado exitosamente

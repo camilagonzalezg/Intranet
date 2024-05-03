@@ -14,10 +14,26 @@ namespace IntranetWeb
         UsuariosDAL usuariosDAL = new UsuariosDAL();
         private string rutUsuarioEditar; // Variable para almacenar el Rut del usuario a editar
 
+        // Variable para indicar si ya se deshabilitó la selección de días futuros
+        private bool diasFuturosDeshabilitados = false;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
+                //Verificar que es la primera vez que se muestra
+                FechaNacimientoDt.Visible = false;
+                FechaIngresoDt.Visible = false;
+
+                List<Contrato> contratos = new ContratosDAL().GetAll();
+                ContratoDdl.DataSource = contratos;
+                ContratoDdl.DataTextField = "Nombre";
+                ContratoDdl.DataValueField = "Nombre";
+                ContratoDdl.DataBind();
+
+                // Restablecer la bandera a false al cargar la página
+                diasFuturosDeshabilitados = false;
+
                 // Verificar si se ha pasado un parámetro de Rut en la URL
                 if (!string.IsNullOrEmpty(Request.QueryString["rut"]))
                 {
@@ -48,6 +64,7 @@ namespace IntranetWeb
                 NombreTxt.Text = usuario.Nombre;
                 ApellidoTxt.Text = usuario.Apellido;
                 RutTxt.Text = usuario.RutUsuario;
+                FechaSeleccionadaTxt.Text = usuario.FechaNacimiento.ToShortDateString();
                 CargoTxt.Text = usuario.Cargo;
                 GerenciaDdl.SelectedValue = usuario.Gerencia;
                 SubgerenciaDdl.SelectedValue = usuario.Subgerencia;
@@ -74,6 +91,7 @@ namespace IntranetWeb
             string nombre = NombreTxt.Text;
             string apellido = ApellidoTxt.Text;
             string rut = RutTxt.Text;
+            DateTime fechaNacimiento = Convert.ToDateTime(FechaSeleccionadaTxt.Text);
             string cargo = CargoTxt.Text;
             string gerencia = GerenciaDdl.SelectedValue;
             string subgerencia = SubgerenciaDdl.SelectedValue;
@@ -92,6 +110,7 @@ namespace IntranetWeb
                 Nombre = nombre,
                 Apellido = apellido,
                 RutUsuario = rut,
+                FechaNacimiento= fechaNacimiento,
                 Cargo = cargo,
                 Gerencia = gerencia,
                 Subgerencia = subgerencia,
@@ -108,8 +127,52 @@ namespace IntranetWeb
             // Llamar al método de actualización en el DAL
             usuariosDAL.Update(usuario);
 
+
+            // Establecer la bandera a true para indicar que se deshabilitaron los días futuros
+            diasFuturosDeshabilitados = true;
+
+
             // Redirigir a la página de VerUsuarios.aspx con un mensaje de éxito
             Response.Redirect("VerUsuarios.aspx?mensaje=ActualizadoExitosamente");
+        }
+
+        protected void VerCalendarioBtn_Click(object sender, EventArgs e)
+        {
+            // Mostrar o ocultar calendario
+            FechaNacimientoDt.Visible = !FechaNacimientoDt.Visible;
+
+        }
+
+        protected void FechaNacimientoDt_SelectionChanged(object sender, EventArgs e)
+        {
+            FechaSeleccionadaTxt.Text = FechaNacimientoDt.SelectedDate.ToShortDateString();
+        }
+
+        protected void FechaNacimientoDt_DayRender(object sender, DayRenderEventArgs e)
+        {
+            if (e.Day.Date > DateTime.Today)
+            {
+                e.Day.IsSelectable = false; // Deshabilitar la selección de días futuros
+            }
+        }
+
+        protected void VerCalendarioIngresoBtn_Click(object sender, EventArgs e)
+        {
+            // Mostrar o ocultar calendario
+            FechaIngresoDt.Visible = !FechaIngresoDt.Visible;
+        }
+
+        protected void FechaIngresoDt_SelectionChanged(object sender, EventArgs e)
+        {
+            FechaSeleccionadaIngresoTxt.Text = FechaIngresoDt.SelectedDate.ToShortDateString();
+        }
+
+        protected void FechaIngresoDt_DayRender(object sender, DayRenderEventArgs e)
+        {
+            if (e.Day.Date > DateTime.Today)
+            {
+                e.Day.IsSelectable = false; // Deshabilitar la selección de días futuros
+            }
         }
     }
 }
