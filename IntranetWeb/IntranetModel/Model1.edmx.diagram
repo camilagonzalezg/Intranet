@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2b2bfa16d89a481bb5364ffc6d424b36" Name="Diagram1">
+        <EntityTypeShape EntityType="IntranetModel.ComentariosNoticias" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.Correspondencia" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.Departamentos" Width="1.5" PointX="10.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.Gerencias" Width="1.5" PointX="5.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.Hijos" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.Noticias" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.Paginas" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.Subgerencias" Width="1.5" PointX="8" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.TiposContrato" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.Ubicaciones" Width="1.5" PointX="12.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.Usuarios" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <AssociationConnector Association="IntranetModel.FK__Comentari__idNot__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="IntranetModel.FK__Comentari__idUsu__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="IntranetModel.FK__Departame__idSub__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="IntranetModel.FK__Ubicacion__idDep__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="IntranetModel.FK__Subgerenc__idGer__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="IntranetModel.FK__Hijos__idUsuario__49C3F6B7" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

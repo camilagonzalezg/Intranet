@@ -76,6 +76,7 @@ namespace IntranetWeb
                 RolUsuarioDdl.SelectedValue = usuario.RolUsuario.ToString();
                 EmailTxt.Text = usuario.Email;
                 CelularTxt.Text = usuario.Celular.ToString();
+                ContraseñaTxt.Text = usuario.Contraseña.ToString();
             }
             else
             {
@@ -103,6 +104,7 @@ namespace IntranetWeb
             int rolUsuario = Convert.ToInt32(RolUsuarioDdl.SelectedValue);
             string email = EmailTxt.Text;
             int celular = Convert.ToInt32(CelularTxt.Text);
+            string contraseña = ContraseñaTxt.Text;
 
             // Crear un objeto Usuario con los datos actualizados
             Usuario usuario = new Usuario
@@ -121,7 +123,8 @@ namespace IntranetWeb
                 TipoContrato = tipoContrato,
                 RolUsuario = rolUsuario,
                 Email = email,
-                Celular = celular
+                Celular = celular,
+                Contraseña = contraseña
             };
 
             // Llamar al método de actualización en el DAL
@@ -150,7 +153,8 @@ namespace IntranetWeb
 
         protected void FechaNacimientoDt_DayRender(object sender, DayRenderEventArgs e)
         {
-            if (e.Day.Date > DateTime.Today)
+            // Solo deshabilitar días futuros si la bandera indica que aún no se ha hecho
+            if (!diasFuturosDeshabilitados && e.Day.Date > DateTime.Today)
             {
                 e.Day.IsSelectable = false; // Deshabilitar la selección de días futuros
             }

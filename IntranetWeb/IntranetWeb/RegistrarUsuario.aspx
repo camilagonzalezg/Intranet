@@ -1,8 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RegistrarUsuario.aspx.cs" Inherits="IntranetWeb.RegistrarUsuario" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-    <!-- Page content-->
+    <!-- Contenido de la página-->
     <section class="py-5">
         <div class="container-fluid px-5">
             <!-- Inicio formulario-->
@@ -149,7 +148,7 @@
                             </div>
                         </div>
 
-                        <!-- Submit button -->
+                        <!-- Botón Guardar -->
                         <asp:Button ID="GuardarUsuarioBtn" runat="server" Text="Ingresar Usuario"
                             CssClass="btn btn-primary btn-block mb-4"
                             OnClick="GuardarUsuarioBtn_Click" />

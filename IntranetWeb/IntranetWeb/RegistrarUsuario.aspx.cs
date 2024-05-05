@@ -54,8 +54,6 @@ namespace IntranetWeb
         {
             if (Page.IsValid)
             {
-
-
                 string nombre = NombreTxt.Text;
                 string apellido = ApellidoTxt.Text;
                 DateTime fechaNacimiento = FechaNacimientoDt.SelectedDate.Date;
@@ -72,6 +70,9 @@ namespace IntranetWeb
                 string email = EmailTxt.Text;
                 int celular = Convert.ToInt32(CelularTxt.Text);
 
+                // Generar contraseña aleatoria de 6 caracteres
+                string contraseña = GenerarContraseña();
+
                 Usuario u = new Usuario();
                 u.Nombre = nombre;
                 u.Apellido = apellido;
@@ -84,10 +85,11 @@ namespace IntranetWeb
                 u.Ubicacion = ubicacion;
                 u.Jefe = jefe;
                 u.RolUsuario = rolUsuario;
-                u.TipoContrato  = tipoContrato;
+                u.TipoContrato = tipoContrato;
                 u.FechaIngreso = fechaIngreso;
                 u.Email = email;
                 u.Celular = celular;
+                u.Contraseña = contraseña; // Asignar la contraseña generada al usuario
 
                 UsuariosDAL usuariosDAL = new UsuariosDAL();
                 usuariosDAL.Add(u);
@@ -172,6 +174,16 @@ namespace IntranetWeb
             {
                 e.Day.IsSelectable = false; // Deshabilitar la selección de días futuros
             }
+        }
+
+        // Método para generar una contraseña aleatoria de 6 caracteres
+        private string GenerarContraseña()
+        {
+            const string caracteresPermitidos = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            Random rnd = new Random();
+            string contraseña = new string(Enumerable.Repeat(caracteresPermitidos, 6)
+                .Select(s => s[rnd.Next(s.Length)]).ToArray());
+            return contraseña;
         }
 
 
