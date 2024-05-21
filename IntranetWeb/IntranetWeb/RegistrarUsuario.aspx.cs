@@ -26,40 +26,72 @@ namespace IntranetWeb
 
         private void CargarDatos()
         {
-            // Cargar TiposContrato
-            var tiposContrato = db.TiposContrato.ToList();
-            ContratoDdl.DataSource = tiposContrato;
-            ContratoDdl.DataTextField = "nombre";
-            ContratoDdl.DataValueField = "id";
-            ContratoDdl.DataBind();
-
             // Cargar Gerencias
             var gerencias = db.Gerencias.ToList();
             GerenciaDdl.DataSource = gerencias;
-            GerenciaDdl.DataTextField = "nombre";
-            GerenciaDdl.DataValueField = "id";
+            GerenciaDdl.DataTextField = "Nombre";
+            GerenciaDdl.DataValueField = "Id";
             GerenciaDdl.DataBind();
+            GerenciaDdl.Items.Insert(0, new ListItem("Elija una Gerencia", ""));
 
-            // Cargar Subgerencias
-            var subgerencias = db.Subgerencias.ToList();
-            SubgerenciaDdl.DataSource = subgerencias;
-            SubgerenciaDdl.DataTextField = "nombre";
-            SubgerenciaDdl.DataValueField = "id";
-            SubgerenciaDdl.DataBind();
+            // Cargar Tipos de Contrato
+            var tiposContrato = db.TiposContrato.ToList();
+            ContratoDdl.DataSource = tiposContrato;
+            ContratoDdl.DataTextField = "Nombre";
+            ContratoDdl.DataValueField = "Id";
+            ContratoDdl.DataBind();
+            ContratoDdl.Items.Insert(0, new ListItem("Elija un Tipo de Contrato", ""));
 
-            // Cargar Departamentos
-            var departamentos = db.Departamentos.ToList();
-            DepartamentoDdl.DataSource = departamentos;
-            DepartamentoDdl.DataTextField = "nombre";
-            DepartamentoDdl.DataValueField = "id";
-            DepartamentoDdl.DataBind();
 
-            // Cargar Ubicaciones
-            var ubicaciones = db.Ubicaciones.ToList();
-            UbicaciónDdl.DataSource = ubicaciones;
-            UbicaciónDdl.DataTextField = "nombre";
-            UbicaciónDdl.DataValueField = "id";
-            UbicaciónDdl.DataBind();
+            // Inicialmente cargar todas las Subgerencias, Departamentos y Ubicaciones (puedes modificarlas según tus necesidades)
+            CargarSubgerencias();
+            CargarDepartamentos();
+            CargarUbicaciones();
+        }
+
+        private void CargarSubgerencias(int? gerenciaId = null)
+        {
+            using (var db = new IntranetEntities())
+            {
+                var subgerencias = gerenciaId.HasValue
+                    ? db.Subgerencias.Where(s => s.idGerencia == gerenciaId).ToList()
+                    : db.Subgerencias.ToList();
+                SubgerenciaDdl.DataSource = subgerencias;
+                SubgerenciaDdl.DataTextField = "Nombre";
+                SubgerenciaDdl.DataValueField = "Id";
+                SubgerenciaDdl.DataBind();
+                SubgerenciaDdl.Items.Insert(0, new ListItem("Elija una Subgerencia", ""));
+            }
+        }
+
+        private void CargarDepartamentos(int? subgerenciaId = null)
+        {
+            using (var db = new IntranetEntities())
+            {
+                var departamentos = subgerenciaId.HasValue
+                    ? db.Departamentos.Where(d => d.idSubgerencia == subgerenciaId).ToList()
+                    : db.Departamentos.ToList();
+                DepartamentoDdl.DataSource = departamentos;
+                DepartamentoDdl.DataTextField = "nombre";
+                DepartamentoDdl.DataValueField = "id";
+                DepartamentoDdl.DataBind();
+                DepartamentoDdl.Items.Insert(0, new ListItem("Elija un Departamento", ""));
+            }
+        }
+
+        private void CargarUbicaciones(int? departamentoId = null)
+        {
+            using (var db = new IntranetEntities())
+            {
+                var ubicaciones = departamentoId.HasValue
+                    ? db.Ubicaciones.Where(u => u.idDepartamento == departamentoId).ToList()
+                    : db.Ubicaciones.ToList();
+                UbicaciónDdl.DataSource = ubicaciones;
+                UbicaciónDdl.DataTextField = "Nombre";
+                UbicaciónDdl.DataValueField = "Id";
+                UbicaciónDdl.DataBind();
+                UbicaciónDdl.Items.Insert(0, new ListItem("Elija una Ubicación", ""));
+            }
         }
 
         protected void VerCalendarioBtn_Click(object sender, EventArgs e)
@@ -198,5 +230,24 @@ namespace IntranetWeb
                 .Select(s => s[rnd.Next(s.Length)]).ToArray());
             return contraseña;
         }
+
+        protected void GerenciaDdl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int gerenciaId = int.Parse(GerenciaDdl.SelectedValue);
+            CargarSubgerencias(gerenciaId);
+        }
+
+        protected void SubgerenciaDdl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int subgerenciaId = int.Parse(SubgerenciaDdl.SelectedValue);
+            CargarDepartamentos(subgerenciaId);
+        }
+
+        protected void DepartamentoDdl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int departamentoId = int.Parse(DepartamentoDdl.SelectedValue);
+            CargarUbicaciones(departamentoId);
+        }
+
     }
 }

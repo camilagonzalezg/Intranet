@@ -79,12 +79,14 @@
                             </div>
                             <div class="col-md-4">
                                 <label class="form-label" for="GerenciaDdl">Gerencia</label>
-                                <asp:DropDownList runat="server" ID="GerenciaDdl" CssClass="form-select">
+                                <asp:DropDownList runat="server" ID="GerenciaDdl" CssClass="form-select" 
+                                    AutoPostBack="true" OnSelectedIndexChanged="GerenciaDdl_SelectedIndexChanged">
                                 </asp:DropDownList>
                             </div>
                             <div class="col-md-4">
                                 <label class="form-label" for="SubgerenciaDdl">Subgerencia</label>
-                                <asp:DropDownList runat="server" ID="SubgerenciaDdl" CssClass="form-select">
+                                <asp:DropDownList runat="server" ID="SubgerenciaDdl" CssClass="form-select" 
+                                    AutoPostBack="true" OnSelectedIndexChanged="SubgerenciaDdl_SelectedIndexChanged">
                                 </asp:DropDownList>
                             </div>
                         </div>
@@ -93,7 +95,8 @@
                         <div class="row mb-4">
                             <div class="col-md-4">
                                 <label class="form-label" for="DepartamentoDdl">Departamento</label>
-                                <asp:DropDownList runat="server" ID="DepartamentoDdl" CssClass="form-select">
+                                <asp:DropDownList runat="server" ID="DepartamentoDdl" CssClass="form-select"
+                                    AutoPostBack="true" OnSelectedIndexChanged="DepartamentoDdl_SelectedIndexChanged">
                                 </asp:DropDownList>
                             </div>
                             <div class="col-md-4">
