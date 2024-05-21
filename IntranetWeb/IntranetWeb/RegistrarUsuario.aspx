@@ -80,13 +80,11 @@
                             <div class="col-md-4">
                                 <label class="form-label" for="GerenciaDdl">Gerencia</label>
                                 <asp:DropDownList runat="server" ID="GerenciaDdl" CssClass="form-select">
-                                    <asp:ListItem Value="1" Text="Personas"></asp:ListItem>
                                 </asp:DropDownList>
                             </div>
                             <div class="col-md-4">
                                 <label class="form-label" for="SubgerenciaDdl">Subgerencia</label>
                                 <asp:DropDownList runat="server" ID="SubgerenciaDdl" CssClass="form-select">
-                                    <asp:ListItem Value="1" Text="Personas"></asp:ListItem>
                                 </asp:DropDownList>
                             </div>
                         </div>
@@ -96,21 +94,21 @@
                             <div class="col-md-4">
                                 <label class="form-label" for="DepartamentoDdl">Departamento</label>
                                 <asp:DropDownList runat="server" ID="DepartamentoDdl" CssClass="form-select">
-                                    <asp:ListItem Value="1" Text="Personas"></asp:ListItem>
                                 </asp:DropDownList>
                             </div>
                             <div class="col-md-4">
                                 <label class="form-label" for="UbicaciónDdl">Ubicación</label>
                                 <asp:DropDownList runat="server" ID="UbicaciónDdl" CssClass="form-select">
-                                    <asp:ListItem Value="1" Text="Personas"></asp:ListItem>
                                 </asp:DropDownList>
                             </div>
                             <div class="col-md-4">
-                                <label class="form-label" for="JefeDdl">Jefe</label>
-                                <asp:DropDownList runat="server" ID="JefeDdl" CssClass="form-select">
-                                    <asp:ListItem Value="1" Text="Personas"></asp:ListItem>
-                                </asp:DropDownList>
+                                <label class="form-label" for="JefeTxt">Jefe</label>
+                                <asp:TextBox ID="JefeTxt" runat="server" CssClass="form-control"></asp:TextBox>
+                                <asp:RequiredFieldValidator runat="server" ErrorMessage="Debe ingresar el Jefe"
+                                    ControlToValidate="JefeTxt" CssClass="text-danger">
+                                </asp:RequiredFieldValidator>
                             </div>
+
                         </div>
 
                         <!-- Tipo contrato, rol usuario, email -->

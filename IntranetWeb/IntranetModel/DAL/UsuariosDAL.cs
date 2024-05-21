@@ -1,82 +1,56 @@
-﻿using IntranetModel.DTO;
+﻿using IntranetModel;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IntranetModel.DAL
 {
-
     public class UsuariosDAL
     {
-        private static List<Usuario> usuarios = new List<Usuario>(); // In-memory storage of users
+        private IntranetEntities dbEntities = new IntranetEntities();
 
-        // Create Method
-        public void Add(Usuario u)
+        // Método para agregar un nuevo usuario
+        public void Add(Usuarios u)
         {
-            usuarios.Add(u);
-        }
-        // Listar
-        public List<Usuario> GetAll()
-        {
-            return usuarios;
-        }
-        
-        //GetAll por nombre
-        public List<Usuario> GetAll(string nombre) {
-        
-        return usuarios.FindAll(u=> u.Nombre == nombre);
-
+            dbEntities.Usuarios.Add(u);
+            dbEntities.SaveChanges();
         }
 
-        //GetAll por rut
-        public Usuario GetByRut(string rut)
+        // Método para listar todos los usuarios
+        public List<Usuarios> GetAll()
         {
-            return usuarios.FirstOrDefault(u => u.RutUsuario == rut);
+            return dbEntities.Usuarios.ToList();
         }
 
-        //Borrar
-        public void Remove(String rut)
+        // Obtener todos los usuarios por nombre
+        public List<Usuarios> GetAll(string nombre)
         {
-            //busqueda
-            Usuario usu = usuarios.Find(u => u.RutUsuario == rut);
-            //eliminacion
-            usuarios.Remove(usu);
+            return dbEntities.Usuarios.Where(u => u.nombre == nombre).ToList();
         }
 
-
-        public void Update(Usuario u)
+        // Obtener usuario por rut
+        public Usuarios GetByRut(string rut)
         {
-            // Buscar el usuario por su rut
-            Usuario usuarioExistente = usuarios.Find(usu => usu.RutUsuario == u.RutUsuario);
+            return dbEntities.Usuarios.FirstOrDefault(u => u.rutUsuario == rut);
+        }
 
-            if (usuarioExistente != null)
+        // Método para eliminar un usuario por rut
+        public void Remove(string rut)
+        {
+            Usuarios usuario = dbEntities.Usuarios.FirstOrDefault(u => u.rutUsuario == rut);
+            if (usuario != null)
             {
-                // Actualizar los campos del usuario existente con los nuevos valores
-                usuarioExistente.Nombre = u.Nombre;
-                usuarioExistente.Apellido = u.Apellido;
-                usuarioExistente.FechaNacimiento = u.FechaNacimiento;
-                usuarioExistente.Cargo = u.Cargo;
-                usuarioExistente.Gerencia = u.Gerencia;
-                usuarioExistente.Subgerencia = u.Subgerencia;
-                usuarioExistente.Departamento = u.Departamento;
-                usuarioExistente.Ubicacion = u.Ubicacion;
-                usuarioExistente.Jefe = u.Jefe;
-                usuarioExistente.RolUsuario = u.RolUsuario;
-                usuarioExistente.TipoContrato = u.TipoContrato;
-                usuarioExistente.FechaIngreso = u.FechaIngreso;
-                usuarioExistente.Email = u.Email;
-                usuarioExistente.Celular = u.Celular;
-            }
-            else
-            {
-                // Lanzar una excepción o manejar el caso en el que no se encuentre el usuario
-                // Por ejemplo:
-                throw new Exception("El usuario a actualizar no existe.");
+                dbEntities.Usuarios.Remove(usuario);
+                dbEntities.SaveChanges();
             }
         }
 
+        // Método para actualizar un usuario
+        public void Update(Usuarios u)
+        {
+            dbEntities.Entry(u).State = EntityState.Modified;
+            dbEntities.SaveChanges();
+        }
     }
-
 }

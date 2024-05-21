@@ -1,5 +1,5 @@
 ﻿using IntranetModel.DAL;
-using IntranetModel.DTO;
+using IntranetModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +12,8 @@ namespace IntranetWeb
     public partial class VerUsuarios : System.Web.UI.Page
     {
         UsuariosDAL usuariosDAL = new UsuariosDAL();
-        private void CargarTabla(List<Usuario> usuarios)
+
+        private void CargarTabla(List<Usuarios> usuarios)
         {
             UsuariosGrid.DataSource = usuarios;
             UsuariosGrid.DataBind();
@@ -37,7 +38,7 @@ namespace IntranetWeb
                     }
                     else if (mensaje.Equals("ActualizadoExitosamente"))
                     {
-                        // Mostrar el mensaje de usuario eliminado exitosamente
+                        // Mostrar el mensaje de usuario actualizado exitosamente
                         MensajePanel.Visible = true;
                         MensajeLabel.Text = "Usuario actualizado exitosamente";
                     }
@@ -46,10 +47,8 @@ namespace IntranetWeb
                         // Mostrar el mensaje de usuario eliminado exitosamente
                         MensajePanel.Visible = true;
                         MensajeLabel.Text = "Usuario eliminado exitosamente";
-
                     }
                 }
-
             }
         }
 
@@ -65,14 +64,13 @@ namespace IntranetWeb
             }
             else if (e.CommandName == "eliminar")
             {
-                String rutAEliminar = e.CommandArgument.ToString();
+                string rutAEliminar = e.CommandArgument.ToString();
                 usuariosDAL.Remove(rutAEliminar);
-                //Actualizo la grilla
+                // Actualizar la grilla
                 CargarTabla(usuariosDAL.GetAll());
 
                 // Redirigir a VerUsuarios.aspx con un parámetro de mensaje
                 Response.Redirect("VerUsuarios.aspx?mensaje=EliminadoExitosamente");
-
             }
         }
     }

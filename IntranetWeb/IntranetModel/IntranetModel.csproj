@@ -56,13 +56,10 @@
     <Compile Include="Correspondencia.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\ContratosDAL.cs" />
     <Compile Include="DAL\UsuariosDAL.cs" />
     <Compile Include="Departamentos.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="DTO\Contrato.cs" />
-    <Compile Include="DTO\Usuario.cs" />
     <Compile Include="Gerencias.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

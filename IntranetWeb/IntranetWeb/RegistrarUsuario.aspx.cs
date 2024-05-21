@@ -1,47 +1,71 @@
-﻿using IntranetModel.DAL;
-using IntranetModel.DTO;
+﻿using IntranetModel;
 using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Globalization;
 using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace IntranetWeb
 {
-
     public partial class RegistrarUsuario : System.Web.UI.Page
     {
-
         // Variable para indicar si ya se deshabilitó la selección de días futuros
         private bool diasFuturosDeshabilitados = false;
+        private IntranetEntities db = new IntranetEntities();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                //Verificar que es la primera vez que se muestra
                 FechaNacimientoDt.Visible = false;
                 FechaIngresoDt.Visible = false;
 
-                List<Contrato> contratos = new ContratosDAL().GetAll();
-                ContratoDdl.DataSource = contratos;
-                ContratoDdl.DataTextField = "Nombre";
-                ContratoDdl.DataValueField = "Nombre";
-                ContratoDdl.DataBind();
-
-                // Restablecer la bandera a false al cargar la página
+                CargarDatos();
                 diasFuturosDeshabilitados = false;
             }
+        }
 
+        private void CargarDatos()
+        {
+            // Cargar TiposContrato
+            var tiposContrato = db.TiposContrato.ToList();
+            ContratoDdl.DataSource = tiposContrato;
+            ContratoDdl.DataTextField = "nombre";
+            ContratoDdl.DataValueField = "id";
+            ContratoDdl.DataBind();
+
+            // Cargar Gerencias
+            var gerencias = db.Gerencias.ToList();
+            GerenciaDdl.DataSource = gerencias;
+            GerenciaDdl.DataTextField = "nombre";
+            GerenciaDdl.DataValueField = "id";
+            GerenciaDdl.DataBind();
+
+            // Cargar Subgerencias
+            var subgerencias = db.Subgerencias.ToList();
+            SubgerenciaDdl.DataSource = subgerencias;
+            SubgerenciaDdl.DataTextField = "nombre";
+            SubgerenciaDdl.DataValueField = "id";
+            SubgerenciaDdl.DataBind();
+
+            // Cargar Departamentos
+            var departamentos = db.Departamentos.ToList();
+            DepartamentoDdl.DataSource = departamentos;
+            DepartamentoDdl.DataTextField = "nombre";
+            DepartamentoDdl.DataValueField = "id";
+            DepartamentoDdl.DataBind();
+
+            // Cargar Ubicaciones
+            var ubicaciones = db.Ubicaciones.ToList();
+            UbicaciónDdl.DataSource = ubicaciones;
+            UbicaciónDdl.DataTextField = "nombre";
+            UbicaciónDdl.DataValueField = "id";
+            UbicaciónDdl.DataBind();
         }
 
         protected void VerCalendarioBtn_Click(object sender, EventArgs e)
         {
             // Mostrar o ocultar calendario
             FechaNacimientoDt.Visible = !FechaNacimientoDt.Visible;
-
         }
 
         protected void VerCalendarioIngresoBtn_Click(object sender, EventArgs e)
@@ -54,64 +78,53 @@ namespace IntranetWeb
         {
             if (Page.IsValid)
             {
-                string nombre = NombreTxt.Text;
-                string apellido = ApellidoTxt.Text;
-                DateTime fechaNacimiento = FechaNacimientoDt.SelectedDate.Date;
-                string rutUsuario = RutTxt.Text;
-                string cargo = CargoTxt.Text;
-                string gerencia = GerenciaDdl.SelectedValue;
-                string subgerencia = SubgerenciaDdl.SelectedValue;
-                string departamento = DepartamentoDdl.SelectedValue;
-                string ubicacion = UbicaciónDdl.SelectedValue;
-                string jefe = JefeDdl.SelectedValue;
-                int rolUsuario = Convert.ToInt32(RolUsuarioDdl.SelectedValue);
-                string tipoContrato = ContratoDdl.SelectedValue;
-                DateTime fechaIngreso = FechaIngresoDt.SelectedDate.Date;
-                string email = EmailTxt.Text;
-                int celular = Convert.ToInt32(CelularTxt.Text);
+                if (!UsuarioExiste(RutTxt.Text))
+                {
+                    Usuarios nuevoUsuario = new Usuarios
+                    {
+                        nombre = NombreTxt.Text,
+                        apellido = ApellidoTxt.Text,
+                        fechaNacimiento = FechaNacimientoDt.SelectedDate.Date,
+                        rutUsuario = RutTxt.Text,
+                        cargo = CargoTxt.Text,
+                        gerencia = GerenciaDdl.SelectedValue,
+                        subgerencia = SubgerenciaDdl.SelectedValue,
+                        departamento = DepartamentoDdl.SelectedValue,
+                        ubicacion = UbicaciónDdl.SelectedValue,
+                        jefe = JefeTxt.Text,
+                        rolUsuario = RolUsuarioDdl.SelectedValue,
+                        tipoContrato = ContratoDdl.SelectedValue,
+                        fechaIngreso = FechaIngresoDt.SelectedDate.Date,
+                        email = EmailTxt.Text,
+                        celular = Convert.ToInt32(CelularTxt.Text),
+                        contraseña = GenerarContraseña()
+                    };
 
-                // Generar contraseña aleatoria de 6 caracteres
-                string contraseña = GenerarContraseña();
+                    db.Usuarios.Add(nuevoUsuario);
+                    db.SaveChanges();
 
-                Usuario u = new Usuario();
-                u.Nombre = nombre;
-                u.Apellido = apellido;
-                u.FechaNacimiento = fechaNacimiento;
-                u.RutUsuario = rutUsuario;
-                u.Cargo = cargo;
-                u.Gerencia = gerencia;
-                u.Subgerencia = subgerencia;
-                u.Departamento = departamento;
-                u.Ubicacion = ubicacion;
-                u.Jefe = jefe;
-                u.RolUsuario = rolUsuario;
-                u.TipoContrato = tipoContrato;
-                u.FechaIngreso = fechaIngreso;
-                u.Email = email;
-                u.Celular = celular;
-                u.Contraseña = contraseña; // Asignar la contraseña generada al usuario
-
-                UsuariosDAL usuariosDAL = new UsuariosDAL();
-                usuariosDAL.Add(u);
-
-                // Establecer la bandera a true para indicar que se deshabilitaron los días futuros
-                diasFuturosDeshabilitados = true;
-
-                // Redireccionar a la página VerUsuarios.aspx con el parámetro de mensaje
-                Response.Redirect("VerUsuarios.aspx?mensaje=AgregadoExitosamente");
+                    diasFuturosDeshabilitados = true;
+                    Response.Redirect("VerUsuarios.aspx?mensaje=AgregadoExitosamente");
+                }
+                else
+                {
+                    RutCV.ErrorMessage = "El RUT ya existe en la base de datos.";
+                    RutCV.IsValid = false;
+                }
             }
-            else
-            {
+        }
 
-            }
+        private bool UsuarioExiste(string rutUsuario)
+        {
+            return db.Usuarios.Any(u => u.rutUsuario == rutUsuario);
         }
 
         protected void RutCV_ServerValidate(object source, ServerValidateEventArgs args)
         {
-            //Validar que rut tenga formato xxxx-x
+            // Validar que rut tenga formato xxxx-x
             String rut = RutTxt.Text.Trim();
 
-            //Caso 1: rut ingresado es vacío
+            // Caso 1: rut ingresado es vacío
             if (rut == string.Empty)
             {
                 RutCV.ErrorMessage = "Debe ingresar el RUT del nuevo colaborador";
@@ -119,10 +132,10 @@ namespace IntranetWeb
             }
             else
             {
-                //Caso 2: rut posee formato incorrecto
+                // Caso 2: rut posee formato incorrecto
                 String[] rutArray = rut.Split('-');
 
-                //Caso ideal: XXXXXXX-X
+                // Caso ideal: XXXXXXX-X
                 // rutArray[0] = XXXXXXXXX
                 // rutArray[1] = X
                 // rutArray.Length == 2
@@ -131,7 +144,7 @@ namespace IntranetWeb
                 {
                     if (rutArray[1].Length != 1)
                     {
-                        //Caso 3: digito verificador debe tener largo 1
+                        // Caso 3: digito verificador debe tener largo 1
                         RutCV.ErrorMessage = "El dígito verificador debe tener un sólo caracter";
                         args.IsValid = false;
                     }
@@ -142,7 +155,7 @@ namespace IntranetWeb
                 }
                 else
                 {
-                    //Caso 2 rut posee formato incorrecto Ej:xx-x-x
+                    // Caso 2 rut posee formato incorrecto Ej:xx-x-x
                     RutCV.ErrorMessage = "Rut no posee el formato correcto";
                     args.IsValid = false;
                 }
@@ -185,7 +198,5 @@ namespace IntranetWeb
                 .Select(s => s[rnd.Next(s.Length)]).ToArray());
             return contraseña;
         }
-
-
     }
 }

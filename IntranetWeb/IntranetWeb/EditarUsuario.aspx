@@ -104,10 +104,11 @@
                                 </asp:DropDownList>
                             </div>
                             <div class="col-md-4">
-                                <label class="form-label" for="JefeDdl">Jefe</label>
-                                <asp:DropDownList runat="server" ID="JefeDdl" CssClass="form-select">
-                                    <asp:ListItem Value="1" Text="Personas"></asp:ListItem>
-                                </asp:DropDownList>
+                                <label class="form-label" for="JefeTxt">Jefe</label>
+                                <asp:TextBox ID="JefeTxt" runat="server" CssClass="form-control"></asp:TextBox>
+                                <asp:RequiredFieldValidator runat="server" ErrorMessage="Debe ingresar el Jefe"
+                                    ControlToValidate="JefeTxt" CssClass="text-danger">
+                                </asp:RequiredFieldValidator>
                             </div>
 
                         </div>
