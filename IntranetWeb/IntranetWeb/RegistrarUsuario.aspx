@@ -91,7 +91,7 @@
                             </div>
                         </div>
 
-                        <!-- Departamento, ubicacion, jefe -->
+                        <!-- Departamento, ubicacion y jefe -->
                         <div class="row mb-4">
                             <div class="col-md-4">
                                 <label class="form-label" for="DepartamentoDdl">Departamento</label>

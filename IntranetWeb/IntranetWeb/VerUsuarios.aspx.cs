@@ -72,5 +72,35 @@ namespace IntranetWeb
                 Response.Redirect("VerUsuarios.aspx?mensaje=EliminadoExitosamente");
             }
         }
+
+        protected void SearchBtn_Click(object sender, EventArgs e)
+        {
+            string searchParam = FilterByDdl.SelectedValue;
+            string searchTerm = SearchTermTxt.Text.ToLower();
+
+            List<Usuarios> usuarios;
+
+            if (searchParam == "all")
+            {
+                usuarios = usuariosDAL.GetAll()
+                    .Where(u => u.nombre.ToLower().Contains(searchTerm) ||
+                                u.apellido.ToLower().Contains(searchTerm) ||
+                                u.GerenciaNombre.ToLower().Contains(searchTerm) ||
+                                u.SubgerenciaNombre.ToLower().Contains(searchTerm) ||
+                                u.DepartamentoNombre.ToLower().Contains(searchTerm) ||
+                                u.UbicacionNombre.ToLower().Contains(searchTerm) ||
+                                u.TipoContratoNombre.ToLower().Contains(searchTerm) ||
+                                u.RolUsuarioNombre.ToLower().Contains(searchTerm))
+                    .ToList();
+            }
+            else
+            {
+                usuarios = usuariosDAL.GetAll()
+                    .Where(u => u.GetType().GetProperty(searchParam).GetValue(u, null).ToString().ToLower().Contains(searchTerm))
+                    .ToList();
+            }
+
+            CargarTabla(usuarios);
+        }
     }
 }

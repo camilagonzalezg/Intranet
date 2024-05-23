@@ -40,8 +40,7 @@
                         <div class="row mb-4">
                             <div class="col-md-3">
                                 <label class="form-label" for="FechaNacimientoDt">Fecha Nacimiento</label>
-                                <asp:TextBox ID="FechaSeleccionadaTxt" runat="server"
-                                    CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="FechaSeleccionadaTxt" runat="server" CssClass="form-control"></asp:TextBox>
                             </div>
                             <div class="col-md-3">
                                 <asp:Button ID="VerCalendarioBtn" runat="server" Text="Ingresar fecha"
@@ -52,9 +51,8 @@
                                     OnDayRender="FechaNacimientoDt_DayRender"></asp:Calendar>
                             </div>
                             <div class="col-md-3">
-                                <label class="form-label" for="FechaIngresoDt">Fecha Ingreso</label>
-                                <asp:TextBox ID="FechaSeleccionadaIngresoTxt" runat="server"
-                                    CssClass="form-control"></asp:TextBox>
+                                <label class="form-label" for="FechaIngresoDt">Fecha Ingreso trabajador</label>
+                                <asp:TextBox ID="FechaSeleccionadaIngresoTxt" runat="server" CssClass="form-control"></asp:TextBox>
                             </div>
                             <div class="col-md-3">
                                 <asp:Button ID="VerCalendarioIngresoBtn" runat="server" Text="Ingresar fecha"
@@ -67,7 +65,7 @@
                         </div>
 
                         <!-- Cargo, Gerencia y subgerencia -->
-                        <div class="mb-4">
+                        <div class="row mb-4">
                             <div class="col-md-4">
                                 <label class="form-label" for="CargoTxt">Cargo</label>
                                 <asp:TextBox ID="CargoTxt" runat="server" CssClass="form-control"></asp:TextBox>
@@ -77,14 +75,14 @@
                             </div>
                             <div class="col-md-4">
                                 <label class="form-label" for="GerenciaDdl">Gerencia</label>
-                                <asp:DropDownList runat="server" ID="GerenciaDdl" CssClass="form-select">
-                                    <asp:ListItem Value="1" Text="Personas"></asp:ListItem>
+                                <asp:DropDownList runat="server" ID="GerenciaDdl" CssClass="form-select"
+                                    AutoPostBack="true" OnSelectedIndexChanged="GerenciaDdl_SelectedIndexChanged">
                                 </asp:DropDownList>
                             </div>
                             <div class="col-md-4">
                                 <label class="form-label" for="SubgerenciaDdl">Subgerencia</label>
-                                <asp:DropDownList runat="server" ID="SubgerenciaDdl" CssClass="form-select">
-                                    <asp:ListItem Value="1" Text="Personas"></asp:ListItem>
+                                <asp:DropDownList runat="server" ID="SubgerenciaDdl" CssClass="form-select"
+                                    AutoPostBack="true" OnSelectedIndexChanged="SubgerenciaDdl_SelectedIndexChanged">
                                 </asp:DropDownList>
                             </div>
                         </div>
@@ -93,14 +91,13 @@
                         <div class="row mb-4">
                             <div class="col-md-4">
                                 <label class="form-label" for="DepartamentoDdl">Departamento</label>
-                                <asp:DropDownList runat="server" ID="DepartamentoDdl" CssClass="form-select">
-                                    <asp:ListItem Value="1" Text="Personas"></asp:ListItem>
+                                <asp:DropDownList runat="server" ID="DepartamentoDdl" CssClass="form-select"
+                                    AutoPostBack="true" OnSelectedIndexChanged="DepartamentoDdl_SelectedIndexChanged">
                                 </asp:DropDownList>
                             </div>
                             <div class="col-md-4">
                                 <label class="form-label" for="UbicaciónDdl">Ubicación</label>
                                 <asp:DropDownList runat="server" ID="UbicaciónDdl" CssClass="form-select">
-                                    <asp:ListItem Value="1" Text="Personas"></asp:ListItem>
                                 </asp:DropDownList>
                             </div>
                             <div class="col-md-4">
@@ -114,7 +111,7 @@
                         </div>
 
                         <!-- Tipo contrato, rol usuario, email -->
-                        <div class="mb-4">
+                        <div class="row mb-4">
                             <div class="col-md-4">
                                 <label class="form-label" for="ContratoDdl">Tipo contrato</label>
                                 <asp:DropDownList runat="server" ID="ContratoDdl" CssClass="form-select">

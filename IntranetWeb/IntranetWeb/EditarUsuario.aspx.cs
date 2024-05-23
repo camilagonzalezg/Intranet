@@ -1,5 +1,4 @@
-﻿using IntranetModel.DAL;
-using IntranetModel;
+﻿using IntranetModel;
 using System;
 using System.Linq;
 using System.Web.UI;
@@ -42,30 +41,55 @@ namespace IntranetWeb
             ContratoDdl.DataTextField = "nombre";
             ContratoDdl.DataValueField = "id";
             ContratoDdl.DataBind();
+            ContratoDdl.Items.Insert(0, new ListItem("Elija un Tipo de Contrato", ""));
 
             var gerencias = db.Gerencias.Select(g => new { g.id, g.nombre }).ToList();
             GerenciaDdl.DataSource = gerencias;
             GerenciaDdl.DataTextField = "nombre";
             GerenciaDdl.DataValueField = "id";
             GerenciaDdl.DataBind();
+            GerenciaDdl.Items.Insert(0, new ListItem("Elija una Gerencia", ""));
 
-            var subgerencias = db.Subgerencias.Select(sg => new { sg.id, sg.nombre }).ToList();
+            // Inicialmente cargar todas las Subgerencias, Departamentos y Ubicaciones
+            CargarSubgerencias();
+            CargarDepartamentos();
+            CargarUbicaciones();
+        }
+
+        private void CargarSubgerencias(int? gerenciaId = null)
+        {
+            var subgerencias = gerenciaId.HasValue
+                ? db.Subgerencias.Where(s => s.idGerencia == gerenciaId).ToList()
+                : db.Subgerencias.ToList();
             SubgerenciaDdl.DataSource = subgerencias;
             SubgerenciaDdl.DataTextField = "nombre";
             SubgerenciaDdl.DataValueField = "id";
             SubgerenciaDdl.DataBind();
+            SubgerenciaDdl.Items.Insert(0, new ListItem("Elija una Subgerencia", ""));
+        }
 
-            var departamentos = db.Departamentos.Select(d => new { d.id, d.nombre }).ToList();
+        private void CargarDepartamentos(int? subgerenciaId = null)
+        {
+            var departamentos = subgerenciaId.HasValue
+                ? db.Departamentos.Where(d => d.idSubgerencia == subgerenciaId).ToList()
+                : db.Departamentos.ToList();
             DepartamentoDdl.DataSource = departamentos;
             DepartamentoDdl.DataTextField = "nombre";
             DepartamentoDdl.DataValueField = "id";
             DepartamentoDdl.DataBind();
+            DepartamentoDdl.Items.Insert(0, new ListItem("Elija un Departamento", ""));
+        }
 
-            var ubicaciones = db.Ubicaciones.Select(u => new { u.id, u.nombre }).ToList();
+        private void CargarUbicaciones(int? departamentoId = null)
+        {
+            var ubicaciones = departamentoId.HasValue
+                ? db.Ubicaciones.Where(u => u.idDepartamento == departamentoId).ToList()
+                : db.Ubicaciones.ToList();
             UbicaciónDdl.DataSource = ubicaciones;
             UbicaciónDdl.DataTextField = "nombre";
             UbicaciónDdl.DataValueField = "id";
             UbicaciónDdl.DataBind();
+            UbicaciónDdl.Items.Insert(0, new ListItem("Elija una Ubicación", ""));
         }
 
         private void CargarDatosUsuario(string rut)
@@ -80,8 +104,11 @@ namespace IntranetWeb
                 FechaSeleccionadaTxt.Text = usuario.fechaNacimiento?.ToShortDateString();
                 CargoTxt.Text = usuario.cargo;
                 GerenciaDdl.SelectedValue = usuario.gerencia;
+                CargarSubgerencias(int.Parse(usuario.gerencia));
                 SubgerenciaDdl.SelectedValue = usuario.subgerencia;
+                CargarDepartamentos(int.Parse(usuario.subgerencia));
                 DepartamentoDdl.SelectedValue = usuario.departamento;
+                CargarUbicaciones(int.Parse(usuario.departamento));
                 UbicaciónDdl.SelectedValue = usuario.ubicacion;
                 JefeTxt.Text = usuario.jefe;
                 FechaSeleccionadaIngresoTxt.Text = usuario.fechaIngreso?.ToShortDateString();
@@ -182,6 +209,54 @@ namespace IntranetWeb
             if (e.Day.Date > DateTime.Today)
             {
                 e.Day.IsSelectable = false;
+            }
+        }
+
+        protected void GerenciaDdl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int gerenciaId;
+            if (int.TryParse(GerenciaDdl.SelectedValue, out gerenciaId))
+            {
+                CargarSubgerencias(gerenciaId);
+            }
+            else
+            {
+                SubgerenciaDdl.Items.Clear();
+                SubgerenciaDdl.Items.Insert(0, new ListItem("Elija una Subgerencia", ""));
+                DepartamentoDdl.Items.Clear();
+                DepartamentoDdl.Items.Insert(0, new ListItem("Elija un Departamento", ""));
+                UbicaciónDdl.Items.Clear();
+                UbicaciónDdl.Items.Insert(0, new ListItem("Elija una Ubicación", ""));
+            }
+        }
+
+        protected void SubgerenciaDdl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int subgerenciaId;
+            if (int.TryParse(SubgerenciaDdl.SelectedValue, out subgerenciaId))
+            {
+                CargarDepartamentos(subgerenciaId);
+            }
+            else
+            {
+                DepartamentoDdl.Items.Clear();
+                DepartamentoDdl.Items.Insert(0, new ListItem("Elija un Departamento", ""));
+                UbicaciónDdl.Items.Clear();
+                UbicaciónDdl.Items.Insert(0, new ListItem("Elija una Ubicación", ""));
+            }
+        }
+
+        protected void DepartamentoDdl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int departamentoId;
+            if (int.TryParse(DepartamentoDdl.SelectedValue, out departamentoId))
+            {
+                CargarUbicaciones(departamentoId);
+            }
+            else
+            {
+                UbicaciónDdl.Items.Clear();
+                UbicaciónDdl.Items.Insert(0, new ListItem("Elija una Ubicación", ""));
             }
         }
     }

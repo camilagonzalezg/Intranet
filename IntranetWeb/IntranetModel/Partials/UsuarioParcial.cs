@@ -88,5 +88,24 @@ namespace IntranetModel
                 }
             }
         }
+
+        public string RolUsuarioNombre
+        {
+            get
+            {
+                switch (this.rolUsuario)
+                {
+                    case "1":
+                        return "Colaborador";
+                    case "2":
+                        return "Gerencia";
+                    case "3":
+                        return "Administrador";
+                    default:
+                        return "N/A";
+                }
+            }
+        }
     }
 }
+
