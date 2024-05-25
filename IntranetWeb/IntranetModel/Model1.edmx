@@ -11,18 +11,20 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="idNoticia" Type="int" />
-          <Property Name="idUsuario" Type="nvarchar" MaxLength="50" />
-          <Property Name="comentario" Type="nvarchar(max)" />
-          <Property Name="fechaComentario" Type="datetime" />
+          <Property Name="rutUsuario" Type="nvarchar" MaxLength="20" />
+          <Property Name="comentarioTexto" Type="text" />
+          <Property Name="fechaComentario" Type="date" />
         </EntityType>
-        <EntityType Name="Correspondencia">
+        <EntityType Name="Correspondencias">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="nombreArchivo" Type="nvarchar" MaxLength="100" />
-          <Property Name="fechaIngreso" Type="datetime" />
-          <Property Name="fechaCierre" Type="datetime" />
+          <Property Name="usuario" Type="nvarchar" MaxLength="20" />
+          <Property Name="nombreArchivo" Type="nvarchar" MaxLength="200" />
+          <Property Name="descripcionArchivo" Type="nvarchar" MaxLength="500" />
+          <Property Name="fechaIngreso" Type="date" />
+          <Property Name="fechaCierre" Type="date" />
         </EntityType>
         <EntityType Name="Departamentos">
           <Key>
@@ -44,29 +46,49 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="idUsuario" Type="nvarchar" MaxLength="50" />
+          <Property Name="rutUsuario" Type="nvarchar" MaxLength="20" />
           <Property Name="nombre" Type="nvarchar" MaxLength="100" />
-          <Property Name="apellido" Type="nvarchar" MaxLength="100" />
-          <Property Name="fechaNacimiento" Type="date" />
+        </EntityType>
+        <EntityType Name="NombreHijos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idHijo" Type="int" />
+          <Property Name="nombre" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="Noticias">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="titulo" Type="nvarchar" MaxLength="100" />
-          <Property Name="descripcion" Type="nvarchar(max)" />
-          <Property Name="fechaPublicacion" Type="datetime" />
-          <Property Name="tag" Type="nvarchar" MaxLength="50" />
+          <Property Name="usuarioAutor" Type="nvarchar" MaxLength="20" />
+          <Property Name="titulo" Type="nvarchar" MaxLength="200" />
+          <Property Name="metaDescripcion" Type="nvarchar" MaxLength="500" />
+          <Property Name="contenidoTexto" Type="text" />
+          <Property Name="fechaPublicacion" Type="date" />
+          <Property Name="tags" Type="nvarchar" MaxLength="200" />
+          <Property Name="likes" Type="int" />
         </EntityType>
         <EntityType Name="Paginas">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="titulo" Type="nvarchar" MaxLength="100" />
-          <Property Name="descripcion" Type="nvarchar(max)" />
-          <Property Name="fechaPublicacion" Type="datetime" />
+          <Property Name="usuarioAutor" Type="nvarchar" MaxLength="20" />
+          <Property Name="titulo" Type="nvarchar" MaxLength="200" />
+          <Property Name="metaDescripcion" Type="nvarchar" MaxLength="500" />
+          <Property Name="contenidoTexto" Type="text" />
+          <Property Name="fechaPublicacion" Type="date" />
+          <Property Name="tags" Type="nvarchar" MaxLength="200" />
+          <Property Name="likes" Type="int" />
+        </EntityType>
+        <EntityType Name="RolesUsuario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="Subgerencias">
           <Key>
@@ -81,7 +103,7 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="nombre" Type="nvarchar" MaxLength="50" />
+          <Property Name="nombre" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="Ubicaciones">
           <Key>
@@ -95,26 +117,24 @@
           <Key>
             <PropertyRef Name="rutUsuario" />
           </Key>
-          <Property Name="rutUsuario" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="rutUsuario" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="nombre" Type="nvarchar" MaxLength="100" />
           <Property Name="apellido" Type="nvarchar" MaxLength="100" />
           <Property Name="fechaNacimiento" Type="date" />
           <Property Name="cargo" Type="nvarchar" MaxLength="100" />
-          <Property Name="gerencia" Type="nvarchar" MaxLength="100" />
-          <Property Name="subgerencia" Type="nvarchar" MaxLength="100" />
-          <Property Name="departamento" Type="nvarchar" MaxLength="100" />
-          <Property Name="ubicacion" Type="nvarchar" MaxLength="100" />
+          <Property Name="idGerencia" Type="int" />
+          <Property Name="idSubgerencia" Type="int" />
+          <Property Name="idDepartamento" Type="int" />
+          <Property Name="idUbicacion" Type="int" />
           <Property Name="jefe" Type="nvarchar" MaxLength="100" />
-          <Property Name="rolUsuario" Type="nvarchar" MaxLength="50" />
-          <Property Name="tipoContrato" Type="nvarchar" MaxLength="50" />
+          <Property Name="idRolUsuario" Type="int" />
+          <Property Name="idTipoContrato" Type="int" />
           <Property Name="fechaIngreso" Type="date" />
           <Property Name="email" Type="nvarchar" MaxLength="100" />
           <Property Name="celular" Type="int" />
-          <Property Name="hijo" Type="int" />
-          <Property Name="nombreHijo" Type="nvarchar" MaxLength="100" />
           <Property Name="contraseña" Type="nvarchar" MaxLength="100" />
         </EntityType>
-        <Association Name="FK__Comentari__idNot__38996AB5">
+        <Association Name="FK__Comentari__idNot__403A8C7D">
           <End Role="Noticias" Type="Self.Noticias" Multiplicity="0..1" />
           <End Role="ComentariosNoticias" Type="Self.ComentariosNoticias" Multiplicity="*" />
           <ReferentialConstraint>
@@ -126,7 +146,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Comentari__idUsu__398D8EEE">
+        <Association Name="FK__Comentari__rutUs__412EB0B6">
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
           <End Role="ComentariosNoticias" Type="Self.ComentariosNoticias" Multiplicity="*" />
           <ReferentialConstraint>
@@ -134,7 +154,19 @@
               <PropertyRef Name="rutUsuario" />
             </Principal>
             <Dependent Role="ComentariosNoticias">
-              <PropertyRef Name="idUsuario" />
+              <PropertyRef Name="rutUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Correspon__usuar__440B1D61">
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+          <End Role="Correspondencias" Type="Self.Correspondencias" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="rutUsuario" />
+            </Principal>
+            <Dependent Role="Correspondencias">
+              <PropertyRef Name="usuario" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -150,7 +182,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Hijos__idUsuario__49C3F6B7">
+        <Association Name="FK__Hijos__rutUsuari__34C8D9D1">
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
           <End Role="Hijos" Type="Self.Hijos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -158,7 +190,43 @@
               <PropertyRef Name="rutUsuario" />
             </Principal>
             <Dependent Role="Hijos">
-              <PropertyRef Name="idUsuario" />
+              <PropertyRef Name="rutUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__NombreHij__idHij__37A5467C">
+          <End Role="Hijos" Type="Self.Hijos" Multiplicity="0..1" />
+          <End Role="NombreHijos" Type="Self.NombreHijos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Hijos">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="NombreHijos">
+              <PropertyRef Name="idHijo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Noticias__usuari__3A81B327">
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+          <End Role="Noticias" Type="Self.Noticias" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="rutUsuario" />
+            </Principal>
+            <Dependent Role="Noticias">
+              <PropertyRef Name="usuarioAutor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Paginas__usuario__3D5E1FD2">
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+          <End Role="Paginas" Type="Self.Paginas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="rutUsuario" />
+            </Principal>
+            <Dependent Role="Paginas">
+              <PropertyRef Name="usuarioAutor" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -186,33 +254,123 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__Usuarios__idDepa__46E78A0C">
+          <End Role="Departamentos" Type="Self.Departamentos" Multiplicity="0..1" />
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departamentos">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="idDepartamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Usuarios__idGere__44FF419A">
+          <End Role="Gerencias" Type="Self.Gerencias" Multiplicity="0..1" />
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Gerencias">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="idGerencia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Usuarios__idRolU__48CFD27E">
+          <End Role="RolesUsuario" Type="Self.RolesUsuario" Multiplicity="0..1" />
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RolesUsuario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="idRolUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Usuarios__idSubg__45F365D3">
+          <End Role="Subgerencias" Type="Self.Subgerencias" Multiplicity="0..1" />
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subgerencias">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="idSubgerencia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Usuarios__idTipo__49C3F6B7">
+          <End Role="TiposContrato" Type="Self.TiposContrato" Multiplicity="0..1" />
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TiposContrato">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="idTipoContrato" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Usuarios__idUbic__47DBAE45">
+          <End Role="Ubicaciones" Type="Self.Ubicaciones" Multiplicity="0..1" />
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ubicaciones">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="idUbicacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="IntranetModelStoreContainer">
           <EntitySet Name="ComentariosNoticias" EntityType="Self.ComentariosNoticias" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Correspondencia" EntityType="Self.Correspondencia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Correspondencias" EntityType="Self.Correspondencias" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Departamentos" EntityType="Self.Departamentos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Gerencias" EntityType="Self.Gerencias" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Hijos" EntityType="Self.Hijos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NombreHijos" EntityType="Self.NombreHijos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Noticias" EntityType="Self.Noticias" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Paginas" EntityType="Self.Paginas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RolesUsuario" EntityType="Self.RolesUsuario" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Subgerencias" EntityType="Self.Subgerencias" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TiposContrato" EntityType="Self.TiposContrato" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Ubicaciones" EntityType="Self.Ubicaciones" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Comentari__idNot__38996AB5" Association="Self.FK__Comentari__idNot__38996AB5">
+          <AssociationSet Name="FK__Comentari__idNot__403A8C7D" Association="Self.FK__Comentari__idNot__403A8C7D">
             <End Role="Noticias" EntitySet="Noticias" />
             <End Role="ComentariosNoticias" EntitySet="ComentariosNoticias" />
           </AssociationSet>
-          <AssociationSet Name="FK__Comentari__idUsu__398D8EEE" Association="Self.FK__Comentari__idUsu__398D8EEE">
+          <AssociationSet Name="FK__Comentari__rutUs__412EB0B6" Association="Self.FK__Comentari__rutUs__412EB0B6">
             <End Role="Usuarios" EntitySet="Usuarios" />
             <End Role="ComentariosNoticias" EntitySet="ComentariosNoticias" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Correspon__usuar__440B1D61" Association="Self.FK__Correspon__usuar__440B1D61">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Correspondencias" EntitySet="Correspondencias" />
           </AssociationSet>
           <AssociationSet Name="FK__Departame__idSub__2B3F6F97" Association="Self.FK__Departame__idSub__2B3F6F97">
             <End Role="Subgerencias" EntitySet="Subgerencias" />
             <End Role="Departamentos" EntitySet="Departamentos" />
           </AssociationSet>
-          <AssociationSet Name="FK__Hijos__idUsuario__49C3F6B7" Association="Self.FK__Hijos__idUsuario__49C3F6B7">
+          <AssociationSet Name="FK__Hijos__rutUsuari__34C8D9D1" Association="Self.FK__Hijos__rutUsuari__34C8D9D1">
             <End Role="Usuarios" EntitySet="Usuarios" />
             <End Role="Hijos" EntitySet="Hijos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__NombreHij__idHij__37A5467C" Association="Self.FK__NombreHij__idHij__37A5467C">
+            <End Role="Hijos" EntitySet="Hijos" />
+            <End Role="NombreHijos" EntitySet="NombreHijos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Noticias__usuari__3A81B327" Association="Self.FK__Noticias__usuari__3A81B327">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Noticias" EntitySet="Noticias" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Paginas__usuario__3D5E1FD2" Association="Self.FK__Paginas__usuario__3D5E1FD2">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Paginas" EntitySet="Paginas" />
           </AssociationSet>
           <AssociationSet Name="FK__Subgerenc__idGer__286302EC" Association="Self.FK__Subgerenc__idGer__286302EC">
             <End Role="Gerencias" EntitySet="Gerencias" />
@@ -221,6 +379,30 @@
           <AssociationSet Name="FK__Ubicacion__idDep__2E1BDC42" Association="Self.FK__Ubicacion__idDep__2E1BDC42">
             <End Role="Departamentos" EntitySet="Departamentos" />
             <End Role="Ubicaciones" EntitySet="Ubicaciones" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Usuarios__idDepa__46E78A0C" Association="Self.FK__Usuarios__idDepa__46E78A0C">
+            <End Role="Departamentos" EntitySet="Departamentos" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Usuarios__idGere__44FF419A" Association="Self.FK__Usuarios__idGere__44FF419A">
+            <End Role="Gerencias" EntitySet="Gerencias" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Usuarios__idRolU__48CFD27E" Association="Self.FK__Usuarios__idRolU__48CFD27E">
+            <End Role="RolesUsuario" EntitySet="RolesUsuario" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Usuarios__idSubg__45F365D3" Association="Self.FK__Usuarios__idSubg__45F365D3">
+            <End Role="Subgerencias" EntitySet="Subgerencias" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Usuarios__idTipo__49C3F6B7" Association="Self.FK__Usuarios__idTipo__49C3F6B7">
+            <End Role="TiposContrato" EntitySet="TiposContrato" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Usuarios__idUbic__47DBAE45" Association="Self.FK__Usuarios__idUbic__47DBAE45">
+            <End Role="Ubicaciones" EntitySet="Ubicaciones" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -234,20 +416,23 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="idNoticia" Type="Int32" />
-          <Property Name="idUsuario" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="comentario" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="fechaComentario" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="Noticias" Relationship="Self.FK__Comentari__idNot__38996AB5" FromRole="ComentariosNoticias" ToRole="Noticias" />
-          <NavigationProperty Name="Usuarios" Relationship="Self.FK__Comentari__idUsu__398D8EEE" FromRole="ComentariosNoticias" ToRole="Usuarios" />
+          <Property Name="rutUsuario" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="comentarioTexto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="fechaComentario" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Noticias" Relationship="Self.FK__Comentari__idNot__403A8C7D" FromRole="ComentariosNoticias" ToRole="Noticias" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.FK__Comentari__rutUs__412EB0B6" FromRole="ComentariosNoticias" ToRole="Usuarios" />
         </EntityType>
-        <EntityType Name="Correspondencia">
+        <EntityType Name="Correspondencias">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="nombreArchivo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="fechaIngreso" Type="DateTime" Precision="3" />
-          <Property Name="fechaCierre" Type="DateTime" Precision="3" />
+          <Property Name="usuario" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="nombreArchivo" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="descripcionArchivo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="fechaIngreso" Type="DateTime" Precision="0" />
+          <Property Name="fechaCierre" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.FK__Correspon__usuar__440B1D61" FromRole="Correspondencias" ToRole="Usuarios" />
         </EntityType>
         <EntityType Name="Departamentos">
           <Key>
@@ -258,6 +443,7 @@
           <Property Name="idSubgerencia" Type="Int32" />
           <NavigationProperty Name="Subgerencias" Relationship="Self.FK__Departame__idSub__2B3F6F97" FromRole="Departamentos" ToRole="Subgerencias" />
           <NavigationProperty Name="Ubicaciones" Relationship="Self.FK__Ubicacion__idDep__2E1BDC42" FromRole="Departamentos" ToRole="Ubicaciones" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.FK__Usuarios__idDepa__46E78A0C" FromRole="Departamentos" ToRole="Usuarios" />
         </EntityType>
         <EntityType Name="Gerencias">
           <Key>
@@ -266,37 +452,63 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Subgerencias" Relationship="Self.FK__Subgerenc__idGer__286302EC" FromRole="Gerencias" ToRole="Subgerencias" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.FK__Usuarios__idGere__44FF419A" FromRole="Gerencias" ToRole="Usuarios" />
         </EntityType>
         <EntityType Name="Hijos">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="idUsuario" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="rutUsuario" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="apellido" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="fechaNacimiento" Type="DateTime" Precision="0" />
-          <NavigationProperty Name="Usuarios" Relationship="Self.FK__Hijos__idUsuario__49C3F6B7" FromRole="Hijos" ToRole="Usuarios" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.FK__Hijos__rutUsuari__34C8D9D1" FromRole="Hijos" ToRole="Usuarios" />
+          <NavigationProperty Name="NombreHijos" Relationship="Self.FK__NombreHij__idHij__37A5467C" FromRole="Hijos" ToRole="NombreHijos" />
+        </EntityType>
+        <EntityType Name="NombreHijos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idHijo" Type="Int32" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Hijos" Relationship="Self.FK__NombreHij__idHij__37A5467C" FromRole="NombreHijos" ToRole="Hijos" />
         </EntityType>
         <EntityType Name="Noticias">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="titulo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="fechaPublicacion" Type="DateTime" Precision="3" />
-          <Property Name="tag" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="ComentariosNoticias" Relationship="Self.FK__Comentari__idNot__38996AB5" FromRole="Noticias" ToRole="ComentariosNoticias" />
+          <Property Name="usuarioAutor" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="titulo" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="metaDescripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="contenidoTexto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="fechaPublicacion" Type="DateTime" Precision="0" />
+          <Property Name="tags" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="likes" Type="Int32" />
+          <NavigationProperty Name="ComentariosNoticias" Relationship="Self.FK__Comentari__idNot__403A8C7D" FromRole="Noticias" ToRole="ComentariosNoticias" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.FK__Noticias__usuari__3A81B327" FromRole="Noticias" ToRole="Usuarios" />
         </EntityType>
         <EntityType Name="Paginas">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="titulo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="fechaPublicacion" Type="DateTime" Precision="3" />
+          <Property Name="usuarioAutor" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="titulo" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="metaDescripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="contenidoTexto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="fechaPublicacion" Type="DateTime" Precision="0" />
+          <Property Name="tags" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="likes" Type="Int32" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.FK__Paginas__usuario__3D5E1FD2" FromRole="Paginas" ToRole="Usuarios" />
+        </EntityType>
+        <EntityType Name="RolesUsuario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.FK__Usuarios__idRolU__48CFD27E" FromRole="RolesUsuario" ToRole="Usuarios" />
         </EntityType>
         <EntityType Name="Subgerencias">
           <Key>
@@ -307,13 +519,15 @@
           <Property Name="idGerencia" Type="Int32" />
           <NavigationProperty Name="Departamentos" Relationship="Self.FK__Departame__idSub__2B3F6F97" FromRole="Subgerencias" ToRole="Departamentos" />
           <NavigationProperty Name="Gerencias" Relationship="Self.FK__Subgerenc__idGer__286302EC" FromRole="Subgerencias" ToRole="Gerencias" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.FK__Usuarios__idSubg__45F365D3" FromRole="Subgerencias" ToRole="Usuarios" />
         </EntityType>
         <EntityType Name="TiposContrato">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.FK__Usuarios__idTipo__49C3F6B7" FromRole="TiposContrato" ToRole="Usuarios" />
         </EntityType>
         <EntityType Name="Ubicaciones">
           <Key>
@@ -323,33 +537,41 @@
           <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="idDepartamento" Type="Int32" />
           <NavigationProperty Name="Departamentos" Relationship="Self.FK__Ubicacion__idDep__2E1BDC42" FromRole="Ubicaciones" ToRole="Departamentos" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.FK__Usuarios__idUbic__47DBAE45" FromRole="Ubicaciones" ToRole="Usuarios" />
         </EntityType>
         <EntityType Name="Usuarios">
           <Key>
             <PropertyRef Name="rutUsuario" />
           </Key>
-          <Property Name="rutUsuario" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="rutUsuario" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="apellido" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="fechaNacimiento" Type="DateTime" Precision="0" />
           <Property Name="cargo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="gerencia" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="subgerencia" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="departamento" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="ubicacion" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="idGerencia" Type="Int32" />
+          <Property Name="idSubgerencia" Type="Int32" />
+          <Property Name="idDepartamento" Type="Int32" />
+          <Property Name="idUbicacion" Type="Int32" />
           <Property Name="jefe" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="rolUsuario" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="tipoContrato" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="idRolUsuario" Type="Int32" />
+          <Property Name="idTipoContrato" Type="Int32" />
           <Property Name="fechaIngreso" Type="DateTime" Precision="0" />
           <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="celular" Type="Int32" />
-          <Property Name="hijo" Type="Int32" />
-          <Property Name="nombreHijo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="contraseña" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="ComentariosNoticias" Relationship="Self.FK__Comentari__idUsu__398D8EEE" FromRole="Usuarios" ToRole="ComentariosNoticias" />
-          <NavigationProperty Name="Hijos" Relationship="Self.FK__Hijos__idUsuario__49C3F6B7" FromRole="Usuarios" ToRole="Hijos" />
+          <NavigationProperty Name="ComentariosNoticias" Relationship="Self.FK__Comentari__rutUs__412EB0B6" FromRole="Usuarios" ToRole="ComentariosNoticias" />
+          <NavigationProperty Name="Correspondencias" Relationship="Self.FK__Correspon__usuar__440B1D61" FromRole="Usuarios" ToRole="Correspondencias" />
+          <NavigationProperty Name="Departamentos" Relationship="Self.FK__Usuarios__idDepa__46E78A0C" FromRole="Usuarios" ToRole="Departamentos" />
+          <NavigationProperty Name="Gerencias" Relationship="Self.FK__Usuarios__idGere__44FF419A" FromRole="Usuarios" ToRole="Gerencias" />
+          <NavigationProperty Name="Hijos" Relationship="Self.FK__Hijos__rutUsuari__34C8D9D1" FromRole="Usuarios" ToRole="Hijos" />
+          <NavigationProperty Name="Noticias" Relationship="Self.FK__Noticias__usuari__3A81B327" FromRole="Usuarios" ToRole="Noticias" />
+          <NavigationProperty Name="Paginas" Relationship="Self.FK__Paginas__usuario__3D5E1FD2" FromRole="Usuarios" ToRole="Paginas" />
+          <NavigationProperty Name="RolesUsuario" Relationship="Self.FK__Usuarios__idRolU__48CFD27E" FromRole="Usuarios" ToRole="RolesUsuario" />
+          <NavigationProperty Name="Subgerencias" Relationship="Self.FK__Usuarios__idSubg__45F365D3" FromRole="Usuarios" ToRole="Subgerencias" />
+          <NavigationProperty Name="TiposContrato" Relationship="Self.FK__Usuarios__idTipo__49C3F6B7" FromRole="Usuarios" ToRole="TiposContrato" />
+          <NavigationProperty Name="Ubicaciones" Relationship="Self.FK__Usuarios__idUbic__47DBAE45" FromRole="Usuarios" ToRole="Ubicaciones" />
         </EntityType>
-        <Association Name="FK__Comentari__idNot__38996AB5">
+        <Association Name="FK__Comentari__idNot__403A8C7D">
           <End Role="Noticias" Type="Self.Noticias" Multiplicity="0..1" />
           <End Role="ComentariosNoticias" Type="Self.ComentariosNoticias" Multiplicity="*" />
           <ReferentialConstraint>
@@ -361,7 +583,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Comentari__idUsu__398D8EEE">
+        <Association Name="FK__Comentari__rutUs__412EB0B6">
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
           <End Role="ComentariosNoticias" Type="Self.ComentariosNoticias" Multiplicity="*" />
           <ReferentialConstraint>
@@ -369,7 +591,19 @@
               <PropertyRef Name="rutUsuario" />
             </Principal>
             <Dependent Role="ComentariosNoticias">
-              <PropertyRef Name="idUsuario" />
+              <PropertyRef Name="rutUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Correspon__usuar__440B1D61">
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+          <End Role="Correspondencias" Type="Self.Correspondencias" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="rutUsuario" />
+            </Principal>
+            <Dependent Role="Correspondencias">
+              <PropertyRef Name="usuario" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -397,6 +631,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__Usuarios__idDepa__46E78A0C">
+          <End Role="Departamentos" Type="Self.Departamentos" Multiplicity="0..1" />
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departamentos">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="idDepartamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__Subgerenc__idGer__286302EC">
           <End Role="Gerencias" Type="Self.Gerencias" Multiplicity="0..1" />
           <End Role="Subgerencias" Type="Self.Subgerencias" Multiplicity="*" />
@@ -409,7 +655,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Hijos__idUsuario__49C3F6B7">
+        <Association Name="FK__Usuarios__idGere__44FF419A">
+          <End Role="Gerencias" Type="Self.Gerencias" Multiplicity="0..1" />
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Gerencias">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="idGerencia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Hijos__rutUsuari__34C8D9D1">
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
           <End Role="Hijos" Type="Self.Hijos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -417,29 +675,119 @@
               <PropertyRef Name="rutUsuario" />
             </Principal>
             <Dependent Role="Hijos">
-              <PropertyRef Name="idUsuario" />
+              <PropertyRef Name="rutUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__NombreHij__idHij__37A5467C">
+          <End Role="Hijos" Type="Self.Hijos" Multiplicity="0..1" />
+          <End Role="NombreHijos" Type="Self.NombreHijos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Hijos">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="NombreHijos">
+              <PropertyRef Name="idHijo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Noticias__usuari__3A81B327">
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+          <End Role="Noticias" Type="Self.Noticias" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="rutUsuario" />
+            </Principal>
+            <Dependent Role="Noticias">
+              <PropertyRef Name="usuarioAutor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Paginas__usuario__3D5E1FD2">
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+          <End Role="Paginas" Type="Self.Paginas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="rutUsuario" />
+            </Principal>
+            <Dependent Role="Paginas">
+              <PropertyRef Name="usuarioAutor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Usuarios__idRolU__48CFD27E">
+          <End Role="RolesUsuario" Type="Self.RolesUsuario" Multiplicity="0..1" />
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RolesUsuario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="idRolUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Usuarios__idSubg__45F365D3">
+          <End Role="Subgerencias" Type="Self.Subgerencias" Multiplicity="0..1" />
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subgerencias">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="idSubgerencia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Usuarios__idTipo__49C3F6B7">
+          <End Role="TiposContrato" Type="Self.TiposContrato" Multiplicity="0..1" />
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TiposContrato">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="idTipoContrato" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Usuarios__idUbic__47DBAE45">
+          <End Role="Ubicaciones" Type="Self.Ubicaciones" Multiplicity="0..1" />
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ubicaciones">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="idUbicacion" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="IntranetEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="ComentariosNoticias" EntityType="Self.ComentariosNoticias" />
-          <EntitySet Name="Correspondencia" EntityType="Self.Correspondencia" />
+          <EntitySet Name="Correspondencias" EntityType="Self.Correspondencias" />
           <EntitySet Name="Departamentos" EntityType="Self.Departamentos" />
           <EntitySet Name="Gerencias" EntityType="Self.Gerencias" />
           <EntitySet Name="Hijos" EntityType="Self.Hijos" />
+          <EntitySet Name="NombreHijos" EntityType="Self.NombreHijos" />
           <EntitySet Name="Noticias" EntityType="Self.Noticias" />
           <EntitySet Name="Paginas" EntityType="Self.Paginas" />
+          <EntitySet Name="RolesUsuario" EntityType="Self.RolesUsuario" />
           <EntitySet Name="Subgerencias" EntityType="Self.Subgerencias" />
           <EntitySet Name="TiposContrato" EntityType="Self.TiposContrato" />
           <EntitySet Name="Ubicaciones" EntityType="Self.Ubicaciones" />
           <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
-          <AssociationSet Name="FK__Comentari__idNot__38996AB5" Association="Self.FK__Comentari__idNot__38996AB5">
+          <AssociationSet Name="FK__Comentari__idNot__403A8C7D" Association="Self.FK__Comentari__idNot__403A8C7D">
             <End Role="Noticias" EntitySet="Noticias" />
             <End Role="ComentariosNoticias" EntitySet="ComentariosNoticias" />
           </AssociationSet>
-          <AssociationSet Name="FK__Comentari__idUsu__398D8EEE" Association="Self.FK__Comentari__idUsu__398D8EEE">
+          <AssociationSet Name="FK__Comentari__rutUs__412EB0B6" Association="Self.FK__Comentari__rutUs__412EB0B6">
             <End Role="Usuarios" EntitySet="Usuarios" />
             <End Role="ComentariosNoticias" EntitySet="ComentariosNoticias" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Correspon__usuar__440B1D61" Association="Self.FK__Correspon__usuar__440B1D61">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Correspondencias" EntitySet="Correspondencias" />
           </AssociationSet>
           <AssociationSet Name="FK__Departame__idSub__2B3F6F97" Association="Self.FK__Departame__idSub__2B3F6F97">
             <End Role="Subgerencias" EntitySet="Subgerencias" />
@@ -449,13 +797,49 @@
             <End Role="Departamentos" EntitySet="Departamentos" />
             <End Role="Ubicaciones" EntitySet="Ubicaciones" />
           </AssociationSet>
+          <AssociationSet Name="FK__Usuarios__idDepa__46E78A0C" Association="Self.FK__Usuarios__idDepa__46E78A0C">
+            <End Role="Departamentos" EntitySet="Departamentos" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
           <AssociationSet Name="FK__Subgerenc__idGer__286302EC" Association="Self.FK__Subgerenc__idGer__286302EC">
             <End Role="Gerencias" EntitySet="Gerencias" />
             <End Role="Subgerencias" EntitySet="Subgerencias" />
           </AssociationSet>
-          <AssociationSet Name="FK__Hijos__idUsuario__49C3F6B7" Association="Self.FK__Hijos__idUsuario__49C3F6B7">
+          <AssociationSet Name="FK__Usuarios__idGere__44FF419A" Association="Self.FK__Usuarios__idGere__44FF419A">
+            <End Role="Gerencias" EntitySet="Gerencias" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Hijos__rutUsuari__34C8D9D1" Association="Self.FK__Hijos__rutUsuari__34C8D9D1">
             <End Role="Usuarios" EntitySet="Usuarios" />
             <End Role="Hijos" EntitySet="Hijos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__NombreHij__idHij__37A5467C" Association="Self.FK__NombreHij__idHij__37A5467C">
+            <End Role="Hijos" EntitySet="Hijos" />
+            <End Role="NombreHijos" EntitySet="NombreHijos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Noticias__usuari__3A81B327" Association="Self.FK__Noticias__usuari__3A81B327">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Noticias" EntitySet="Noticias" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Paginas__usuario__3D5E1FD2" Association="Self.FK__Paginas__usuario__3D5E1FD2">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Paginas" EntitySet="Paginas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Usuarios__idRolU__48CFD27E" Association="Self.FK__Usuarios__idRolU__48CFD27E">
+            <End Role="RolesUsuario" EntitySet="RolesUsuario" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Usuarios__idSubg__45F365D3" Association="Self.FK__Usuarios__idSubg__45F365D3">
+            <End Role="Subgerencias" EntitySet="Subgerencias" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Usuarios__idTipo__49C3F6B7" Association="Self.FK__Usuarios__idTipo__49C3F6B7">
+            <End Role="TiposContrato" EntitySet="TiposContrato" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Usuarios__idUbic__47DBAE45" Association="Self.FK__Usuarios__idUbic__47DBAE45">
+            <End Role="Ubicaciones" EntitySet="Ubicaciones" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -469,17 +853,19 @@
               <MappingFragment StoreEntitySet="ComentariosNoticias">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="idNoticia" ColumnName="idNoticia" />
-                <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
-                <ScalarProperty Name="comentario" ColumnName="comentario" />
+                <ScalarProperty Name="rutUsuario" ColumnName="rutUsuario" />
+                <ScalarProperty Name="comentarioTexto" ColumnName="comentarioTexto" />
                 <ScalarProperty Name="fechaComentario" ColumnName="fechaComentario" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Correspondencia">
-            <EntityTypeMapping TypeName="IntranetModel.Correspondencia">
-              <MappingFragment StoreEntitySet="Correspondencia">
+          <EntitySetMapping Name="Correspondencias">
+            <EntityTypeMapping TypeName="IntranetModel.Correspondencias">
+              <MappingFragment StoreEntitySet="Correspondencias">
                 <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="usuario" ColumnName="usuario" />
                 <ScalarProperty Name="nombreArchivo" ColumnName="nombreArchivo" />
+                <ScalarProperty Name="descripcionArchivo" ColumnName="descripcionArchivo" />
                 <ScalarProperty Name="fechaIngreso" ColumnName="fechaIngreso" />
                 <ScalarProperty Name="fechaCierre" ColumnName="fechaCierre" />
               </MappingFragment>
@@ -506,10 +892,17 @@
             <EntityTypeMapping TypeName="IntranetModel.Hijos">
               <MappingFragment StoreEntitySet="Hijos">
                 <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+                <ScalarProperty Name="rutUsuario" ColumnName="rutUsuario" />
                 <ScalarProperty Name="nombre" ColumnName="nombre" />
-                <ScalarProperty Name="apellido" ColumnName="apellido" />
-                <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NombreHijos">
+            <EntityTypeMapping TypeName="IntranetModel.NombreHijos">
+              <MappingFragment StoreEntitySet="NombreHijos">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idHijo" ColumnName="idHijo" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -517,10 +910,13 @@
             <EntityTypeMapping TypeName="IntranetModel.Noticias">
               <MappingFragment StoreEntitySet="Noticias">
                 <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="usuarioAutor" ColumnName="usuarioAutor" />
                 <ScalarProperty Name="titulo" ColumnName="titulo" />
-                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="metaDescripcion" ColumnName="metaDescripcion" />
+                <ScalarProperty Name="contenidoTexto" ColumnName="contenidoTexto" />
                 <ScalarProperty Name="fechaPublicacion" ColumnName="fechaPublicacion" />
-                <ScalarProperty Name="tag" ColumnName="tag" />
+                <ScalarProperty Name="tags" ColumnName="tags" />
+                <ScalarProperty Name="likes" ColumnName="likes" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -528,9 +924,21 @@
             <EntityTypeMapping TypeName="IntranetModel.Paginas">
               <MappingFragment StoreEntitySet="Paginas">
                 <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="usuarioAutor" ColumnName="usuarioAutor" />
                 <ScalarProperty Name="titulo" ColumnName="titulo" />
-                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="metaDescripcion" ColumnName="metaDescripcion" />
+                <ScalarProperty Name="contenidoTexto" ColumnName="contenidoTexto" />
                 <ScalarProperty Name="fechaPublicacion" ColumnName="fechaPublicacion" />
+                <ScalarProperty Name="tags" ColumnName="tags" />
+                <ScalarProperty Name="likes" ColumnName="likes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RolesUsuario">
+            <EntityTypeMapping TypeName="IntranetModel.RolesUsuario">
+              <MappingFragment StoreEntitySet="RolesUsuario">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -568,18 +976,16 @@
                 <ScalarProperty Name="apellido" ColumnName="apellido" />
                 <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
                 <ScalarProperty Name="cargo" ColumnName="cargo" />
-                <ScalarProperty Name="gerencia" ColumnName="gerencia" />
-                <ScalarProperty Name="subgerencia" ColumnName="subgerencia" />
-                <ScalarProperty Name="departamento" ColumnName="departamento" />
-                <ScalarProperty Name="ubicacion" ColumnName="ubicacion" />
+                <ScalarProperty Name="idGerencia" ColumnName="idGerencia" />
+                <ScalarProperty Name="idSubgerencia" ColumnName="idSubgerencia" />
+                <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
+                <ScalarProperty Name="idUbicacion" ColumnName="idUbicacion" />
                 <ScalarProperty Name="jefe" ColumnName="jefe" />
-                <ScalarProperty Name="rolUsuario" ColumnName="rolUsuario" />
-                <ScalarProperty Name="tipoContrato" ColumnName="tipoContrato" />
+                <ScalarProperty Name="idRolUsuario" ColumnName="idRolUsuario" />
+                <ScalarProperty Name="idTipoContrato" ColumnName="idTipoContrato" />
                 <ScalarProperty Name="fechaIngreso" ColumnName="fechaIngreso" />
                 <ScalarProperty Name="email" ColumnName="email" />
                 <ScalarProperty Name="celular" ColumnName="celular" />
-                <ScalarProperty Name="hijo" ColumnName="hijo" />
-                <ScalarProperty Name="nombreHijo" ColumnName="nombreHijo" />
                 <ScalarProperty Name="contraseña" ColumnName="contraseña" />
               </MappingFragment>
             </EntityTypeMapping>

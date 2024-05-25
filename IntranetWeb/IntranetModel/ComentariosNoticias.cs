@@ -16,8 +16,8 @@ namespace IntranetModel
     {
         public int id { get; set; }
         public Nullable<int> idNoticia { get; set; }
-        public string idUsuario { get; set; }
-        public string comentario { get; set; }
+        public string rutUsuario { get; set; }
+        public string comentarioTexto { get; set; }
         public Nullable<System.DateTime> fechaComentario { get; set; }
     
         public virtual Noticias Noticias { get; set; }

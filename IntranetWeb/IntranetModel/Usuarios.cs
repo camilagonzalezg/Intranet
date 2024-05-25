@@ -18,7 +18,10 @@ namespace IntranetModel
         public Usuarios()
         {
             this.ComentariosNoticias = new HashSet<ComentariosNoticias>();
+            this.Correspondencias = new HashSet<Correspondencias>();
             this.Hijos = new HashSet<Hijos>();
+            this.Noticias = new HashSet<Noticias>();
+            this.Paginas = new HashSet<Paginas>();
         }
     
         public string rutUsuario { get; set; }
@@ -26,23 +29,33 @@ namespace IntranetModel
         public string apellido { get; set; }
         public Nullable<System.DateTime> fechaNacimiento { get; set; }
         public string cargo { get; set; }
-        public string gerencia { get; set; }
-        public string subgerencia { get; set; }
-        public string departamento { get; set; }
-        public string ubicacion { get; set; }
+        public Nullable<int> idGerencia { get; set; }
+        public Nullable<int> idSubgerencia { get; set; }
+        public Nullable<int> idDepartamento { get; set; }
+        public Nullable<int> idUbicacion { get; set; }
         public string jefe { get; set; }
-        public string rolUsuario { get; set; }
-        public string tipoContrato { get; set; }
+        public Nullable<int> idRolUsuario { get; set; }
+        public Nullable<int> idTipoContrato { get; set; }
         public Nullable<System.DateTime> fechaIngreso { get; set; }
         public string email { get; set; }
         public Nullable<int> celular { get; set; }
-        public Nullable<int> hijo { get; set; }
-        public string nombreHijo { get; set; }
         public string contraseña { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ComentariosNoticias> ComentariosNoticias { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Correspondencias> Correspondencias { get; set; }
+        public virtual Departamentos Departamentos { get; set; }
+        public virtual Gerencias Gerencias { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Hijos> Hijos { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Noticias> Noticias { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Paginas> Paginas { get; set; }
+        public virtual RolesUsuario RolesUsuario { get; set; }
+        public virtual Subgerencias Subgerencias { get; set; }
+        public virtual TiposContrato TiposContrato { get; set; }
+        public virtual Ubicaciones Ubicaciones { get; set; }
     }
 }

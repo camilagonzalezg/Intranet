@@ -21,12 +21,16 @@ namespace IntranetModel
         }
     
         public int id { get; set; }
+        public string usuarioAutor { get; set; }
         public string titulo { get; set; }
-        public string descripcion { get; set; }
+        public string metaDescripcion { get; set; }
+        public string contenidoTexto { get; set; }
         public Nullable<System.DateTime> fechaPublicacion { get; set; }
-        public string tag { get; set; }
+        public string tags { get; set; }
+        public Nullable<int> likes { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ComentariosNoticias> ComentariosNoticias { get; set; }
+        public virtual Usuarios Usuarios { get; set; }
     }
 }

@@ -18,6 +18,7 @@ namespace IntranetModel
         public Gerencias()
         {
             this.Subgerencias = new HashSet<Subgerencias>();
+            this.Usuarios = new HashSet<Usuarios>();
         }
     
         public int id { get; set; }
@@ -25,5 +26,7 @@ namespace IntranetModel
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Subgerencias> Subgerencias { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Usuarios> Usuarios { get; set; }
     }
 }

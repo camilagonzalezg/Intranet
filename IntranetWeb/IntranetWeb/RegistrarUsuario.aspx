@@ -124,9 +124,6 @@
                             <div class="col-md-4">
                                 <label class="form-label" for="RolUsuarioDdl">Rol de usuario</label>
                                 <asp:DropDownList runat="server" ID="RolUsuarioDdl" CssClass="form-select">
-                                    <asp:ListItem Value="1" Text="Colaborador"></asp:ListItem>
-                                    <asp:ListItem Value="2" Text="Gerencia"></asp:ListItem>
-                                    <asp:ListItem Value="3" Text="Administrador"></asp:ListItem>
                                 </asp:DropDownList>
                             </div>
                             <div class="col-md-4">

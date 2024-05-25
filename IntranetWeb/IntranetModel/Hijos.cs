@@ -14,12 +14,18 @@ namespace IntranetModel
     
     public partial class Hijos
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Hijos()
+        {
+            this.NombreHijos = new HashSet<NombreHijos>();
+        }
+    
         public int id { get; set; }
-        public string idUsuario { get; set; }
+        public string rutUsuario { get; set; }
         public string nombre { get; set; }
-        public string apellido { get; set; }
-        public Nullable<System.DateTime> fechaNacimiento { get; set; }
     
         public virtual Usuarios Usuarios { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<NombreHijos> NombreHijos { get; set; }
     }
 }
