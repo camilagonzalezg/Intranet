@@ -10,6 +10,7 @@ namespace IntranetModel
         private Subgerencias _subgerenciaEntity;
         private Departamentos _departamentoEntity;
         private Ubicaciones _ubicacionEntity;
+        private RolesUsuario _rolesUsuarioEntity;
 
         private void LoadRelatedEntities()
         {
@@ -38,6 +39,11 @@ namespace IntranetModel
                 if (this.idUbicacion.HasValue)
                 {
                     _ubicacionEntity = db.Ubicaciones.FirstOrDefault(u => u.id == this.idUbicacion.Value);
+                }
+
+                if (this.idRolUsuario.HasValue)
+                {
+                    _rolesUsuarioEntity = db.RolesUsuario.FirstOrDefault(r => r.id == this.idRolUsuario.Value);
                 }
             }
         }
@@ -106,133 +112,30 @@ namespace IntranetModel
         {
             get
             {
-                switch (this.idRolUsuario)
+                if (_rolesUsuarioEntity == null)
                 {
-                    case 1:
-                        return "Colaborador";
-                    case 2:
-                        return "Gerencia";
-                    case 3:
-                        return "Administrador";
-                    default:
-                        return "N/A";
+                    LoadRelatedEntities();
                 }
+                return _rolesUsuarioEntity != null ? _rolesUsuarioEntity.nombre : "N/A";
             }
         }
+
+        //public string RolUsuarioNombre
+        //{
+        //    get
+        //    {
+        //        switch (this.idRolUsuario)
+        //        {
+        //            case 1:
+        //                return "Colaborador";
+        //            case 2:
+        //                return "Gerencia";
+        //            case 3:
+        //                return "Administrador";
+        //            default:
+        //                return "N/A";
+        //        }
+        //    }
+        //}
     }
 }
-
-
-
-
-//using System.Linq;
-
-//namespace IntranetModel
-//{
-//    public partial class Usuarios
-//    {
-//        public string TipoContratoNombre
-//        {
-//            get
-//            {
-//                using (var db = new IntranetEntities())
-//                {
-//                    int tipoContratoId;
-//                    if (int.TryParse(this.tipoContrato, out tipoContratoId))
-//                    {
-//                        var tipoContrato = db.TiposContrato.FirstOrDefault(tc => tc.id == tipoContratoId);
-//                        return tipoContrato != null ? tipoContrato.nombre : "N/A";
-//                    }
-//                    return "N/A";
-//                }
-//            }
-//        }
-
-//        public string GerenciaNombre
-//        {
-//            get
-//            {
-//                using (var db = new IntranetEntities())
-//                {
-//                    int gerenciaId;
-//                    if (int.TryParse(this.gerencia, out gerenciaId))
-//                    {
-//                        var gerencia = db.Gerencias.FirstOrDefault(g => g.id == gerenciaId);
-//                        return gerencia != null ? gerencia.nombre : "N/A";
-//                    }
-//                    return "N/A";
-//                }
-//            }
-//        }
-
-//        public string SubgerenciaNombre
-//        {
-//            get
-//            {
-//                using (var db = new IntranetEntities())
-//                {
-//                    int subgerenciaId;
-//                    if (int.TryParse(this.subgerencia, out subgerenciaId))
-//                    {
-//                        var subgerencia = db.Subgerencias.FirstOrDefault(sg => sg.id == subgerenciaId);
-//                        return subgerencia != null ? subgerencia.nombre : "N/A";
-//                    }
-//                    return "N/A";
-//                }
-//            }
-//        }
-
-//        public string DepartamentoNombre
-//        {
-//            get
-//            {
-//                using (var db = new IntranetEntities())
-//                {
-//                    int departamentoId;
-//                    if (int.TryParse(this.departamento, out departamentoId))
-//                    {
-//                        var departamento = db.Departamentos.FirstOrDefault(d => d.id == departamentoId);
-//                        return departamento != null ? departamento.nombre : "N/A";
-//                    }
-//                    return "N/A";
-//                }
-//            }
-//        }
-
-//        public string UbicacionNombre
-//        {
-//            get
-//            {
-//                using (var db = new IntranetEntities())
-//                {
-//                    int ubicacionId;
-//                    if (int.TryParse(this.ubicacion, out ubicacionId))
-//                    {
-//                        var ubicacion = db.Ubicaciones.FirstOrDefault(u => u.id == ubicacionId);
-//                        return ubicacion != null ? ubicacion.nombre : "N/A";
-//                    }
-//                    return "N/A";
-//                }
-//            }
-//        }
-
-//        public string RolUsuarioNombre
-//        {
-//            get
-//            {
-//                switch (this.rolUsuario)
-//                {
-//                    case "1":
-//                        return "Colaborador";
-//                    case "2":
-//                        return "Gerencia";
-//                    case "3":
-//                        return "Administrador";
-//                    default:
-//                        return "N/A";
-//                }
-//            }
-//        }
-//    }
-//}
-

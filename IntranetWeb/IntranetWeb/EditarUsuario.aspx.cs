@@ -178,12 +178,17 @@ namespace IntranetWeb
 
         protected void VerCalendarioBtn_Click(object sender, EventArgs e)
         {
+            // Mostrar o ocultar calendario
             FechaNacimientoDt.Visible = !FechaNacimientoDt.Visible;
+
+            //Que calendario flote
+            FechaNacimientoDt.Attributes.Add("style", "position:absolute");
         }
 
         protected void FechaNacimientoDt_SelectionChanged(object sender, EventArgs e)
         {
             FechaSeleccionadaTxt.Text = FechaNacimientoDt.SelectedDate.ToShortDateString();
+            FechaNacimientoDt.Visible = false;
         }
 
         protected void FechaNacimientoDt_DayRender(object sender, DayRenderEventArgs e)
@@ -196,12 +201,17 @@ namespace IntranetWeb
 
         protected void VerCalendarioIngresoBtn_Click(object sender, EventArgs e)
         {
+            // Mostrar o ocultar calendario
             FechaIngresoDt.Visible = !FechaIngresoDt.Visible;
+
+            //Que calendario flote
+            FechaIngresoDt.Attributes.Add("style", "position:absolute");
         }
 
         protected void FechaIngresoDt_SelectionChanged(object sender, EventArgs e)
         {
             FechaSeleccionadaIngresoTxt.Text = FechaIngresoDt.SelectedDate.ToShortDateString();
+            FechaIngresoDt.Visible = false;
         }
 
         protected void FechaIngresoDt_DayRender(object sender, DayRenderEventArgs e)
