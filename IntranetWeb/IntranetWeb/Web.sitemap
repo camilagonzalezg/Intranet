@@ -1,7 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
-  <siteMapNode url="Default.aspx" title="Home"  description="">
-    <siteMapNode url="RegistrarUsuario.aspx" title="Registrar Usuario"  description="" />
-    <siteMapNode url="" title=""  description="" />
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+  <siteMapNode url="Default.aspx" title="Home" description="">
+    <siteMapNode url="Usuarios.aspx" title="Usuarios">
+      <siteMapNode url="RegistrarUsuarios.aspx" title="Registrar Usuarios"/>
+      <siteMapNode url="VerUsuarios.aspx" title="Ver Usuarios"/>
+    </siteMapNode>
+    <siteMapNode url="Noticias.aspx" title="Noticias">
+      <siteMapNode url="RegistrarNoticias.aspx" title="Registrar Noticias"/>
+      <siteMapNode url="VerNoticias.aspx" title="Ver Noticias"/>
+    </siteMapNode>
+    <siteMapNode url="Paginas.aspx" title="Páginas">
+      <siteMapNode url="RegistrarPaginas.aspx" title="Registrar Páginas"/>
+      <siteMapNode url="VerPaginas.aspx" title="Ver Páginas"/>
+    </siteMapNode>
+    <siteMapNode url="Correspondencia.aspx" title="Correspondencia">
+      <siteMapNode url="RegistrarCorrespondencia.aspx" title="Registrar Correspondencia"/>
+      <siteMapNode url="VerCorrespondencia.aspx" title="Ver Correspondencia"/>
+    </siteMapNode>
+    <siteMapNode url="Cultura.aspx" title="Cultura">
+      <siteMapNode url="RegistrarCultura.aspx" title="Registrar datos Cultura"/>
+      <siteMapNode url="VerCultura.aspx" title="Ver datos Cultura"/>
+    </siteMapNode>
   </siteMapNode>
 </siteMap>

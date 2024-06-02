@@ -155,6 +155,7 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
+    <Compile Include="Validador.cs" />
     <Compile Include="VerNoticias.aspx.cs">
       <DependentUpon>VerNoticias.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

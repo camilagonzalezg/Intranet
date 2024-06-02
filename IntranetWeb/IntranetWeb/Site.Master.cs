@@ -44,11 +44,11 @@ namespace IntranetWeb
         {
             navMenu.InnerHtml = @"
                 <li class='nav-item'><a class='nav-link' href='Default.aspx'>Home</a></li>
-                <li class='nav-item'><a class='nav-link' href='Usuarios.aspx'>Usuarios</a></li>
-                <li class='nav-item'><a class='nav-link' href='Noticias.aspx'>Noticias</a></li>
-                <li class='nav-item'><a class='nav-link' href='Paginas.aspx'>Páginas</a></li>
-                <li class='nav-item'><a class='nav-link' href='Correspondencia.aspx'>Correspondencia</a></li>
-                <li class='nav-item'><a class='nav-link' href='Cultura.aspx'>Cultura</a></li>";
+                <li class='nav-item'><a class='nav-link' href='VerUsuarios.aspx'>Usuarios</a></li>
+                <li class='nav-item'><a class='nav-link' href='VerNoticias.aspx'>Noticias</a></li>
+                <li class='nav-item'><a class='nav-link' href='VerPaginas.aspx'>Páginas</a></li>
+                <li class='nav-item'><a class='nav-link' href='VerCorrespondencia.aspx'>Correspondencia</a></li>
+                <li class='nav-item'><a class='nav-link' href='VerCultura.aspx'>Cultura</a></li>";
         }
 
         private void SetMenuColaborador()
@@ -66,7 +66,7 @@ namespace IntranetWeb
                 <li class='nav-item'><a class='nav-link' href='Default.aspx'>Home</a></li>
                 <li class='nav-item'><a class='nav-link' href='NuestraEmpresa.aspx'>Nuestra empresa</a></li>
                 <li class='nav-item'><a class='nav-link' href='Novedades.aspx'>Novedades</a></li>
-                <li class='nav-item'><a class='nav-link' href='VerCorrespondencia.aspx'>Ver correspondencia</a></li>";
+                <li class='nav-item'><a class='nav-link' href='VerCorrespondencia.aspx'>Correspondencia</a></li>";
         }
 
         private void SetMenuRRHH()
