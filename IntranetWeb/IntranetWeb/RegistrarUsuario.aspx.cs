@@ -167,7 +167,7 @@ namespace IntranetWeb
 
             //Se evalúa si estado es "correcto" o "incorrecto"
             if (objValida.xEstado != "Correcto")
-            {           
+            {
                 RutCV.ErrorMessage = "Rut incorrecto.";
                 args.IsValid = false;
             }
