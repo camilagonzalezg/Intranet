@@ -51,58 +51,22 @@ namespace IntranetWeb
         protected global::System.Web.UI.WebControls.CustomValidator RutCV;
 
         /// <summary>
-        /// Control FechaSeleccionadaTxt.
+        /// Control FechaNacimientoTxt.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FechaSeleccionadaTxt;
+        protected global::System.Web.UI.WebControls.TextBox FechaNacimientoTxt;
 
         /// <summary>
-        /// Control VerCalendarioBtn.
+        /// Control FechaIngresoTxt.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button VerCalendarioBtn;
-
-        /// <summary>
-        /// Control FechaNacimientoDt.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar FechaNacimientoDt;
-
-        /// <summary>
-        /// Control FechaSeleccionadaIngresoTxt.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FechaSeleccionadaIngresoTxt;
-
-        /// <summary>
-        /// Control VerCalendarioIngresoBtn.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button VerCalendarioIngresoBtn;
-
-        /// <summary>
-        /// Control FechaIngresoDt.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar FechaIngresoDt;
+        protected global::System.Web.UI.WebControls.TextBox FechaIngresoTxt;
 
         /// <summary>
         /// Control CargoTxt.

@@ -40,59 +40,16 @@
 
                         </div>
 
-                        <!-- Fecha nacimiento, fecha ingreso -->
+                        <!-- Fecha nacimiento, fecha ingreso, Cargo -->
                         <div class="row mb-4">
-                            <div class="col-md-3">
-                                <label class="form-label" for="FechaNacimientoDt">Fecha Nacimiento</label>
-                                <asp:TextBox ID="FechaSeleccionadaTxt" runat="server" CssClass="form-control"></asp:TextBox>
+                            <div class="col-md-4">
+                                <label class="form-label" for="FechaNacimientoTxt">Fecha Nacimiento</label>
+                                <asp:TextBox ID="FechaNacimientoTxt" runat="server" TextMode="Date" CssClass="form-control"></asp:TextBox>
                             </div>
-                            <div class="col-md-3">
-                                <asp:Button ID="VerCalendarioBtn" runat="server" Text="Ingresar fecha"
-                                    CssClass="btn btn-primary btn-block mb-4" OnClick="VerCalendarioBtn_Click"
-                                    CausesValidation="false" />
-                           
-                            <asp:Calendar runat="server" ID="FechaNacimientoDt"
-                                CssClass="form-select" OnSelectionChanged="FechaNacimientoDt_SelectionChanged"
-                                OnDayRender="FechaNacimientoDt_DayRender" BackColor="White"
-                                BorderColor="#3366CC" CellPadding="1" DayNameFormat="Shortest"
-                                Font-Names="Verdana" Font-Size="8pt" ForeColor="#003399"
-                                Height="200px" Width="220px" BorderWidth="1px">
-                                <DayHeaderStyle BackColor="#99CCCC" ForeColor="#336666" Height="1px" />
-                                <NextPrevStyle Font-Size="8pt" ForeColor="#CCCCFF" />
-                                <OtherMonthDayStyle ForeColor="#999999" />
-                                <SelectedDayStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
-                                <SelectorStyle BackColor="#99CCCC" ForeColor="#336666" />
-                                <TitleStyle BackColor="#003399" BorderColor="#3366CC" Font-Bold="True" BorderWidth="1px" Font-Size="10pt" ForeColor="#CCCCFF" Height="25px" />
-                                <TodayDayStyle BackColor="#99CCCC" ForeColor="White" />
-                                <WeekendDayStyle BackColor="#CCCCFF" />
-                            </asp:Calendar>
-                                 </div>
-                            <div class="col-md-3">
-                                <label class="form-label" for="FechaIngresoDt">Fecha Ingreso trabajador</label>
-                                <asp:TextBox ID="FechaSeleccionadaIngresoTxt" runat="server" CssClass="form-control"></asp:TextBox>
+                            <div class="col-md-4">
+                                <label class="form-label" for="FechaIngresoTxt">Fecha Ingreso trabajador</label>
+                                <asp:TextBox ID="FechaIngresoTxt" runat="server" TextMode="Date" CssClass="form-control"></asp:TextBox>
                             </div>
-                            <div class="col-md-3">
-                                <asp:Button ID="VerCalendarioIngresoBtn" runat="server" Text="Ingresar fecha"
-                                    CssClass="btn btn-primary btn-block mb-4" OnClick="VerCalendarioIngresoBtn_Click"
-                                    CausesValidation="false" />
-                            
-                            <asp:Calendar runat="server" ID="FechaIngresoDt" CssClass="form-select"
-                                OnSelectionChanged="FechaIngresoDt_SelectionChanged"
-                                OnDayRender="FechaIngresoDt_DayRender" BackColor="White" BorderColor="#3366CC" CellPadding="1" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="#003399" Height="200px" Width="220px" BorderWidth="1px">
-                                <DayHeaderStyle BackColor="#99CCCC" ForeColor="#336666" Height="1px" />
-                                <NextPrevStyle Font-Size="8pt" ForeColor="#CCCCFF" />
-                                <OtherMonthDayStyle ForeColor="#999999" />
-                                <SelectedDayStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
-                                <SelectorStyle BackColor="#99CCCC" ForeColor="#336666" />
-                                <TitleStyle BackColor="#003399" BorderColor="#3366CC" Font-Bold="True" BorderWidth="1px" Font-Size="10pt" ForeColor="#CCCCFF" Height="25px" />
-                                <TodayDayStyle BackColor="#99CCCC" ForeColor="White" />
-                                <WeekendDayStyle BackColor="#CCCCFF" />
-                            </asp:Calendar>
-                                </div>
-                        </div>
-
-                        <!-- Cargo, Gerencia y subgerencia -->
-                        <div class="row mb-4">
                             <div class="col-md-4">
                                 <label class="form-label" for="CargoTxt">Cargo</label>
                                 <asp:TextBox ID="CargoTxt" runat="server" CssClass="form-control"></asp:TextBox>
@@ -100,6 +57,11 @@
                                     ControlToValidate="CargoTxt" CssClass="text-danger">
                                 </asp:RequiredFieldValidator>
                             </div>
+                        </div>
+
+                        <!-- Gerencia, subgerencia y departamento -->
+                        <div class="row mb-4">
+
                             <div class="col-md-4">
                                 <label class="form-label" for="GerenciaDdl">Gerencia</label>
                                 <asp:DropDownList runat="server" ID="GerenciaDdl" CssClass="form-select"
@@ -112,16 +74,17 @@
                                     AutoPostBack="true" OnSelectedIndexChanged="SubgerenciaDdl_SelectedIndexChanged">
                                 </asp:DropDownList>
                             </div>
-                        </div>
-
-                        <!-- Departamento, ubicacion y jefe -->
-                        <div class="row mb-4">
                             <div class="col-md-4">
                                 <label class="form-label" for="DepartamentoDdl">Departamento</label>
                                 <asp:DropDownList runat="server" ID="DepartamentoDdl" CssClass="form-select"
                                     AutoPostBack="true" OnSelectedIndexChanged="DepartamentoDdl_SelectedIndexChanged">
                                 </asp:DropDownList>
                             </div>
+                        </div>
+
+                        <!-- Ubicacion, jefe y tipo contrato -->
+                        <div class="row mb-4">
+
                             <div class="col-md-4">
                                 <label class="form-label" for="UbicaciónDdl">Ubicación</label>
                                 <asp:DropDownList runat="server" ID="UbicaciónDdl" CssClass="form-select">
@@ -134,16 +97,16 @@
                                     ControlToValidate="JefeTxt" CssClass="text-danger">
                                 </asp:RequiredFieldValidator>
                             </div>
-
-                        </div>
-
-                        <!-- Tipo contrato, rol usuario, email -->
-                        <div class="row mb-4">
                             <div class="col-md-4">
                                 <label class="form-label" for="ContratoDdl">Tipo contrato</label>
                                 <asp:DropDownList runat="server" ID="ContratoDdl" CssClass="form-select">
                                 </asp:DropDownList>
                             </div>
+                        </div>
+
+                        <!-- Rol usuario, email y celular -->
+                        <div class="row mb-4">
+
                             <div class="col-md-4">
                                 <label class="form-label" for="RolUsuarioDdl">Rol de usuario</label>
                                 <asp:DropDownList runat="server" ID="RolUsuarioDdl" CssClass="form-select">
@@ -156,10 +119,6 @@
                                     ControlToValidate="EmailTxt" CssClass="text-danger">
                                 </asp:RequiredFieldValidator>
                             </div>
-                        </div>
-
-                        <!-- Celular input -->
-                        <div class="mb-4">
                             <div class="col-md-4">
                                 <label class="form-label" for="CelularTxt">Celular</label>
                                 <asp:TextBox ID="CelularTxt" runat="server" CssClass="form-control"></asp:TextBox>

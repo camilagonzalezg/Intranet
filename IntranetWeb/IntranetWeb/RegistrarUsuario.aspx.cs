@@ -9,18 +9,14 @@ namespace IntranetWeb
     public partial class RegistrarUsuario : System.Web.UI.Page
     {
         // Variable para indicar si ya se deshabilitó la selección de días futuros
-        private bool diasFuturosDeshabilitados = false;
+
         private IntranetEntities db = new IntranetEntities();
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                FechaNacimientoDt.Visible = false;
-                FechaIngresoDt.Visible = false;
-
                 CargarDatos();
-                diasFuturosDeshabilitados = false;
             }
         }
 
@@ -92,24 +88,6 @@ namespace IntranetWeb
             UbicaciónDdl.Items.Insert(0, new ListItem("Elija una Ubicación", ""));
         }
 
-        protected void VerCalendarioBtn_Click(object sender, EventArgs e)
-        {
-            // Mostrar o ocultar calendario
-            FechaNacimientoDt.Visible = !FechaNacimientoDt.Visible;
-
-            //Que calendario flote
-            FechaNacimientoDt.Attributes.Add("style", "position:absolute");
-        }
-
-        protected void VerCalendarioIngresoBtn_Click(object sender, EventArgs e)
-        {
-            // Mostrar o ocultar calendario
-            FechaIngresoDt.Visible = !FechaIngresoDt.Visible;
-
-            //Que calendario flote
-            FechaIngresoDt.Attributes.Add("style", "position:absolute");
-        }
-
         protected void GuardarUsuarioBtn_Click(object sender, EventArgs e)
         {
             if (Page.IsValid)
@@ -120,7 +98,7 @@ namespace IntranetWeb
                     {
                         nombre = NombreTxt.Text,
                         apellido = ApellidoTxt.Text,
-                        fechaNacimiento = FechaNacimientoDt.SelectedDate,
+                        fechaNacimiento = DateTime.Parse(FechaNacimientoTxt.Text),
                         rutUsuario = RutTxt.Text,
                         cargo = CargoTxt.Text,
                         idGerencia = string.IsNullOrEmpty(GerenciaDdl.SelectedValue) ? (int?)null : int.Parse(GerenciaDdl.SelectedValue),
@@ -130,7 +108,7 @@ namespace IntranetWeb
                         jefe = JefeTxt.Text,
                         idRolUsuario = string.IsNullOrEmpty(RolUsuarioDdl.SelectedValue) ? (int?)null : int.Parse(RolUsuarioDdl.SelectedValue),
                         idTipoContrato = string.IsNullOrEmpty(ContratoDdl.SelectedValue) ? (int?)null : int.Parse(ContratoDdl.SelectedValue),
-                        fechaIngreso = FechaIngresoDt.SelectedDate,
+                        fechaIngreso = DateTime.Parse(FechaIngresoTxt.Text),
                         email = EmailTxt.Text,
                         celular = string.IsNullOrEmpty(CelularTxt.Text) ? (int?)null : int.Parse(CelularTxt.Text),
                         contraseña = GenerarContraseña()
@@ -139,7 +117,6 @@ namespace IntranetWeb
                     db.Usuarios.Add(nuevoUsuario);
                     db.SaveChanges();
 
-                    diasFuturosDeshabilitados = true;
                     Response.Redirect("VerUsuarios.aspx?mensaje=AgregadoExitosamente");
                 }
                 else
@@ -173,36 +150,7 @@ namespace IntranetWeb
             }
         }
 
-        protected void FechaNacimientoDt_SelectionChanged(object sender, EventArgs e)
-        {
-            FechaSeleccionadaTxt.Text = FechaNacimientoDt.SelectedDate.ToShortDateString();
-            FechaNacimientoDt.Visible = false;
-        }
-
-        protected void FechaNacimientoDt_DayRender(object sender, DayRenderEventArgs e)
-        {
-            // Solo deshabilitar días futuros si la bandera indica que aún no se ha hecho
-            if (!diasFuturosDeshabilitados && e.Day.Date > DateTime.Today)
-            {
-                e.Day.IsSelectable = false; // Deshabilitar la selección de días futuros
-            }
-        }
-
-        protected void FechaIngresoDt_SelectionChanged(object sender, EventArgs e)
-        {
-            FechaSeleccionadaIngresoTxt.Text = FechaIngresoDt.SelectedDate.ToShortDateString();
-            FechaIngresoDt.Visible = false;
-        }
-
-        protected void FechaIngresoDt_DayRender(object sender, DayRenderEventArgs e)
-        {
-            if (e.Day.Date > DateTime.Today)
-            {
-                e.Day.IsSelectable = false; // Deshabilitar la selección de días futuros
-            }
-        }
-
-        // Método para generar una contraseña aleatoria de 6 caracteres
+       // Método para generar una contraseña aleatoria de 6 caracteres
         private string GenerarContraseña()
         {
             const string caracteresPermitidos = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";

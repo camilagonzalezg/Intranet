@@ -10,17 +10,12 @@ namespace IntranetWeb
     {
         private IntranetEntities db = new IntranetEntities();
         private string rutUsuarioEditar;
-        private bool diasFuturosDeshabilitados = false;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                FechaNacimientoDt.Visible = false;
-                FechaIngresoDt.Visible = false;
-
                 CargarDatos();
-                diasFuturosDeshabilitados = false;
 
                 if (!string.IsNullOrEmpty(Request.QueryString["rut"]))
                 {
@@ -36,19 +31,29 @@ namespace IntranetWeb
 
         private void CargarDatos()
         {
-            var contratos = db.TiposContrato.Select(tc => new { tc.id, tc.nombre }).ToList();
-            ContratoDdl.DataSource = contratos;
-            ContratoDdl.DataTextField = "nombre";
-            ContratoDdl.DataValueField = "id";
-            ContratoDdl.DataBind();
-            ContratoDdl.Items.Insert(0, new ListItem("Elija un Tipo de Contrato", ""));
-
-            var gerencias = db.Gerencias.Select(g => new { g.id, g.nombre }).ToList();
+            // Cargar Gerencias
+            var gerencias = db.Gerencias.ToList();
             GerenciaDdl.DataSource = gerencias;
             GerenciaDdl.DataTextField = "nombre";
             GerenciaDdl.DataValueField = "id";
             GerenciaDdl.DataBind();
             GerenciaDdl.Items.Insert(0, new ListItem("Elija una Gerencia", ""));
+
+            // Cargar Tipos de Contrato
+            var tiposContrato = db.TiposContrato.ToList();
+            ContratoDdl.DataSource = tiposContrato;
+            ContratoDdl.DataTextField = "nombre";
+            ContratoDdl.DataValueField = "id";
+            ContratoDdl.DataBind();
+            ContratoDdl.Items.Insert(0, new ListItem("Elija un Tipo de Contrato", ""));
+
+            // Cargar Roles de Usuario
+            var rolesUsuario = db.RolesUsuario.ToList();
+            RolUsuarioDdl.DataSource = rolesUsuario;
+            RolUsuarioDdl.DataTextField = "nombre";
+            RolUsuarioDdl.DataValueField = "id";
+            RolUsuarioDdl.DataBind();
+            RolUsuarioDdl.Items.Insert(0, new ListItem("Elija un Rol de Usuario", ""));
 
             // Inicialmente cargar todas las Subgerencias, Departamentos y Ubicaciones
             CargarSubgerencias();
@@ -101,7 +106,7 @@ namespace IntranetWeb
                 NombreTxt.Text = usuario.nombre;
                 ApellidoTxt.Text = usuario.apellido;
                 RutTxt.Text = usuario.rutUsuario;
-                FechaSeleccionadaTxt.Text = usuario.fechaNacimiento?.ToShortDateString();
+                FechaNacimientoTxt.Text = usuario.fechaNacimiento?.ToString("yyyy-MM-dd");
                 CargoTxt.Text = usuario.cargo;
                 GerenciaDdl.SelectedValue = usuario.idGerencia.HasValue ? usuario.idGerencia.Value.ToString() : "";
                 CargarSubgerencias(usuario.idGerencia);
@@ -111,7 +116,7 @@ namespace IntranetWeb
                 CargarUbicaciones(usuario.idDepartamento);
                 UbicaciónDdl.SelectedValue = usuario.idUbicacion.HasValue ? usuario.idUbicacion.Value.ToString() : "";
                 JefeTxt.Text = usuario.jefe;
-                FechaSeleccionadaIngresoTxt.Text = usuario.fechaIngreso?.ToShortDateString();
+                FechaIngresoTxt.Text = usuario.fechaIngreso?.ToString("yyyy-MM-dd");
                 ContratoDdl.SelectedValue = usuario.idTipoContrato.HasValue ? usuario.idTipoContrato.Value.ToString() : "";
                 RolUsuarioDdl.SelectedValue = usuario.idRolUsuario.HasValue ? usuario.idRolUsuario.Value.ToString() : "";
                 EmailTxt.Text = usuario.email;
@@ -131,14 +136,14 @@ namespace IntranetWeb
                 string nombre = NombreTxt.Text;
                 string apellido = ApellidoTxt.Text;
                 string rut = RutTxt.Text;
-                DateTime fechaNacimiento = Convert.ToDateTime(FechaSeleccionadaTxt.Text);
+                DateTime fechaNacimiento = Convert.ToDateTime(FechaNacimientoTxt.Text);
                 string cargo = CargoTxt.Text;
                 int? idGerencia = string.IsNullOrEmpty(GerenciaDdl.SelectedValue) ? (int?)null : int.Parse(GerenciaDdl.SelectedValue);
                 int? idSubgerencia = string.IsNullOrEmpty(SubgerenciaDdl.SelectedValue) ? (int?)null : int.Parse(SubgerenciaDdl.SelectedValue);
                 int? idDepartamento = string.IsNullOrEmpty(DepartamentoDdl.SelectedValue) ? (int?)null : int.Parse(DepartamentoDdl.SelectedValue);
                 int? idUbicacion = string.IsNullOrEmpty(UbicaciónDdl.SelectedValue) ? (int?)null : int.Parse(UbicaciónDdl.SelectedValue);
                 string jefe = JefeTxt.Text;
-                DateTime fechaIngreso = Convert.ToDateTime(FechaSeleccionadaIngresoTxt.Text);
+                DateTime fechaIngreso = Convert.ToDateTime(FechaIngresoTxt.Text);
                 int? idTipoContrato = string.IsNullOrEmpty(ContratoDdl.SelectedValue) ? (int?)null : int.Parse(ContratoDdl.SelectedValue);
                 int? idRolUsuario = string.IsNullOrEmpty(RolUsuarioDdl.SelectedValue) ? (int?)null : int.Parse(RolUsuarioDdl.SelectedValue);
                 string email = EmailTxt.Text;
@@ -166,59 +171,12 @@ namespace IntranetWeb
 
                     db.SaveChanges();
 
-                    diasFuturosDeshabilitados = true;
                     Response.Redirect("VerUsuarios.aspx?mensaje=ActualizadoExitosamente");
                 }
                 else
                 {
                     Response.Redirect("Error.aspx");
                 }
-            }
-        }
-
-        protected void VerCalendarioBtn_Click(object sender, EventArgs e)
-        {
-            // Mostrar o ocultar calendario
-            FechaNacimientoDt.Visible = !FechaNacimientoDt.Visible;
-
-            //Que calendario flote
-            FechaNacimientoDt.Attributes.Add("style", "position:absolute");
-        }
-
-        protected void FechaNacimientoDt_SelectionChanged(object sender, EventArgs e)
-        {
-            FechaSeleccionadaTxt.Text = FechaNacimientoDt.SelectedDate.ToShortDateString();
-            FechaNacimientoDt.Visible = false;
-        }
-
-        protected void FechaNacimientoDt_DayRender(object sender, DayRenderEventArgs e)
-        {
-            if (!diasFuturosDeshabilitados && e.Day.Date > DateTime.Today)
-            {
-                e.Day.IsSelectable = false;
-            }
-        }
-
-        protected void VerCalendarioIngresoBtn_Click(object sender, EventArgs e)
-        {
-            // Mostrar o ocultar calendario
-            FechaIngresoDt.Visible = !FechaIngresoDt.Visible;
-
-            //Que calendario flote
-            FechaIngresoDt.Attributes.Add("style", "position:absolute");
-        }
-
-        protected void FechaIngresoDt_SelectionChanged(object sender, EventArgs e)
-        {
-            FechaSeleccionadaIngresoTxt.Text = FechaIngresoDt.SelectedDate.ToShortDateString();
-            FechaIngresoDt.Visible = false;
-        }
-
-        protected void FechaIngresoDt_DayRender(object sender, DayRenderEventArgs e)
-        {
-            if (e.Day.Date > DateTime.Today)
-            {
-                e.Day.IsSelectable = false;
             }
         }
 
@@ -269,8 +227,27 @@ namespace IntranetWeb
                 UbicaciónDdl.Items.Insert(0, new ListItem("Elija una Ubicación", ""));
             }
         }
+
+        protected void RutCV_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            //Se crea objeto Validador
+            Validador objValida = new Validador();
+
+            //Entra el dato de rut
+            objValida.ValidaVacio(RutTxt.Text.Trim());
+            objValida.ValidaNumDigVerificador(RutTxt.Text.Trim());
+            objValida.ValidaDigito(RutTxt.Text.Trim());
+
+            //Se evalúa si estado es "correcto" o "incorrecto"
+            if (objValida.xEstado != "Correcto")
+            {
+                RutCV.ErrorMessage = "Rut incorrecto.";
+                args.IsValid = false;
+            }
+        }
     }
 }
+
 
 
 
@@ -379,19 +356,19 @@ namespace IntranetWeb
 //                RutTxt.Text = usuario.rutUsuario;
 //                FechaSeleccionadaTxt.Text = usuario.fechaNacimiento?.ToShortDateString();
 //                CargoTxt.Text = usuario.cargo;
-//                GerenciaDdl.SelectedValue = usuario.gerencia;
-//                CargarSubgerencias(int.Parse(usuario.gerencia));
-//                SubgerenciaDdl.SelectedValue = usuario.subgerencia;
-//                CargarDepartamentos(int.Parse(usuario.subgerencia));
-//                DepartamentoDdl.SelectedValue = usuario.departamento;
-//                CargarUbicaciones(int.Parse(usuario.departamento));
-//                UbicaciónDdl.SelectedValue = usuario.ubicacion;
+//                GerenciaDdl.SelectedValue = usuario.idGerencia.HasValue ? usuario.idGerencia.Value.ToString() : "";
+//                CargarSubgerencias(usuario.idGerencia);
+//                SubgerenciaDdl.SelectedValue = usuario.idSubgerencia.HasValue ? usuario.idSubgerencia.Value.ToString() : "";
+//                CargarDepartamentos(usuario.idSubgerencia);
+//                DepartamentoDdl.SelectedValue = usuario.idDepartamento.HasValue ? usuario.idDepartamento.Value.ToString() : "";
+//                CargarUbicaciones(usuario.idDepartamento);
+//                UbicaciónDdl.SelectedValue = usuario.idUbicacion.HasValue ? usuario.idUbicacion.Value.ToString() : "";
 //                JefeTxt.Text = usuario.jefe;
 //                FechaSeleccionadaIngresoTxt.Text = usuario.fechaIngreso?.ToShortDateString();
-//                ContratoDdl.SelectedValue = usuario.tipoContrato;
-//                RolUsuarioDdl.SelectedValue = usuario.rolUsuario;
+//                ContratoDdl.SelectedValue = usuario.idTipoContrato.HasValue ? usuario.idTipoContrato.Value.ToString() : "";
+//                RolUsuarioDdl.SelectedValue = usuario.idRolUsuario.HasValue ? usuario.idRolUsuario.Value.ToString() : "";
 //                EmailTxt.Text = usuario.email;
-//                CelularTxt.Text = usuario.celular.ToString();
+//                CelularTxt.Text = usuario.celular?.ToString() ?? "";
 //                ContraseñaTxt.Text = usuario.contraseña;
 //            }
 //            else
@@ -409,16 +386,16 @@ namespace IntranetWeb
 //                string rut = RutTxt.Text;
 //                DateTime fechaNacimiento = Convert.ToDateTime(FechaSeleccionadaTxt.Text);
 //                string cargo = CargoTxt.Text;
-//                string gerencia = GerenciaDdl.SelectedValue;
-//                string subgerencia = SubgerenciaDdl.SelectedValue;
-//                string departamento = DepartamentoDdl.SelectedValue;
-//                string ubicacion = UbicaciónDdl.SelectedValue;
+//                int? idGerencia = string.IsNullOrEmpty(GerenciaDdl.SelectedValue) ? (int?)null : int.Parse(GerenciaDdl.SelectedValue);
+//                int? idSubgerencia = string.IsNullOrEmpty(SubgerenciaDdl.SelectedValue) ? (int?)null : int.Parse(SubgerenciaDdl.SelectedValue);
+//                int? idDepartamento = string.IsNullOrEmpty(DepartamentoDdl.SelectedValue) ? (int?)null : int.Parse(DepartamentoDdl.SelectedValue);
+//                int? idUbicacion = string.IsNullOrEmpty(UbicaciónDdl.SelectedValue) ? (int?)null : int.Parse(UbicaciónDdl.SelectedValue);
 //                string jefe = JefeTxt.Text;
 //                DateTime fechaIngreso = Convert.ToDateTime(FechaSeleccionadaIngresoTxt.Text);
-//                string tipoContrato = ContratoDdl.SelectedValue;
-//                string rolUsuario = RolUsuarioDdl.SelectedValue;
+//                int? idTipoContrato = string.IsNullOrEmpty(ContratoDdl.SelectedValue) ? (int?)null : int.Parse(ContratoDdl.SelectedValue);
+//                int? idRolUsuario = string.IsNullOrEmpty(RolUsuarioDdl.SelectedValue) ? (int?)null : int.Parse(RolUsuarioDdl.SelectedValue);
 //                string email = EmailTxt.Text;
-//                int celular = Convert.ToInt32(CelularTxt.Text);
+//                int? celular = string.IsNullOrEmpty(CelularTxt.Text) ? (int?)null : int.Parse(CelularTxt.Text);
 //                string contraseña = ContraseñaTxt.Text;
 
 //                Usuarios usuario = db.Usuarios.SingleOrDefault(u => u.rutUsuario == rut);
@@ -428,14 +405,14 @@ namespace IntranetWeb
 //                    usuario.apellido = apellido;
 //                    usuario.fechaNacimiento = fechaNacimiento;
 //                    usuario.cargo = cargo;
-//                    usuario.gerencia = gerencia;
-//                    usuario.subgerencia = subgerencia;
-//                    usuario.departamento = departamento;
-//                    usuario.ubicacion = ubicacion;
+//                    usuario.idGerencia = idGerencia;
+//                    usuario.idSubgerencia = idSubgerencia;
+//                    usuario.idDepartamento = idDepartamento;
+//                    usuario.idUbicacion = idUbicacion;
 //                    usuario.jefe = jefe;
 //                    usuario.fechaIngreso = fechaIngreso;
-//                    usuario.tipoContrato = tipoContrato;
-//                    usuario.rolUsuario = rolUsuario;
+//                    usuario.idTipoContrato = idTipoContrato;
+//                    usuario.idRolUsuario = idRolUsuario;
 //                    usuario.email = email;
 //                    usuario.celular = celular;
 //                    usuario.contraseña = contraseña;
@@ -454,12 +431,17 @@ namespace IntranetWeb
 
 //        protected void VerCalendarioBtn_Click(object sender, EventArgs e)
 //        {
+//            // Mostrar o ocultar calendario
 //            FechaNacimientoDt.Visible = !FechaNacimientoDt.Visible;
+
+//            //Que calendario flote
+//            FechaNacimientoDt.Attributes.Add("style", "position:absolute");
 //        }
 
 //        protected void FechaNacimientoDt_SelectionChanged(object sender, EventArgs e)
 //        {
 //            FechaSeleccionadaTxt.Text = FechaNacimientoDt.SelectedDate.ToShortDateString();
+//            FechaNacimientoDt.Visible = false;
 //        }
 
 //        protected void FechaNacimientoDt_DayRender(object sender, DayRenderEventArgs e)
@@ -472,12 +454,17 @@ namespace IntranetWeb
 
 //        protected void VerCalendarioIngresoBtn_Click(object sender, EventArgs e)
 //        {
+//            // Mostrar o ocultar calendario
 //            FechaIngresoDt.Visible = !FechaIngresoDt.Visible;
+
+//            //Que calendario flote
+//            FechaIngresoDt.Attributes.Add("style", "position:absolute");
 //        }
 
 //        protected void FechaIngresoDt_SelectionChanged(object sender, EventArgs e)
 //        {
 //            FechaSeleccionadaIngresoTxt.Text = FechaIngresoDt.SelectedDate.ToShortDateString();
+//            FechaIngresoDt.Visible = false;
 //        }
 
 //        protected void FechaIngresoDt_DayRender(object sender, DayRenderEventArgs e)
@@ -537,3 +524,4 @@ namespace IntranetWeb
 //        }
 //    }
 //}
+
