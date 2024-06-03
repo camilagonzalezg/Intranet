@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RegistrarNoticia.aspx.cs" Inherits="IntranetWeb.RegistrarNoticia" ValidateRequest="false" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditarNoticia.aspx.cs" Inherits="IntranetWeb.EditarNoticia" ValidateRequest="false" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!-- Contenido de la página-->
     <section class="py-5">
@@ -6,8 +6,8 @@
             <!-- Inicio formulario-->
             <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
                 <div class="text-center mb-5">
-                    <h1 class="fw-bolder">Ingresar Noticia</h1>
-                    <p class="lead fw-normal text-muted mb-0">Complete todos los campos</p>
+                    <h1 class="fw-bolder">Editar Noticia</h1>
+                    <p class="lead fw-normal text-muted mb-0">Modifique los campos necesarios</p>
                 </div>
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-10 col-xl-8">
@@ -59,9 +59,6 @@
                             <div class="col-md-4">
                                 <label class="form-label" for="ImagenPortadaSlider">Imagen portada slider</label>
                                 <asp:FileUpload ID="ImagenPortadaSlider" runat="server" CssClass="form-control-file" />
-                                <asp:RequiredFieldValidator runat="server" ErrorMessage="Debe seleccionar una imagen"
-                                    ControlToValidate="ImagenPortadaSlider" CssClass="text-danger">
-                                </asp:RequiredFieldValidator>
                             </div>
                         </div>
 
@@ -70,9 +67,6 @@
                             <div class="col-md-4">
                                 <label class="form-label" for="ImagenPortadaCard">Imagen tarjeta noticia</label>
                                 <asp:FileUpload ID="ImagenPortadaCard" runat="server" CssClass="form-control-file" />
-                                <asp:RequiredFieldValidator runat="server" ErrorMessage="Debe seleccionar una imagen"
-                                    ControlToValidate="ImagenPortadaCard" CssClass="text-danger">
-                                </asp:RequiredFieldValidator>
                             </div>
                         </div>
 
@@ -80,7 +74,7 @@
                         <div class="row mb-12">
                             <div class="col-md-12">
                                 <label class="form-label" for="ContenidoNoticiaTxt">Contenido Noticia</label>
-                                <textarea id="ContenidoNoticiaTxt" name="ContenidoNoticiaTxt" class="form-control" rows="20"></textarea>
+                                <asp:TextBox ID="ContenidoNoticiaTxt" TextMode="MultiLine" runat="server" CssClass="form-control" Rows="20"></asp:TextBox>
                             </div>
                         </div>
 
@@ -88,7 +82,7 @@
                         <asp:Label ID="ErrorMessageLabel" runat="server" CssClass="text-danger" Visible="False"></asp:Label>
 
                         <!-- Botón Publicar -->
-                        <asp:Button ID="GuardarNoticiaBtn" runat="server" Text="Ingresar Noticia"
+                        <asp:Button ID="GuardarNoticiaBtn" runat="server" Text="Guardar Cambios"
                             CssClass="btn btn-primary btn-block mb-4"
                             OnClick="GuardarNoticiaBtn_Click" />
                     </div>

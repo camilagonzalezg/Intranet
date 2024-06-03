@@ -119,23 +119,5 @@ namespace IntranetModel
                 return _rolesUsuarioEntity != null ? _rolesUsuarioEntity.nombre : "N/A";
             }
         }
-
-        //public string RolUsuarioNombre
-        //{
-        //    get
-        //    {
-        //        switch (this.idRolUsuario)
-        //        {
-        //            case 1:
-        //                return "Colaborador";
-        //            case 2:
-        //                return "Gerencia";
-        //            case 3:
-        //                return "Administrador";
-        //            default:
-        //                return "N/A";
-        //        }
-        //    }
-        //}
     }
 }

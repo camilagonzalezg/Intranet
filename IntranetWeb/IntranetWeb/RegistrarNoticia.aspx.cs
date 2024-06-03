@@ -1,32 +1,7 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Web;
-//using System.Web.UI;
-//using System.Web.UI.WebControls;
-
-//namespace IntranetWeb
-//{
-//    public partial class RegistrarNoticia : System.Web.UI.Page
-//    {
-//        protected void Page_Load(object sender, EventArgs e)
-//        {
-
-//        }
-
-//        protected void GuardarNoticiaBtn_Click(object sender, EventArgs e)
-//        {
-
-//        }
-//    }
-//}
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
-using AjaxControlToolkit;
+using IntranetModel;
 
 namespace IntranetWeb
 {
@@ -41,19 +16,54 @@ namespace IntranetWeb
         {
             string titulo = TituloTxt.Text;
             string metaDescripcion = MetaDescripcionTxt.Text;
-            string fechaPublicacion = FechaPublicacionInput.Text;
+            string fechaPublicacionStr = FechaPublicacionInput.Text;
             string tags = TagsRadioList.SelectedValue;
             string contenidoNoticia = Request.Form["ContenidoNoticiaTxt"];
 
             if (string.IsNullOrWhiteSpace(contenidoNoticia))
             {
-                // Mostrar mensaje de error (puedes usar un Label para esto)
+                // Mostrar mensaje de error
                 ErrorMessageLabel.Text = "Debe ingresar contenido";
                 ErrorMessageLabel.Visible = true;
                 return;
             }
 
-            // Continuar con el guardado de la noticia
+            // Validar y limpiar la entrada del usuario si es necesario
+
+            DateTime? fechaPublicacion = null;
+            if (DateTime.TryParse(fechaPublicacionStr, out DateTime parsedDate))
+            {
+                fechaPublicacion = parsedDate;
+            }
+
+            // Obtener el usuario actual desde la sesión
+            var usuario = Session["Usuario"] as Usuarios;
+            if (usuario == null)
+            {
+                // El usuario no está autenticado, redirigir a la página de inicio de sesión
+                Response.Redirect("Login.aspx");
+                return;
+            }
+
+            using (var context = new IntranetEntities())
+            {
+                Noticias nuevaNoticia = new Noticias
+                {
+                    titulo = titulo,
+                    metaDescripcion = metaDescripcion,
+                    fechaPublicacion = fechaPublicacion,
+                    tags = tags,
+                    contenidoTexto = contenidoNoticia,
+                    usuarioAutor = usuario.rutUsuario, // Usar el rut del usuario autenticado
+                    likes = 0 // Inicializamos los likes a 0
+                };
+
+                context.Noticias.Add(nuevaNoticia);
+                context.SaveChanges();
+            }
+
+            // Redireccionar o mostrar un mensaje de éxito
+            Response.Redirect("VerNoticias.aspx"); // Redirigir a una página de lista de noticias
         }
     }
 }
