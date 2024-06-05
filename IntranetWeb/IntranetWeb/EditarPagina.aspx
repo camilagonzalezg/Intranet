@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditarNoticia.aspx.cs" Inherits="IntranetWeb.EditarNoticia" ValidateRequest="false" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditarPagina.aspx.cs" Inherits="IntranetWeb.EditarPagina" ValidateRequest="false" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!-- Contenido de la página-->
     <section class="py-5">
@@ -6,7 +6,7 @@
             <!-- Inicio formulario-->
             <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
                 <div class="text-center mb-5">
-                    <h1 class="fw-bolder">Editar Noticia</h1>
+                    <h1 class="fw-bolder">Editar Página</h1>
                     <p class="lead fw-normal text-muted mb-0">Modifique los campos necesarios</p>
                 </div>
                 <div class="row gx-5 justify-content-center">
@@ -34,47 +34,39 @@
                             </div>
                         </div>
 
-                        <!-- Fecha publicación -->
+                        <!-- Fecha de Creación -->
                         <div class="row mb-4">
                             <div class="col-md-4">
-                                <label class="form-label" for="FechaPublicacionInput">Fecha de publicación</label>
-                                <asp:TextBox ID="FechaPublicacionInput" runat="server" TextMode="Date" CssClass="form-control"></asp:TextBox>
+                                <label class="form-label" for="FechaCreacionInput">Fecha de Creación</label>
+                                <asp:TextBox ID="FechaCreacionInput" runat="server" TextMode="Date" CssClass="form-control"></asp:TextBox>
                             </div>
                         </div>
 
-                        <!-- Tags -->
+                        <!-- Categorías -->
                         <div class="row mb-4">
                             <div class="col-md-4">
-                                <label class="form-label" for="TagsRadioList">Tags</label>
-                                <asp:RadioButtonList ID="TagsRadioList" runat="server" CssClass="form-check">
-                                    <asp:ListItem Text="Novedades empresa" Value="Novedades empresa"></asp:ListItem>
-                                    <asp:ListItem Text="Beneficios" Value="Beneficios"></asp:ListItem>
-                                    <asp:ListItem Text="Desarrollo organizacional" Value="Desarrollo organizacional"></asp:ListItem>
+                                <label class="form-label" for="CategoriasRadioList">Categorías</label>
+                                <asp:RadioButtonList ID="CategoriasRadioList" runat="server" CssClass="form-check">
+                                    <asp:ListItem Text="Corporativo" Value="Corporativo"></asp:ListItem>
+                                    <asp:ListItem Text="Servicios" Value="Servicios"></asp:ListItem>
+                                    <asp:ListItem Text="Contacto" Value="Contacto"></asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
 
-                        <!-- Imagen portada Slider -->
+                        <!-- Imagen portada -->
                         <div class="mb-4">
                             <div class="col-md-4">
-                                <label class="form-label" for="ImagenPortadaSlider">Imagen portada slider</label>
-                                <asp:FileUpload ID="ImagenPortadaSlider" runat="server" CssClass="form-control-file" />
+                                <label class="form-label" for="ImagenPortada">Imagen portada</label>
+                                <asp:FileUpload ID="ImagenPortada" runat="server" CssClass="form-control-file" />
                             </div>
                         </div>
 
-                        <!-- Imagen portada Card -->
-                        <div class="mb-4">
-                            <div class="col-md-4">
-                                <label class="form-label" for="ImagenPortadaCard">Imagen tarjeta noticia</label>
-                                <asp:FileUpload ID="ImagenPortadaCard" runat="server" CssClass="form-control-file" />
-                            </div>
-                        </div>
-
-                        <!-- Contenido Noticia -->
+                        <!-- Contenido Página -->
                         <div class="row mb-12">
                             <div class="col-md-12">
-                                <label class="form-label" for="ContenidoNoticiaTxt">Contenido Noticia</label>
-                                <asp:TextBox ID="ContenidoNoticiaTxt" TextMode="MultiLine" runat="server" CssClass="form-control" Rows="20"></asp:TextBox>
+                                <label class="form-label" for="ContenidoPaginaTxt">Contenido Página</label>
+                                <asp:TextBox ID="ContenidoPaginaTxt" TextMode="MultiLine" runat="server" CssClass="form-control" Rows="20"></asp:TextBox>
                             </div>
                         </div>
 
@@ -82,9 +74,9 @@
                         <asp:Label ID="ErrorMessageLabel" runat="server" CssClass="text-danger" Visible="False"></asp:Label>
 
                         <!-- Botón Guardar -->
-                        <asp:Button ID="GuardarNoticiaBtn" runat="server" Text="Guardar Cambios"
+                        <asp:Button ID="GuardarPaginaBtn" runat="server" Text="Guardar Cambios"
                             CssClass="btn btn-primary btn-block mb-4"
-                            OnClick="GuardarNoticiaBtn_Click" />
+                            OnClick="GuardarPaginaBtn_Click" />
                     </div>
                 </div>
             </div>
@@ -94,7 +86,7 @@
     <!-- Inicializar TinyMCE -->
     <script>
         tinymce.init({
-            selector: '#<%= ContenidoNoticiaTxt.ClientID %>',
+            selector: '#<%= ContenidoPaginaTxt.ClientID %>',
             toolbar: 'undo redo | formatselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
             plugins: 'lists link image preview',
             menubar: false

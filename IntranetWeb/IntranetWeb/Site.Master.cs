@@ -85,7 +85,7 @@ namespace IntranetWeb
         private void SetMenuColaborador()
         {
             navMenu.InnerHtml = @"
-                <li class='nav-item'><a class='nav-link' href='Default.aspx'>Home</a></li>
+                <li class='nav-item'><a class='nav-link' href='Home.aspx'>Home</a></li>
                 <li class='nav-item'><a class='nav-link' href='NuestraEmpresa.aspx'>Nuestra empresa</a></li>
                 <li class='nav-item'><a class='nav-link' href='Novedades.aspx'>Novedades</a></li>
                 <li class='nav-item'><a class='nav-link' href='QuePasaEnAFC.aspx'>¿Qué pasa en AFC?</a></li>
@@ -95,7 +95,7 @@ namespace IntranetWeb
         private void SetMenuGerencia()
         {
             navMenu.InnerHtml = @"
-                <li class='nav-item'><a class='nav-link' href='Default.aspx'>Home</a></li>
+                <li class='nav-item'><a class='nav-link' href='Home.aspx'>Home</a></li>
                 <li class='nav-item'><a class='nav-link' href='NuestraEmpresa.aspx'>Nuestra empresa</a></li>
                 <li class='nav-item'><a class='nav-link' href='Novedades.aspx'>Novedades</a></li>
                 <li class='nav-item'><a class='nav-link' href='VerCorrespondencia.aspx'>Correspondencia</a></li>
@@ -105,7 +105,7 @@ namespace IntranetWeb
         private void SetMenuRRHH()
         {
             navMenu.InnerHtml = @"
-                <li class='nav-item'><a class='nav-link' href='Default.aspx'>Home</a></li>
+                <li class='nav-item'><a class='nav-link' href='Home.aspx'>Home</a></li>
                 <li class='nav-item'><a class='nav-link' href='CargarUsuarios.aspx'>Cargar usuarios</a></li>
                 <li class='nav-item'><a class='nav-link' href='#' onclick='logout()'><i class='fa-solid fa-right-from-bracket'></i></a></li>";
         }
@@ -113,7 +113,7 @@ namespace IntranetWeb
         private void SetMenuDefault()
         {
             navMenu.InnerHtml = @"
-                <li class='nav-item'><a class='nav-link' href='Default.aspx'>Home</a></li>
+                <li class='nav-item'><a class='nav-link' href='Home.aspx'>Home</a></li>
                 <li class='nav-item'><a class='nav-link' href='Login.aspx'><i class='fa-solid fa-user'></i> Login</a></li>";
         }
 

@@ -1,17 +1,15 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditarNoticia.aspx.cs" Inherits="IntranetWeb.EditarNoticia" ValidateRequest="false" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RegistrarPagina.aspx.cs" Inherits="IntranetWeb.RegistrarPagina" ValidateRequest="false" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <!-- Contenido de la página-->
     <section class="py-5">
         <div class="container-fluid px-5">
-            <!-- Inicio formulario-->
             <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
                 <div class="text-center mb-5">
-                    <h1 class="fw-bolder">Editar Noticia</h1>
-                    <p class="lead fw-normal text-muted mb-0">Modifique los campos necesarios</p>
+                    <h1 class="fw-bolder">Ingresar Página</h1>
+                    <p class="lead fw-normal text-muted mb-0">Complete todos los campos</p>
                 </div>
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-10 col-xl-8">
-
                         <!-- Título -->
                         <div class="row mb-12">
                             <div class="col-md-12">
@@ -47,44 +45,28 @@
                             <div class="col-md-4">
                                 <label class="form-label" for="TagsRadioList">Tags</label>
                                 <asp:RadioButtonList ID="TagsRadioList" runat="server" CssClass="form-check">
-                                    <asp:ListItem Text="Novedades empresa" Value="Novedades empresa"></asp:ListItem>
-                                    <asp:ListItem Text="Beneficios" Value="Beneficios"></asp:ListItem>
-                                    <asp:ListItem Text="Desarrollo organizacional" Value="Desarrollo organizacional"></asp:ListItem>
+                                    <asp:ListItem Text="Información general" Value="Información general"></asp:ListItem>
+                                    <asp:ListItem Text="Procedimientos" Value="Procedimientos"></asp:ListItem>
+                                    <asp:ListItem Text="Políticas" Value="Políticas"></asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
 
-                        <!-- Imagen portada Slider -->
-                        <div class="mb-4">
-                            <div class="col-md-4">
-                                <label class="form-label" for="ImagenPortadaSlider">Imagen portada slider</label>
-                                <asp:FileUpload ID="ImagenPortadaSlider" runat="server" CssClass="form-control-file" />
-                            </div>
-                        </div>
-
-                        <!-- Imagen portada Card -->
-                        <div class="mb-4">
-                            <div class="col-md-4">
-                                <label class="form-label" for="ImagenPortadaCard">Imagen tarjeta noticia</label>
-                                <asp:FileUpload ID="ImagenPortadaCard" runat="server" CssClass="form-control-file" />
-                            </div>
-                        </div>
-
-                        <!-- Contenido Noticia -->
+                        <!-- Contenido Página -->
                         <div class="row mb-12">
                             <div class="col-md-12">
-                                <label class="form-label" for="ContenidoNoticiaTxt">Contenido Noticia</label>
-                                <asp:TextBox ID="ContenidoNoticiaTxt" TextMode="MultiLine" runat="server" CssClass="form-control" Rows="20"></asp:TextBox>
+                                <label class="form-label" for="ContenidoPaginaTxt">Contenido Página</label>
+                                <asp:TextBox ID="ContenidoPaginaTxt" TextMode="MultiLine" runat="server" CssClass="form-control" Rows="20"></asp:TextBox>
                             </div>
                         </div>
 
                         <!-- Mensaje de error -->
                         <asp:Label ID="ErrorMessageLabel" runat="server" CssClass="text-danger" Visible="False"></asp:Label>
 
-                        <!-- Botón Guardar -->
-                        <asp:Button ID="GuardarNoticiaBtn" runat="server" Text="Guardar Cambios"
+                        <!-- Botón Publicar -->
+                        <asp:Button ID="GuardarPaginaBtn" runat="server" Text="Ingresar Página"
                             CssClass="btn btn-primary btn-block mb-4"
-                            OnClick="GuardarNoticiaBtn_Click" />
+                            OnClick="GuardarPaginaBtn_Click" />
                     </div>
                 </div>
             </div>
@@ -94,7 +76,7 @@
     <!-- Inicializar TinyMCE -->
     <script>
         tinymce.init({
-            selector: '#<%= ContenidoNoticiaTxt.ClientID %>',
+            selector: '#<%= ContenidoPaginaTxt.ClientID %>',
             toolbar: 'undo redo | formatselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
             plugins: 'lists link image preview',
             menubar: false

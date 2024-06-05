@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RegistrarNoticia.aspx.cs" Inherits="IntranetWeb.RegistrarNoticia" ValidateRequest="false" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!-- Contenido de la página-->
     <section class="py-5">
@@ -59,9 +60,6 @@
                             <div class="col-md-4">
                                 <label class="form-label" for="ImagenPortadaSlider">Imagen portada slider</label>
                                 <asp:FileUpload ID="ImagenPortadaSlider" runat="server" CssClass="form-control-file" />
-                                <asp:RequiredFieldValidator runat="server" ErrorMessage="Debe seleccionar una imagen"
-                                    ControlToValidate="ImagenPortadaSlider" CssClass="text-danger">
-                                </asp:RequiredFieldValidator>
                             </div>
                         </div>
 
@@ -70,9 +68,6 @@
                             <div class="col-md-4">
                                 <label class="form-label" for="ImagenPortadaCard">Imagen tarjeta noticia</label>
                                 <asp:FileUpload ID="ImagenPortadaCard" runat="server" CssClass="form-control-file" />
-                                <asp:RequiredFieldValidator runat="server" ErrorMessage="Debe seleccionar una imagen"
-                                    ControlToValidate="ImagenPortadaCard" CssClass="text-danger">
-                                </asp:RequiredFieldValidator>
                             </div>
                         </div>
 
@@ -80,7 +75,7 @@
                         <div class="row mb-12">
                             <div class="col-md-12">
                                 <label class="form-label" for="ContenidoNoticiaTxt">Contenido Noticia</label>
-                                <textarea id="ContenidoNoticiaTxt" name="ContenidoNoticiaTxt" class="form-control" rows="20"></textarea>
+                                <asp:TextBox ID="ContenidoNoticiaTxt" TextMode="MultiLine" runat="server" CssClass="form-control" Rows="20"></asp:TextBox>
                             </div>
                         </div>
 
@@ -100,7 +95,7 @@
     <!-- Inicializar TinyMCE -->
     <script>
         tinymce.init({
-            selector: '#ContenidoNoticiaTxt',
+            selector: '#<%= ContenidoNoticiaTxt.ClientID %>',
             toolbar: 'undo redo | formatselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
             plugins: 'lists link image preview',
             menubar: false

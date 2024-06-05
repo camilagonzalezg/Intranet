@@ -6,22 +6,22 @@ using Ganss.Xss;
 
 namespace IntranetWeb
 {
-    public partial class RegistrarNoticia : System.Web.UI.Page
+    public partial class RegistrarPagina : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void GuardarNoticiaBtn_Click(object sender, EventArgs e)
+        protected void GuardarPaginaBtn_Click(object sender, EventArgs e)
         {
             string titulo = TituloTxt.Text;
             string metaDescripcion = MetaDescripcionTxt.Text;
             string fechaPublicacionStr = FechaPublicacionInput.Text;
             string tags = TagsRadioList.SelectedValue;
-            string contenidoNoticia = ContenidoNoticiaTxt.Text;
+            string contenidoPagina = ContenidoPaginaTxt.Text;
 
-            if (string.IsNullOrWhiteSpace(contenidoNoticia))
+            if (string.IsNullOrWhiteSpace(contenidoPagina))
             {
                 // Mostrar mensaje de error
                 ErrorMessageLabel.Text = "Debe ingresar contenido";
@@ -31,7 +31,7 @@ namespace IntranetWeb
 
             // Sanitizar el contenido HTML
             var sanitizer = new HtmlSanitizer();
-            string sanitizedContent = sanitizer.Sanitize(contenidoNoticia);
+            string sanitizedContent = sanitizer.Sanitize(contenidoPagina);
 
             DateTime? fechaPublicacion = null;
             if (DateTime.TryParse(fechaPublicacionStr, out DateTime parsedDate))
@@ -50,23 +50,22 @@ namespace IntranetWeb
 
             using (var context = new IntranetEntities())
             {
-                Noticias nuevaNoticia = new Noticias
+                Paginas nuevaPagina = new Paginas
                 {
                     titulo = titulo,
                     metaDescripcion = metaDescripcion,
                     fechaPublicacion = fechaPublicacion,
                     tags = tags,
                     contenidoTexto = sanitizedContent,
-                    usuarioAutor = usuario.rutUsuario, // Usar el rut del usuario autenticado
-                    likes = 0 // Inicializamos los likes a 0
+                    usuarioAutor = usuario.rutUsuario // Usar el rut del usuario autenticado
                 };
 
-                context.Noticias.Add(nuevaNoticia);
+                context.Paginas.Add(nuevaPagina);
                 context.SaveChanges();
             }
 
             // Redireccionar o mostrar un mensaje de éxito
-            Response.Redirect("VerNoticias.aspx"); // Redirigir a una página de lista de noticias
+            Response.Redirect("VerPaginas.aspx"); // Redirigir a una página de lista de páginas
         }
     }
 }

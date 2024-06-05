@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Web.UI;
 using IntranetModel;
+using Ganss.Xss;
 using IntranetModel.DAL;
 
 namespace IntranetWeb
@@ -36,7 +37,7 @@ namespace IntranetWeb
                 MetaDescripcionTxt.Text = noticia.metaDescripcion;
                 FechaPublicacionInput.Text = noticia.fechaPublicacion.HasValue ? noticia.fechaPublicacion.Value.ToString("yyyy-MM-dd") : "";
                 TagsRadioList.SelectedValue = noticia.tags;
-                ContenidoNoticiaTxt.Text = noticia.contenidoTexto; // Asegúrate de usar ContenidoNoticiaTxt.Text aquí
+                ContenidoNoticiaTxt.Text = noticia.contenidoTexto;
             }
             else
             {
@@ -54,7 +55,7 @@ namespace IntranetWeb
                 string metaDescripcion = MetaDescripcionTxt.Text;
                 string fechaPublicacionStr = FechaPublicacionInput.Text;
                 string tags = TagsRadioList.SelectedValue;
-                string contenidoNoticia = ContenidoNoticiaTxt.Text; // Usa ContenidoNoticiaTxt.Text aquí
+                string contenidoNoticia = ContenidoNoticiaTxt.Text;
 
                 if (string.IsNullOrWhiteSpace(contenidoNoticia))
                 {
@@ -63,6 +64,10 @@ namespace IntranetWeb
                     ErrorMessageLabel.Visible = true;
                     return;
                 }
+
+                // Sanitizar el contenido HTML
+                var sanitizer = new HtmlSanitizer();
+                string sanitizedContent = sanitizer.Sanitize(contenidoNoticia);
 
                 DateTime? fechaPublicacion = null;
                 if (DateTime.TryParse(fechaPublicacionStr, out DateTime parsedDate))
@@ -79,7 +84,7 @@ namespace IntranetWeb
                         noticia.metaDescripcion = metaDescripcion;
                         noticia.fechaPublicacion = fechaPublicacion;
                         noticia.tags = tags;
-                        noticia.contenidoTexto = contenidoNoticia;
+                        noticia.contenidoTexto = sanitizedContent;
 
                         context.SaveChanges();
                     }

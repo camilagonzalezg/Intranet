@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace IntranetWeb
 {
@@ -11,7 +8,21 @@ namespace IntranetWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                // Verifica si el usuario ha iniciado sesión
+                if (Session["Usuario"] == null || Session["RolUsuario"] == null)
+                {
+                    Response.Redirect("Login.aspx");
+                }
 
+                // Verifica si el rol del usuario es "Administrador"
+                string rolUsuario = Session["RolUsuario"].ToString();
+                if (rolUsuario != "Administrador")
+                {
+                    Response.Redirect("Home.aspx");
+                }
+            }
         }
     }
 }

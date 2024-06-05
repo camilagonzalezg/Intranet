@@ -25,7 +25,19 @@ namespace IntranetWeb
                     // Inicio de sesión exitoso
                     Session["Usuario"] = usuario;
                     Session["RolUsuario"] = usuario.RolesUsuario.nombre;
-                    Response.Redirect("Default.aspx"); // Redirigir a la página principal
+
+                    switch (usuario.RolesUsuario.nombre)
+                    {
+                        case "Administrador":
+                            Response.Redirect("Default.aspx"); // Redirigir a la página principal
+                            break;
+                        case "Colaborador":
+                        case "Gerencia":
+                        case "RRHH":
+                        default:
+                            Response.Redirect("Home.aspx"); // Redirigir a Home.aspx
+                            break;
+                    }
                 }
                 else
                 {

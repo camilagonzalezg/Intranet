@@ -11,61 +11,70 @@ namespace IntranetWeb
 {
 
 
-    public partial class VerPaginas
+    public partial class RegistrarPagina
     {
 
         /// <summary>
-        /// Control FilterByDdl.
+        /// Control TituloTxt.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList FilterByDdl;
+        protected global::System.Web.UI.WebControls.TextBox TituloTxt;
 
         /// <summary>
-        /// Control SearchTermTxt.
+        /// Control MetaDescripcionTxt.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SearchTermTxt;
+        protected global::System.Web.UI.WebControls.TextBox MetaDescripcionTxt;
 
         /// <summary>
-        /// Control SearchBtn.
+        /// Control FechaPublicacionInput.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SearchBtn;
+        protected global::System.Web.UI.WebControls.TextBox FechaPublicacionInput;
 
         /// <summary>
-        /// Control MensajePanel.
+        /// Control TagsRadioList.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel MensajePanel;
+        protected global::System.Web.UI.WebControls.RadioButtonList TagsRadioList;
 
         /// <summary>
-        /// Control MensajeLabel.
+        /// Control ContenidoPaginaTxt.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label MensajeLabel;
+        protected global::System.Web.UI.WebControls.TextBox ContenidoPaginaTxt;
 
         /// <summary>
-        /// Control PaginasGrid.
+        /// Control ErrorMessageLabel.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView PaginasGrid;
+        protected global::System.Web.UI.WebControls.Label ErrorMessageLabel;
+
+        /// <summary>
+        /// Control GuardarPaginaBtn.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button GuardarPaginaBtn;
     }
 }
