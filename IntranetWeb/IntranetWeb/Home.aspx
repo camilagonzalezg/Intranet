@@ -13,23 +13,23 @@
             <div class="carousel-item active">
                 <img class="d-block w-100" src="Images\descarga.svg" alt="First slide">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>...</h5>
-                    <p>...</p>
+                    <h5>Noticia 1</h5>
+                    <p>Revisa que tiene la noticia 1</p>
                 </div>
             </div>
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="..." alt="Second slide">
+            <img class="d-block w-100" src="Images\descarga.svg" alt="Second slide">
             <div class="carousel-caption d-none d-md-block">
-                <h5>...</h5>
-                <p>...</p>
+                <h5>Noticia 2</h5>
+                <p>Revisa que tiene la noticia 2</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="..." alt="Third slide">
+            <img class="d-block w-100" src="Images\descarga.svg" alt="Third slide">
             <div class="carousel-caption d-none d-md-block">
-                <h5>...</h5>
-                <p>...</p>
+                <h5>Noticia 3</h5>
+                <p>Revisa que tiene la noticia 3</p>
             </div>
         </div>
     </div>

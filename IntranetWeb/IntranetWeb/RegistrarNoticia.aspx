@@ -58,7 +58,7 @@
                         <!-- Imagen portada Slider -->
                         <div class="mb-4">
                             <div class="col-md-4">
-                                <label class="form-label" for="ImagenPortadaSlider">Imagen portada slider</label>
+                                <label class="form-label" for="ImagenPortadaSlider">Imagen portada 900x400</label>
                                 <asp:FileUpload ID="ImagenPortadaSlider" runat="server" CssClass="form-control-file" />
                             </div>
                         </div>
@@ -66,7 +66,7 @@
                         <!-- Imagen portada Card -->
                         <div class="mb-4">
                             <div class="col-md-4">
-                                <label class="form-label" for="ImagenPortadaCard">Imagen tarjeta noticia</label>
+                                <label class="form-label" for="ImagenPortadaCard">Imagen tarjeta noticia 600x350</label>
                                 <asp:FileUpload ID="ImagenPortadaCard" runat="server" CssClass="form-control-file" />
                             </div>
                         </div>

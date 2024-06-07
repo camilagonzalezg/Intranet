@@ -66,21 +66,23 @@ namespace IntranetWeb
             }
         }
 
-        //Constructor que valida que formato sea correcto
-        public void ValidaFormato(string RutTxt)
-        {
-            String rut = RutTxt;
+        ////Constructor que valida que formato sea correcto
+        //public void ValidaFormato(string RutTxt)
+        //{
+        //    String rut = RutTxt;
 
-        }
+        //}
 
         //Constructor que obtiene el RutTxt desde TextBox
         public void ValidaDigito(string RutTxt)
         {
-            // Validar que rut tenga formato xxxx-x
+            // Validar que rut tenga formato xxxx-x 8.058.535-7
             String rut = RutTxt;
 
+            rut = rut.PadLeft(10, '0');
+
             int n0 = int.Parse(rut[0].ToString()) * 3;
-            int n1 = int.Parse(rut[1].ToString()) * 2;
+                        int n1 = int.Parse(rut[1].ToString()) * 2;
             int n2 = int.Parse(rut[2].ToString()) * 7;
             int n3 = int.Parse(rut[3].ToString()) * 6;
             int n4 = int.Parse(rut[4].ToString()) * 5;

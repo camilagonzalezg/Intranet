@@ -359,15 +359,14 @@
     <Content Include="Content\froala\License.txt" />
     <Content Include="Default.aspx" />
     <Content Include="EditarNoticia.aspx" />
+    <Content Include="EditarPagina.aspx" />
     <Content Include="EditarUsuario.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Images\descarga.svg" />
-    <Content Include="Images\foto_1280x1920.jpg" />
-    <Content Include="Images\foto_400x300.jpg" />
     <Content Include="Login.aspx" />
-    <Content Include="Noticia.aspx" />
     <Content Include="Novedades.aspx" />
     <Content Include="RegistrarNoticia.aspx" />
+    <Content Include="RegistrarPagina.aspx" />
     <Content Include="RegistrarUsuario.aspx" />
     <Content Include="VerNoticias.aspx" />
     <Content Include="VerPaginas.aspx" />
@@ -388,6 +387,13 @@
     </Compile>
     <Compile Include="EditarNoticia.aspx.designer.cs">
       <DependentUpon>EditarNoticia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditarPagina.aspx.cs">
+      <DependentUpon>EditarPagina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditarPagina.aspx.designer.cs">
+      <DependentUpon>EditarPagina.aspx</DependentUpon>
     </Compile>
     <Compile Include="EditarUsuario.aspx.cs">
       <DependentUpon>EditarUsuario.aspx</DependentUpon>
@@ -410,13 +416,6 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Noticia.aspx.cs">
-      <DependentUpon>Noticia.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Noticia.aspx.designer.cs">
-      <DependentUpon>Noticia.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Novedades.aspx.cs">
       <DependentUpon>Novedades.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -431,6 +430,13 @@
     </Compile>
     <Compile Include="RegistrarNoticia.aspx.designer.cs">
       <DependentUpon>RegistrarNoticia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarPagina.aspx.cs">
+      <DependentUpon>RegistrarPagina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrarPagina.aspx.designer.cs">
+      <DependentUpon>RegistrarPagina.aspx</DependentUpon>
     </Compile>
     <Compile Include="RegistrarUsuario.aspx.cs">
       <DependentUpon>RegistrarUsuario.aspx</DependentUpon>
