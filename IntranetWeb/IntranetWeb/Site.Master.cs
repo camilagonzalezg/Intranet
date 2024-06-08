@@ -55,7 +55,7 @@ namespace IntranetWeb
                     <a class='nav-link dropdown-toggle' href='#' id='navbarDropdownNoticias' role='button' data-bs-toggle='dropdown' aria-expanded='false'>Noticias</a>
                     <ul class='dropdown-menu' aria-labelledby='navbarDropdownNoticias'>
                         <li><a class='dropdown-item' href='RegistrarNoticia.aspx'>Registrar Noticias</a></li>
-                        <li><a class='dropdown-item' href='#'>Ver noticias</a></li>
+                        <li><a class='dropdown-item' href='VerNoticias.aspx'>Ver noticias</a></li>
                     </ul>
                 </li>
                 <li class='nav-item dropdown'>

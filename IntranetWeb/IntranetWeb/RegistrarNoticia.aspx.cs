@@ -192,8 +192,8 @@ namespace IntranetWeb
                 GuardarArchivoMultimedia(usuario.rutUsuario, "Imagen", Path.Combine(relativePath, fileName));
             }
 
-            // Redireccionar o mostrar un mensaje de éxito
-            Response.Redirect("VerNoticias.aspx"); // Redirigir a una página de lista de noticias
+            // Redireccionar a la página de la noticia recién creada
+            Response.Redirect("noticias/" + urlSimple.Substring(urlSimple.LastIndexOf('/') + 1));
         }
 
         private string GenerateUrlSimple(string titulo)
@@ -230,4 +230,6 @@ namespace IntranetWeb
         }
     }
 }
+
+
 
