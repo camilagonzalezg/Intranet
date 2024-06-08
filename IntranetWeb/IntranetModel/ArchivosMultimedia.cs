@@ -14,6 +14,12 @@ namespace IntranetModel
     
     public partial class ArchivosMultimedia
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public ArchivosMultimedia()
+        {
+            this.Noticias = new HashSet<Noticias>();
+        }
+    
         public int id { get; set; }
         public System.DateTime fechaPublicacion { get; set; }
         public string tipoArchivo { get; set; }
@@ -21,5 +27,7 @@ namespace IntranetModel
         public string usuarioAutor { get; set; }
     
         public virtual Usuarios Usuarios { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Noticias> Noticias { get; set; }
     }
 }

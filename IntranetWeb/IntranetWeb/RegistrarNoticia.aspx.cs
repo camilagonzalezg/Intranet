@@ -1,4 +1,5 @@
 ﻿//using System;
+//using System.IO;
 //using System.Linq;
 //using System.Text.RegularExpressions;
 //using System.Web.UI;
@@ -68,8 +69,39 @@
 //            NoticiasDAL noticiasDAL = new NoticiasDAL();
 //            noticiasDAL.Add(nuevaNoticia);
 
-//            // Redireccionar o mostrar un mensaje de éxito
-//            Response.Redirect("VerNoticias.aspx"); // Redirigir a una página de lista de noticias
+//            // Manejar la subida de imágenes
+//            string basePath = Server.MapPath("~/Multimedia/ImagenesNoticias/");
+//            string relativePath = $"{DateTime.Now.Year}/{DateTime.Now.Month}/";
+//            string fullPath = Path.Combine(basePath, relativePath);
+
+//            // Crear la carpeta si no existe
+//            if (!Directory.Exists(fullPath))
+//            {
+//                Directory.CreateDirectory(fullPath);
+//            }
+
+//            // Guardar la imagen de portada slider
+//            if (ImagenPortadaSlider.HasFile)
+//            {
+//                string fileName = Path.GetFileName(ImagenPortadaSlider.FileName);
+//                string filePath = Path.Combine(fullPath, fileName);
+//                ImagenPortadaSlider.SaveAs(filePath);
+
+//                GuardarArchivoMultimedia(usuario.rutUsuario, "Imagen", Path.Combine(relativePath, fileName));
+//            }
+
+//            // Guardar la imagen de portada card
+//            if (ImagenPortadaCard.HasFile)
+//            {
+//                string fileName = Path.GetFileName(ImagenPortadaCard.FileName);
+//                string filePath = Path.Combine(fullPath, fileName);
+//                ImagenPortadaCard.SaveAs(filePath);
+
+//                GuardarArchivoMultimedia(usuario.rutUsuario, "Imagen", Path.Combine(relativePath, fileName));
+//            }
+
+//            // Redireccionar a la página de la noticia recién creada
+//            Response.Redirect("noticias/" + urlSimple.Substring(urlSimple.LastIndexOf('/') + 1));
 //        }
 
 //        private string GenerateUrlSimple(string titulo)
@@ -86,6 +118,23 @@
 //            urlSimple = "noticias/" + urlSimple;
 
 //            return urlSimple;
+//        }
+
+//        private void GuardarArchivoMultimedia(string usuarioAutor, string tipoArchivo, string urlArchivo)
+//        {
+//            using (var context = new IntranetEntities())
+//            {
+//                ArchivosMultimedia archivoMultimedia = new ArchivosMultimedia
+//                {
+//                    fechaPublicacion = DateTime.Now,
+//                    tipoArchivo = tipoArchivo,
+//                    urlArchivo = urlArchivo,
+//                    usuarioAutor = usuarioAutor
+//                };
+
+//                context.ArchivosMultimedia.Add(archivoMultimedia);
+//                context.SaveChanges();
+//            }
 //        }
 //    }
 //}
@@ -146,22 +195,7 @@ namespace IntranetWeb
             // Generar URL simple a partir del título
             string urlSimple = GenerateUrlSimple(titulo);
 
-            Noticias nuevaNoticia = new Noticias
-            {
-                titulo = titulo,
-                metaDescripcion = metaDescripcion,
-                fechaPublicacion = fechaPublicacion,
-                tags = tags,
-                contenidoTexto = sanitizedContent,
-                usuarioAutor = usuario.rutUsuario, // Usar el rut del usuario autenticado
-                likes = 0, // Inicializamos los likes a 0
-                urlSimple = urlSimple
-            };
-
-            NoticiasDAL noticiasDAL = new NoticiasDAL();
-            noticiasDAL.Add(nuevaNoticia);
-
-            // Manejar la subida de imágenes
+            int? archivoMultimediaId = null;
             string basePath = Server.MapPath("~/Multimedia/ImagenesNoticias/");
             string relativePath = $"{DateTime.Now.Year}/{DateTime.Now.Month}/";
             string fullPath = Path.Combine(basePath, relativePath);
@@ -179,18 +213,25 @@ namespace IntranetWeb
                 string filePath = Path.Combine(fullPath, fileName);
                 ImagenPortadaSlider.SaveAs(filePath);
 
-                GuardarArchivoMultimedia(usuario.rutUsuario, "Imagen", Path.Combine(relativePath, fileName));
+                string imagenPortadaSliderUrl = Path.Combine(relativePath, fileName).Replace("\\", "/");
+                archivoMultimediaId = GuardarArchivoMultimedia(usuario.rutUsuario, "Imagen", imagenPortadaSliderUrl);
             }
 
-            // Guardar la imagen de portada card
-            if (ImagenPortadaCard.HasFile)
+            Noticias nuevaNoticia = new Noticias
             {
-                string fileName = Path.GetFileName(ImagenPortadaCard.FileName);
-                string filePath = Path.Combine(fullPath, fileName);
-                ImagenPortadaCard.SaveAs(filePath);
+                titulo = titulo,
+                metaDescripcion = metaDescripcion,
+                fechaPublicacion = fechaPublicacion,
+                tags = tags,
+                contenidoTexto = sanitizedContent,
+                usuarioAutor = usuario.rutUsuario, // Usar el rut del usuario autenticado
+                likes = 0, // Inicializamos los likes a 0
+                urlSimple = urlSimple,
+                ArchivoMultimediaId = archivoMultimediaId // Guardar la relación
+            };
 
-                GuardarArchivoMultimedia(usuario.rutUsuario, "Imagen", Path.Combine(relativePath, fileName));
-            }
+            NoticiasDAL noticiasDAL = new NoticiasDAL();
+            noticiasDAL.Add(nuevaNoticia);
 
             // Redireccionar a la página de la noticia recién creada
             Response.Redirect("noticias/" + urlSimple.Substring(urlSimple.LastIndexOf('/') + 1));
@@ -212,7 +253,7 @@ namespace IntranetWeb
             return urlSimple;
         }
 
-        private void GuardarArchivoMultimedia(string usuarioAutor, string tipoArchivo, string urlArchivo)
+        private int GuardarArchivoMultimedia(string usuarioAutor, string tipoArchivo, string urlArchivo)
         {
             using (var context = new IntranetEntities())
             {
@@ -226,10 +267,11 @@ namespace IntranetWeb
 
                 context.ArchivosMultimedia.Add(archivoMultimedia);
                 context.SaveChanges();
+
+                return archivoMultimedia.id;
             }
         }
     }
 }
-
 
 

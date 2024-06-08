@@ -80,6 +80,7 @@
           <Property Name="tags" Type="nvarchar" MaxLength="200" />
           <Property Name="likes" Type="int" />
           <Property Name="urlSimple" Type="nvarchar" MaxLength="255" />
+          <Property Name="ArchivoMultimediaId" Type="int" />
         </EntityType>
         <EntityType Name="Paginas">
           <Key>
@@ -349,6 +350,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Noticias_ArchivosMultimedia">
+          <End Role="ArchivosMultimedia" Type="Self.ArchivosMultimedia" Multiplicity="0..1" />
+          <End Role="Noticias" Type="Self.Noticias" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ArchivosMultimedia">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Noticias">
+              <PropertyRef Name="ArchivoMultimediaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="IntranetModelStoreContainer">
           <EntitySet Name="ArchivosMultimedia" EntityType="Self.ArchivosMultimedia" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ComentariosNoticias" EntityType="Self.ComentariosNoticias" Schema="dbo" store:Type="Tables" />
@@ -432,6 +445,10 @@
             <End Role="Ubicaciones" EntitySet="Ubicaciones" />
             <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>
+          <AssociationSet Name="FK_Noticias_ArchivosMultimedia" Association="Self.FK_Noticias_ArchivosMultimedia">
+            <End Role="ArchivosMultimedia" EntitySet="ArchivosMultimedia" />
+            <End Role="Noticias" EntitySet="Noticias" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -448,6 +465,7 @@
           <Property Name="urlArchivo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="usuarioAutor" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Usuarios" Relationship="Self.FK__ArchivosM__usuar__5FB337D6" FromRole="ArchivosMultimedia" ToRole="Usuarios" />
+          <NavigationProperty Name="Noticias" Relationship="Self.FK_Noticias_ArchivosMultimedia" FromRole="ArchivosMultimedia" ToRole="Noticias" />
         </EntityType>
         <EntityType Name="ComentariosNoticias">
           <Key>
@@ -525,6 +543,8 @@
           <Property Name="tags" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="likes" Type="Int32" />
           <Property Name="urlSimple" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ArchivoMultimediaId" Type="Int32" />
+          <NavigationProperty Name="ArchivosMultimedia" Relationship="Self.FK_Noticias_ArchivosMultimedia" FromRole="Noticias" ToRole="ArchivosMultimedia" />
           <NavigationProperty Name="ComentariosNoticias" Relationship="Self.FK__Comentari__idNot__403A8C7D" FromRole="Noticias" ToRole="ComentariosNoticias" />
           <NavigationProperty Name="Usuarios" Relationship="Self.FK__Noticias__usuari__3A81B327" FromRole="Noticias" ToRole="Usuarios" />
         </EntityType>
@@ -621,6 +641,18 @@
             </Principal>
             <Dependent Role="ArchivosMultimedia">
               <PropertyRef Name="usuarioAutor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Noticias_ArchivosMultimedia">
+          <End Role="ArchivosMultimedia" Type="Self.ArchivosMultimedia" Multiplicity="0..1" />
+          <End Role="Noticias" Type="Self.Noticias" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ArchivosMultimedia">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Noticias">
+              <PropertyRef Name="ArchivoMultimediaId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -835,6 +867,10 @@
             <End Role="Usuarios" EntitySet="Usuarios" />
             <End Role="ArchivosMultimedia" EntitySet="ArchivosMultimedia" />
           </AssociationSet>
+          <AssociationSet Name="FK_Noticias_ArchivosMultimedia" Association="Self.FK_Noticias_ArchivosMultimedia">
+            <End Role="ArchivosMultimedia" EntitySet="ArchivosMultimedia" />
+            <End Role="Noticias" EntitySet="Noticias" />
+          </AssociationSet>
           <AssociationSet Name="FK__Comentari__idNot__403A8C7D" Association="Self.FK__Comentari__idNot__403A8C7D">
             <End Role="Noticias" EntitySet="Noticias" />
             <End Role="ComentariosNoticias" EntitySet="ComentariosNoticias" />
@@ -987,6 +1023,7 @@
                 <ScalarProperty Name="tags" ColumnName="tags" />
                 <ScalarProperty Name="likes" ColumnName="likes" />
                 <ScalarProperty Name="urlSimple" ColumnName="urlSimple" />
+                <ScalarProperty Name="ArchivoMultimediaId" ColumnName="ArchivoMultimediaId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
