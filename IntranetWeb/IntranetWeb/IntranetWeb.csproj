@@ -506,6 +506,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\froala\html\styling\fonts\" />
+    <Folder Include="Multimedia\ImagenesNoticias\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

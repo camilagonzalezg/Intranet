@@ -5,6 +5,16 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="IntranetModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ArchivosMultimedia">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fechaPublicacion" Type="datetime" Nullable="false" />
+          <Property Name="tipoArchivo" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="urlArchivo" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="usuarioAutor" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
         <EntityType Name="ComentariosNoticias">
           <Key>
             <PropertyRef Name="id" />
@@ -69,6 +79,7 @@
           <Property Name="fechaPublicacion" Type="date" />
           <Property Name="tags" Type="nvarchar" MaxLength="200" />
           <Property Name="likes" Type="int" />
+          <Property Name="urlSimple" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="Paginas">
           <Key>
@@ -134,6 +145,18 @@
           <Property Name="celular" Type="int" />
           <Property Name="contraseña" Type="nvarchar" MaxLength="100" />
         </EntityType>
+        <Association Name="FK__ArchivosM__usuar__5FB337D6">
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+          <End Role="ArchivosMultimedia" Type="Self.ArchivosMultimedia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="rutUsuario" />
+            </Principal>
+            <Dependent Role="ArchivosMultimedia">
+              <PropertyRef Name="usuarioAutor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__Comentari__idNot__403A8C7D">
           <End Role="Noticias" Type="Self.Noticias" Multiplicity="0..1" />
           <End Role="ComentariosNoticias" Type="Self.ComentariosNoticias" Multiplicity="*" />
@@ -327,6 +350,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="IntranetModelStoreContainer">
+          <EntitySet Name="ArchivosMultimedia" EntityType="Self.ArchivosMultimedia" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ComentariosNoticias" EntityType="Self.ComentariosNoticias" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Correspondencias" EntityType="Self.Correspondencias" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Departamentos" EntityType="Self.Departamentos" Schema="dbo" store:Type="Tables" />
@@ -340,6 +364,10 @@
           <EntitySet Name="TiposContrato" EntityType="Self.TiposContrato" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Ubicaciones" EntityType="Self.Ubicaciones" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__ArchivosM__usuar__5FB337D6" Association="Self.FK__ArchivosM__usuar__5FB337D6">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="ArchivosMultimedia" EntitySet="ArchivosMultimedia" />
+          </AssociationSet>
           <AssociationSet Name="FK__Comentari__idNot__403A8C7D" Association="Self.FK__Comentari__idNot__403A8C7D">
             <End Role="Noticias" EntitySet="Noticias" />
             <End Role="ComentariosNoticias" EntitySet="ComentariosNoticias" />
@@ -410,6 +438,17 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="IntranetModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ArchivosMultimedia">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fechaPublicacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="tipoArchivo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="urlArchivo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="usuarioAutor" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.FK__ArchivosM__usuar__5FB337D6" FromRole="ArchivosMultimedia" ToRole="Usuarios" />
+        </EntityType>
         <EntityType Name="ComentariosNoticias">
           <Key>
             <PropertyRef Name="id" />
@@ -485,6 +524,7 @@
           <Property Name="fechaPublicacion" Type="DateTime" Precision="0" />
           <Property Name="tags" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="likes" Type="Int32" />
+          <Property Name="urlSimple" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="ComentariosNoticias" Relationship="Self.FK__Comentari__idNot__403A8C7D" FromRole="Noticias" ToRole="ComentariosNoticias" />
           <NavigationProperty Name="Usuarios" Relationship="Self.FK__Noticias__usuari__3A81B327" FromRole="Noticias" ToRole="Usuarios" />
         </EntityType>
@@ -559,6 +599,7 @@
           <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="celular" Type="Int32" />
           <Property Name="contraseña" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ArchivosMultimedia" Relationship="Self.FK__ArchivosM__usuar__5FB337D6" FromRole="Usuarios" ToRole="ArchivosMultimedia" />
           <NavigationProperty Name="ComentariosNoticias" Relationship="Self.FK__Comentari__rutUs__412EB0B6" FromRole="Usuarios" ToRole="ComentariosNoticias" />
           <NavigationProperty Name="Correspondencias" Relationship="Self.FK__Correspon__usuar__440B1D61" FromRole="Usuarios" ToRole="Correspondencias" />
           <NavigationProperty Name="Departamentos" Relationship="Self.FK__Usuarios__idDepa__46E78A0C" FromRole="Usuarios" ToRole="Departamentos" />
@@ -571,6 +612,18 @@
           <NavigationProperty Name="TiposContrato" Relationship="Self.FK__Usuarios__idTipo__49C3F6B7" FromRole="Usuarios" ToRole="TiposContrato" />
           <NavigationProperty Name="Ubicaciones" Relationship="Self.FK__Usuarios__idUbic__47DBAE45" FromRole="Usuarios" ToRole="Ubicaciones" />
         </EntityType>
+        <Association Name="FK__ArchivosM__usuar__5FB337D6">
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+          <End Role="ArchivosMultimedia" Type="Self.ArchivosMultimedia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="rutUsuario" />
+            </Principal>
+            <Dependent Role="ArchivosMultimedia">
+              <PropertyRef Name="usuarioAutor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__Comentari__idNot__403A8C7D">
           <End Role="Noticias" Type="Self.Noticias" Multiplicity="0..1" />
           <End Role="ComentariosNoticias" Type="Self.ComentariosNoticias" Multiplicity="*" />
@@ -764,6 +817,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="IntranetEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ArchivosMultimedia" EntityType="Self.ArchivosMultimedia" />
           <EntitySet Name="ComentariosNoticias" EntityType="Self.ComentariosNoticias" />
           <EntitySet Name="Correspondencias" EntityType="Self.Correspondencias" />
           <EntitySet Name="Departamentos" EntityType="Self.Departamentos" />
@@ -777,6 +831,10 @@
           <EntitySet Name="TiposContrato" EntityType="Self.TiposContrato" />
           <EntitySet Name="Ubicaciones" EntityType="Self.Ubicaciones" />
           <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
+          <AssociationSet Name="FK__ArchivosM__usuar__5FB337D6" Association="Self.FK__ArchivosM__usuar__5FB337D6">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="ArchivosMultimedia" EntitySet="ArchivosMultimedia" />
+          </AssociationSet>
           <AssociationSet Name="FK__Comentari__idNot__403A8C7D" Association="Self.FK__Comentari__idNot__403A8C7D">
             <End Role="Noticias" EntitySet="Noticias" />
             <End Role="ComentariosNoticias" EntitySet="ComentariosNoticias" />
@@ -848,6 +906,17 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="IntranetModelStoreContainer" CdmEntityContainer="IntranetEntities">
+          <EntitySetMapping Name="ArchivosMultimedia">
+            <EntityTypeMapping TypeName="IntranetModel.ArchivosMultimedia">
+              <MappingFragment StoreEntitySet="ArchivosMultimedia">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fechaPublicacion" ColumnName="fechaPublicacion" />
+                <ScalarProperty Name="tipoArchivo" ColumnName="tipoArchivo" />
+                <ScalarProperty Name="urlArchivo" ColumnName="urlArchivo" />
+                <ScalarProperty Name="usuarioAutor" ColumnName="usuarioAutor" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="ComentariosNoticias">
             <EntityTypeMapping TypeName="IntranetModel.ComentariosNoticias">
               <MappingFragment StoreEntitySet="ComentariosNoticias">
@@ -917,6 +986,7 @@
                 <ScalarProperty Name="fechaPublicacion" ColumnName="fechaPublicacion" />
                 <ScalarProperty Name="tags" ColumnName="tags" />
                 <ScalarProperty Name="likes" ColumnName="likes" />
+                <ScalarProperty Name="urlSimple" ColumnName="urlSimple" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

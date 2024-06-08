@@ -25,6 +25,7 @@ namespace IntranetModel
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<ArchivosMultimedia> ArchivosMultimedia { get; set; }
         public virtual DbSet<ComentariosNoticias> ComentariosNoticias { get; set; }
         public virtual DbSet<Correspondencias> Correspondencias { get; set; }
         public virtual DbSet<Departamentos> Departamentos { get; set; }

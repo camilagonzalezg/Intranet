@@ -17,6 +17,7 @@ namespace IntranetModel
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Usuarios()
         {
+            this.ArchivosMultimedia = new HashSet<ArchivosMultimedia>();
             this.ComentariosNoticias = new HashSet<ComentariosNoticias>();
             this.Correspondencias = new HashSet<Correspondencias>();
             this.Hijos = new HashSet<Hijos>();
@@ -41,6 +42,8 @@ namespace IntranetModel
         public Nullable<int> celular { get; set; }
         public string contraseña { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ArchivosMultimedia> ArchivosMultimedia { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ComentariosNoticias> ComentariosNoticias { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

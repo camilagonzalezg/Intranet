@@ -28,6 +28,7 @@ namespace IntranetModel
         public Nullable<System.DateTime> fechaPublicacion { get; set; }
         public string tags { get; set; }
         public Nullable<int> likes { get; set; }
+        public string urlSimple { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ComentariosNoticias> ComentariosNoticias { get; set; }

@@ -41,6 +41,18 @@ namespace IntranetModel.DAL
             return dbEntities.Noticias.Where(n => n.titulo.Contains(titulo)).ToList();
         }
 
+        // Obtener noticias por fecha de publicación
+        public List<Noticias> GetByFechaPublicacion(DateTime fecha)
+        {
+            return dbEntities.Noticias.Where(n => DbFunctions.TruncateTime(n.fechaPublicacion) == DbFunctions.TruncateTime(fecha)).ToList();
+        }
+
+        // Obtener noticias por tags
+        public List<Noticias> GetByTags(string tags)
+        {
+            return dbEntities.Noticias.Where(n => n.tags.Contains(tags)).ToList();
+        }
+
         // Método para eliminar una noticia por ID
         public void Remove(int id)
         {
