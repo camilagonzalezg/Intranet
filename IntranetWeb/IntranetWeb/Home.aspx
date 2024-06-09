@@ -3,36 +3,44 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <!-- Carrusel con ImagenPortadaSlider-->
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <asp:Repeater ID="RepeaterSliderIndicators" runat="server">
-                <ItemTemplate>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="<%# Container.ItemIndex %>" class="<%# Container.ItemIndex == 0 ? "active" : "" %>" aria-current="true" aria-label="Slide <%# Container.ItemIndex + 1 %>"></button>
-                </ItemTemplate>
-            </asp:Repeater>
+    <section class="py-1">
+        <div class="container px-1 my-0">
+            <!-- Carrusel con ImagenPortadaSlider-->
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <asp:Repeater ID="RepeaterSliderIndicators" runat="server">
+                        <ItemTemplate>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="<%# Container.ItemIndex %>" class="<%# Container.ItemIndex == 0 ? "active" : "" %>" aria-current="true" aria-label="Slide <%# Container.ItemIndex + 1 %>"></button>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </div>
+                <div class="carousel-inner">
+                    <asp:Repeater ID="RepeaterSlider" runat="server">
+                        <ItemTemplate>
+                            <div class="carousel-item <%# Container.ItemIndex == 0 ? "active" : "" %>">
+                                <a href="<%# Eval("urlSimple") %>">
+                                    <img src="/Multimedia/ImagenesNoticias/<%# Eval("ImagenUrl") %>" class="d-block w-100" alt="...">
+                                </a>
+                                <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.7); padding: 10px; border-radius: 5px;">
+                                    <h5><%# Eval("titulo") %></h5>
+                                    <p><%# Eval("metaDescripcion") %></p>
+                                </div>
+                            </div>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>
-        <div class="carousel-inner">
-            <asp:Repeater ID="RepeaterSlider" runat="server">
-                <ItemTemplate>
-                    <div class="carousel-item <%# Container.ItemIndex == 0 ? "active" : "" %>">
-                        <img src="/Multimedia/ImagenesNoticias/<%# Eval("ImagenUrl") %>" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5><%# Eval("titulo") %></h5>
-                            <p><%# Eval("metaDescripcion") %></p>
-                        </div>
-                    </div>
-                </ItemTemplate>
-            </asp:Repeater>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+
+    </section>
 
     <!-- Accesos directos-->
     <section class="py-3">
@@ -94,32 +102,35 @@
                         </div>
                     </ItemTemplate>
                 </asp:Repeater>
-
-
-                <header class="bg-light py-5">
-                    <div class="container px-5">
-                        <div class="row gx-5 align-items-center justify-content-center">
-                            <div class="col-lg-8 col-xl-7 col-xxl-6">
-                                <div class="my-5 text-center text-xl-start">
-                                    <h1 class="display-5 fw-bolder mb-2">A Bootstrap 5 template for modern businesses</h1>
-                                    <p class="lead fw-normal mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit!</p>
-                                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                                        <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Get Started</a>
-                                        <a class="btn btn-outline-dark btn-lg px-4" href="#!">Learn More</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
-                                <img class="img-fluid rounded-3 my-5" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." />
+    </section>
+    <br />
+    <br />
+    <section class="py-2">
+        <div class="container px-5 my-1">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center justify-content-center">
+                    <div class="col-lg-8 col-xl-7 col-xxl-6">
+                        <div class="my-5 text-center text-xl-start">
+                            <h1 class="display-5 fw-bolder mb-2">Somos una empresa reconocida como Great Place to Work</h1>
+                            <p class="lead fw-normal mb-4">Por séptimo año consecutivo, AFC Chile obtuvo un 6° lugar en la categoría de empresas de menos de mil trabajadores. Un hito que nos llena de orgullo.</p>
+                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Revisa la nota</a>
+                                <a class="btn btn-outline-dark btn-lg px-4" href="#!">Descubre nuestro modelo de competencias</a>
                             </div>
                         </div>
                     </div>
-                </header>
-
+                    <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
+                        <img class="img-fluid rounded-3 my-5" src="\Multimedia\ImagenesEstaticas\gptw600x400.jpg" alt="..." />
+                    </div>
+                </div>
             </div>
         </div>
+        </div>
+        </div>
     </section>
-
+    <br />
+    <br />
+    <br />
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 </asp:Content>

@@ -8,7 +8,7 @@
         <div class="card" style="border-radius: 1rem;">
           <div class="row g-0">
             <div class="col-md-6 col-lg-5 d-none d-md-block">
-              <img src="Images\foto_1280x1920.jpg"
+              <img src="\Multimedia\ImagenesEstaticas\foto_1280x1920.jpg"
                 alt="foto de mujer en AFC" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
             </div>
             <div class="col-md-6 col-lg-7 d-flex align-items-center">
