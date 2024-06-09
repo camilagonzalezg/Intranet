@@ -18,6 +18,7 @@ namespace IntranetModel
         public ArchivosMultimedia()
         {
             this.Noticias = new HashSet<Noticias>();
+            this.Noticias1 = new HashSet<Noticias>();
         }
     
         public int id { get; set; }
@@ -29,5 +30,7 @@ namespace IntranetModel
         public virtual Usuarios Usuarios { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Noticias> Noticias { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Noticias> Noticias1 { get; set; }
     }
 }

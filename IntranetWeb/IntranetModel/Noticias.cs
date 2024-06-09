@@ -29,9 +29,12 @@ namespace IntranetModel
         public string tags { get; set; }
         public Nullable<int> likes { get; set; }
         public string urlSimple { get; set; }
-        public Nullable<int> ArchivoMultimediaId { get; set; }
+        public Nullable<int> ArchivoMultimediaIdSlider { get; set; }
+        public Nullable<int> ArchivoMultimediaIdCard { get; set; }
+        public Nullable<bool> ColocarEnSlider { get; set; }
     
         public virtual ArchivosMultimedia ArchivosMultimedia { get; set; }
+        public virtual ArchivosMultimedia ArchivosMultimedia1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ComentariosNoticias> ComentariosNoticias { get; set; }
         public virtual Usuarios Usuarios { get; set; }

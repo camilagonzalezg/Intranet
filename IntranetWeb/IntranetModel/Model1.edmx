@@ -80,7 +80,9 @@
           <Property Name="tags" Type="nvarchar" MaxLength="200" />
           <Property Name="likes" Type="int" />
           <Property Name="urlSimple" Type="nvarchar" MaxLength="255" />
-          <Property Name="ArchivoMultimediaId" Type="int" />
+          <Property Name="ArchivoMultimediaIdSlider" Type="int" />
+          <Property Name="ArchivoMultimediaIdCard" Type="int" />
+          <Property Name="ColocarEnSlider" Type="bit" />
         </EntityType>
         <EntityType Name="Paginas">
           <Key>
@@ -350,7 +352,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Noticias_ArchivosMultimedia">
+        <Association Name="FK_Noticias_ArchivoMultimediaCard">
           <End Role="ArchivosMultimedia" Type="Self.ArchivosMultimedia" Multiplicity="0..1" />
           <End Role="Noticias" Type="Self.Noticias" Multiplicity="*" />
           <ReferentialConstraint>
@@ -358,7 +360,19 @@
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="Noticias">
-              <PropertyRef Name="ArchivoMultimediaId" />
+              <PropertyRef Name="ArchivoMultimediaIdCard" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Noticias_ArchivoMultimediaSlider">
+          <End Role="ArchivosMultimedia" Type="Self.ArchivosMultimedia" Multiplicity="0..1" />
+          <End Role="Noticias" Type="Self.Noticias" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ArchivosMultimedia">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Noticias">
+              <PropertyRef Name="ArchivoMultimediaIdSlider" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -445,7 +459,11 @@
             <End Role="Ubicaciones" EntitySet="Ubicaciones" />
             <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>
-          <AssociationSet Name="FK_Noticias_ArchivosMultimedia" Association="Self.FK_Noticias_ArchivosMultimedia">
+          <AssociationSet Name="FK_Noticias_ArchivoMultimediaCard" Association="Self.FK_Noticias_ArchivoMultimediaCard">
+            <End Role="ArchivosMultimedia" EntitySet="ArchivosMultimedia" />
+            <End Role="Noticias" EntitySet="Noticias" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Noticias_ArchivoMultimediaSlider" Association="Self.FK_Noticias_ArchivoMultimediaSlider">
             <End Role="ArchivosMultimedia" EntitySet="ArchivosMultimedia" />
             <End Role="Noticias" EntitySet="Noticias" />
           </AssociationSet>
@@ -465,7 +483,8 @@
           <Property Name="urlArchivo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="usuarioAutor" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Usuarios" Relationship="Self.FK__ArchivosM__usuar__5FB337D6" FromRole="ArchivosMultimedia" ToRole="Usuarios" />
-          <NavigationProperty Name="Noticias" Relationship="Self.FK_Noticias_ArchivosMultimedia" FromRole="ArchivosMultimedia" ToRole="Noticias" />
+          <NavigationProperty Name="Noticias" Relationship="Self.FK_Noticias_ArchivoMultimediaCard" FromRole="ArchivosMultimedia" ToRole="Noticias" />
+          <NavigationProperty Name="Noticias1" Relationship="Self.FK_Noticias_ArchivoMultimediaSlider" FromRole="ArchivosMultimedia" ToRole="Noticias" />
         </EntityType>
         <EntityType Name="ComentariosNoticias">
           <Key>
@@ -543,8 +562,11 @@
           <Property Name="tags" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="likes" Type="Int32" />
           <Property Name="urlSimple" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="ArchivoMultimediaId" Type="Int32" />
-          <NavigationProperty Name="ArchivosMultimedia" Relationship="Self.FK_Noticias_ArchivosMultimedia" FromRole="Noticias" ToRole="ArchivosMultimedia" />
+          <Property Name="ArchivoMultimediaIdSlider" Type="Int32" />
+          <Property Name="ArchivoMultimediaIdCard" Type="Int32" />
+          <Property Name="ColocarEnSlider" Type="Boolean" />
+          <NavigationProperty Name="ArchivosMultimedia" Relationship="Self.FK_Noticias_ArchivoMultimediaCard" FromRole="Noticias" ToRole="ArchivosMultimedia" />
+          <NavigationProperty Name="ArchivosMultimedia1" Relationship="Self.FK_Noticias_ArchivoMultimediaSlider" FromRole="Noticias" ToRole="ArchivosMultimedia" />
           <NavigationProperty Name="ComentariosNoticias" Relationship="Self.FK__Comentari__idNot__403A8C7D" FromRole="Noticias" ToRole="ComentariosNoticias" />
           <NavigationProperty Name="Usuarios" Relationship="Self.FK__Noticias__usuari__3A81B327" FromRole="Noticias" ToRole="Usuarios" />
         </EntityType>
@@ -644,7 +666,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Noticias_ArchivosMultimedia">
+        <Association Name="FK_Noticias_ArchivoMultimediaCard">
           <End Role="ArchivosMultimedia" Type="Self.ArchivosMultimedia" Multiplicity="0..1" />
           <End Role="Noticias" Type="Self.Noticias" Multiplicity="*" />
           <ReferentialConstraint>
@@ -652,7 +674,19 @@
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="Noticias">
-              <PropertyRef Name="ArchivoMultimediaId" />
+              <PropertyRef Name="ArchivoMultimediaIdCard" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Noticias_ArchivoMultimediaSlider">
+          <End Role="ArchivosMultimedia" Type="Self.ArchivosMultimedia" Multiplicity="0..1" />
+          <End Role="Noticias" Type="Self.Noticias" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ArchivosMultimedia">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Noticias">
+              <PropertyRef Name="ArchivoMultimediaIdSlider" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -867,7 +901,11 @@
             <End Role="Usuarios" EntitySet="Usuarios" />
             <End Role="ArchivosMultimedia" EntitySet="ArchivosMultimedia" />
           </AssociationSet>
-          <AssociationSet Name="FK_Noticias_ArchivosMultimedia" Association="Self.FK_Noticias_ArchivosMultimedia">
+          <AssociationSet Name="FK_Noticias_ArchivoMultimediaCard" Association="Self.FK_Noticias_ArchivoMultimediaCard">
+            <End Role="ArchivosMultimedia" EntitySet="ArchivosMultimedia" />
+            <End Role="Noticias" EntitySet="Noticias" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Noticias_ArchivoMultimediaSlider" Association="Self.FK_Noticias_ArchivoMultimediaSlider">
             <End Role="ArchivosMultimedia" EntitySet="ArchivosMultimedia" />
             <End Role="Noticias" EntitySet="Noticias" />
           </AssociationSet>
@@ -1023,7 +1061,9 @@
                 <ScalarProperty Name="tags" ColumnName="tags" />
                 <ScalarProperty Name="likes" ColumnName="likes" />
                 <ScalarProperty Name="urlSimple" ColumnName="urlSimple" />
-                <ScalarProperty Name="ArchivoMultimediaId" ColumnName="ArchivoMultimediaId" />
+                <ScalarProperty Name="ArchivoMultimediaIdSlider" ColumnName="ArchivoMultimediaIdSlider" />
+                <ScalarProperty Name="ArchivoMultimediaIdCard" ColumnName="ArchivoMultimediaIdCard" />
+                <ScalarProperty Name="ColocarEnSlider" ColumnName="ColocarEnSlider" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
