@@ -3,76 +3,76 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <!-- Carrusel -->
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="Images\descarga.svg" alt="First slide">
+                <img src="Images\nota1_900x400.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Noticia 1</h5>
-                    <p>Revisa que tiene la noticia 1</p>
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="Images\nota2_900x400.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="Images\nota3_900x400.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
                 </div>
             </div>
         </div>
-        <div class="carousel-item">
-            <img class="d-block w-100" src="Images\descarga.svg" alt="Second slide">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Noticia 2</h5>
-                <p>Revisa que tiene la noticia 2</p>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img class="d-block w-100" src="Images\descarga.svg" alt="Third slide">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Noticia 3</h5>
-                <p>Revisa que tiene la noticia 3</p>
-            </div>
-        </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 
-        <!-- Header-->
-    <header class="bg-dark py-5">
-        <div class="container px-5">
-            <div class="row gx-5 align-items-center justify-content-center">
-                <div class="col-lg-8 col-xl-7 col-xxl-6">
-                    <div class="my-5 text-center text-xl-start">
-                        <h1 class="display-5 fw-bolder text-white mb-2">A Bootstrap 5 template for modern businesses</h1>
-                        <p class="lead fw-normal text-white-50 mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit!</p>
-                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                            <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Get Started</a>
-                            <a class="btn btn-outline-light btn-lg px-4" href="#!">Learn More</a>
-                        </div>
-                    </div>
+    <!-- Accesos directos-->
+    <section class="py-3">
+        <div class="container px-5 my-5">
+            <div class="row gx-5 row-cols-2 row-cols-lg-4 py-5">
+                <div class="col">
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-chat-dots"></i></div>
+                    <div class="h5 mb-2">Chat with us</div>
+                    <p class="text-muted mb-0">Chat live with one of our support specialists.</p>
                 </div>
-                <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
-                    <img class="img-fluid rounded-3 my-5" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." /></div>
+                <div class="col">
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-people"></i></div>
+                    <div class="h5">Ask the community</div>
+                    <p class="text-muted mb-0">Explore our community forums and communicate with other users.</p>
+                </div>
+                <div class="col">
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-question-circle"></i></div>
+                    <div class="h5">Support center</div>
+                    <p class="text-muted mb-0">Browse FAQ's and support articles to find solutions.</p>
+                </div>
+                <div class="col">
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-telephone"></i></div>
+                    <div class="h5">Call us</div>
+                    <p class="text-muted mb-0">Call us during normal business hours at (555) 892-9403.</p>
+                </div>
             </div>
         </div>
-    </header>
+    </section>
+
     <!-- Blog preview section-->
-    <section class="py-5">
-        <div class="container px-5 my-5">
-            <div class="row gx-5 justify-content-center">
-                <div class="col-lg-8 col-xl-6">
-                    <div class="text-center">
-                        <h2 class="fw-bolder">From our blog</h2>
-                        <p class="lead fw-normal text-muted mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque fugit ratione dicta mollitia. Officiis ad.</p>
-                    </div>
-                </div>
-            </div>
+    <section class="py-2">
+        <div class="container px-5 my-1">
             <div class="row gx-5">
                 <div class="col-lg-4 mb-5">
                     <div class="card h-100 shadow border-0">
@@ -144,22 +144,26 @@
                     </div>
                 </div>
             </div>
-            <!-- Call to action-->
-            <aside class="bg-primary bg-gradient rounded-3 p-4 p-sm-5 mt-5">
-                <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
-                    <div class="mb-4 mb-xl-0">
-                        <div class="fs-3 fw-bold text-white">New products, delivered to you.</div>
-                        <div class="text-white-50">Sign up for our newsletter for the latest updates.</div>
-                    </div>
-                    <div class="ms-xl-4">
-                        <div class="input-group mb-2">
-                            <input class="form-control" type="text" placeholder="Email address..." aria-label="Email address..." aria-describedby="button-newsletter" />
-                            <button class="btn btn-outline-light" id="button-newsletter" type="button">Sign up</button>
+            <!-- Header-->
+            <header class="bg-light py-5">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center justify-content-center">
+                        <div class="col-lg-8 col-xl-7 col-xxl-6">
+                            <div class="my-5 text-center text-xl-start">
+                                <h1 class="display-5 fw-bolder mb-2">A Bootstrap 5 template for modern businesses</h1>
+                                <p class="lead fw-normal mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit!</p>
+                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                    <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Get Started</a>
+                                    <a class="btn btn-outline-dark btn-lg px-4" href="#!">Learn More</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="small text-white-50">We care about privacy, and will never share your data.</div>
+                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
+                            <img class="img-fluid rounded-3 my-5" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." />
+                        </div>
                     </div>
                 </div>
-            </aside>
+            </header>
         </div>
     </section>
 

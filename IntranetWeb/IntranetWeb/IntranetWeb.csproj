@@ -364,6 +364,9 @@
     <Content Include="Home.aspx" />
     <Content Include="Images\descarga.svg" />
     <Content Include="Images\foto_1280x1920.jpg" />
+    <Content Include="Images\nota1_900x400.jpg" />
+    <Content Include="Images\nota2_900x400.jpg" />
+    <Content Include="Images\nota3_900x400.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="Noticia.aspx" />
     <Content Include="Novedades.aspx" />
