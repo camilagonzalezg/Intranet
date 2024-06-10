@@ -35,6 +35,7 @@
           <Property Name="descripcionArchivo" Type="nvarchar" MaxLength="500" />
           <Property Name="fechaIngreso" Type="date" />
           <Property Name="fechaCierre" Type="date" />
+          <Property Name="rutaArchivo" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Departamentos">
           <Key>
@@ -508,6 +509,7 @@
           <Property Name="descripcionArchivo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="fechaIngreso" Type="DateTime" Precision="0" />
           <Property Name="fechaCierre" Type="DateTime" Precision="0" />
+          <Property Name="rutaArchivo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Usuarios" Relationship="Self.FK__Correspon__usuar__440B1D61" FromRole="Correspondencias" ToRole="Usuarios" />
         </EntityType>
         <EntityType Name="Departamentos">
@@ -1011,6 +1013,7 @@
                 <ScalarProperty Name="descripcionArchivo" ColumnName="descripcionArchivo" />
                 <ScalarProperty Name="fechaIngreso" ColumnName="fechaIngreso" />
                 <ScalarProperty Name="fechaCierre" ColumnName="fechaCierre" />
+                <ScalarProperty Name="rutaArchivo" ColumnName="rutaArchivo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

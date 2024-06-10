@@ -44,12 +44,6 @@
     </header>
     <main class="container-fluid">
         <form id="form1" runat="server">
-<%--            <div class="container px-5 my-0 mb-0">
-                <div class="row gx-5">
-                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
-                    <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
-                </div>
-            </div>--%>
             <div>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>

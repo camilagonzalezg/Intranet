@@ -358,6 +358,7 @@
     <Content Include="Content\froala\js\third_party\spell_checker.min.js" />
     <Content Include="Content\froala\License.txt" />
     <Content Include="Default.aspx" />
+    <Content Include="EditarCorrespondencia.aspx" />
     <Content Include="EditarNoticia.aspx" />
     <Content Include="EditarPagina.aspx" />
     <Content Include="EditarUsuario.aspx" />
@@ -367,9 +368,11 @@
     <Content Include="Multimedia\ImagenesEstaticas\gptw600x400.jpg" />
     <Content Include="Noticia.aspx" />
     <Content Include="Novedades.aspx" />
+    <Content Include="RegistrarCorrespondencia.aspx" />
     <Content Include="RegistrarNoticia.aspx" />
     <Content Include="RegistrarPagina.aspx" />
     <Content Include="RegistrarUsuario.aspx" />
+    <Content Include="VerCorrespondencias.aspx" />
     <Content Include="VerNoticias.aspx" />
     <Content Include="VerPaginas.aspx" />
     <Content Include="VerUsuarios.aspx" />
@@ -382,6 +385,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditarCorrespondencia.aspx.cs">
+      <DependentUpon>EditarCorrespondencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditarCorrespondencia.aspx.designer.cs">
+      <DependentUpon>EditarCorrespondencia.aspx</DependentUpon>
     </Compile>
     <Compile Include="EditarNoticia.aspx.cs">
       <DependentUpon>EditarNoticia.aspx</DependentUpon>
@@ -433,6 +443,13 @@
       <DependentUpon>Novedades.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrarCorrespondencia.aspx.cs">
+      <DependentUpon>RegistrarCorrespondencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrarCorrespondencia.aspx.designer.cs">
+      <DependentUpon>RegistrarCorrespondencia.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RegistrarNoticia.aspx.cs">
       <DependentUpon>RegistrarNoticia.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -462,6 +479,13 @@
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
     <Compile Include="Validador.cs" />
+    <Compile Include="VerCorrespondencias.aspx.cs">
+      <DependentUpon>VerCorrespondencias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VerCorrespondencias.aspx.designer.cs">
+      <DependentUpon>VerCorrespondencias.aspx</DependentUpon>
+    </Compile>
     <Compile Include="VerNoticias.aspx.cs">
       <DependentUpon>VerNoticias.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

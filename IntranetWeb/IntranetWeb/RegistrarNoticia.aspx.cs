@@ -106,25 +106,6 @@ namespace IntranetWeb
             Context.ApplicationInstance.CompleteRequest();
         }
 
-
-
-
-        //private string GenerateUrlSimple(string titulo)
-        //{
-        //    // Convertir a minúsculas
-        //    string urlSimple = titulo.ToLowerInvariant();
-
-        //    // Reemplazar caracteres especiales y espacios con guiones
-        //    urlSimple = Regex.Replace(urlSimple, @"[^a-z0-9\s-]", ""); // Eliminar caracteres especiales
-        //    urlSimple = Regex.Replace(urlSimple, @"\s+", " ").Trim(); // Reemplazar múltiples espacios con uno solo
-        //    urlSimple = Regex.Replace(urlSimple, @"\s", "-"); // Reemplazar espacios con guiones
-
-        //    // Añadir prefijo "noticias/"
-        //    urlSimple = "noticias/" + urlSimple;
-
-        //    return urlSimple;
-        //}
-
         private string GenerateUrlSimple(string titulo)
         {
             // Convertir a minúsculas
@@ -184,7 +165,6 @@ namespace IntranetWeb
 
     }
 }
-
 
 
 

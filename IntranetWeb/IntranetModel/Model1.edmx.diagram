@@ -4,21 +4,21 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="8c6848e76b87405e965d5f25fb373bde" Name="Diagram1">
+      <Diagram DiagramId="e114115b4d9c4ce1a088226f6cbaac67" Name="Diagram1">
         <EntityTypeShape EntityType="IntranetModel.ArchivosMultimedia" Width="1.5" PointX="12" PointY="2.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="IntranetModel.ComentariosNoticias" Width="1.5" PointX="16.5" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.ComentariosNoticias" Width="1.5" PointX="16.5" PointY="6.5" IsExpanded="true" />
         <EntityTypeShape EntityType="IntranetModel.Correspondencias" Width="1.5" PointX="12" PointY="5.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="IntranetModel.Departamentos" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.Departamentos" Width="1.5" PointX="5.25" PointY="7.25" IsExpanded="true" />
         <EntityTypeShape EntityType="IntranetModel.Gerencias" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="IntranetModel.Hijos" Width="1.5" PointX="12" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="IntranetModel.NombreHijos" Width="1.5" PointX="14.25" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="IntranetModel.Noticias" Width="1.5" PointX="14.25" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="IntranetModel.Paginas" Width="1.5" PointX="12" PointY="11.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="IntranetModel.RolesUsuario" Width="1.5" PointX="7.5" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="IntranetModel.Subgerencias" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="IntranetModel.TiposContrato" Width="1.5" PointX="7.5" PointY="10.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="IntranetModel.Ubicaciones" Width="1.5" PointX="7.5" PointY="7.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="IntranetModel.Usuarios" Width="1.5" PointX="9.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.Hijos" Width="1.5" PointX="12" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.NombreHijos" Width="1.5" PointX="14.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.Noticias" Width="1.5" PointX="14.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.Paginas" Width="1.5" PointX="12" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.RolesUsuario" Width="1.5" PointX="7.5" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.Subgerencias" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.TiposContrato" Width="1.5" PointX="7.5" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.Ubicaciones" Width="1.5" PointX="7.5" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.Usuarios" Width="1.5" PointX="9.75" PointY="5.125" IsExpanded="true" />
         <AssociationConnector Association="IntranetModel.FK__ArchivosM__usuar__5FB337D6" ManuallyRouted="false" />
         <AssociationConnector Association="IntranetModel.FK_Noticias_ArchivoMultimediaCard" ManuallyRouted="false" />
         <AssociationConnector Association="IntranetModel.FK_Noticias_ArchivoMultimediaSlider" ManuallyRouted="false" />

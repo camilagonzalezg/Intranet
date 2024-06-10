@@ -20,6 +20,7 @@ namespace IntranetModel
         public string descripcionArchivo { get; set; }
         public Nullable<System.DateTime> fechaIngreso { get; set; }
         public Nullable<System.DateTime> fechaCierre { get; set; }
+        public string rutaArchivo { get; set; }
     
         public virtual Usuarios Usuarios { get; set; }
     }

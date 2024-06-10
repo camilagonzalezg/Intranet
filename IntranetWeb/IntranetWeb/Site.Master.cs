@@ -68,8 +68,8 @@ namespace IntranetWeb
                 <li class='nav-item dropdown'>
                     <a class='nav-link dropdown-toggle' href='#' id='navbarDropdownCorrespondencia' role='button' data-bs-toggle='dropdown' aria-expanded='false'>Correspondencia</a>
                     <ul class='dropdown-menu' aria-labelledby='navbarDropdownCorrespondencia'>
-                        <li><a class='dropdown-item' href='#'>Registrar Correspondencia</a></li>
-                        <li><a class='dropdown-item' href='#'>Ver correspondencia</a></li>
+                        <li><a class='dropdown-item' href='/RegistrarCorrespondencia.aspx'>Registrar Correspondencia</a></li>
+                        <li><a class='dropdown-item' href='/VerCorrespondencias.aspx'>Ver correspondencia</a></li>
                     </ul>
                 </li>
                 <li class='nav-item dropdown'>
