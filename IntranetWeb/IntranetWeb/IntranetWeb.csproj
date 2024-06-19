@@ -357,6 +357,8 @@
     <Content Include="Content\froala\js\third_party\showdown.min.js" />
     <Content Include="Content\froala\js\third_party\spell_checker.min.js" />
     <Content Include="Content\froala\License.txt" />
+    <Content Include="Content\sidebar\sidebars.css" />
+    <Content Include="Content\sidebar\sidebars.js" />
     <Content Include="Default.aspx" />
     <Content Include="EditarCorrespondencia.aspx" />
     <Content Include="EditarNoticia.aspx" />
@@ -368,6 +370,7 @@
     <Content Include="Multimedia\ImagenesEstaticas\gptw600x400.jpg" />
     <Content Include="Noticia.aspx" />
     <Content Include="Novedades.aspx" />
+    <Content Include="NuestraEmpresa.aspx" />
     <Content Include="RegistrarCorrespondencia.aspx" />
     <Content Include="RegistrarNoticia.aspx" />
     <Content Include="RegistrarPagina.aspx" />
@@ -441,6 +444,13 @@
     </Compile>
     <Compile Include="Novedades.aspx.designer.cs">
       <DependentUpon>Novedades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NuestraEmpresa.aspx.cs">
+      <DependentUpon>NuestraEmpresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NuestraEmpresa.aspx.designer.cs">
+      <DependentUpon>NuestraEmpresa.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrarCorrespondencia.aspx.cs">
