@@ -8,7 +8,6 @@
     <title>Intranet AFC</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sidebars/">
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
@@ -16,11 +15,6 @@
     <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/133cff1af7.js" crossorigin="anonymous"></script>
     <link href="Content/estilos.css" rel="stylesheet" />
-    <link href="Content/sidebar/sidebars.css" rel="stylesheet" />
-    <!-- Froala Editor -->
-    <link href="Content\froala\css\froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
-    <link href="Content\froala\css\froala_style.min.css" rel="stylesheet" type="text/css" />
-    <script src="Content\froala\js\froala_editor.pkgd.min.js"></script>
     <!-- TinyMCE -->
     <script src="https://cdn.tiny.cloud/1/45ylqwv0kblvg0f2ap5jrzsrgvm2gpev491max8pl4djs6ag/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
     <script type="text/javascript">
