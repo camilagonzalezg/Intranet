@@ -16,19 +16,6 @@ namespace IntranetWeb
             }
         }
 
-        //private void VerifyDatabaseEntries()
-        //{
-        //    using (var context = new IntranetEntities())
-        //    {
-        //        var multimediaEntries = context.ArchivosMultimedia.ToList();
-        //        foreach (var entry in multimediaEntries)
-        //        {
-        //            System.Diagnostics.Debug.WriteLine("ArchivoMultimedia ID: " + entry.id);
-        //            System.Diagnostics.Debug.WriteLine("URL Archivo: " + entry.urlArchivo);
-        //        }
-        //    }
-        //}
-
         private void LoadSliderNews()
         {
             using (var context = new IntranetEntities())
@@ -72,13 +59,6 @@ namespace IntranetWeb
                         tags = n.tags // Cambia 'tag' por 'tags'
                     })
                     .ToList();
-
-                //foreach (var news in latestNews)
-                //{
-                //    System.Diagnostics.Debug.WriteLine("Titulo: " + news.titulo);
-                //    System.Diagnostics.Debug.WriteLine("ImagenUrlCard: " + news.ImagenUrlCard ?? "No image URL");
-                //    System.Diagnostics.Debug.WriteLine("UrlSimple: " + news.urlSimple);
-                //}
 
                 RepeaterLatestNews.DataSource = latestNews;
                 RepeaterLatestNews.DataBind();

@@ -17,7 +17,7 @@ namespace IntranetWeb
             // Ordenar las noticias por fecha de publicación de forma descendente
             var noticiasOrdenadas = noticias.OrderByDescending(n => n.fechaPublicacion).ToList();
             // Agregar mensaje de depuración
-            System.Diagnostics.Debug.WriteLine("Noticias a cargar: " + noticiasOrdenadas.Count);
+            //System.Diagnostics.Debug.WriteLine("Noticias a cargar: " + noticiasOrdenadas.Count);
             NoticiasGrid.DataSource = noticiasOrdenadas;
             NoticiasGrid.DataBind();
         }
@@ -27,7 +27,7 @@ namespace IntranetWeb
             if (!IsPostBack)
             {
                 List<Noticias> noticias = noticiasDAL.GetAll();
-                System.Diagnostics.Debug.WriteLine("Noticias obtenidas: " + noticias.Count);
+                //System.Diagnostics.Debug.WriteLine("Noticias obtenidas: " + noticias.Count);
                 CargarTabla(noticias);
 
                 // Verificar si hay un parámetro en la URL

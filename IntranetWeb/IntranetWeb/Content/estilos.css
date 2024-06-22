@@ -1,18 +1,18 @@
 ﻿body {
     .table-sm td, .table-sm th
 
-{
-    font-size: 0.8rem; /* Reducir el tamaño de fuente */
-    padding: 0.25rem; /* Reducir el padding */
+        {
+            font-size: 0.8rem; /* Reducir el tamaño de fuente */
+            padding: 0.25rem; /* Reducir el padding */
+        }
+
+        .table-hover tbody tr:hover {
+            background-color: #f5f5f5; /* Color de fondo al pasar el ratón */
+        }
+
+        .btn-sm {
+            padding: 0.25rem 0.5rem; /* Ajustar el padding de los botones */
+            font-size: 0.75rem; /* Reducir el tamaño de fuente de los botones */
+        }
 }
 
-.table-hover tbody tr:hover {
-    background-color: #f5f5f5; /* Color de fondo al pasar el ratón */
-}
-
-.btn-sm {
-    padding: 0.25rem 0.5rem; /* Ajustar el padding de los botones */
-    font-size: 0.75rem; /* Reducir el tamaño de fuente de los botones */
-}
-
-}

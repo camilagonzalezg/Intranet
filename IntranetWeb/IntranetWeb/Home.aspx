@@ -102,6 +102,8 @@
                         </div>
                     </ItemTemplate>
                 </asp:Repeater>
+                </div>
+            </div>
     </section>
     <br />
     <br />
