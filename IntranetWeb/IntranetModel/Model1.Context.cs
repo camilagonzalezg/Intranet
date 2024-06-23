@@ -31,7 +31,6 @@ namespace IntranetModel
         public virtual DbSet<Departamentos> Departamentos { get; set; }
         public virtual DbSet<Gerencias> Gerencias { get; set; }
         public virtual DbSet<Hijos> Hijos { get; set; }
-        public virtual DbSet<NombreHijos> NombreHijos { get; set; }
         public virtual DbSet<Noticias> Noticias { get; set; }
         public virtual DbSet<Paginas> Paginas { get; set; }
         public virtual DbSet<RolesUsuario> RolesUsuario { get; set; }

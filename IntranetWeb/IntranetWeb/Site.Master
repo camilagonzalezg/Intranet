@@ -16,6 +16,9 @@
     <link href="Content/estilos.css" rel="stylesheet" />
     <!-- TinyMCE -->
     <script src="https://cdn.tiny.cloud/1/45ylqwv0kblvg0f2ap5jrzsrgvm2gpev491max8pl4djs6ag/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+    <!-- Otros meta tags y CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript">
         function logout() {
             document.getElementById('<%= btnLogout.ClientID %>').click();

@@ -104,6 +104,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AgregarNacimiento.aspx" />
     <Content Include="Content\estilos.css" />
     <Content Include="Cultura.aspx" />
     <Content Include="Default.aspx" />
@@ -119,8 +120,10 @@
     <Content Include="Novedades.aspx" />
     <Content Include="NuestraEmpresa.aspx" />
     <Content Include="RegistrarCorrespondencia.aspx" />
+    <Content Include="RegistrarNacimiento.aspx" />
     <Content Include="RegistrarNoticia.aspx" />
     <Content Include="RegistrarPagina.aspx" />
+    <Content Include="RegistrarPromocion.aspx" />
     <Content Include="RegistrarUsuario.aspx" />
     <Content Include="VerCorrespondencias.aspx" />
     <Content Include="VerNoticias.aspx" />
@@ -129,6 +132,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarNacimiento.aspx.cs">
+      <DependentUpon>AgregarNacimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarNacimiento.aspx.designer.cs">
+      <DependentUpon>AgregarNacimiento.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Cultura.aspx.cs">
       <DependentUpon>Cultura.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -214,6 +224,13 @@
     <Compile Include="RegistrarCorrespondencia.aspx.designer.cs">
       <DependentUpon>RegistrarCorrespondencia.aspx</DependentUpon>
     </Compile>
+    <Compile Include="RegistrarNacimiento.aspx.cs">
+      <DependentUpon>RegistrarNacimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrarNacimiento.aspx.designer.cs">
+      <DependentUpon>RegistrarNacimiento.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RegistrarNoticia.aspx.cs">
       <DependentUpon>RegistrarNoticia.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -227,6 +244,13 @@
     </Compile>
     <Compile Include="RegistrarPagina.aspx.designer.cs">
       <DependentUpon>RegistrarPagina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarPromocion.aspx.cs">
+      <DependentUpon>RegistrarPromocion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrarPromocion.aspx.designer.cs">
+      <DependentUpon>RegistrarPromocion.aspx</DependentUpon>
     </Compile>
     <Compile Include="RegistrarUsuario.aspx.cs">
       <DependentUpon>RegistrarUsuario.aspx</DependentUpon>

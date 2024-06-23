@@ -60,6 +60,7 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\CorrespondenciasDAL.cs" />
+    <Compile Include="DAL\HijosDAL.cs" />
     <Compile Include="DAL\NoticiasDAL.cs" />
     <Compile Include="DAL\PaginasDAL.cs" />
     <Compile Include="DAL\UsuariosDAL.cs" />
@@ -86,9 +87,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="NombreHijos.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Noticias.cs">
       <DependentUpon>Model1.tt</DependentUpon>

@@ -59,14 +59,7 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="rutUsuario" Type="nvarchar" MaxLength="20" />
           <Property Name="nombre" Type="nvarchar" MaxLength="100" />
-        </EntityType>
-        <EntityType Name="NombreHijos">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="idHijo" Type="int" />
-          <Property Name="nombre" Type="nvarchar" MaxLength="100" />
+          <Property Name="fechanacimientohijo" Type="date" Nullable="false" />
         </EntityType>
         <EntityType Name="Noticias">
           <Key>
@@ -221,18 +214,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__NombreHij__idHij__37A5467C">
-          <End Role="Hijos" Type="Self.Hijos" Multiplicity="0..1" />
-          <End Role="NombreHijos" Type="Self.NombreHijos" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Hijos">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="NombreHijos">
-              <PropertyRef Name="idHijo" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__Noticias__usuari__3A81B327">
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
           <End Role="Noticias" Type="Self.Noticias" Multiplicity="*" />
@@ -384,7 +365,6 @@
           <EntitySet Name="Departamentos" EntityType="Self.Departamentos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Gerencias" EntityType="Self.Gerencias" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Hijos" EntityType="Self.Hijos" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="NombreHijos" EntityType="Self.NombreHijos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Noticias" EntityType="Self.Noticias" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Paginas" EntityType="Self.Paginas" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RolesUsuario" EntityType="Self.RolesUsuario" Schema="dbo" store:Type="Tables" />
@@ -415,10 +395,6 @@
           <AssociationSet Name="FK__Hijos__rutUsuari__34C8D9D1" Association="Self.FK__Hijos__rutUsuari__34C8D9D1">
             <End Role="Usuarios" EntitySet="Usuarios" />
             <End Role="Hijos" EntitySet="Hijos" />
-          </AssociationSet>
-          <AssociationSet Name="FK__NombreHij__idHij__37A5467C" Association="Self.FK__NombreHij__idHij__37A5467C">
-            <End Role="Hijos" EntitySet="Hijos" />
-            <End Role="NombreHijos" EntitySet="NombreHijos" />
           </AssociationSet>
           <AssociationSet Name="FK__Noticias__usuari__3A81B327" Association="Self.FK__Noticias__usuari__3A81B327">
             <End Role="Usuarios" EntitySet="Usuarios" />
@@ -539,17 +515,8 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="rutUsuario" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="fechanacimientohijo" Type="DateTime" Nullable="false" Precision="0" />
           <NavigationProperty Name="Usuarios" Relationship="Self.FK__Hijos__rutUsuari__34C8D9D1" FromRole="Hijos" ToRole="Usuarios" />
-          <NavigationProperty Name="NombreHijos" Relationship="Self.FK__NombreHij__idHij__37A5467C" FromRole="Hijos" ToRole="NombreHijos" />
-        </EntityType>
-        <EntityType Name="NombreHijos">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="idHijo" Type="Int32" />
-          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Hijos" Relationship="Self.FK__NombreHij__idHij__37A5467C" FromRole="NombreHijos" ToRole="Hijos" />
         </EntityType>
         <EntityType Name="Noticias">
           <Key>
@@ -800,18 +767,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__NombreHij__idHij__37A5467C">
-          <End Role="Hijos" Type="Self.Hijos" Multiplicity="0..1" />
-          <End Role="NombreHijos" Type="Self.NombreHijos" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Hijos">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="NombreHijos">
-              <PropertyRef Name="idHijo" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__Noticias__usuari__3A81B327">
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
           <End Role="Noticias" Type="Self.Noticias" Multiplicity="*" />
@@ -891,7 +846,6 @@
           <EntitySet Name="Departamentos" EntityType="Self.Departamentos" />
           <EntitySet Name="Gerencias" EntityType="Self.Gerencias" />
           <EntitySet Name="Hijos" EntityType="Self.Hijos" />
-          <EntitySet Name="NombreHijos" EntityType="Self.NombreHijos" />
           <EntitySet Name="Noticias" EntityType="Self.Noticias" />
           <EntitySet Name="Paginas" EntityType="Self.Paginas" />
           <EntitySet Name="RolesUsuario" EntityType="Self.RolesUsuario" />
@@ -946,10 +900,6 @@
           <AssociationSet Name="FK__Hijos__rutUsuari__34C8D9D1" Association="Self.FK__Hijos__rutUsuari__34C8D9D1">
             <End Role="Usuarios" EntitySet="Usuarios" />
             <End Role="Hijos" EntitySet="Hijos" />
-          </AssociationSet>
-          <AssociationSet Name="FK__NombreHij__idHij__37A5467C" Association="Self.FK__NombreHij__idHij__37A5467C">
-            <End Role="Hijos" EntitySet="Hijos" />
-            <End Role="NombreHijos" EntitySet="NombreHijos" />
           </AssociationSet>
           <AssociationSet Name="FK__Noticias__usuari__3A81B327" Association="Self.FK__Noticias__usuari__3A81B327">
             <End Role="Usuarios" EntitySet="Usuarios" />
@@ -1040,15 +990,7 @@
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="rutUsuario" ColumnName="rutUsuario" />
                 <ScalarProperty Name="nombre" ColumnName="nombre" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="NombreHijos">
-            <EntityTypeMapping TypeName="IntranetModel.NombreHijos">
-              <MappingFragment StoreEntitySet="NombreHijos">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="idHijo" ColumnName="idHijo" />
-                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="fechanacimientohijo" ColumnName="fechanacimientohijo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

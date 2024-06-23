@@ -52,5 +52,13 @@ namespace IntranetModel.DAL
             dbEntities.Entry(u).State = EntityState.Modified;
             dbEntities.SaveChanges();
         }
+
+        // Método para obtener todos los usuarios con sus hijos
+        public List<Usuarios> GetAllWithChildren()
+        {
+            return dbEntities.Usuarios.Include(u => u.Hijos).Include(u => u.Gerencias).Include(u => u.Subgerencias).Include(u => u.Departamentos).Include(u => u.Ubicaciones).Include(u => u.TiposContrato).Include(u => u.RolesUsuario).ToList();
+        }
+
+
     }
 }
