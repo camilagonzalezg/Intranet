@@ -105,13 +105,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AgregarNacimiento.aspx" />
+    <Content Include="AgregarPromocion.aspx" />
     <Content Include="Content\estilos.css" />
     <Content Include="Cultura.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="EditarCorrespondencia.aspx" />
     <Content Include="EditarNoticia.aspx" />
     <Content Include="EditarPagina.aspx" />
+    <Content Include="EditarPromocion.aspx" />
     <Content Include="EditarUsuario.aspx" />
+    <Content Include="Error.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Multimedia\ImagenesEstaticas\foto_1280x1920.jpg" />
@@ -138,6 +141,13 @@
     </Compile>
     <Compile Include="AgregarNacimiento.aspx.designer.cs">
       <DependentUpon>AgregarNacimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarPromocion.aspx.cs">
+      <DependentUpon>AgregarPromocion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarPromocion.aspx.designer.cs">
+      <DependentUpon>AgregarPromocion.aspx</DependentUpon>
     </Compile>
     <Compile Include="Cultura.aspx.cs">
       <DependentUpon>Cultura.aspx</DependentUpon>
@@ -174,12 +184,26 @@
     <Compile Include="EditarPagina.aspx.designer.cs">
       <DependentUpon>EditarPagina.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EditarPromocion.aspx.cs">
+      <DependentUpon>EditarPromocion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditarPromocion.aspx.designer.cs">
+      <DependentUpon>EditarPromocion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EditarUsuario.aspx.cs">
       <DependentUpon>EditarUsuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="EditarUsuario.aspx.designer.cs">
       <DependentUpon>EditarUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>

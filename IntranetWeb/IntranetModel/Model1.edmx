@@ -91,6 +91,14 @@
           <Property Name="tags" Type="nvarchar" MaxLength="200" />
           <Property Name="likes" Type="int" />
         </EntityType>
+        <EntityType Name="Promociones">
+          <Key>
+            <PropertyRef Name="IdPromocion" />
+          </Key>
+          <Property Name="IdPromocion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RutUsuario" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="FechaPromocion" Type="date" Nullable="false" />
+        </EntityType>
         <EntityType Name="RolesUsuario">
           <Key>
             <PropertyRef Name="id" />
@@ -238,6 +246,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__Promocion__RutUs__2EDAF651">
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+          <End Role="Promociones" Type="Self.Promociones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="rutUsuario" />
+            </Principal>
+            <Dependent Role="Promociones">
+              <PropertyRef Name="RutUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__Subgerenc__idGer__286302EC">
           <End Role="Gerencias" Type="Self.Gerencias" Multiplicity="0..1" />
           <End Role="Subgerencias" Type="Self.Subgerencias" Multiplicity="*" />
@@ -367,6 +387,7 @@
           <EntitySet Name="Hijos" EntityType="Self.Hijos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Noticias" EntityType="Self.Noticias" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Paginas" EntityType="Self.Paginas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Promociones" EntityType="Self.Promociones" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RolesUsuario" EntityType="Self.RolesUsuario" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Subgerencias" EntityType="Self.Subgerencias" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TiposContrato" EntityType="Self.TiposContrato" Schema="dbo" store:Type="Tables" />
@@ -403,6 +424,10 @@
           <AssociationSet Name="FK__Paginas__usuario__3D5E1FD2" Association="Self.FK__Paginas__usuario__3D5E1FD2">
             <End Role="Usuarios" EntitySet="Usuarios" />
             <End Role="Paginas" EntitySet="Paginas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Promocion__RutUs__2EDAF651" Association="Self.FK__Promocion__RutUs__2EDAF651">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Promociones" EntitySet="Promociones" />
           </AssociationSet>
           <AssociationSet Name="FK__Subgerenc__idGer__286302EC" Association="Self.FK__Subgerenc__idGer__286302EC">
             <End Role="Gerencias" EntitySet="Gerencias" />
@@ -553,6 +578,15 @@
           <Property Name="likes" Type="Int32" />
           <NavigationProperty Name="Usuarios" Relationship="Self.FK__Paginas__usuario__3D5E1FD2" FromRole="Paginas" ToRole="Usuarios" />
         </EntityType>
+        <EntityType Name="Promociones">
+          <Key>
+            <PropertyRef Name="IdPromocion" />
+          </Key>
+          <Property Name="IdPromocion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RutUsuario" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FechaPromocion" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.FK__Promocion__RutUs__2EDAF651" FromRole="Promociones" ToRole="Usuarios" />
+        </EntityType>
         <EntityType Name="RolesUsuario">
           <Key>
             <PropertyRef Name="id" />
@@ -618,6 +652,7 @@
           <NavigationProperty Name="Hijos" Relationship="Self.FK__Hijos__rutUsuari__34C8D9D1" FromRole="Usuarios" ToRole="Hijos" />
           <NavigationProperty Name="Noticias" Relationship="Self.FK__Noticias__usuari__3A81B327" FromRole="Usuarios" ToRole="Noticias" />
           <NavigationProperty Name="Paginas" Relationship="Self.FK__Paginas__usuario__3D5E1FD2" FromRole="Usuarios" ToRole="Paginas" />
+          <NavigationProperty Name="Promociones" Relationship="Self.FK__Promocion__RutUs__2EDAF651" FromRole="Usuarios" ToRole="Promociones" />
           <NavigationProperty Name="RolesUsuario" Relationship="Self.FK__Usuarios__idRolU__48CFD27E" FromRole="Usuarios" ToRole="RolesUsuario" />
           <NavigationProperty Name="Subgerencias" Relationship="Self.FK__Usuarios__idSubg__45F365D3" FromRole="Usuarios" ToRole="Subgerencias" />
           <NavigationProperty Name="TiposContrato" Relationship="Self.FK__Usuarios__idTipo__49C3F6B7" FromRole="Usuarios" ToRole="TiposContrato" />
@@ -791,6 +826,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__Promocion__RutUs__2EDAF651">
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+          <End Role="Promociones" Type="Self.Promociones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="rutUsuario" />
+            </Principal>
+            <Dependent Role="Promociones">
+              <PropertyRef Name="RutUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__Usuarios__idRolU__48CFD27E">
           <End Role="RolesUsuario" Type="Self.RolesUsuario" Multiplicity="0..1" />
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
@@ -848,6 +895,7 @@
           <EntitySet Name="Hijos" EntityType="Self.Hijos" />
           <EntitySet Name="Noticias" EntityType="Self.Noticias" />
           <EntitySet Name="Paginas" EntityType="Self.Paginas" />
+          <EntitySet Name="Promociones" EntityType="Self.Promociones" />
           <EntitySet Name="RolesUsuario" EntityType="Self.RolesUsuario" />
           <EntitySet Name="Subgerencias" EntityType="Self.Subgerencias" />
           <EntitySet Name="TiposContrato" EntityType="Self.TiposContrato" />
@@ -908,6 +956,10 @@
           <AssociationSet Name="FK__Paginas__usuario__3D5E1FD2" Association="Self.FK__Paginas__usuario__3D5E1FD2">
             <End Role="Usuarios" EntitySet="Usuarios" />
             <End Role="Paginas" EntitySet="Paginas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Promocion__RutUs__2EDAF651" Association="Self.FK__Promocion__RutUs__2EDAF651">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Promociones" EntitySet="Promociones" />
           </AssociationSet>
           <AssociationSet Name="FK__Usuarios__idRolU__48CFD27E" Association="Self.FK__Usuarios__idRolU__48CFD27E">
             <End Role="RolesUsuario" EntitySet="RolesUsuario" />
@@ -1023,6 +1075,15 @@
                 <ScalarProperty Name="fechaPublicacion" ColumnName="fechaPublicacion" />
                 <ScalarProperty Name="tags" ColumnName="tags" />
                 <ScalarProperty Name="likes" ColumnName="likes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Promociones">
+            <EntityTypeMapping TypeName="IntranetModel.Promociones">
+              <MappingFragment StoreEntitySet="Promociones">
+                <ScalarProperty Name="IdPromocion" ColumnName="IdPromocion" />
+                <ScalarProperty Name="RutUsuario" ColumnName="RutUsuario" />
+                <ScalarProperty Name="FechaPromocion" ColumnName="FechaPromocion" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

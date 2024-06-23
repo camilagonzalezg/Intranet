@@ -48,16 +48,9 @@
                             <asp:BoundField DataField="rutUsuario" HeaderText="RUT" />
                             <asp:BoundField DataField="nombre" HeaderText="Nombre" />
                             <asp:BoundField DataField="apellido" HeaderText="Apellido" />
-                            <asp:BoundField DataField="fechaNacimiento" HeaderText="Fecha de Nacimiento" DataFormatString="{0:dd/MM/yyyy}" />
+                            <asp:BoundField DataField="fechaNacimiento" HeaderText="Fecha de Nacimiento colaborador" DataFormatString="{0:dd/MM/yyyy}" />
                             <asp:BoundField DataField="cargo" HeaderText="Cargo" />
-                            <asp:BoundField DataField="GerenciaNombre" HeaderText="Gerencia" />
-                            <asp:BoundField DataField="SubgerenciaNombre" HeaderText="Subgerencia" />
-                            <asp:BoundField DataField="DepartamentoNombre" HeaderText="Departamento" />
-                            <asp:BoundField DataField="UbicacionNombre" HeaderText="Ubicación" />
-                            <asp:BoundField DataField="jefe" HeaderText="Jefe" />
-                            <asp:BoundField DataField="TipoContratoNombre" HeaderText="Tipo de Contrato" />
                             <asp:BoundField DataField="fechaIngreso" HeaderText="Fecha de Ingreso" DataFormatString="{0:dd/MM/yyyy}" />
-                            <asp:BoundField DataField="RolUsuarioNombre" HeaderText="Rol Usuario" />
                             <asp:BoundField DataField="email" HeaderText="Email" />
                             <asp:BoundField DataField="celular" HeaderText="Celular" />
                             <asp:TemplateField HeaderText="Acciones">

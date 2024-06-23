@@ -33,6 +33,7 @@ namespace IntranetModel
         public virtual DbSet<Hijos> Hijos { get; set; }
         public virtual DbSet<Noticias> Noticias { get; set; }
         public virtual DbSet<Paginas> Paginas { get; set; }
+        public virtual DbSet<Promociones> Promociones { get; set; }
         public virtual DbSet<RolesUsuario> RolesUsuario { get; set; }
         public virtual DbSet<Subgerencias> Subgerencias { get; set; }
         public virtual DbSet<TiposContrato> TiposContrato { get; set; }

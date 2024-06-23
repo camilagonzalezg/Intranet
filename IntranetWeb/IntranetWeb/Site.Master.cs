@@ -78,7 +78,8 @@ namespace IntranetWeb
                     <a class='nav-link dropdown-toggle' href='#' id='navbarDropdownCultura' role='button' data-bs-toggle='dropdown' aria-expanded='false'>Cultura</a>
                     <ul class='dropdown-menu' aria-labelledby='navbarDropdownCultura'>
                         <li><a class='dropdown-item' href='/RegistrarNacimiento.aspx'>Registrar Nacimiento</a></li>
-                        <li><a class='dropdown-item' href='/Cultura.aspx'>Ver datos cultura</a></li>
+                        <li><a class='dropdown-item' href='/RegistrarPromocion.aspx'>Registrar Promoción</a></li>
+                        <li><a class='dropdown-item' href='/Cultura.aspx'>Ver datos Cultura</a></li>
                     </ul>
                 </li>
                 <li class='nav-item'><a class='nav-link' href='#' onclick='logout()'><i class='fa-solid fa-right-from-bracket'></i></a></li>";

@@ -23,6 +23,7 @@ namespace IntranetModel
             this.Hijos = new HashSet<Hijos>();
             this.Noticias = new HashSet<Noticias>();
             this.Paginas = new HashSet<Paginas>();
+            this.Promociones = new HashSet<Promociones>();
         }
     
         public string rutUsuario { get; set; }
@@ -56,6 +57,8 @@ namespace IntranetModel
         public virtual ICollection<Noticias> Noticias { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Paginas> Paginas { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Promociones> Promociones { get; set; }
         public virtual RolesUsuario RolesUsuario { get; set; }
         public virtual Subgerencias Subgerencias { get; set; }
         public virtual TiposContrato TiposContrato { get; set; }

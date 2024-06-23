@@ -4,20 +4,21 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9149e647685e4a50bacd547eaaee2467" Name="Diagram1">
-        <EntityTypeShape EntityType="IntranetModel.ArchivosMultimedia" Width="1.5" PointX="12" PointY="2.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="IntranetModel.ComentariosNoticias" Width="1.5" PointX="16.5" PointY="7" IsExpanded="true" />
-        <EntityTypeShape EntityType="IntranetModel.Correspondencias" Width="1.5" PointX="12" PointY="5.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="IntranetModel.Departamentos" Width="1.5" PointX="5.25" PointY="7.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="IntranetModel.Gerencias" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="IntranetModel.Hijos" Width="1.5" PointX="12" PointY="8.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="IntranetModel.Noticias" Width="1.5" PointX="14.25" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="IntranetModel.Paginas" Width="1.5" PointX="12" PointY="11.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="IntranetModel.RolesUsuario" Width="1.5" PointX="7.5" PointY="4.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="IntranetModel.Subgerencias" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="IntranetModel.TiposContrato" Width="1.5" PointX="7.5" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="IntranetModel.Ubicaciones" Width="1.5" PointX="7.5" PointY="7.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="IntranetModel.Usuarios" Width="1.5" PointX="9.75" PointY="5.125" IsExpanded="true" />
+      <Diagram DiagramId="469ff27624034a87a1cb9a9e5853e692" Name="Diagram1">
+        <EntityTypeShape EntityType="IntranetModel.ArchivosMultimedia" Width="1.5" PointX="12" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.ComentariosNoticias" Width="1.5" PointX="16.5" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.Correspondencias" Width="1.5" PointX="12" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.Departamentos" Width="1.5" PointX="5.25" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.Gerencias" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.Hijos" Width="1.5" PointX="12" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.Noticias" Width="1.5" PointX="14.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.Paginas" Width="1.5" PointX="12" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.Promociones" Width="1.5" PointX="12" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.RolesUsuario" Width="1.5" PointX="7.5" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.Subgerencias" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.TiposContrato" Width="1.5" PointX="7.5" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.Ubicaciones" Width="1.5" PointX="7.5" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.Usuarios" Width="1.5" PointX="9.75" PointY="6.375" IsExpanded="true" />
         <AssociationConnector Association="IntranetModel.FK__ArchivosM__usuar__5FB337D6" ManuallyRouted="false" />
         <AssociationConnector Association="IntranetModel.FK_Noticias_ArchivoMultimediaCard" ManuallyRouted="false" />
         <AssociationConnector Association="IntranetModel.FK_Noticias_ArchivoMultimediaSlider" ManuallyRouted="false" />
@@ -32,6 +33,7 @@
         <AssociationConnector Association="IntranetModel.FK__Hijos__rutUsuari__34C8D9D1" ManuallyRouted="false" />
         <AssociationConnector Association="IntranetModel.FK__Noticias__usuari__3A81B327" ManuallyRouted="false" />
         <AssociationConnector Association="IntranetModel.FK__Paginas__usuario__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="IntranetModel.FK__Promocion__RutUs__2EDAF651" ManuallyRouted="false" />
         <AssociationConnector Association="IntranetModel.FK__Usuarios__idRolU__48CFD27E" ManuallyRouted="false" />
         <AssociationConnector Association="IntranetModel.FK__Usuarios__idSubg__45F365D3" ManuallyRouted="false" />
         <AssociationConnector Association="IntranetModel.FK__Usuarios__idTipo__49C3F6B7" ManuallyRouted="false" />
