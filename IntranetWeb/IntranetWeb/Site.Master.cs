@@ -102,7 +102,7 @@ namespace IntranetWeb
                 <li class='nav-item'><a class='nav-link' href='/NuestraEmpresa.aspx'>Nuestra empresa</a></li>
                 <li class='nav-item'><a class='nav-link' href='/Novedades.aspx'>Novedades</a></li>
                 <li class='nav-item'><a class='nav-link' href='/Cultura.aspx'>¿Qué pasa en AFC?</a></li>
-                <li class='nav-item'><a class='nav-link' href='/VerCorrespondencia.aspx'>Correspondencia</a></li>
+                <li class='nav-item'><a class='nav-link' href='/VerCorrespondencias.aspx'>Correspondencia</a></li>
                 <li class='nav-item'><a class='nav-link' href='#' onclick='logout()'><i class='fa-solid fa-right-from-bracket'></i></a></li>";
         }
 
