@@ -127,15 +127,17 @@
                             </div>
                         </div>
 
-                        <!-- Contraseña -->
+                        <!-- Generar nueva contraseña -->
                         <div class="mb-4">
                             <div class="col-md-4">
-                                <label class="form-label" for="ContraseñaTxt">Contraseña (min 6 caracteres)</label>
-                                <asp:TextBox ID="ContraseñaTxt" runat="server" CssClass="form-control"></asp:TextBox>
-                                <asp:RequiredFieldValidator runat="server" ErrorMessage="Debe ingresar una contraseña"
-                                    ControlToValidate="ContraseñaTxt" CssClass="text-danger">
-                                </asp:RequiredFieldValidator>
+                                <label class="form-label">Generar nueva contraseña</label>
+                                <asp:Button ID="GenerarContraseñaBtn" runat="server" Text="Generar nueva contraseña" CssClass="btn btn-success mt-4" OnClick="GenerarContraseñaBtn_Click" />
                             </div>
+                        </div>
+
+                        <!-- Label para mostrar mensajes -->
+                        <div class="mb-4">
+                            <asp:Label ID="lblMensaje" runat="server" CssClass="text-success" Visible="false"></asp:Label>
                         </div>
 
                         <!-- Botón Guardar -->
@@ -148,6 +150,4 @@
         </div>
     </section>
 </asp:Content>
-
-
 

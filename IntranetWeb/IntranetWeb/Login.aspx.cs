@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using IntranetModel;
+using System.Security.Cryptography;
 
 namespace IntranetWeb
 {
@@ -18,34 +19,55 @@ namespace IntranetWeb
 
             using (var context = new IntranetEntities())
             {
-                var usuario = context.Usuarios.Include("RolesUsuario").FirstOrDefault(u => u.rutUsuario == rut && u.contraseña == contraseña);
+                var usuario = context.Usuarios.Include("RolesUsuario").FirstOrDefault(u => u.rutUsuario == rut);
 
-                if (usuario != null)
+                if (usuario != null && !string.IsNullOrEmpty(usuario.salt) && !string.IsNullOrEmpty(usuario.contraseña))
                 {
-                    // Inicio de sesión exitoso
-                    Session["Usuario"] = usuario;
-                    Session["RolUsuario"] = usuario.RolesUsuario.nombre;
-
-                    switch (usuario.RolesUsuario.nombre)
+                    if (VerificarUsuario(contraseña, usuario.contraseña, usuario.salt))
                     {
-                        case "Administrador":
-                            Response.Redirect("Default.aspx"); // Redirigir a la página principal
-                            break;
-                        case "Colaborador":
-                        case "Gerencia":
-                        case "RRHH":
-                        default:
-                            Response.Redirect("Home.aspx"); // Redirigir a Home.aspx
-                            break;
+                        // Inicio de sesión exitoso
+                        Session["Usuario"] = usuario;
+                        Session["RolUsuario"] = usuario.RolesUsuario.nombre;
+
+                        switch (usuario.RolesUsuario.nombre)
+                        {
+                            case "Administrador":
+                                Response.Redirect("Default.aspx"); // Redirigir a la página principal
+                                break;
+                            case "Colaborador":
+                            case "Gerencia":
+                            case "RRHH":
+                            default:
+                                Response.Redirect("Home.aspx"); // Redirigir a Home.aspx
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        // Contraseña incorrecta
+                        lblError.Text = "Rut o contraseña incorrectos";
+                        lblError.Visible = true;
                     }
                 }
                 else
                 {
-                    // Inicio de sesión fallido
+                    // Usuario no encontrado o campos nulos
                     lblError.Text = "Rut o contraseña incorrectos";
                     lblError.Visible = true;
                 }
             }
+        }
+
+        // Método de verificación de contraseña
+        private bool VerificarUsuario(string password, string hashedPassword, string saltBase64)
+        {
+            if (string.IsNullOrEmpty(saltBase64) || string.IsNullOrEmpty(hashedPassword))
+                return false;
+
+            byte[] salt = Convert.FromBase64String(saltBase64);
+            var pbkdf2 = new Rfc2898DeriveBytes(password, salt, 10000);
+            byte[] hash = pbkdf2.GetBytes(256 / 8);
+            return Convert.ToBase64String(hash) == hashedPassword;
         }
     }
 }

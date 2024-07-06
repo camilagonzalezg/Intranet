@@ -1,0 +1,826 @@
+### YamlMime:ManagedReference
+items:
+- uid: IntranetModel.ArchivosMultimedia
+  commentId: T:IntranetModel.ArchivosMultimedia
+  id: ArchivosMultimedia
+  parent: IntranetModel
+  children:
+  - IntranetModel.ArchivosMultimedia.#ctor
+  - IntranetModel.ArchivosMultimedia.fechaPublicacion
+  - IntranetModel.ArchivosMultimedia.id
+  - IntranetModel.ArchivosMultimedia.Noticias
+  - IntranetModel.ArchivosMultimedia.Noticias1
+  - IntranetModel.ArchivosMultimedia.tipoArchivo
+  - IntranetModel.ArchivosMultimedia.urlArchivo
+  - IntranetModel.ArchivosMultimedia.usuarioAutor
+  - IntranetModel.ArchivosMultimedia.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: ArchivosMultimedia
+  nameWithType: ArchivosMultimedia
+  fullName: IntranetModel.ArchivosMultimedia
+  type: Class
+  source:
+    remote:
+      path: intranetweb/IntranetModel/ArchivosMultimedia.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: ArchivosMultimedia
+    path: IntranetModel/ArchivosMultimedia.cs
+    startLine: 14
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public class ArchivosMultimedia
+    content.vb: Public Class ArchivosMultimedia
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: IntranetModel.ArchivosMultimedia.#ctor
+  commentId: M:IntranetModel.ArchivosMultimedia.#ctor
+  id: '#ctor'
+  parent: IntranetModel.ArchivosMultimedia
+  langs:
+  - csharp
+  - vb
+  name: ArchivosMultimedia()
+  nameWithType: ArchivosMultimedia.ArchivosMultimedia()
+  fullName: IntranetModel.ArchivosMultimedia.ArchivosMultimedia()
+  type: Constructor
+  source:
+    remote:
+      path: intranetweb/IntranetModel/ArchivosMultimedia.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: .ctor
+    path: IntranetModel/ArchivosMultimedia.cs
+    startLine: 16
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public ArchivosMultimedia()
+    content.vb: Public Sub New
+  overload: IntranetModel.ArchivosMultimedia.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.ArchivosMultimedia.id
+  commentId: P:IntranetModel.ArchivosMultimedia.id
+  id: id
+  parent: IntranetModel.ArchivosMultimedia
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: ArchivosMultimedia.id
+  fullName: IntranetModel.ArchivosMultimedia.id
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/ArchivosMultimedia.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: id
+    path: IntranetModel/ArchivosMultimedia.cs
+    startLine: 23
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public int id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property id As Integer
+  overload: IntranetModel.ArchivosMultimedia.id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.ArchivosMultimedia.fechaPublicacion
+  commentId: P:IntranetModel.ArchivosMultimedia.fechaPublicacion
+  id: fechaPublicacion
+  parent: IntranetModel.ArchivosMultimedia
+  langs:
+  - csharp
+  - vb
+  name: fechaPublicacion
+  nameWithType: ArchivosMultimedia.fechaPublicacion
+  fullName: IntranetModel.ArchivosMultimedia.fechaPublicacion
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/ArchivosMultimedia.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: fechaPublicacion
+    path: IntranetModel/ArchivosMultimedia.cs
+    startLine: 24
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public DateTime fechaPublicacion { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property fechaPublicacion As Date
+  overload: IntranetModel.ArchivosMultimedia.fechaPublicacion*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.ArchivosMultimedia.tipoArchivo
+  commentId: P:IntranetModel.ArchivosMultimedia.tipoArchivo
+  id: tipoArchivo
+  parent: IntranetModel.ArchivosMultimedia
+  langs:
+  - csharp
+  - vb
+  name: tipoArchivo
+  nameWithType: ArchivosMultimedia.tipoArchivo
+  fullName: IntranetModel.ArchivosMultimedia.tipoArchivo
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/ArchivosMultimedia.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: tipoArchivo
+    path: IntranetModel/ArchivosMultimedia.cs
+    startLine: 25
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public string tipoArchivo { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property tipoArchivo As String
+  overload: IntranetModel.ArchivosMultimedia.tipoArchivo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.ArchivosMultimedia.urlArchivo
+  commentId: P:IntranetModel.ArchivosMultimedia.urlArchivo
+  id: urlArchivo
+  parent: IntranetModel.ArchivosMultimedia
+  langs:
+  - csharp
+  - vb
+  name: urlArchivo
+  nameWithType: ArchivosMultimedia.urlArchivo
+  fullName: IntranetModel.ArchivosMultimedia.urlArchivo
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/ArchivosMultimedia.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: urlArchivo
+    path: IntranetModel/ArchivosMultimedia.cs
+    startLine: 26
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public string urlArchivo { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property urlArchivo As String
+  overload: IntranetModel.ArchivosMultimedia.urlArchivo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.ArchivosMultimedia.usuarioAutor
+  commentId: P:IntranetModel.ArchivosMultimedia.usuarioAutor
+  id: usuarioAutor
+  parent: IntranetModel.ArchivosMultimedia
+  langs:
+  - csharp
+  - vb
+  name: usuarioAutor
+  nameWithType: ArchivosMultimedia.usuarioAutor
+  fullName: IntranetModel.ArchivosMultimedia.usuarioAutor
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/ArchivosMultimedia.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: usuarioAutor
+    path: IntranetModel/ArchivosMultimedia.cs
+    startLine: 27
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public string usuarioAutor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property usuarioAutor As String
+  overload: IntranetModel.ArchivosMultimedia.usuarioAutor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.ArchivosMultimedia.Usuarios
+  commentId: P:IntranetModel.ArchivosMultimedia.Usuarios
+  id: Usuarios
+  parent: IntranetModel.ArchivosMultimedia
+  langs:
+  - csharp
+  - vb
+  name: Usuarios
+  nameWithType: ArchivosMultimedia.Usuarios
+  fullName: IntranetModel.ArchivosMultimedia.Usuarios
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/ArchivosMultimedia.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Usuarios
+    path: IntranetModel/ArchivosMultimedia.cs
+    startLine: 29
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public virtual Usuarios Usuarios { get; set; }
+    parameters: []
+    return:
+      type: IntranetModel.Usuarios
+    content.vb: Public Overridable Property Usuarios As Usuarios
+  overload: IntranetModel.ArchivosMultimedia.Usuarios*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: IntranetModel.ArchivosMultimedia.Noticias
+  commentId: P:IntranetModel.ArchivosMultimedia.Noticias
+  id: Noticias
+  parent: IntranetModel.ArchivosMultimedia
+  langs:
+  - csharp
+  - vb
+  name: Noticias
+  nameWithType: ArchivosMultimedia.Noticias
+  fullName: IntranetModel.ArchivosMultimedia.Noticias
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/ArchivosMultimedia.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Noticias
+    path: IntranetModel/ArchivosMultimedia.cs
+    startLine: 30
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public virtual ICollection<Noticias> Noticias { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{IntranetModel.Noticias}
+    content.vb: Public Overridable Property Noticias As ICollection(Of Noticias)
+  overload: IntranetModel.ArchivosMultimedia.Noticias*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: IntranetModel.ArchivosMultimedia.Noticias1
+  commentId: P:IntranetModel.ArchivosMultimedia.Noticias1
+  id: Noticias1
+  parent: IntranetModel.ArchivosMultimedia
+  langs:
+  - csharp
+  - vb
+  name: Noticias1
+  nameWithType: ArchivosMultimedia.Noticias1
+  fullName: IntranetModel.ArchivosMultimedia.Noticias1
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/ArchivosMultimedia.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Noticias1
+    path: IntranetModel/ArchivosMultimedia.cs
+    startLine: 32
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public virtual ICollection<Noticias> Noticias1 { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{IntranetModel.Noticias}
+    content.vb: Public Overridable Property Noticias1 As ICollection(Of Noticias)
+  overload: IntranetModel.ArchivosMultimedia.Noticias1*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+references:
+- uid: IntranetModel
+  commentId: N:IntranetModel
+  name: IntranetModel
+  nameWithType: IntranetModel
+  fullName: IntranetModel
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IntranetModel.ArchivosMultimedia.#ctor*
+  commentId: Overload:IntranetModel.ArchivosMultimedia.#ctor
+  name: ArchivosMultimedia
+  nameWithType: ArchivosMultimedia.ArchivosMultimedia
+  fullName: IntranetModel.ArchivosMultimedia.ArchivosMultimedia
+- uid: IntranetModel.ArchivosMultimedia.id*
+  commentId: Overload:IntranetModel.ArchivosMultimedia.id
+  name: id
+  nameWithType: ArchivosMultimedia.id
+  fullName: IntranetModel.ArchivosMultimedia.id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: IntranetModel.ArchivosMultimedia.fechaPublicacion*
+  commentId: Overload:IntranetModel.ArchivosMultimedia.fechaPublicacion
+  name: fechaPublicacion
+  nameWithType: ArchivosMultimedia.fechaPublicacion
+  fullName: IntranetModel.ArchivosMultimedia.fechaPublicacion
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: IntranetModel.ArchivosMultimedia.tipoArchivo*
+  commentId: Overload:IntranetModel.ArchivosMultimedia.tipoArchivo
+  name: tipoArchivo
+  nameWithType: ArchivosMultimedia.tipoArchivo
+  fullName: IntranetModel.ArchivosMultimedia.tipoArchivo
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: IntranetModel.ArchivosMultimedia.urlArchivo*
+  commentId: Overload:IntranetModel.ArchivosMultimedia.urlArchivo
+  name: urlArchivo
+  nameWithType: ArchivosMultimedia.urlArchivo
+  fullName: IntranetModel.ArchivosMultimedia.urlArchivo
+- uid: IntranetModel.ArchivosMultimedia.usuarioAutor*
+  commentId: Overload:IntranetModel.ArchivosMultimedia.usuarioAutor
+  name: usuarioAutor
+  nameWithType: ArchivosMultimedia.usuarioAutor
+  fullName: IntranetModel.ArchivosMultimedia.usuarioAutor
+- uid: IntranetModel.ArchivosMultimedia.Usuarios*
+  commentId: Overload:IntranetModel.ArchivosMultimedia.Usuarios
+  name: Usuarios
+  nameWithType: ArchivosMultimedia.Usuarios
+  fullName: IntranetModel.ArchivosMultimedia.Usuarios
+- uid: IntranetModel.Usuarios
+  commentId: T:IntranetModel.Usuarios
+  parent: IntranetModel
+  name: Usuarios
+  nameWithType: Usuarios
+  fullName: IntranetModel.Usuarios
+- uid: IntranetModel.ArchivosMultimedia.Noticias*
+  commentId: Overload:IntranetModel.ArchivosMultimedia.Noticias
+  name: Noticias
+  nameWithType: ArchivosMultimedia.Noticias
+  fullName: IntranetModel.ArchivosMultimedia.Noticias
+- uid: System.Collections.Generic.ICollection{IntranetModel.Noticias}
+  commentId: T:System.Collections.Generic.ICollection{IntranetModel.Noticias}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<Noticias>
+  nameWithType: ICollection<Noticias>
+  fullName: System.Collections.Generic.ICollection<IntranetModel.Noticias>
+  nameWithType.vb: ICollection(Of Noticias)
+  fullName.vb: System.Collections.Generic.ICollection(Of IntranetModel.Noticias)
+  name.vb: ICollection(Of Noticias)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IntranetModel.Noticias
+    name: Noticias
+    nameWithType: Noticias
+    fullName: IntranetModel.Noticias
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IntranetModel.Noticias
+    name: Noticias
+    nameWithType: Noticias
+    fullName: IntranetModel.Noticias
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: IntranetModel.ArchivosMultimedia.Noticias1*
+  commentId: Overload:IntranetModel.ArchivosMultimedia.Noticias1
+  name: Noticias1
+  nameWithType: ArchivosMultimedia.Noticias1
+  fullName: IntranetModel.ArchivosMultimedia.Noticias1

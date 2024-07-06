@@ -1,8 +1,10 @@
 ﻿using IntranetModel;
 using System;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Net.Mail;
 
 namespace IntranetWeb
 {
@@ -20,12 +22,17 @@ namespace IntranetWeb
                 if (!string.IsNullOrEmpty(Request.QueryString["rut"]))
                 {
                     rutUsuarioEditar = Request.QueryString["rut"];
+                    ViewState["rutUsuarioEditar"] = rutUsuarioEditar; // Guarda en ViewState
                     CargarDatosUsuario(rutUsuarioEditar);
                 }
                 else
                 {
                     Response.Redirect("Error.aspx");
                 }
+            }
+            else
+            {
+                rutUsuarioEditar = ViewState["rutUsuarioEditar"] as string; // Recupera de ViewState
             }
         }
 
@@ -121,7 +128,6 @@ namespace IntranetWeb
                 RolUsuarioDdl.SelectedValue = usuario.idRolUsuario.HasValue ? usuario.idRolUsuario.Value.ToString() : "";
                 EmailTxt.Text = usuario.email;
                 CelularTxt.Text = usuario.celular?.ToString() ?? "";
-                ContraseñaTxt.Text = usuario.contraseña;
             }
             else
             {
@@ -148,7 +154,6 @@ namespace IntranetWeb
                 int? idRolUsuario = string.IsNullOrEmpty(RolUsuarioDdl.SelectedValue) ? (int?)null : int.Parse(RolUsuarioDdl.SelectedValue);
                 string email = EmailTxt.Text;
                 int? celular = string.IsNullOrEmpty(CelularTxt.Text) ? (int?)null : int.Parse(CelularTxt.Text);
-                string contraseña = ContraseñaTxt.Text;
 
                 Usuarios usuario = db.Usuarios.SingleOrDefault(u => u.rutUsuario == rut);
                 if (usuario != null)
@@ -167,7 +172,6 @@ namespace IntranetWeb
                     usuario.idRolUsuario = idRolUsuario;
                     usuario.email = email;
                     usuario.celular = celular;
-                    usuario.contraseña = contraseña;
 
                     db.SaveChanges();
 
@@ -178,6 +182,101 @@ namespace IntranetWeb
                     Response.Redirect("Error.aspx");
                 }
             }
+        }
+
+        protected void GenerarContraseñaBtn_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(rutUsuarioEditar))
+            {
+                Usuarios usuario = db.Usuarios.SingleOrDefault(u => u.rutUsuario == rutUsuarioEditar);
+                if (usuario != null)
+                {
+                    string nuevaContraseña = GenerarContraseña();
+                    byte[] salt;
+                    string hashedPassword = HashPassword(nuevaContraseña, out salt);
+
+                    usuario.contraseña = hashedPassword;
+                    usuario.salt = Convert.ToBase64String(salt);
+                    db.SaveChanges();
+
+                    Console.WriteLine("Nueva contraseña generada para el usuario: " + usuario.email);
+                    bool correoEnviado = EnviarCorreoContraseñaSimple(nuevaContraseña, usuario.email);
+
+                    if (correoEnviado)
+                    {
+                        lblMensaje.Text = "Nueva contraseña generada y enviada por correo.";
+                        lblMensaje.CssClass = "text-success";
+                    }
+                    else
+                    {
+                        lblMensaje.Text = "No se pudo enviar el correo electrónico.";
+                        lblMensaje.CssClass = "text-danger";
+                    }
+
+                    lblMensaje.Visible = true;
+                }
+                else
+                {
+                    Console.WriteLine("Usuario no encontrado para RUT: " + rutUsuarioEditar);
+                    lblMensaje.Text = "Usuario no encontrado.";
+                    lblMensaje.CssClass = "text-danger";
+                    lblMensaje.Visible = true;
+                }
+            }
+            else
+            {
+                Console.WriteLine("RUT de usuario para editar está vacío.");
+                lblMensaje.Text = "RUT de usuario no especificado.";
+                lblMensaje.CssClass = "text-danger";
+                lblMensaje.Visible = true;
+            }
+        }
+
+        private bool EnviarCorreoContraseñaSimple(string contraseñaSimple, string email)
+        {
+            try
+            {
+                var fromAddress = new MailAddress("camilag@gmail.com", "Tu Nombre");
+                var toAddress = new MailAddress(email);
+                const string fromPassword = ""; // Contraseña de aplicación
+                const string subject = "Nueva Contraseña Temporal";
+                string body = $"Su nueva contraseña temporal es: {contraseñaSimple}";
+
+                var smtp = new SmtpClient
+                {
+                    Host = "smtp.gmail.com",
+                    Port = 587,
+                    EnableSsl = true,
+                    DeliveryMethod = SmtpDeliveryMethod.Network,
+                    UseDefaultCredentials = false,
+                    Credentials = new System.Net.NetworkCredential(fromAddress.Address, fromPassword)
+                };
+
+                using (var message = new MailMessage(fromAddress, toAddress)
+                {
+                    Subject = subject,
+                    Body = body
+                })
+                {
+                    smtp.Send(message);
+                    Console.WriteLine("Correo enviado exitosamente a: " + email);
+                    return true; // Envío exitoso
+                }
+            }
+            catch (SmtpFailedRecipientException ex)
+            {
+                Console.WriteLine("Error al enviar el correo a " + ex.FailedRecipient + ": " + ex.Message);
+            }
+            catch (SmtpException ex)
+            {
+                Console.WriteLine("Error de SMTP: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error general al enviar el correo: " + ex.Message);
+            }
+
+            return false; // Envío fallido
         }
 
         protected void GerenciaDdl_SelectedIndexChanged(object sender, EventArgs e)
@@ -245,6 +344,39 @@ namespace IntranetWeb
                 args.IsValid = false;
             }
         }
+
+        // Métodos de hash y verificación de contraseñas
+        private static string HashPassword(string password, out byte[] salt)
+        {
+            // Genera una sal
+            salt = new byte[128 / 8];
+            using (var rng = RandomNumberGenerator.Create())
+            {
+                rng.GetBytes(salt);
+            }
+
+            // Hashea la contraseña con la sal usando PBKDF2
+            var pbkdf2 = new Rfc2898DeriveBytes(password, salt, 10000);
+            byte[] hash = pbkdf2.GetBytes(256 / 8);
+            return Convert.ToBase64String(hash);
+        }
+
+        private static bool VerifyPassword(string password, string hashedPassword, byte[] salt)
+        {
+            var pbkdf2 = new Rfc2898DeriveBytes(password, salt, 10000);
+            byte[] hash = pbkdf2.GetBytes(256 / 8);
+            return Convert.ToBase64String(hash) == hashedPassword;
+        }
+
+        private string GenerarContraseña()
+        {
+            const string caracteresPermitidos = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            Random rnd = new Random();
+            string contraseña = new string(Enumerable.Repeat(caracteresPermitidos, 6)
+                .Select(s => s[rnd.Next(s.Length)]).ToArray());
+            return contraseña;
+        }
     }
 }
+
 

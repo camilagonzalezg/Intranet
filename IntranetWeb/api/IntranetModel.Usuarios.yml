@@ -1,0 +1,2348 @@
+### YamlMime:ManagedReference
+items:
+- uid: IntranetModel.Usuarios
+  commentId: T:IntranetModel.Usuarios
+  id: Usuarios
+  parent: IntranetModel
+  children:
+  - IntranetModel.Usuarios.#ctor
+  - IntranetModel.Usuarios.apellido
+  - IntranetModel.Usuarios.ArchivosMultimedia
+  - IntranetModel.Usuarios.cargo
+  - IntranetModel.Usuarios.celular
+  - IntranetModel.Usuarios.ComentariosNoticias
+  - IntranetModel.Usuarios.contraseña
+  - IntranetModel.Usuarios.Correspondencias
+  - IntranetModel.Usuarios.DepartamentoNombre
+  - IntranetModel.Usuarios.Departamentos
+  - IntranetModel.Usuarios.email
+  - IntranetModel.Usuarios.fechaIngreso
+  - IntranetModel.Usuarios.fechaNacimiento
+  - IntranetModel.Usuarios.GerenciaNombre
+  - IntranetModel.Usuarios.Gerencias
+  - IntranetModel.Usuarios.Hijos
+  - IntranetModel.Usuarios.idDepartamento
+  - IntranetModel.Usuarios.idGerencia
+  - IntranetModel.Usuarios.idRolUsuario
+  - IntranetModel.Usuarios.idSubgerencia
+  - IntranetModel.Usuarios.idTipoContrato
+  - IntranetModel.Usuarios.idUbicacion
+  - IntranetModel.Usuarios.jefe
+  - IntranetModel.Usuarios.nombre
+  - IntranetModel.Usuarios.Noticias
+  - IntranetModel.Usuarios.Paginas
+  - IntranetModel.Usuarios.Promociones
+  - IntranetModel.Usuarios.RolesUsuario
+  - IntranetModel.Usuarios.RolUsuarioNombre
+  - IntranetModel.Usuarios.rutUsuario
+  - IntranetModel.Usuarios.SubgerenciaNombre
+  - IntranetModel.Usuarios.Subgerencias
+  - IntranetModel.Usuarios.TipoContratoNombre
+  - IntranetModel.Usuarios.TiposContrato
+  - IntranetModel.Usuarios.Ubicaciones
+  - IntranetModel.Usuarios.UbicacionNombre
+  langs:
+  - csharp
+  - vb
+  name: Usuarios
+  nameWithType: Usuarios
+  fullName: IntranetModel.Usuarios
+  type: Class
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Usuarios
+    path: IntranetModel/Usuarios.cs
+    startLine: 14
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public class Usuarios
+    content.vb: Public Class Usuarios
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: IntranetModel.Usuarios.TipoContratoNombre
+  commentId: P:IntranetModel.Usuarios.TipoContratoNombre
+  id: TipoContratoNombre
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: TipoContratoNombre
+  nameWithType: Usuarios.TipoContratoNombre
+  fullName: IntranetModel.Usuarios.TipoContratoNombre
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Partials/UsuarioParcial.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: TipoContratoNombre
+    path: IntranetModel/Partials/UsuarioParcial.cs
+    startLine: 50
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public string TipoContratoNombre { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property TipoContratoNombre As String
+  overload: IntranetModel.Usuarios.TipoContratoNombre*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: IntranetModel.Usuarios.GerenciaNombre
+  commentId: P:IntranetModel.Usuarios.GerenciaNombre
+  id: GerenciaNombre
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: GerenciaNombre
+  nameWithType: Usuarios.GerenciaNombre
+  fullName: IntranetModel.Usuarios.GerenciaNombre
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Partials/UsuarioParcial.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: GerenciaNombre
+    path: IntranetModel/Partials/UsuarioParcial.cs
+    startLine: 62
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public string GerenciaNombre { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property GerenciaNombre As String
+  overload: IntranetModel.Usuarios.GerenciaNombre*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: IntranetModel.Usuarios.SubgerenciaNombre
+  commentId: P:IntranetModel.Usuarios.SubgerenciaNombre
+  id: SubgerenciaNombre
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: SubgerenciaNombre
+  nameWithType: Usuarios.SubgerenciaNombre
+  fullName: IntranetModel.Usuarios.SubgerenciaNombre
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Partials/UsuarioParcial.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: SubgerenciaNombre
+    path: IntranetModel/Partials/UsuarioParcial.cs
+    startLine: 74
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public string SubgerenciaNombre { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property SubgerenciaNombre As String
+  overload: IntranetModel.Usuarios.SubgerenciaNombre*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: IntranetModel.Usuarios.DepartamentoNombre
+  commentId: P:IntranetModel.Usuarios.DepartamentoNombre
+  id: DepartamentoNombre
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: DepartamentoNombre
+  nameWithType: Usuarios.DepartamentoNombre
+  fullName: IntranetModel.Usuarios.DepartamentoNombre
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Partials/UsuarioParcial.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: DepartamentoNombre
+    path: IntranetModel/Partials/UsuarioParcial.cs
+    startLine: 86
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public string DepartamentoNombre { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property DepartamentoNombre As String
+  overload: IntranetModel.Usuarios.DepartamentoNombre*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: IntranetModel.Usuarios.UbicacionNombre
+  commentId: P:IntranetModel.Usuarios.UbicacionNombre
+  id: UbicacionNombre
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: UbicacionNombre
+  nameWithType: Usuarios.UbicacionNombre
+  fullName: IntranetModel.Usuarios.UbicacionNombre
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Partials/UsuarioParcial.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: UbicacionNombre
+    path: IntranetModel/Partials/UsuarioParcial.cs
+    startLine: 98
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public string UbicacionNombre { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property UbicacionNombre As String
+  overload: IntranetModel.Usuarios.UbicacionNombre*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: IntranetModel.Usuarios.RolUsuarioNombre
+  commentId: P:IntranetModel.Usuarios.RolUsuarioNombre
+  id: RolUsuarioNombre
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: RolUsuarioNombre
+  nameWithType: Usuarios.RolUsuarioNombre
+  fullName: IntranetModel.Usuarios.RolUsuarioNombre
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Partials/UsuarioParcial.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: RolUsuarioNombre
+    path: IntranetModel/Partials/UsuarioParcial.cs
+    startLine: 110
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public string RolUsuarioNombre { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property RolUsuarioNombre As String
+  overload: IntranetModel.Usuarios.RolUsuarioNombre*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: IntranetModel.Usuarios.#ctor
+  commentId: M:IntranetModel.Usuarios.#ctor
+  id: '#ctor'
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: Usuarios()
+  nameWithType: Usuarios.Usuarios()
+  fullName: IntranetModel.Usuarios.Usuarios()
+  type: Constructor
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: .ctor
+    path: IntranetModel/Usuarios.cs
+    startLine: 16
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public Usuarios()
+    content.vb: Public Sub New
+  overload: IntranetModel.Usuarios.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Usuarios.rutUsuario
+  commentId: P:IntranetModel.Usuarios.rutUsuario
+  id: rutUsuario
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: rutUsuario
+  nameWithType: Usuarios.rutUsuario
+  fullName: IntranetModel.Usuarios.rutUsuario
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: rutUsuario
+    path: IntranetModel/Usuarios.cs
+    startLine: 28
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public string rutUsuario { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property rutUsuario As String
+  overload: IntranetModel.Usuarios.rutUsuario*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Usuarios.nombre
+  commentId: P:IntranetModel.Usuarios.nombre
+  id: nombre
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: nombre
+  nameWithType: Usuarios.nombre
+  fullName: IntranetModel.Usuarios.nombre
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: nombre
+    path: IntranetModel/Usuarios.cs
+    startLine: 29
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public string nombre { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property nombre As String
+  overload: IntranetModel.Usuarios.nombre*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Usuarios.apellido
+  commentId: P:IntranetModel.Usuarios.apellido
+  id: apellido
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: apellido
+  nameWithType: Usuarios.apellido
+  fullName: IntranetModel.Usuarios.apellido
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: apellido
+    path: IntranetModel/Usuarios.cs
+    startLine: 30
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public string apellido { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property apellido As String
+  overload: IntranetModel.Usuarios.apellido*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Usuarios.fechaNacimiento
+  commentId: P:IntranetModel.Usuarios.fechaNacimiento
+  id: fechaNacimiento
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: fechaNacimiento
+  nameWithType: Usuarios.fechaNacimiento
+  fullName: IntranetModel.Usuarios.fechaNacimiento
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: fechaNacimiento
+    path: IntranetModel/Usuarios.cs
+    startLine: 31
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public DateTime? fechaNacimiento { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property fechaNacimiento As Date?
+  overload: IntranetModel.Usuarios.fechaNacimiento*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Usuarios.cargo
+  commentId: P:IntranetModel.Usuarios.cargo
+  id: cargo
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: cargo
+  nameWithType: Usuarios.cargo
+  fullName: IntranetModel.Usuarios.cargo
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: cargo
+    path: IntranetModel/Usuarios.cs
+    startLine: 32
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public string cargo { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property cargo As String
+  overload: IntranetModel.Usuarios.cargo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Usuarios.idGerencia
+  commentId: P:IntranetModel.Usuarios.idGerencia
+  id: idGerencia
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: idGerencia
+  nameWithType: Usuarios.idGerencia
+  fullName: IntranetModel.Usuarios.idGerencia
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: idGerencia
+    path: IntranetModel/Usuarios.cs
+    startLine: 33
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public int? idGerencia { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property idGerencia As Integer?
+  overload: IntranetModel.Usuarios.idGerencia*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Usuarios.idSubgerencia
+  commentId: P:IntranetModel.Usuarios.idSubgerencia
+  id: idSubgerencia
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: idSubgerencia
+  nameWithType: Usuarios.idSubgerencia
+  fullName: IntranetModel.Usuarios.idSubgerencia
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: idSubgerencia
+    path: IntranetModel/Usuarios.cs
+    startLine: 34
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public int? idSubgerencia { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property idSubgerencia As Integer?
+  overload: IntranetModel.Usuarios.idSubgerencia*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Usuarios.idDepartamento
+  commentId: P:IntranetModel.Usuarios.idDepartamento
+  id: idDepartamento
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: idDepartamento
+  nameWithType: Usuarios.idDepartamento
+  fullName: IntranetModel.Usuarios.idDepartamento
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: idDepartamento
+    path: IntranetModel/Usuarios.cs
+    startLine: 35
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public int? idDepartamento { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property idDepartamento As Integer?
+  overload: IntranetModel.Usuarios.idDepartamento*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Usuarios.idUbicacion
+  commentId: P:IntranetModel.Usuarios.idUbicacion
+  id: idUbicacion
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: idUbicacion
+  nameWithType: Usuarios.idUbicacion
+  fullName: IntranetModel.Usuarios.idUbicacion
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: idUbicacion
+    path: IntranetModel/Usuarios.cs
+    startLine: 36
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public int? idUbicacion { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property idUbicacion As Integer?
+  overload: IntranetModel.Usuarios.idUbicacion*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Usuarios.jefe
+  commentId: P:IntranetModel.Usuarios.jefe
+  id: jefe
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: jefe
+  nameWithType: Usuarios.jefe
+  fullName: IntranetModel.Usuarios.jefe
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: jefe
+    path: IntranetModel/Usuarios.cs
+    startLine: 37
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public string jefe { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property jefe As String
+  overload: IntranetModel.Usuarios.jefe*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Usuarios.idRolUsuario
+  commentId: P:IntranetModel.Usuarios.idRolUsuario
+  id: idRolUsuario
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: idRolUsuario
+  nameWithType: Usuarios.idRolUsuario
+  fullName: IntranetModel.Usuarios.idRolUsuario
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: idRolUsuario
+    path: IntranetModel/Usuarios.cs
+    startLine: 38
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public int? idRolUsuario { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property idRolUsuario As Integer?
+  overload: IntranetModel.Usuarios.idRolUsuario*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Usuarios.idTipoContrato
+  commentId: P:IntranetModel.Usuarios.idTipoContrato
+  id: idTipoContrato
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: idTipoContrato
+  nameWithType: Usuarios.idTipoContrato
+  fullName: IntranetModel.Usuarios.idTipoContrato
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: idTipoContrato
+    path: IntranetModel/Usuarios.cs
+    startLine: 39
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public int? idTipoContrato { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property idTipoContrato As Integer?
+  overload: IntranetModel.Usuarios.idTipoContrato*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Usuarios.fechaIngreso
+  commentId: P:IntranetModel.Usuarios.fechaIngreso
+  id: fechaIngreso
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: fechaIngreso
+  nameWithType: Usuarios.fechaIngreso
+  fullName: IntranetModel.Usuarios.fechaIngreso
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: fechaIngreso
+    path: IntranetModel/Usuarios.cs
+    startLine: 40
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public DateTime? fechaIngreso { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property fechaIngreso As Date?
+  overload: IntranetModel.Usuarios.fechaIngreso*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Usuarios.email
+  commentId: P:IntranetModel.Usuarios.email
+  id: email
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: email
+  nameWithType: Usuarios.email
+  fullName: IntranetModel.Usuarios.email
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: email
+    path: IntranetModel/Usuarios.cs
+    startLine: 41
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public string email { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property email As String
+  overload: IntranetModel.Usuarios.email*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Usuarios.celular
+  commentId: P:IntranetModel.Usuarios.celular
+  id: celular
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: celular
+  nameWithType: Usuarios.celular
+  fullName: IntranetModel.Usuarios.celular
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: celular
+    path: IntranetModel/Usuarios.cs
+    startLine: 42
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public int? celular { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property celular As Integer?
+  overload: IntranetModel.Usuarios.celular*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Usuarios.contraseña
+  commentId: P:IntranetModel.Usuarios.contraseña
+  id: contraseña
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: contraseña
+  nameWithType: Usuarios.contraseña
+  fullName: IntranetModel.Usuarios.contraseña
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: contraseña
+    path: IntranetModel/Usuarios.cs
+    startLine: 43
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public string contraseña { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property contraseña As String
+  overload: IntranetModel.Usuarios.contraseña*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Usuarios.ArchivosMultimedia
+  commentId: P:IntranetModel.Usuarios.ArchivosMultimedia
+  id: ArchivosMultimedia
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: ArchivosMultimedia
+  nameWithType: Usuarios.ArchivosMultimedia
+  fullName: IntranetModel.Usuarios.ArchivosMultimedia
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: ArchivosMultimedia
+    path: IntranetModel/Usuarios.cs
+    startLine: 45
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public virtual ICollection<ArchivosMultimedia> ArchivosMultimedia { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{IntranetModel.ArchivosMultimedia}
+    content.vb: Public Overridable Property ArchivosMultimedia As ICollection(Of ArchivosMultimedia)
+  overload: IntranetModel.Usuarios.ArchivosMultimedia*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: IntranetModel.Usuarios.ComentariosNoticias
+  commentId: P:IntranetModel.Usuarios.ComentariosNoticias
+  id: ComentariosNoticias
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: ComentariosNoticias
+  nameWithType: Usuarios.ComentariosNoticias
+  fullName: IntranetModel.Usuarios.ComentariosNoticias
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: ComentariosNoticias
+    path: IntranetModel/Usuarios.cs
+    startLine: 47
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public virtual ICollection<ComentariosNoticias> ComentariosNoticias { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{IntranetModel.ComentariosNoticias}
+    content.vb: Public Overridable Property ComentariosNoticias As ICollection(Of ComentariosNoticias)
+  overload: IntranetModel.Usuarios.ComentariosNoticias*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: IntranetModel.Usuarios.Correspondencias
+  commentId: P:IntranetModel.Usuarios.Correspondencias
+  id: Correspondencias
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: Correspondencias
+  nameWithType: Usuarios.Correspondencias
+  fullName: IntranetModel.Usuarios.Correspondencias
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Correspondencias
+    path: IntranetModel/Usuarios.cs
+    startLine: 49
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public virtual ICollection<Correspondencias> Correspondencias { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{IntranetModel.Correspondencias}
+    content.vb: Public Overridable Property Correspondencias As ICollection(Of Correspondencias)
+  overload: IntranetModel.Usuarios.Correspondencias*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: IntranetModel.Usuarios.Departamentos
+  commentId: P:IntranetModel.Usuarios.Departamentos
+  id: Departamentos
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: Departamentos
+  nameWithType: Usuarios.Departamentos
+  fullName: IntranetModel.Usuarios.Departamentos
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Departamentos
+    path: IntranetModel/Usuarios.cs
+    startLine: 51
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public virtual Departamentos Departamentos { get; set; }
+    parameters: []
+    return:
+      type: IntranetModel.Departamentos
+    content.vb: Public Overridable Property Departamentos As Departamentos
+  overload: IntranetModel.Usuarios.Departamentos*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: IntranetModel.Usuarios.Gerencias
+  commentId: P:IntranetModel.Usuarios.Gerencias
+  id: Gerencias
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: Gerencias
+  nameWithType: Usuarios.Gerencias
+  fullName: IntranetModel.Usuarios.Gerencias
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Gerencias
+    path: IntranetModel/Usuarios.cs
+    startLine: 52
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public virtual Gerencias Gerencias { get; set; }
+    parameters: []
+    return:
+      type: IntranetModel.Gerencias
+    content.vb: Public Overridable Property Gerencias As Gerencias
+  overload: IntranetModel.Usuarios.Gerencias*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: IntranetModel.Usuarios.Hijos
+  commentId: P:IntranetModel.Usuarios.Hijos
+  id: Hijos
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: Hijos
+  nameWithType: Usuarios.Hijos
+  fullName: IntranetModel.Usuarios.Hijos
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Hijos
+    path: IntranetModel/Usuarios.cs
+    startLine: 53
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public virtual ICollection<Hijos> Hijos { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{IntranetModel.Hijos}
+    content.vb: Public Overridable Property Hijos As ICollection(Of Hijos)
+  overload: IntranetModel.Usuarios.Hijos*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: IntranetModel.Usuarios.Noticias
+  commentId: P:IntranetModel.Usuarios.Noticias
+  id: Noticias
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: Noticias
+  nameWithType: Usuarios.Noticias
+  fullName: IntranetModel.Usuarios.Noticias
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Noticias
+    path: IntranetModel/Usuarios.cs
+    startLine: 55
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public virtual ICollection<Noticias> Noticias { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{IntranetModel.Noticias}
+    content.vb: Public Overridable Property Noticias As ICollection(Of Noticias)
+  overload: IntranetModel.Usuarios.Noticias*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: IntranetModel.Usuarios.Paginas
+  commentId: P:IntranetModel.Usuarios.Paginas
+  id: Paginas
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: Paginas
+  nameWithType: Usuarios.Paginas
+  fullName: IntranetModel.Usuarios.Paginas
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Paginas
+    path: IntranetModel/Usuarios.cs
+    startLine: 57
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public virtual ICollection<Paginas> Paginas { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{IntranetModel.Paginas}
+    content.vb: Public Overridable Property Paginas As ICollection(Of Paginas)
+  overload: IntranetModel.Usuarios.Paginas*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: IntranetModel.Usuarios.Promociones
+  commentId: P:IntranetModel.Usuarios.Promociones
+  id: Promociones
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: Promociones
+  nameWithType: Usuarios.Promociones
+  fullName: IntranetModel.Usuarios.Promociones
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Promociones
+    path: IntranetModel/Usuarios.cs
+    startLine: 59
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public virtual ICollection<Promociones> Promociones { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{IntranetModel.Promociones}
+    content.vb: Public Overridable Property Promociones As ICollection(Of Promociones)
+  overload: IntranetModel.Usuarios.Promociones*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: IntranetModel.Usuarios.RolesUsuario
+  commentId: P:IntranetModel.Usuarios.RolesUsuario
+  id: RolesUsuario
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: RolesUsuario
+  nameWithType: Usuarios.RolesUsuario
+  fullName: IntranetModel.Usuarios.RolesUsuario
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: RolesUsuario
+    path: IntranetModel/Usuarios.cs
+    startLine: 61
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public virtual RolesUsuario RolesUsuario { get; set; }
+    parameters: []
+    return:
+      type: IntranetModel.RolesUsuario
+    content.vb: Public Overridable Property RolesUsuario As RolesUsuario
+  overload: IntranetModel.Usuarios.RolesUsuario*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: IntranetModel.Usuarios.Subgerencias
+  commentId: P:IntranetModel.Usuarios.Subgerencias
+  id: Subgerencias
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: Subgerencias
+  nameWithType: Usuarios.Subgerencias
+  fullName: IntranetModel.Usuarios.Subgerencias
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Subgerencias
+    path: IntranetModel/Usuarios.cs
+    startLine: 62
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public virtual Subgerencias Subgerencias { get; set; }
+    parameters: []
+    return:
+      type: IntranetModel.Subgerencias
+    content.vb: Public Overridable Property Subgerencias As Subgerencias
+  overload: IntranetModel.Usuarios.Subgerencias*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: IntranetModel.Usuarios.TiposContrato
+  commentId: P:IntranetModel.Usuarios.TiposContrato
+  id: TiposContrato
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: TiposContrato
+  nameWithType: Usuarios.TiposContrato
+  fullName: IntranetModel.Usuarios.TiposContrato
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: TiposContrato
+    path: IntranetModel/Usuarios.cs
+    startLine: 63
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public virtual TiposContrato TiposContrato { get; set; }
+    parameters: []
+    return:
+      type: IntranetModel.TiposContrato
+    content.vb: Public Overridable Property TiposContrato As TiposContrato
+  overload: IntranetModel.Usuarios.TiposContrato*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: IntranetModel.Usuarios.Ubicaciones
+  commentId: P:IntranetModel.Usuarios.Ubicaciones
+  id: Ubicaciones
+  parent: IntranetModel.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: Ubicaciones
+  nameWithType: Usuarios.Ubicaciones
+  fullName: IntranetModel.Usuarios.Ubicaciones
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Usuarios.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Ubicaciones
+    path: IntranetModel/Usuarios.cs
+    startLine: 64
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public virtual Ubicaciones Ubicaciones { get; set; }
+    parameters: []
+    return:
+      type: IntranetModel.Ubicaciones
+    content.vb: Public Overridable Property Ubicaciones As Ubicaciones
+  overload: IntranetModel.Usuarios.Ubicaciones*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+references:
+- uid: IntranetModel
+  commentId: N:IntranetModel
+  name: IntranetModel
+  nameWithType: IntranetModel
+  fullName: IntranetModel
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IntranetModel.Usuarios.TipoContratoNombre*
+  commentId: Overload:IntranetModel.Usuarios.TipoContratoNombre
+  name: TipoContratoNombre
+  nameWithType: Usuarios.TipoContratoNombre
+  fullName: IntranetModel.Usuarios.TipoContratoNombre
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: IntranetModel.Usuarios.GerenciaNombre*
+  commentId: Overload:IntranetModel.Usuarios.GerenciaNombre
+  name: GerenciaNombre
+  nameWithType: Usuarios.GerenciaNombre
+  fullName: IntranetModel.Usuarios.GerenciaNombre
+- uid: IntranetModel.Usuarios.SubgerenciaNombre*
+  commentId: Overload:IntranetModel.Usuarios.SubgerenciaNombre
+  name: SubgerenciaNombre
+  nameWithType: Usuarios.SubgerenciaNombre
+  fullName: IntranetModel.Usuarios.SubgerenciaNombre
+- uid: IntranetModel.Usuarios.DepartamentoNombre*
+  commentId: Overload:IntranetModel.Usuarios.DepartamentoNombre
+  name: DepartamentoNombre
+  nameWithType: Usuarios.DepartamentoNombre
+  fullName: IntranetModel.Usuarios.DepartamentoNombre
+- uid: IntranetModel.Usuarios.UbicacionNombre*
+  commentId: Overload:IntranetModel.Usuarios.UbicacionNombre
+  name: UbicacionNombre
+  nameWithType: Usuarios.UbicacionNombre
+  fullName: IntranetModel.Usuarios.UbicacionNombre
+- uid: IntranetModel.Usuarios.RolUsuarioNombre*
+  commentId: Overload:IntranetModel.Usuarios.RolUsuarioNombre
+  name: RolUsuarioNombre
+  nameWithType: Usuarios.RolUsuarioNombre
+  fullName: IntranetModel.Usuarios.RolUsuarioNombre
+- uid: IntranetModel.Usuarios.#ctor*
+  commentId: Overload:IntranetModel.Usuarios.#ctor
+  name: Usuarios
+  nameWithType: Usuarios.Usuarios
+  fullName: IntranetModel.Usuarios.Usuarios
+- uid: IntranetModel.Usuarios.rutUsuario*
+  commentId: Overload:IntranetModel.Usuarios.rutUsuario
+  name: rutUsuario
+  nameWithType: Usuarios.rutUsuario
+  fullName: IntranetModel.Usuarios.rutUsuario
+- uid: IntranetModel.Usuarios.nombre*
+  commentId: Overload:IntranetModel.Usuarios.nombre
+  name: nombre
+  nameWithType: Usuarios.nombre
+  fullName: IntranetModel.Usuarios.nombre
+- uid: IntranetModel.Usuarios.apellido*
+  commentId: Overload:IntranetModel.Usuarios.apellido
+  name: apellido
+  nameWithType: Usuarios.apellido
+  fullName: IntranetModel.Usuarios.apellido
+- uid: IntranetModel.Usuarios.fechaNacimiento*
+  commentId: Overload:IntranetModel.Usuarios.fechaNacimiento
+  name: fechaNacimiento
+  nameWithType: Usuarios.fechaNacimiento
+  fullName: IntranetModel.Usuarios.fechaNacimiento
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<DateTime>
+  nameWithType: Nullable<DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IntranetModel.Usuarios.cargo*
+  commentId: Overload:IntranetModel.Usuarios.cargo
+  name: cargo
+  nameWithType: Usuarios.cargo
+  fullName: IntranetModel.Usuarios.cargo
+- uid: IntranetModel.Usuarios.idGerencia*
+  commentId: Overload:IntranetModel.Usuarios.idGerencia
+  name: idGerencia
+  nameWithType: Usuarios.idGerencia
+  fullName: IntranetModel.Usuarios.idGerencia
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Int32>
+  nameWithType: Nullable<Int32>
+  fullName: System.Nullable<System.Int32>
+  nameWithType.vb: Nullable(Of Int32)
+  fullName.vb: System.Nullable(Of System.Int32)
+  name.vb: Nullable(Of Int32)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IntranetModel.Usuarios.idSubgerencia*
+  commentId: Overload:IntranetModel.Usuarios.idSubgerencia
+  name: idSubgerencia
+  nameWithType: Usuarios.idSubgerencia
+  fullName: IntranetModel.Usuarios.idSubgerencia
+- uid: IntranetModel.Usuarios.idDepartamento*
+  commentId: Overload:IntranetModel.Usuarios.idDepartamento
+  name: idDepartamento
+  nameWithType: Usuarios.idDepartamento
+  fullName: IntranetModel.Usuarios.idDepartamento
+- uid: IntranetModel.Usuarios.idUbicacion*
+  commentId: Overload:IntranetModel.Usuarios.idUbicacion
+  name: idUbicacion
+  nameWithType: Usuarios.idUbicacion
+  fullName: IntranetModel.Usuarios.idUbicacion
+- uid: IntranetModel.Usuarios.jefe*
+  commentId: Overload:IntranetModel.Usuarios.jefe
+  name: jefe
+  nameWithType: Usuarios.jefe
+  fullName: IntranetModel.Usuarios.jefe
+- uid: IntranetModel.Usuarios.idRolUsuario*
+  commentId: Overload:IntranetModel.Usuarios.idRolUsuario
+  name: idRolUsuario
+  nameWithType: Usuarios.idRolUsuario
+  fullName: IntranetModel.Usuarios.idRolUsuario
+- uid: IntranetModel.Usuarios.idTipoContrato*
+  commentId: Overload:IntranetModel.Usuarios.idTipoContrato
+  name: idTipoContrato
+  nameWithType: Usuarios.idTipoContrato
+  fullName: IntranetModel.Usuarios.idTipoContrato
+- uid: IntranetModel.Usuarios.fechaIngreso*
+  commentId: Overload:IntranetModel.Usuarios.fechaIngreso
+  name: fechaIngreso
+  nameWithType: Usuarios.fechaIngreso
+  fullName: IntranetModel.Usuarios.fechaIngreso
+- uid: IntranetModel.Usuarios.email*
+  commentId: Overload:IntranetModel.Usuarios.email
+  name: email
+  nameWithType: Usuarios.email
+  fullName: IntranetModel.Usuarios.email
+- uid: IntranetModel.Usuarios.celular*
+  commentId: Overload:IntranetModel.Usuarios.celular
+  name: celular
+  nameWithType: Usuarios.celular
+  fullName: IntranetModel.Usuarios.celular
+- uid: IntranetModel.Usuarios.contraseña*
+  commentId: Overload:IntranetModel.Usuarios.contraseña
+  name: contraseña
+  nameWithType: Usuarios.contraseña
+  fullName: IntranetModel.Usuarios.contraseña
+- uid: IntranetModel.Usuarios.ArchivosMultimedia*
+  commentId: Overload:IntranetModel.Usuarios.ArchivosMultimedia
+  name: ArchivosMultimedia
+  nameWithType: Usuarios.ArchivosMultimedia
+  fullName: IntranetModel.Usuarios.ArchivosMultimedia
+- uid: System.Collections.Generic.ICollection{IntranetModel.ArchivosMultimedia}
+  commentId: T:System.Collections.Generic.ICollection{IntranetModel.ArchivosMultimedia}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<ArchivosMultimedia>
+  nameWithType: ICollection<ArchivosMultimedia>
+  fullName: System.Collections.Generic.ICollection<IntranetModel.ArchivosMultimedia>
+  nameWithType.vb: ICollection(Of ArchivosMultimedia)
+  fullName.vb: System.Collections.Generic.ICollection(Of IntranetModel.ArchivosMultimedia)
+  name.vb: ICollection(Of ArchivosMultimedia)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IntranetModel.ArchivosMultimedia
+    name: ArchivosMultimedia
+    nameWithType: ArchivosMultimedia
+    fullName: IntranetModel.ArchivosMultimedia
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IntranetModel.ArchivosMultimedia
+    name: ArchivosMultimedia
+    nameWithType: ArchivosMultimedia
+    fullName: IntranetModel.ArchivosMultimedia
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: IntranetModel.Usuarios.ComentariosNoticias*
+  commentId: Overload:IntranetModel.Usuarios.ComentariosNoticias
+  name: ComentariosNoticias
+  nameWithType: Usuarios.ComentariosNoticias
+  fullName: IntranetModel.Usuarios.ComentariosNoticias
+- uid: System.Collections.Generic.ICollection{IntranetModel.ComentariosNoticias}
+  commentId: T:System.Collections.Generic.ICollection{IntranetModel.ComentariosNoticias}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<ComentariosNoticias>
+  nameWithType: ICollection<ComentariosNoticias>
+  fullName: System.Collections.Generic.ICollection<IntranetModel.ComentariosNoticias>
+  nameWithType.vb: ICollection(Of ComentariosNoticias)
+  fullName.vb: System.Collections.Generic.ICollection(Of IntranetModel.ComentariosNoticias)
+  name.vb: ICollection(Of ComentariosNoticias)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IntranetModel.ComentariosNoticias
+    name: ComentariosNoticias
+    nameWithType: ComentariosNoticias
+    fullName: IntranetModel.ComentariosNoticias
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IntranetModel.ComentariosNoticias
+    name: ComentariosNoticias
+    nameWithType: ComentariosNoticias
+    fullName: IntranetModel.ComentariosNoticias
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IntranetModel.Usuarios.Correspondencias*
+  commentId: Overload:IntranetModel.Usuarios.Correspondencias
+  name: Correspondencias
+  nameWithType: Usuarios.Correspondencias
+  fullName: IntranetModel.Usuarios.Correspondencias
+- uid: System.Collections.Generic.ICollection{IntranetModel.Correspondencias}
+  commentId: T:System.Collections.Generic.ICollection{IntranetModel.Correspondencias}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<Correspondencias>
+  nameWithType: ICollection<Correspondencias>
+  fullName: System.Collections.Generic.ICollection<IntranetModel.Correspondencias>
+  nameWithType.vb: ICollection(Of Correspondencias)
+  fullName.vb: System.Collections.Generic.ICollection(Of IntranetModel.Correspondencias)
+  name.vb: ICollection(Of Correspondencias)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IntranetModel.Correspondencias
+    name: Correspondencias
+    nameWithType: Correspondencias
+    fullName: IntranetModel.Correspondencias
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IntranetModel.Correspondencias
+    name: Correspondencias
+    nameWithType: Correspondencias
+    fullName: IntranetModel.Correspondencias
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IntranetModel.Usuarios.Departamentos*
+  commentId: Overload:IntranetModel.Usuarios.Departamentos
+  name: Departamentos
+  nameWithType: Usuarios.Departamentos
+  fullName: IntranetModel.Usuarios.Departamentos
+- uid: IntranetModel.Departamentos
+  commentId: T:IntranetModel.Departamentos
+  parent: IntranetModel
+  name: Departamentos
+  nameWithType: Departamentos
+  fullName: IntranetModel.Departamentos
+- uid: IntranetModel.Usuarios.Gerencias*
+  commentId: Overload:IntranetModel.Usuarios.Gerencias
+  name: Gerencias
+  nameWithType: Usuarios.Gerencias
+  fullName: IntranetModel.Usuarios.Gerencias
+- uid: IntranetModel.Gerencias
+  commentId: T:IntranetModel.Gerencias
+  parent: IntranetModel
+  name: Gerencias
+  nameWithType: Gerencias
+  fullName: IntranetModel.Gerencias
+- uid: IntranetModel.Usuarios.Hijos*
+  commentId: Overload:IntranetModel.Usuarios.Hijos
+  name: Hijos
+  nameWithType: Usuarios.Hijos
+  fullName: IntranetModel.Usuarios.Hijos
+- uid: System.Collections.Generic.ICollection{IntranetModel.Hijos}
+  commentId: T:System.Collections.Generic.ICollection{IntranetModel.Hijos}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<Hijos>
+  nameWithType: ICollection<Hijos>
+  fullName: System.Collections.Generic.ICollection<IntranetModel.Hijos>
+  nameWithType.vb: ICollection(Of Hijos)
+  fullName.vb: System.Collections.Generic.ICollection(Of IntranetModel.Hijos)
+  name.vb: ICollection(Of Hijos)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IntranetModel.Hijos
+    name: Hijos
+    nameWithType: Hijos
+    fullName: IntranetModel.Hijos
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IntranetModel.Hijos
+    name: Hijos
+    nameWithType: Hijos
+    fullName: IntranetModel.Hijos
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IntranetModel.Usuarios.Noticias*
+  commentId: Overload:IntranetModel.Usuarios.Noticias
+  name: Noticias
+  nameWithType: Usuarios.Noticias
+  fullName: IntranetModel.Usuarios.Noticias
+- uid: System.Collections.Generic.ICollection{IntranetModel.Noticias}
+  commentId: T:System.Collections.Generic.ICollection{IntranetModel.Noticias}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<Noticias>
+  nameWithType: ICollection<Noticias>
+  fullName: System.Collections.Generic.ICollection<IntranetModel.Noticias>
+  nameWithType.vb: ICollection(Of Noticias)
+  fullName.vb: System.Collections.Generic.ICollection(Of IntranetModel.Noticias)
+  name.vb: ICollection(Of Noticias)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IntranetModel.Noticias
+    name: Noticias
+    nameWithType: Noticias
+    fullName: IntranetModel.Noticias
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IntranetModel.Noticias
+    name: Noticias
+    nameWithType: Noticias
+    fullName: IntranetModel.Noticias
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IntranetModel.Usuarios.Paginas*
+  commentId: Overload:IntranetModel.Usuarios.Paginas
+  name: Paginas
+  nameWithType: Usuarios.Paginas
+  fullName: IntranetModel.Usuarios.Paginas
+- uid: System.Collections.Generic.ICollection{IntranetModel.Paginas}
+  commentId: T:System.Collections.Generic.ICollection{IntranetModel.Paginas}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<Paginas>
+  nameWithType: ICollection<Paginas>
+  fullName: System.Collections.Generic.ICollection<IntranetModel.Paginas>
+  nameWithType.vb: ICollection(Of Paginas)
+  fullName.vb: System.Collections.Generic.ICollection(Of IntranetModel.Paginas)
+  name.vb: ICollection(Of Paginas)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IntranetModel.Paginas
+    name: Paginas
+    nameWithType: Paginas
+    fullName: IntranetModel.Paginas
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IntranetModel.Paginas
+    name: Paginas
+    nameWithType: Paginas
+    fullName: IntranetModel.Paginas
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IntranetModel.Usuarios.Promociones*
+  commentId: Overload:IntranetModel.Usuarios.Promociones
+  name: Promociones
+  nameWithType: Usuarios.Promociones
+  fullName: IntranetModel.Usuarios.Promociones
+- uid: System.Collections.Generic.ICollection{IntranetModel.Promociones}
+  commentId: T:System.Collections.Generic.ICollection{IntranetModel.Promociones}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<Promociones>
+  nameWithType: ICollection<Promociones>
+  fullName: System.Collections.Generic.ICollection<IntranetModel.Promociones>
+  nameWithType.vb: ICollection(Of Promociones)
+  fullName.vb: System.Collections.Generic.ICollection(Of IntranetModel.Promociones)
+  name.vb: ICollection(Of Promociones)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IntranetModel.Promociones
+    name: Promociones
+    nameWithType: Promociones
+    fullName: IntranetModel.Promociones
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IntranetModel.Promociones
+    name: Promociones
+    nameWithType: Promociones
+    fullName: IntranetModel.Promociones
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IntranetModel.Usuarios.RolesUsuario*
+  commentId: Overload:IntranetModel.Usuarios.RolesUsuario
+  name: RolesUsuario
+  nameWithType: Usuarios.RolesUsuario
+  fullName: IntranetModel.Usuarios.RolesUsuario
+- uid: IntranetModel.RolesUsuario
+  commentId: T:IntranetModel.RolesUsuario
+  parent: IntranetModel
+  name: RolesUsuario
+  nameWithType: RolesUsuario
+  fullName: IntranetModel.RolesUsuario
+- uid: IntranetModel.Usuarios.Subgerencias*
+  commentId: Overload:IntranetModel.Usuarios.Subgerencias
+  name: Subgerencias
+  nameWithType: Usuarios.Subgerencias
+  fullName: IntranetModel.Usuarios.Subgerencias
+- uid: IntranetModel.Subgerencias
+  commentId: T:IntranetModel.Subgerencias
+  parent: IntranetModel
+  name: Subgerencias
+  nameWithType: Subgerencias
+  fullName: IntranetModel.Subgerencias
+- uid: IntranetModel.Usuarios.TiposContrato*
+  commentId: Overload:IntranetModel.Usuarios.TiposContrato
+  name: TiposContrato
+  nameWithType: Usuarios.TiposContrato
+  fullName: IntranetModel.Usuarios.TiposContrato
+- uid: IntranetModel.TiposContrato
+  commentId: T:IntranetModel.TiposContrato
+  parent: IntranetModel
+  name: TiposContrato
+  nameWithType: TiposContrato
+  fullName: IntranetModel.TiposContrato
+- uid: IntranetModel.Usuarios.Ubicaciones*
+  commentId: Overload:IntranetModel.Usuarios.Ubicaciones
+  name: Ubicaciones
+  nameWithType: Usuarios.Ubicaciones
+  fullName: IntranetModel.Usuarios.Ubicaciones
+- uid: IntranetModel.Ubicaciones
+  commentId: T:IntranetModel.Ubicaciones
+  parent: IntranetModel
+  name: Ubicaciones
+  nameWithType: Ubicaciones
+  fullName: IntranetModel.Ubicaciones

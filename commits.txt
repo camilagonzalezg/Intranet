@@ -1,0 +1,40 @@
+1e65b67 - camilagonzalezg, Mon Jun 24 22:28:30 2024 -0400 : último commit previo reporte
+9c49cdf - camilagonzalezg, Sun Jun 23 13:39:53 2024 -0400 : se completa trabajo en modulo cultura, agregando promociones, donde se modificó base de datos para agregar promociones y su fecha, se crear las paginas y se modifica la pagina cultura para cargar todo
+1df1600 - camilagonzalezg, Sat Jun 22 22:25:59 2024 -0400 : se avanza modulo de usuarios con carga desde base de datos, además, se crea tab de nacimientos, modificando la base de datos, creando hijosDAL y creando página de agregar nacimiento en modulo administrador
+b7841e5 - camilagonzalezg, Sat Jun 22 18:04:04 2024 -0400 : se termina el front end del modulo cultura
+a3a67e4 - camilagonzalezg, Thu Jun 20 13:32:52 2024 -0400 : se arregla problema de inclinacion de página post inclusion pagina nuestra empresa
+b72a019 - camilagonzalezg, Tue Jun 18 21:50:53 2024 -0400 : se avanza modulo de páginas
+61f76da - camilagonzalezg, Sun Jun 9 22:32:54 2024 -0400 : Se crea modulo correspondencia, con el crud completo y se arreglan enrutamientos para visualizar el pdf cargado
+4fe3300 - camilagonzalezg, Sun Jun 9 18:05:11 2024 -0400 : se agregan noticias finales, se modificó ancho del slider y se termina la presentacion del home colaboradores (quedan pendiente los iconos)
+76dee71 - camilagonzalezg, Sun Jun 9 17:00:53 2024 -0400 : se agregan los nombres de los autores a las noticias y se arregla el slider, ahora muestra las noticias desplegadas
+a3f01b7 - camilagonzalezg, Sat Jun 8 22:37:01 2024 -0400 : se avanza el diseño del home colaboradores implementando un slider
+8e20a8d - camilagonzalezg, Sat Jun 8 00:55:26 2024 -0400 : se corrige redireccion de urls y se agrega imagen a noticias
+190945e - camilagonzalezg, Sat Jun 8 00:09:28 2024 -0400 : se añade nueva cadena de url para las noticias creadas y en ver noticias se añade opcion para ver las noticias publicadas
+6859675 - camilagonzalezg, Fri Jun 7 21:41:47 2024 -0400 : se avanza en creacion de post noticia
+651ce42 - camilagonzalezg, Fri Jun 7 14:56:48 2024 -0400 : se arreglan detalles
+eb9f36d - camilagonzalezg, Tue Jun 4 20:38:00 2024 -0400 : se trabaja en crud de modulo paginas
+f3c9497 - camilagonzalezg, Mon Jun 3 10:38:56 2024 -0400 : se avanza en ingreso de noticia
+91b9286 - camilagonzalezg, Sun Jun 2 13:57:35 2024 -0400 : ae arregla calendario y carga de Ddl
+5bc302b - camilagonzalezg, Sun Jun 2 13:28:28 2024 -0400 : se trabaja en registro de noticia
+007f59a - camilagonzalezg, Sat Jun 1 20:36:08 2024 -0400 : se trabaja en dropdown list
+4afe2b3 - camilagonzalezg, Sat Jun 1 20:08:00 2024 -0400 : se incluye el metodo de validacion del rut
+7890da4 - camilagonzalezg, Sun May 26 16:14:58 2024 -0400 : Se comienza a construir el Login, dependiendo del rol del usuario
+c31a3cd - camilagonzalezg, Sat May 25 18:34:03 2024 -0400 : Se arregla error en base de datos
+b78c4f7 - camilagonzalezg, Wed May 22 20:59:21 2024 -0400 : se avanza construcción de buscador en página ver usuarios
+8191bc3 - camilagonzalezg, Tue May 21 15:25:12 2024 -0400 : Se ordena base de datos para que se despliegue normalmente y con sus relaciones correctas en el drop down list
+06ab90f - camilagonzalezg, Mon May 20 21:54:51 2024 -0400 : Se realiza conexion a base de datos, se crea el model y se instala entity framework en proyecto web
+8440c56 - camilagonzalezg, Sat May 4 20:22:38 2024 -0400 : Se guarda modelo de conexion a bd
+8364215 - camilagonzalezg, Sat May 4 20:16:03 2024 -0400 : se conecta a base de datos mediante ADO Entity Framework
+9d3ca3c - camilagonzalezg, Sat May 4 14:02:31 2024 -0400 : se modifica front end de formulario ingreso de usuarios
+8fafe9a - camilagonzalezg, Fri May 3 17:50:39 2024 -0400 : se termina editar usuario
+93e3a3f - camilagonzalezg, Thu May 2 11:42:25 2024 -0400 : se avanza editar usuario
+005d6f6 - camilagonzalezg, Wed May 1 18:35:23 2024 -0400 : se completa crud eliminar y agregar con mensaje
+96e5239 - camilagonzalezg, Wed May 1 14:30:22 2024 -0400 : se agrega calendario y se confirma creacion de usuario
+dbea46f - camilagonzalezg, Tue Apr 30 20:40:47 2024 -0400 : se avanza en creacion usuario
+2a916dd - camilagonzalezg, Mon Apr 29 21:01:21 2024 -0400 : avance en creacion de usuario
+73ea136 - camilagonzalezg, Sun Apr 28 21:27:29 2024 -0400 : se avanza en validacion de rut
+9629036 - camilagonzalezg, Sun Apr 28 17:52:51 2024 -0400 : Avance en formulario de ingreso usuario
+226c728 - camilagonzalezg, Sun Apr 28 16:58:12 2024 -0400 : Se avanza en DAL y DTO de usuarios
+9596082 - camilagonzalezg, Sun Apr 28 15:42:53 2024 -0400 : Agregar interfaz registrar cliente
+9a25d39 - camilagonzalezg, Thu Apr 25 13:06:27 2024 -0400 : Primer commit, se inicia proyecto en visual
+f83337f - Camila Gonzalez, Thu Apr 25 11:11:43 2024 -0400 : Initial commit

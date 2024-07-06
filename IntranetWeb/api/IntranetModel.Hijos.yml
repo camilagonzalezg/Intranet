@@ -1,0 +1,576 @@
+### YamlMime:ManagedReference
+items:
+- uid: IntranetModel.Hijos
+  commentId: T:IntranetModel.Hijos
+  id: Hijos
+  parent: IntranetModel
+  children:
+  - IntranetModel.Hijos.fechanacimientohijo
+  - IntranetModel.Hijos.id
+  - IntranetModel.Hijos.nombre
+  - IntranetModel.Hijos.rutUsuario
+  - IntranetModel.Hijos.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: Hijos
+  nameWithType: Hijos
+  fullName: IntranetModel.Hijos
+  type: Class
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Hijos.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Hijos
+    path: IntranetModel/Hijos.cs
+    startLine: 14
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public class Hijos
+    content.vb: Public Class Hijos
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: IntranetModel.Hijos.id
+  commentId: P:IntranetModel.Hijos.id
+  id: id
+  parent: IntranetModel.Hijos
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: Hijos.id
+  fullName: IntranetModel.Hijos.id
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Hijos.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: id
+    path: IntranetModel/Hijos.cs
+    startLine: 16
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public int id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property id As Integer
+  overload: IntranetModel.Hijos.id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Hijos.rutUsuario
+  commentId: P:IntranetModel.Hijos.rutUsuario
+  id: rutUsuario
+  parent: IntranetModel.Hijos
+  langs:
+  - csharp
+  - vb
+  name: rutUsuario
+  nameWithType: Hijos.rutUsuario
+  fullName: IntranetModel.Hijos.rutUsuario
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Hijos.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: rutUsuario
+    path: IntranetModel/Hijos.cs
+    startLine: 17
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public string rutUsuario { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property rutUsuario As String
+  overload: IntranetModel.Hijos.rutUsuario*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Hijos.nombre
+  commentId: P:IntranetModel.Hijos.nombre
+  id: nombre
+  parent: IntranetModel.Hijos
+  langs:
+  - csharp
+  - vb
+  name: nombre
+  nameWithType: Hijos.nombre
+  fullName: IntranetModel.Hijos.nombre
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Hijos.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: nombre
+    path: IntranetModel/Hijos.cs
+    startLine: 18
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public string nombre { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property nombre As String
+  overload: IntranetModel.Hijos.nombre*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Hijos.fechanacimientohijo
+  commentId: P:IntranetModel.Hijos.fechanacimientohijo
+  id: fechanacimientohijo
+  parent: IntranetModel.Hijos
+  langs:
+  - csharp
+  - vb
+  name: fechanacimientohijo
+  nameWithType: Hijos.fechanacimientohijo
+  fullName: IntranetModel.Hijos.fechanacimientohijo
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Hijos.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: fechanacimientohijo
+    path: IntranetModel/Hijos.cs
+    startLine: 19
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public DateTime fechanacimientohijo { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property fechanacimientohijo As Date
+  overload: IntranetModel.Hijos.fechanacimientohijo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Hijos.Usuarios
+  commentId: P:IntranetModel.Hijos.Usuarios
+  id: Usuarios
+  parent: IntranetModel.Hijos
+  langs:
+  - csharp
+  - vb
+  name: Usuarios
+  nameWithType: Hijos.Usuarios
+  fullName: IntranetModel.Hijos.Usuarios
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Hijos.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Usuarios
+    path: IntranetModel/Hijos.cs
+    startLine: 21
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public virtual Usuarios Usuarios { get; set; }
+    parameters: []
+    return:
+      type: IntranetModel.Usuarios
+    content.vb: Public Overridable Property Usuarios As Usuarios
+  overload: IntranetModel.Hijos.Usuarios*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+references:
+- uid: IntranetModel
+  commentId: N:IntranetModel
+  name: IntranetModel
+  nameWithType: IntranetModel
+  fullName: IntranetModel
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IntranetModel.Hijos.id*
+  commentId: Overload:IntranetModel.Hijos.id
+  name: id
+  nameWithType: Hijos.id
+  fullName: IntranetModel.Hijos.id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: IntranetModel.Hijos.rutUsuario*
+  commentId: Overload:IntranetModel.Hijos.rutUsuario
+  name: rutUsuario
+  nameWithType: Hijos.rutUsuario
+  fullName: IntranetModel.Hijos.rutUsuario
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: IntranetModel.Hijos.nombre*
+  commentId: Overload:IntranetModel.Hijos.nombre
+  name: nombre
+  nameWithType: Hijos.nombre
+  fullName: IntranetModel.Hijos.nombre
+- uid: IntranetModel.Hijos.fechanacimientohijo*
+  commentId: Overload:IntranetModel.Hijos.fechanacimientohijo
+  name: fechanacimientohijo
+  nameWithType: Hijos.fechanacimientohijo
+  fullName: IntranetModel.Hijos.fechanacimientohijo
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: IntranetModel.Hijos.Usuarios*
+  commentId: Overload:IntranetModel.Hijos.Usuarios
+  name: Usuarios
+  nameWithType: Hijos.Usuarios
+  fullName: IntranetModel.Hijos.Usuarios
+- uid: IntranetModel.Usuarios
+  commentId: T:IntranetModel.Usuarios
+  parent: IntranetModel
+  name: Usuarios
+  nameWithType: Usuarios
+  fullName: IntranetModel.Usuarios

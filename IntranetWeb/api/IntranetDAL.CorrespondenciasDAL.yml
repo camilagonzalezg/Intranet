@@ -1,0 +1,679 @@
+### YamlMime:ManagedReference
+items:
+- uid: IntranetDAL.CorrespondenciasDAL
+  commentId: T:IntranetDAL.CorrespondenciasDAL
+  id: CorrespondenciasDAL
+  parent: IntranetDAL
+  children:
+  - IntranetDAL.CorrespondenciasDAL.#ctor
+  - IntranetDAL.CorrespondenciasDAL.AddCorrespondencia(IntranetModel.Correspondencias)
+  - IntranetDAL.CorrespondenciasDAL.DeleteCorrespondencia(System.Int32)
+  - IntranetDAL.CorrespondenciasDAL.GetAllCorrespondencias
+  - IntranetDAL.CorrespondenciasDAL.GetCorrespondenciaById(System.Int32)
+  - IntranetDAL.CorrespondenciasDAL.UpdateCorrespondencia(IntranetModel.Correspondencias)
+  langs:
+  - csharp
+  - vb
+  name: CorrespondenciasDAL
+  nameWithType: CorrespondenciasDAL
+  fullName: IntranetDAL.CorrespondenciasDAL
+  type: Class
+  source:
+    remote:
+      path: intranetweb/IntranetModel/DAL/CorrespondenciasDAL.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: CorrespondenciasDAL
+    path: IntranetModel/DAL/CorrespondenciasDAL.cs
+    startLine: 6
+  assemblies:
+  - IntranetModel
+  namespace: IntranetDAL
+  syntax:
+    content: public class CorrespondenciasDAL
+    content.vb: Public Class CorrespondenciasDAL
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: IntranetDAL.CorrespondenciasDAL.#ctor
+  commentId: M:IntranetDAL.CorrespondenciasDAL.#ctor
+  id: '#ctor'
+  parent: IntranetDAL.CorrespondenciasDAL
+  langs:
+  - csharp
+  - vb
+  name: CorrespondenciasDAL()
+  nameWithType: CorrespondenciasDAL.CorrespondenciasDAL()
+  fullName: IntranetDAL.CorrespondenciasDAL.CorrespondenciasDAL()
+  type: Constructor
+  source:
+    remote:
+      path: intranetweb/IntranetModel/DAL/CorrespondenciasDAL.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: .ctor
+    path: IntranetModel/DAL/CorrespondenciasDAL.cs
+    startLine: 10
+  assemblies:
+  - IntranetModel
+  namespace: IntranetDAL
+  syntax:
+    content: public CorrespondenciasDAL()
+    content.vb: Public Sub New
+  overload: IntranetDAL.CorrespondenciasDAL.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: IntranetDAL.CorrespondenciasDAL.GetAllCorrespondencias
+  commentId: M:IntranetDAL.CorrespondenciasDAL.GetAllCorrespondencias
+  id: GetAllCorrespondencias
+  parent: IntranetDAL.CorrespondenciasDAL
+  langs:
+  - csharp
+  - vb
+  name: GetAllCorrespondencias()
+  nameWithType: CorrespondenciasDAL.GetAllCorrespondencias()
+  fullName: IntranetDAL.CorrespondenciasDAL.GetAllCorrespondencias()
+  type: Method
+  source:
+    remote:
+      path: intranetweb/IntranetModel/DAL/CorrespondenciasDAL.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: GetAllCorrespondencias
+    path: IntranetModel/DAL/CorrespondenciasDAL.cs
+    startLine: 15
+  assemblies:
+  - IntranetModel
+  namespace: IntranetDAL
+  syntax:
+    content: public List<Correspondencias> GetAllCorrespondencias()
+    return:
+      type: System.Collections.Generic.List{IntranetModel.Correspondencias}
+    content.vb: Public Function GetAllCorrespondencias As List(Of Correspondencias)
+  overload: IntranetDAL.CorrespondenciasDAL.GetAllCorrespondencias*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: IntranetDAL.CorrespondenciasDAL.GetCorrespondenciaById(System.Int32)
+  commentId: M:IntranetDAL.CorrespondenciasDAL.GetCorrespondenciaById(System.Int32)
+  id: GetCorrespondenciaById(System.Int32)
+  parent: IntranetDAL.CorrespondenciasDAL
+  langs:
+  - csharp
+  - vb
+  name: GetCorrespondenciaById(Int32)
+  nameWithType: CorrespondenciasDAL.GetCorrespondenciaById(Int32)
+  fullName: IntranetDAL.CorrespondenciasDAL.GetCorrespondenciaById(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: intranetweb/IntranetModel/DAL/CorrespondenciasDAL.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: GetCorrespondenciaById
+    path: IntranetModel/DAL/CorrespondenciasDAL.cs
+    startLine: 20
+  assemblies:
+  - IntranetModel
+  namespace: IntranetDAL
+  syntax:
+    content: public Correspondencias GetCorrespondenciaById(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: IntranetModel.Correspondencias
+    content.vb: Public Function GetCorrespondenciaById(id As Integer) As Correspondencias
+  overload: IntranetDAL.CorrespondenciasDAL.GetCorrespondenciaById*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: IntranetDAL.CorrespondenciasDAL.AddCorrespondencia(IntranetModel.Correspondencias)
+  commentId: M:IntranetDAL.CorrespondenciasDAL.AddCorrespondencia(IntranetModel.Correspondencias)
+  id: AddCorrespondencia(IntranetModel.Correspondencias)
+  parent: IntranetDAL.CorrespondenciasDAL
+  langs:
+  - csharp
+  - vb
+  name: AddCorrespondencia(Correspondencias)
+  nameWithType: CorrespondenciasDAL.AddCorrespondencia(Correspondencias)
+  fullName: IntranetDAL.CorrespondenciasDAL.AddCorrespondencia(IntranetModel.Correspondencias)
+  type: Method
+  source:
+    remote:
+      path: intranetweb/IntranetModel/DAL/CorrespondenciasDAL.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: AddCorrespondencia
+    path: IntranetModel/DAL/CorrespondenciasDAL.cs
+    startLine: 25
+  assemblies:
+  - IntranetModel
+  namespace: IntranetDAL
+  syntax:
+    content: public void AddCorrespondencia(Correspondencias correspondencia)
+    parameters:
+    - id: correspondencia
+      type: IntranetModel.Correspondencias
+    content.vb: Public Sub AddCorrespondencia(correspondencia As Correspondencias)
+  overload: IntranetDAL.CorrespondenciasDAL.AddCorrespondencia*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: IntranetDAL.CorrespondenciasDAL.UpdateCorrespondencia(IntranetModel.Correspondencias)
+  commentId: M:IntranetDAL.CorrespondenciasDAL.UpdateCorrespondencia(IntranetModel.Correspondencias)
+  id: UpdateCorrespondencia(IntranetModel.Correspondencias)
+  parent: IntranetDAL.CorrespondenciasDAL
+  langs:
+  - csharp
+  - vb
+  name: UpdateCorrespondencia(Correspondencias)
+  nameWithType: CorrespondenciasDAL.UpdateCorrespondencia(Correspondencias)
+  fullName: IntranetDAL.CorrespondenciasDAL.UpdateCorrespondencia(IntranetModel.Correspondencias)
+  type: Method
+  source:
+    remote:
+      path: intranetweb/IntranetModel/DAL/CorrespondenciasDAL.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: UpdateCorrespondencia
+    path: IntranetModel/DAL/CorrespondenciasDAL.cs
+    startLine: 31
+  assemblies:
+  - IntranetModel
+  namespace: IntranetDAL
+  syntax:
+    content: public void UpdateCorrespondencia(Correspondencias correspondencia)
+    parameters:
+    - id: correspondencia
+      type: IntranetModel.Correspondencias
+    content.vb: Public Sub UpdateCorrespondencia(correspondencia As Correspondencias)
+  overload: IntranetDAL.CorrespondenciasDAL.UpdateCorrespondencia*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: IntranetDAL.CorrespondenciasDAL.DeleteCorrespondencia(System.Int32)
+  commentId: M:IntranetDAL.CorrespondenciasDAL.DeleteCorrespondencia(System.Int32)
+  id: DeleteCorrespondencia(System.Int32)
+  parent: IntranetDAL.CorrespondenciasDAL
+  langs:
+  - csharp
+  - vb
+  name: DeleteCorrespondencia(Int32)
+  nameWithType: CorrespondenciasDAL.DeleteCorrespondencia(Int32)
+  fullName: IntranetDAL.CorrespondenciasDAL.DeleteCorrespondencia(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: intranetweb/IntranetModel/DAL/CorrespondenciasDAL.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: DeleteCorrespondencia
+    path: IntranetModel/DAL/CorrespondenciasDAL.cs
+    startLine: 37
+  assemblies:
+  - IntranetModel
+  namespace: IntranetDAL
+  syntax:
+    content: public void DeleteCorrespondencia(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    content.vb: Public Sub DeleteCorrespondencia(id As Integer)
+  overload: IntranetDAL.CorrespondenciasDAL.DeleteCorrespondencia*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: IntranetDAL
+  commentId: N:IntranetDAL
+  name: IntranetDAL
+  nameWithType: IntranetDAL
+  fullName: IntranetDAL
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IntranetDAL.CorrespondenciasDAL.#ctor*
+  commentId: Overload:IntranetDAL.CorrespondenciasDAL.#ctor
+  name: CorrespondenciasDAL
+  nameWithType: CorrespondenciasDAL.CorrespondenciasDAL
+  fullName: IntranetDAL.CorrespondenciasDAL.CorrespondenciasDAL
+- uid: IntranetDAL.CorrespondenciasDAL.GetAllCorrespondencias*
+  commentId: Overload:IntranetDAL.CorrespondenciasDAL.GetAllCorrespondencias
+  name: GetAllCorrespondencias
+  nameWithType: CorrespondenciasDAL.GetAllCorrespondencias
+  fullName: IntranetDAL.CorrespondenciasDAL.GetAllCorrespondencias
+- uid: System.Collections.Generic.List{IntranetModel.Correspondencias}
+  commentId: T:System.Collections.Generic.List{IntranetModel.Correspondencias}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Correspondencias>
+  nameWithType: List<Correspondencias>
+  fullName: System.Collections.Generic.List<IntranetModel.Correspondencias>
+  nameWithType.vb: List(Of Correspondencias)
+  fullName.vb: System.Collections.Generic.List(Of IntranetModel.Correspondencias)
+  name.vb: List(Of Correspondencias)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IntranetModel.Correspondencias
+    name: Correspondencias
+    nameWithType: Correspondencias
+    fullName: IntranetModel.Correspondencias
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IntranetModel.Correspondencias
+    name: Correspondencias
+    nameWithType: Correspondencias
+    fullName: IntranetModel.Correspondencias
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: IntranetDAL.CorrespondenciasDAL.GetCorrespondenciaById*
+  commentId: Overload:IntranetDAL.CorrespondenciasDAL.GetCorrespondenciaById
+  name: GetCorrespondenciaById
+  nameWithType: CorrespondenciasDAL.GetCorrespondenciaById
+  fullName: IntranetDAL.CorrespondenciasDAL.GetCorrespondenciaById
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: IntranetModel.Correspondencias
+  commentId: T:IntranetModel.Correspondencias
+  parent: IntranetModel
+  name: Correspondencias
+  nameWithType: Correspondencias
+  fullName: IntranetModel.Correspondencias
+- uid: IntranetModel
+  commentId: N:IntranetModel
+  name: IntranetModel
+  nameWithType: IntranetModel
+  fullName: IntranetModel
+- uid: IntranetDAL.CorrespondenciasDAL.AddCorrespondencia*
+  commentId: Overload:IntranetDAL.CorrespondenciasDAL.AddCorrespondencia
+  name: AddCorrespondencia
+  nameWithType: CorrespondenciasDAL.AddCorrespondencia
+  fullName: IntranetDAL.CorrespondenciasDAL.AddCorrespondencia
+- uid: IntranetDAL.CorrespondenciasDAL.UpdateCorrespondencia*
+  commentId: Overload:IntranetDAL.CorrespondenciasDAL.UpdateCorrespondencia
+  name: UpdateCorrespondencia
+  nameWithType: CorrespondenciasDAL.UpdateCorrespondencia
+  fullName: IntranetDAL.CorrespondenciasDAL.UpdateCorrespondencia
+- uid: IntranetDAL.CorrespondenciasDAL.DeleteCorrespondencia*
+  commentId: Overload:IntranetDAL.CorrespondenciasDAL.DeleteCorrespondencia
+  name: DeleteCorrespondencia
+  nameWithType: CorrespondenciasDAL.DeleteCorrespondencia
+  fullName: IntranetDAL.CorrespondenciasDAL.DeleteCorrespondencia

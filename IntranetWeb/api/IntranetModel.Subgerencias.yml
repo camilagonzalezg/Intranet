@@ -1,0 +1,862 @@
+### YamlMime:ManagedReference
+items:
+- uid: IntranetModel.Subgerencias
+  commentId: T:IntranetModel.Subgerencias
+  id: Subgerencias
+  parent: IntranetModel
+  children:
+  - IntranetModel.Subgerencias.#ctor
+  - IntranetModel.Subgerencias.Departamentos
+  - IntranetModel.Subgerencias.Gerencias
+  - IntranetModel.Subgerencias.id
+  - IntranetModel.Subgerencias.idGerencia
+  - IntranetModel.Subgerencias.nombre
+  - IntranetModel.Subgerencias.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: Subgerencias
+  nameWithType: Subgerencias
+  fullName: IntranetModel.Subgerencias
+  type: Class
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Subgerencias.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Subgerencias
+    path: IntranetModel/Subgerencias.cs
+    startLine: 14
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public class Subgerencias
+    content.vb: Public Class Subgerencias
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: IntranetModel.Subgerencias.#ctor
+  commentId: M:IntranetModel.Subgerencias.#ctor
+  id: '#ctor'
+  parent: IntranetModel.Subgerencias
+  langs:
+  - csharp
+  - vb
+  name: Subgerencias()
+  nameWithType: Subgerencias.Subgerencias()
+  fullName: IntranetModel.Subgerencias.Subgerencias()
+  type: Constructor
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Subgerencias.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: .ctor
+    path: IntranetModel/Subgerencias.cs
+    startLine: 16
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public Subgerencias()
+    content.vb: Public Sub New
+  overload: IntranetModel.Subgerencias.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Subgerencias.id
+  commentId: P:IntranetModel.Subgerencias.id
+  id: id
+  parent: IntranetModel.Subgerencias
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: Subgerencias.id
+  fullName: IntranetModel.Subgerencias.id
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Subgerencias.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: id
+    path: IntranetModel/Subgerencias.cs
+    startLine: 23
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public int id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property id As Integer
+  overload: IntranetModel.Subgerencias.id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Subgerencias.nombre
+  commentId: P:IntranetModel.Subgerencias.nombre
+  id: nombre
+  parent: IntranetModel.Subgerencias
+  langs:
+  - csharp
+  - vb
+  name: nombre
+  nameWithType: Subgerencias.nombre
+  fullName: IntranetModel.Subgerencias.nombre
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Subgerencias.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: nombre
+    path: IntranetModel/Subgerencias.cs
+    startLine: 24
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public string nombre { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property nombre As String
+  overload: IntranetModel.Subgerencias.nombre*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Subgerencias.idGerencia
+  commentId: P:IntranetModel.Subgerencias.idGerencia
+  id: idGerencia
+  parent: IntranetModel.Subgerencias
+  langs:
+  - csharp
+  - vb
+  name: idGerencia
+  nameWithType: Subgerencias.idGerencia
+  fullName: IntranetModel.Subgerencias.idGerencia
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Subgerencias.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: idGerencia
+    path: IntranetModel/Subgerencias.cs
+    startLine: 25
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public int? idGerencia { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property idGerencia As Integer?
+  overload: IntranetModel.Subgerencias.idGerencia*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Subgerencias.Departamentos
+  commentId: P:IntranetModel.Subgerencias.Departamentos
+  id: Departamentos
+  parent: IntranetModel.Subgerencias
+  langs:
+  - csharp
+  - vb
+  name: Departamentos
+  nameWithType: Subgerencias.Departamentos
+  fullName: IntranetModel.Subgerencias.Departamentos
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Subgerencias.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Departamentos
+    path: IntranetModel/Subgerencias.cs
+    startLine: 27
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public virtual ICollection<Departamentos> Departamentos { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{IntranetModel.Departamentos}
+    content.vb: Public Overridable Property Departamentos As ICollection(Of Departamentos)
+  overload: IntranetModel.Subgerencias.Departamentos*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: IntranetModel.Subgerencias.Gerencias
+  commentId: P:IntranetModel.Subgerencias.Gerencias
+  id: Gerencias
+  parent: IntranetModel.Subgerencias
+  langs:
+  - csharp
+  - vb
+  name: Gerencias
+  nameWithType: Subgerencias.Gerencias
+  fullName: IntranetModel.Subgerencias.Gerencias
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Subgerencias.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Gerencias
+    path: IntranetModel/Subgerencias.cs
+    startLine: 29
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public virtual Gerencias Gerencias { get; set; }
+    parameters: []
+    return:
+      type: IntranetModel.Gerencias
+    content.vb: Public Overridable Property Gerencias As Gerencias
+  overload: IntranetModel.Subgerencias.Gerencias*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: IntranetModel.Subgerencias.Usuarios
+  commentId: P:IntranetModel.Subgerencias.Usuarios
+  id: Usuarios
+  parent: IntranetModel.Subgerencias
+  langs:
+  - csharp
+  - vb
+  name: Usuarios
+  nameWithType: Subgerencias.Usuarios
+  fullName: IntranetModel.Subgerencias.Usuarios
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Subgerencias.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Usuarios
+    path: IntranetModel/Subgerencias.cs
+    startLine: 30
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public virtual ICollection<Usuarios> Usuarios { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{IntranetModel.Usuarios}
+    content.vb: Public Overridable Property Usuarios As ICollection(Of Usuarios)
+  overload: IntranetModel.Subgerencias.Usuarios*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+references:
+- uid: IntranetModel
+  commentId: N:IntranetModel
+  name: IntranetModel
+  nameWithType: IntranetModel
+  fullName: IntranetModel
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IntranetModel.Subgerencias.#ctor*
+  commentId: Overload:IntranetModel.Subgerencias.#ctor
+  name: Subgerencias
+  nameWithType: Subgerencias.Subgerencias
+  fullName: IntranetModel.Subgerencias.Subgerencias
+- uid: IntranetModel.Subgerencias.id*
+  commentId: Overload:IntranetModel.Subgerencias.id
+  name: id
+  nameWithType: Subgerencias.id
+  fullName: IntranetModel.Subgerencias.id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: IntranetModel.Subgerencias.nombre*
+  commentId: Overload:IntranetModel.Subgerencias.nombre
+  name: nombre
+  nameWithType: Subgerencias.nombre
+  fullName: IntranetModel.Subgerencias.nombre
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: IntranetModel.Subgerencias.idGerencia*
+  commentId: Overload:IntranetModel.Subgerencias.idGerencia
+  name: idGerencia
+  nameWithType: Subgerencias.idGerencia
+  fullName: IntranetModel.Subgerencias.idGerencia
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Int32>
+  nameWithType: Nullable<Int32>
+  fullName: System.Nullable<System.Int32>
+  nameWithType.vb: Nullable(Of Int32)
+  fullName.vb: System.Nullable(Of System.Int32)
+  name.vb: Nullable(Of Int32)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IntranetModel.Subgerencias.Departamentos*
+  commentId: Overload:IntranetModel.Subgerencias.Departamentos
+  name: Departamentos
+  nameWithType: Subgerencias.Departamentos
+  fullName: IntranetModel.Subgerencias.Departamentos
+- uid: System.Collections.Generic.ICollection{IntranetModel.Departamentos}
+  commentId: T:System.Collections.Generic.ICollection{IntranetModel.Departamentos}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<Departamentos>
+  nameWithType: ICollection<Departamentos>
+  fullName: System.Collections.Generic.ICollection<IntranetModel.Departamentos>
+  nameWithType.vb: ICollection(Of Departamentos)
+  fullName.vb: System.Collections.Generic.ICollection(Of IntranetModel.Departamentos)
+  name.vb: ICollection(Of Departamentos)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IntranetModel.Departamentos
+    name: Departamentos
+    nameWithType: Departamentos
+    fullName: IntranetModel.Departamentos
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IntranetModel.Departamentos
+    name: Departamentos
+    nameWithType: Departamentos
+    fullName: IntranetModel.Departamentos
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: IntranetModel.Subgerencias.Gerencias*
+  commentId: Overload:IntranetModel.Subgerencias.Gerencias
+  name: Gerencias
+  nameWithType: Subgerencias.Gerencias
+  fullName: IntranetModel.Subgerencias.Gerencias
+- uid: IntranetModel.Gerencias
+  commentId: T:IntranetModel.Gerencias
+  parent: IntranetModel
+  name: Gerencias
+  nameWithType: Gerencias
+  fullName: IntranetModel.Gerencias
+- uid: IntranetModel.Subgerencias.Usuarios*
+  commentId: Overload:IntranetModel.Subgerencias.Usuarios
+  name: Usuarios
+  nameWithType: Subgerencias.Usuarios
+  fullName: IntranetModel.Subgerencias.Usuarios
+- uid: System.Collections.Generic.ICollection{IntranetModel.Usuarios}
+  commentId: T:System.Collections.Generic.ICollection{IntranetModel.Usuarios}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<Usuarios>
+  nameWithType: ICollection<Usuarios>
+  fullName: System.Collections.Generic.ICollection<IntranetModel.Usuarios>
+  nameWithType.vb: ICollection(Of Usuarios)
+  fullName.vb: System.Collections.Generic.ICollection(Of IntranetModel.Usuarios)
+  name.vb: ICollection(Of Usuarios)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IntranetModel.Usuarios
+    name: Usuarios
+    nameWithType: Usuarios
+    fullName: IntranetModel.Usuarios
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IntranetModel.Usuarios
+    name: Usuarios
+    nameWithType: Usuarios
+    fullName: IntranetModel.Usuarios
+  - name: )
+    nameWithType: )
+    fullName: )

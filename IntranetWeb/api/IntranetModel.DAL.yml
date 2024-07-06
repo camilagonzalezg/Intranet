@@ -1,0 +1,46 @@
+### YamlMime:ManagedReference
+items:
+- uid: IntranetModel.DAL
+  commentId: N:IntranetModel.DAL
+  id: IntranetModel.DAL
+  children:
+  - IntranetModel.DAL.HijosDAL
+  - IntranetModel.DAL.NoticiasDAL
+  - IntranetModel.DAL.PaginasDAL
+  - IntranetModel.DAL.PromocionesDAL
+  - IntranetModel.DAL.UsuariosDAL
+  langs:
+  - csharp
+  - vb
+  name: IntranetModel.DAL
+  nameWithType: IntranetModel.DAL
+  fullName: IntranetModel.DAL
+  type: Namespace
+  assemblies:
+  - IntranetModel
+references:
+- uid: IntranetModel.DAL.HijosDAL
+  commentId: T:IntranetModel.DAL.HijosDAL
+  name: HijosDAL
+  nameWithType: HijosDAL
+  fullName: IntranetModel.DAL.HijosDAL
+- uid: IntranetModel.DAL.NoticiasDAL
+  commentId: T:IntranetModel.DAL.NoticiasDAL
+  name: NoticiasDAL
+  nameWithType: NoticiasDAL
+  fullName: IntranetModel.DAL.NoticiasDAL
+- uid: IntranetModel.DAL.PaginasDAL
+  commentId: T:IntranetModel.DAL.PaginasDAL
+  name: PaginasDAL
+  nameWithType: PaginasDAL
+  fullName: IntranetModel.DAL.PaginasDAL
+- uid: IntranetModel.DAL.PromocionesDAL
+  commentId: T:IntranetModel.DAL.PromocionesDAL
+  name: PromocionesDAL
+  nameWithType: PromocionesDAL
+  fullName: IntranetModel.DAL.PromocionesDAL
+- uid: IntranetModel.DAL.UsuariosDAL
+  commentId: T:IntranetModel.DAL.UsuariosDAL
+  name: UsuariosDAL
+  nameWithType: UsuariosDAL
+  fullName: IntranetModel.DAL.UsuariosDAL

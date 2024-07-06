@@ -1,0 +1,6 @@
+projectKey=Intranet
+serverUrl=http://localhost:9000
+serverVersion=10.6.0.92116
+dashboardUrl=http://localhost:9000/dashboard?id=Intranet
+ceTaskId=78f9e0a1-d26c-44c4-8943-73b89bde3a37
+ceTaskUrl=http://localhost:9000/api/ce/task?id=78f9e0a1-d26c-44c4-8943-73b89bde3a37

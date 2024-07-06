@@ -1,0 +1,901 @@
+### YamlMime:ManagedReference
+items:
+- uid: IntranetModel.Paginas
+  commentId: T:IntranetModel.Paginas
+  id: Paginas
+  parent: IntranetModel
+  children:
+  - IntranetModel.Paginas.AutorNombre
+  - IntranetModel.Paginas.contenidoTexto
+  - IntranetModel.Paginas.fechaPublicacion
+  - IntranetModel.Paginas.id
+  - IntranetModel.Paginas.likes
+  - IntranetModel.Paginas.metaDescripcion
+  - IntranetModel.Paginas.tags
+  - IntranetModel.Paginas.titulo
+  - IntranetModel.Paginas.usuarioAutor
+  - IntranetModel.Paginas.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: Paginas
+  nameWithType: Paginas
+  fullName: IntranetModel.Paginas
+  type: Class
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Partials/PaginaParcial.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Paginas
+    path: IntranetModel/Partials/PaginaParcial.cs
+    startLine: 5
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public class Paginas
+    content.vb: Public Class Paginas
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: IntranetModel.Paginas.id
+  commentId: P:IntranetModel.Paginas.id
+  id: id
+  parent: IntranetModel.Paginas
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: Paginas.id
+  fullName: IntranetModel.Paginas.id
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Paginas.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: id
+    path: IntranetModel/Paginas.cs
+    startLine: 16
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public int id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property id As Integer
+  overload: IntranetModel.Paginas.id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Paginas.usuarioAutor
+  commentId: P:IntranetModel.Paginas.usuarioAutor
+  id: usuarioAutor
+  parent: IntranetModel.Paginas
+  langs:
+  - csharp
+  - vb
+  name: usuarioAutor
+  nameWithType: Paginas.usuarioAutor
+  fullName: IntranetModel.Paginas.usuarioAutor
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Paginas.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: usuarioAutor
+    path: IntranetModel/Paginas.cs
+    startLine: 17
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public string usuarioAutor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property usuarioAutor As String
+  overload: IntranetModel.Paginas.usuarioAutor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Paginas.titulo
+  commentId: P:IntranetModel.Paginas.titulo
+  id: titulo
+  parent: IntranetModel.Paginas
+  langs:
+  - csharp
+  - vb
+  name: titulo
+  nameWithType: Paginas.titulo
+  fullName: IntranetModel.Paginas.titulo
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Paginas.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: titulo
+    path: IntranetModel/Paginas.cs
+    startLine: 18
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public string titulo { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property titulo As String
+  overload: IntranetModel.Paginas.titulo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Paginas.metaDescripcion
+  commentId: P:IntranetModel.Paginas.metaDescripcion
+  id: metaDescripcion
+  parent: IntranetModel.Paginas
+  langs:
+  - csharp
+  - vb
+  name: metaDescripcion
+  nameWithType: Paginas.metaDescripcion
+  fullName: IntranetModel.Paginas.metaDescripcion
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Paginas.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: metaDescripcion
+    path: IntranetModel/Paginas.cs
+    startLine: 19
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public string metaDescripcion { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property metaDescripcion As String
+  overload: IntranetModel.Paginas.metaDescripcion*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Paginas.contenidoTexto
+  commentId: P:IntranetModel.Paginas.contenidoTexto
+  id: contenidoTexto
+  parent: IntranetModel.Paginas
+  langs:
+  - csharp
+  - vb
+  name: contenidoTexto
+  nameWithType: Paginas.contenidoTexto
+  fullName: IntranetModel.Paginas.contenidoTexto
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Paginas.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: contenidoTexto
+    path: IntranetModel/Paginas.cs
+    startLine: 20
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public string contenidoTexto { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property contenidoTexto As String
+  overload: IntranetModel.Paginas.contenidoTexto*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Paginas.fechaPublicacion
+  commentId: P:IntranetModel.Paginas.fechaPublicacion
+  id: fechaPublicacion
+  parent: IntranetModel.Paginas
+  langs:
+  - csharp
+  - vb
+  name: fechaPublicacion
+  nameWithType: Paginas.fechaPublicacion
+  fullName: IntranetModel.Paginas.fechaPublicacion
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Paginas.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: fechaPublicacion
+    path: IntranetModel/Paginas.cs
+    startLine: 21
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public DateTime? fechaPublicacion { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property fechaPublicacion As Date?
+  overload: IntranetModel.Paginas.fechaPublicacion*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Paginas.tags
+  commentId: P:IntranetModel.Paginas.tags
+  id: tags
+  parent: IntranetModel.Paginas
+  langs:
+  - csharp
+  - vb
+  name: tags
+  nameWithType: Paginas.tags
+  fullName: IntranetModel.Paginas.tags
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Paginas.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: tags
+    path: IntranetModel/Paginas.cs
+    startLine: 22
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public string tags { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property tags As String
+  overload: IntranetModel.Paginas.tags*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Paginas.likes
+  commentId: P:IntranetModel.Paginas.likes
+  id: likes
+  parent: IntranetModel.Paginas
+  langs:
+  - csharp
+  - vb
+  name: likes
+  nameWithType: Paginas.likes
+  fullName: IntranetModel.Paginas.likes
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Paginas.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: likes
+    path: IntranetModel/Paginas.cs
+    startLine: 23
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public int? likes { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property likes As Integer?
+  overload: IntranetModel.Paginas.likes*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Paginas.Usuarios
+  commentId: P:IntranetModel.Paginas.Usuarios
+  id: Usuarios
+  parent: IntranetModel.Paginas
+  langs:
+  - csharp
+  - vb
+  name: Usuarios
+  nameWithType: Paginas.Usuarios
+  fullName: IntranetModel.Paginas.Usuarios
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Paginas.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Usuarios
+    path: IntranetModel/Paginas.cs
+    startLine: 25
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public virtual Usuarios Usuarios { get; set; }
+    parameters: []
+    return:
+      type: IntranetModel.Usuarios
+    content.vb: Public Overridable Property Usuarios As Usuarios
+  overload: IntranetModel.Paginas.Usuarios*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: IntranetModel.Paginas.AutorNombre
+  commentId: P:IntranetModel.Paginas.AutorNombre
+  id: AutorNombre
+  parent: IntranetModel.Paginas
+  langs:
+  - csharp
+  - vb
+  name: AutorNombre
+  nameWithType: Paginas.AutorNombre
+  fullName: IntranetModel.Paginas.AutorNombre
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Partials/PaginaParcial.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: AutorNombre
+    path: IntranetModel/Partials/PaginaParcial.cs
+    startLine: 20
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public string AutorNombre { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property AutorNombre As String
+  overload: IntranetModel.Paginas.AutorNombre*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: IntranetModel
+  commentId: N:IntranetModel
+  name: IntranetModel
+  nameWithType: IntranetModel
+  fullName: IntranetModel
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IntranetModel.Paginas.id*
+  commentId: Overload:IntranetModel.Paginas.id
+  name: id
+  nameWithType: Paginas.id
+  fullName: IntranetModel.Paginas.id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: IntranetModel.Paginas.usuarioAutor*
+  commentId: Overload:IntranetModel.Paginas.usuarioAutor
+  name: usuarioAutor
+  nameWithType: Paginas.usuarioAutor
+  fullName: IntranetModel.Paginas.usuarioAutor
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: IntranetModel.Paginas.titulo*
+  commentId: Overload:IntranetModel.Paginas.titulo
+  name: titulo
+  nameWithType: Paginas.titulo
+  fullName: IntranetModel.Paginas.titulo
+- uid: IntranetModel.Paginas.metaDescripcion*
+  commentId: Overload:IntranetModel.Paginas.metaDescripcion
+  name: metaDescripcion
+  nameWithType: Paginas.metaDescripcion
+  fullName: IntranetModel.Paginas.metaDescripcion
+- uid: IntranetModel.Paginas.contenidoTexto*
+  commentId: Overload:IntranetModel.Paginas.contenidoTexto
+  name: contenidoTexto
+  nameWithType: Paginas.contenidoTexto
+  fullName: IntranetModel.Paginas.contenidoTexto
+- uid: IntranetModel.Paginas.fechaPublicacion*
+  commentId: Overload:IntranetModel.Paginas.fechaPublicacion
+  name: fechaPublicacion
+  nameWithType: Paginas.fechaPublicacion
+  fullName: IntranetModel.Paginas.fechaPublicacion
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<DateTime>
+  nameWithType: Nullable<DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IntranetModel.Paginas.tags*
+  commentId: Overload:IntranetModel.Paginas.tags
+  name: tags
+  nameWithType: Paginas.tags
+  fullName: IntranetModel.Paginas.tags
+- uid: IntranetModel.Paginas.likes*
+  commentId: Overload:IntranetModel.Paginas.likes
+  name: likes
+  nameWithType: Paginas.likes
+  fullName: IntranetModel.Paginas.likes
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Int32>
+  nameWithType: Nullable<Int32>
+  fullName: System.Nullable<System.Int32>
+  nameWithType.vb: Nullable(Of Int32)
+  fullName.vb: System.Nullable(Of System.Int32)
+  name.vb: Nullable(Of Int32)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IntranetModel.Paginas.Usuarios*
+  commentId: Overload:IntranetModel.Paginas.Usuarios
+  name: Usuarios
+  nameWithType: Paginas.Usuarios
+  fullName: IntranetModel.Paginas.Usuarios
+- uid: IntranetModel.Usuarios
+  commentId: T:IntranetModel.Usuarios
+  parent: IntranetModel
+  name: Usuarios
+  nameWithType: Usuarios
+  fullName: IntranetModel.Usuarios
+- uid: IntranetModel.Paginas.AutorNombre*
+  commentId: Overload:IntranetModel.Paginas.AutorNombre
+  name: AutorNombre
+  nameWithType: Paginas.AutorNombre
+  fullName: IntranetModel.Paginas.AutorNombre

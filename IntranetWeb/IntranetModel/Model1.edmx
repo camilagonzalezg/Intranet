@@ -149,6 +149,7 @@
           <Property Name="email" Type="nvarchar" MaxLength="100" />
           <Property Name="celular" Type="int" />
           <Property Name="contraseña" Type="nvarchar" MaxLength="100" />
+          <Property Name="salt" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <Association Name="FK__ArchivosM__usuar__5FB337D6">
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
@@ -644,6 +645,7 @@
           <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="celular" Type="Int32" />
           <Property Name="contraseña" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="salt" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="ArchivosMultimedia" Relationship="Self.FK__ArchivosM__usuar__5FB337D6" FromRole="Usuarios" ToRole="ArchivosMultimedia" />
           <NavigationProperty Name="ComentariosNoticias" Relationship="Self.FK__Comentari__rutUs__412EB0B6" FromRole="Usuarios" ToRole="ComentariosNoticias" />
           <NavigationProperty Name="Correspondencias" Relationship="Self.FK__Correspon__usuar__440B1D61" FromRole="Usuarios" ToRole="Correspondencias" />
@@ -1140,6 +1142,7 @@
                 <ScalarProperty Name="email" ColumnName="email" />
                 <ScalarProperty Name="celular" ColumnName="celular" />
                 <ScalarProperty Name="contraseña" ColumnName="contraseña" />
+                <ScalarProperty Name="salt" ColumnName="salt" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

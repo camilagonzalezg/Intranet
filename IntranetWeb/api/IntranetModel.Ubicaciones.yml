@@ -1,0 +1,777 @@
+### YamlMime:ManagedReference
+items:
+- uid: IntranetModel.Ubicaciones
+  commentId: T:IntranetModel.Ubicaciones
+  id: Ubicaciones
+  parent: IntranetModel
+  children:
+  - IntranetModel.Ubicaciones.#ctor
+  - IntranetModel.Ubicaciones.Departamentos
+  - IntranetModel.Ubicaciones.id
+  - IntranetModel.Ubicaciones.idDepartamento
+  - IntranetModel.Ubicaciones.nombre
+  - IntranetModel.Ubicaciones.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: Ubicaciones
+  nameWithType: Ubicaciones
+  fullName: IntranetModel.Ubicaciones
+  type: Class
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Ubicaciones.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Ubicaciones
+    path: IntranetModel/Ubicaciones.cs
+    startLine: 14
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public class Ubicaciones
+    content.vb: Public Class Ubicaciones
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: IntranetModel.Ubicaciones.#ctor
+  commentId: M:IntranetModel.Ubicaciones.#ctor
+  id: '#ctor'
+  parent: IntranetModel.Ubicaciones
+  langs:
+  - csharp
+  - vb
+  name: Ubicaciones()
+  nameWithType: Ubicaciones.Ubicaciones()
+  fullName: IntranetModel.Ubicaciones.Ubicaciones()
+  type: Constructor
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Ubicaciones.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: .ctor
+    path: IntranetModel/Ubicaciones.cs
+    startLine: 16
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public Ubicaciones()
+    content.vb: Public Sub New
+  overload: IntranetModel.Ubicaciones.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Ubicaciones.id
+  commentId: P:IntranetModel.Ubicaciones.id
+  id: id
+  parent: IntranetModel.Ubicaciones
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: Ubicaciones.id
+  fullName: IntranetModel.Ubicaciones.id
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Ubicaciones.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: id
+    path: IntranetModel/Ubicaciones.cs
+    startLine: 22
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public int id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property id As Integer
+  overload: IntranetModel.Ubicaciones.id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Ubicaciones.nombre
+  commentId: P:IntranetModel.Ubicaciones.nombre
+  id: nombre
+  parent: IntranetModel.Ubicaciones
+  langs:
+  - csharp
+  - vb
+  name: nombre
+  nameWithType: Ubicaciones.nombre
+  fullName: IntranetModel.Ubicaciones.nombre
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Ubicaciones.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: nombre
+    path: IntranetModel/Ubicaciones.cs
+    startLine: 23
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public string nombre { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property nombre As String
+  overload: IntranetModel.Ubicaciones.nombre*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Ubicaciones.idDepartamento
+  commentId: P:IntranetModel.Ubicaciones.idDepartamento
+  id: idDepartamento
+  parent: IntranetModel.Ubicaciones
+  langs:
+  - csharp
+  - vb
+  name: idDepartamento
+  nameWithType: Ubicaciones.idDepartamento
+  fullName: IntranetModel.Ubicaciones.idDepartamento
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Ubicaciones.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: idDepartamento
+    path: IntranetModel/Ubicaciones.cs
+    startLine: 24
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public int? idDepartamento { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property idDepartamento As Integer?
+  overload: IntranetModel.Ubicaciones.idDepartamento*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Ubicaciones.Departamentos
+  commentId: P:IntranetModel.Ubicaciones.Departamentos
+  id: Departamentos
+  parent: IntranetModel.Ubicaciones
+  langs:
+  - csharp
+  - vb
+  name: Departamentos
+  nameWithType: Ubicaciones.Departamentos
+  fullName: IntranetModel.Ubicaciones.Departamentos
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Ubicaciones.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Departamentos
+    path: IntranetModel/Ubicaciones.cs
+    startLine: 26
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public virtual Departamentos Departamentos { get; set; }
+    parameters: []
+    return:
+      type: IntranetModel.Departamentos
+    content.vb: Public Overridable Property Departamentos As Departamentos
+  overload: IntranetModel.Ubicaciones.Departamentos*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: IntranetModel.Ubicaciones.Usuarios
+  commentId: P:IntranetModel.Ubicaciones.Usuarios
+  id: Usuarios
+  parent: IntranetModel.Ubicaciones
+  langs:
+  - csharp
+  - vb
+  name: Usuarios
+  nameWithType: Ubicaciones.Usuarios
+  fullName: IntranetModel.Ubicaciones.Usuarios
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Ubicaciones.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Usuarios
+    path: IntranetModel/Ubicaciones.cs
+    startLine: 27
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public virtual ICollection<Usuarios> Usuarios { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{IntranetModel.Usuarios}
+    content.vb: Public Overridable Property Usuarios As ICollection(Of Usuarios)
+  overload: IntranetModel.Ubicaciones.Usuarios*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+references:
+- uid: IntranetModel
+  commentId: N:IntranetModel
+  name: IntranetModel
+  nameWithType: IntranetModel
+  fullName: IntranetModel
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IntranetModel.Ubicaciones.#ctor*
+  commentId: Overload:IntranetModel.Ubicaciones.#ctor
+  name: Ubicaciones
+  nameWithType: Ubicaciones.Ubicaciones
+  fullName: IntranetModel.Ubicaciones.Ubicaciones
+- uid: IntranetModel.Ubicaciones.id*
+  commentId: Overload:IntranetModel.Ubicaciones.id
+  name: id
+  nameWithType: Ubicaciones.id
+  fullName: IntranetModel.Ubicaciones.id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: IntranetModel.Ubicaciones.nombre*
+  commentId: Overload:IntranetModel.Ubicaciones.nombre
+  name: nombre
+  nameWithType: Ubicaciones.nombre
+  fullName: IntranetModel.Ubicaciones.nombre
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: IntranetModel.Ubicaciones.idDepartamento*
+  commentId: Overload:IntranetModel.Ubicaciones.idDepartamento
+  name: idDepartamento
+  nameWithType: Ubicaciones.idDepartamento
+  fullName: IntranetModel.Ubicaciones.idDepartamento
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Int32>
+  nameWithType: Nullable<Int32>
+  fullName: System.Nullable<System.Int32>
+  nameWithType.vb: Nullable(Of Int32)
+  fullName.vb: System.Nullable(Of System.Int32)
+  name.vb: Nullable(Of Int32)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IntranetModel.Ubicaciones.Departamentos*
+  commentId: Overload:IntranetModel.Ubicaciones.Departamentos
+  name: Departamentos
+  nameWithType: Ubicaciones.Departamentos
+  fullName: IntranetModel.Ubicaciones.Departamentos
+- uid: IntranetModel.Departamentos
+  commentId: T:IntranetModel.Departamentos
+  parent: IntranetModel
+  name: Departamentos
+  nameWithType: Departamentos
+  fullName: IntranetModel.Departamentos
+- uid: IntranetModel.Ubicaciones.Usuarios*
+  commentId: Overload:IntranetModel.Ubicaciones.Usuarios
+  name: Usuarios
+  nameWithType: Ubicaciones.Usuarios
+  fullName: IntranetModel.Ubicaciones.Usuarios
+- uid: System.Collections.Generic.ICollection{IntranetModel.Usuarios}
+  commentId: T:System.Collections.Generic.ICollection{IntranetModel.Usuarios}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<Usuarios>
+  nameWithType: ICollection<Usuarios>
+  fullName: System.Collections.Generic.ICollection<IntranetModel.Usuarios>
+  nameWithType.vb: ICollection(Of Usuarios)
+  fullName.vb: System.Collections.Generic.ICollection(Of IntranetModel.Usuarios)
+  name.vb: ICollection(Of Usuarios)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IntranetModel.Usuarios
+    name: Usuarios
+    nameWithType: Usuarios
+    fullName: IntranetModel.Usuarios
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IntranetModel.Usuarios
+    name: Usuarios
+    nameWithType: Usuarios
+    fullName: IntranetModel.Usuarios
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

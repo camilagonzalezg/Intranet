@@ -1,0 +1,42 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [
+            "IntranetWeb.csproj",
+            "IntranetModel/IntranetModel.csproj"
+          ],
+          "cwd": "./",
+          "exclude": [ "**/obj/**", "**/bin/**" ]
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [ "api/**.yml", "api/index.md" ],
+        "src": "api",
+        "dest": "api"
+      },
+      {
+        "files": [ "**.md", "toc.yml" ],
+        "src": ".",
+        "dest": "."
+      }
+    ],
+    "resource": [
+      {
+        "files": [ "**" ],
+        "src": "IntranetWeb/Multimedia",
+        "dest": "images"
+      }
+    ],
+    "template": [ "default" ],
+    "dest": "_site",
+    "globalMetadata": {},
+    "fileMetadata": {}
+  }
+}

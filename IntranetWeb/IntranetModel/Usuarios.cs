@@ -42,6 +42,7 @@ namespace IntranetModel
         public string email { get; set; }
         public Nullable<int> celular { get; set; }
         public string contraseña { get; set; }
+        public string salt { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ArchivosMultimedia> ArchivosMultimedia { get; set; }

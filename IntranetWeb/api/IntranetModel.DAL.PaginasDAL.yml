@@ -1,0 +1,732 @@
+### YamlMime:ManagedReference
+items:
+- uid: IntranetModel.DAL.PaginasDAL
+  commentId: T:IntranetModel.DAL.PaginasDAL
+  id: PaginasDAL
+  parent: IntranetModel.DAL
+  children:
+  - IntranetModel.DAL.PaginasDAL.Add(IntranetModel.Paginas)
+  - IntranetModel.DAL.PaginasDAL.GetAll
+  - IntranetModel.DAL.PaginasDAL.GetAllByAuthor(System.String)
+  - IntranetModel.DAL.PaginasDAL.GetById(System.Int32)
+  - IntranetModel.DAL.PaginasDAL.GetByTitle(System.String)
+  - IntranetModel.DAL.PaginasDAL.Remove(System.Int32)
+  - IntranetModel.DAL.PaginasDAL.Update(IntranetModel.Paginas)
+  langs:
+  - csharp
+  - vb
+  name: PaginasDAL
+  nameWithType: PaginasDAL
+  fullName: IntranetModel.DAL.PaginasDAL
+  type: Class
+  source:
+    remote:
+      path: intranetweb/IntranetModel/DAL/PaginasDAL.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: PaginasDAL
+    path: IntranetModel/DAL/PaginasDAL.cs
+    startLine: 8
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel.DAL
+  syntax:
+    content: public class PaginasDAL
+    content.vb: Public Class PaginasDAL
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: IntranetModel.DAL.PaginasDAL.Add(IntranetModel.Paginas)
+  commentId: M:IntranetModel.DAL.PaginasDAL.Add(IntranetModel.Paginas)
+  id: Add(IntranetModel.Paginas)
+  parent: IntranetModel.DAL.PaginasDAL
+  langs:
+  - csharp
+  - vb
+  name: Add(Paginas)
+  nameWithType: PaginasDAL.Add(Paginas)
+  fullName: IntranetModel.DAL.PaginasDAL.Add(IntranetModel.Paginas)
+  type: Method
+  source:
+    remote:
+      path: intranetweb/IntranetModel/DAL/PaginasDAL.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Add
+    path: IntranetModel/DAL/PaginasDAL.cs
+    startLine: 13
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel.DAL
+  syntax:
+    content: public void Add(Paginas pagina)
+    parameters:
+    - id: pagina
+      type: IntranetModel.Paginas
+    content.vb: Public Sub Add(pagina As Paginas)
+  overload: IntranetModel.DAL.PaginasDAL.Add*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.DAL.PaginasDAL.GetAll
+  commentId: M:IntranetModel.DAL.PaginasDAL.GetAll
+  id: GetAll
+  parent: IntranetModel.DAL.PaginasDAL
+  langs:
+  - csharp
+  - vb
+  name: GetAll()
+  nameWithType: PaginasDAL.GetAll()
+  fullName: IntranetModel.DAL.PaginasDAL.GetAll()
+  type: Method
+  source:
+    remote:
+      path: intranetweb/IntranetModel/DAL/PaginasDAL.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: GetAll
+    path: IntranetModel/DAL/PaginasDAL.cs
+    startLine: 20
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel.DAL
+  syntax:
+    content: public List<Paginas> GetAll()
+    return:
+      type: System.Collections.Generic.List{IntranetModel.Paginas}
+    content.vb: Public Function GetAll As List(Of Paginas)
+  overload: IntranetModel.DAL.PaginasDAL.GetAll*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.DAL.PaginasDAL.GetAllByAuthor(System.String)
+  commentId: M:IntranetModel.DAL.PaginasDAL.GetAllByAuthor(System.String)
+  id: GetAllByAuthor(System.String)
+  parent: IntranetModel.DAL.PaginasDAL
+  langs:
+  - csharp
+  - vb
+  name: GetAllByAuthor(String)
+  nameWithType: PaginasDAL.GetAllByAuthor(String)
+  fullName: IntranetModel.DAL.PaginasDAL.GetAllByAuthor(System.String)
+  type: Method
+  source:
+    remote:
+      path: intranetweb/IntranetModel/DAL/PaginasDAL.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: GetAllByAuthor
+    path: IntranetModel/DAL/PaginasDAL.cs
+    startLine: 26
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel.DAL
+  syntax:
+    content: public List<Paginas> GetAllByAuthor(string autor)
+    parameters:
+    - id: autor
+      type: System.String
+    return:
+      type: System.Collections.Generic.List{IntranetModel.Paginas}
+    content.vb: Public Function GetAllByAuthor(autor As String) As List(Of Paginas)
+  overload: IntranetModel.DAL.PaginasDAL.GetAllByAuthor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.DAL.PaginasDAL.GetById(System.Int32)
+  commentId: M:IntranetModel.DAL.PaginasDAL.GetById(System.Int32)
+  id: GetById(System.Int32)
+  parent: IntranetModel.DAL.PaginasDAL
+  langs:
+  - csharp
+  - vb
+  name: GetById(Int32)
+  nameWithType: PaginasDAL.GetById(Int32)
+  fullName: IntranetModel.DAL.PaginasDAL.GetById(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: intranetweb/IntranetModel/DAL/PaginasDAL.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: GetById
+    path: IntranetModel/DAL/PaginasDAL.cs
+    startLine: 32
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel.DAL
+  syntax:
+    content: public Paginas GetById(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: IntranetModel.Paginas
+    content.vb: Public Function GetById(id As Integer) As Paginas
+  overload: IntranetModel.DAL.PaginasDAL.GetById*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.DAL.PaginasDAL.GetByTitle(System.String)
+  commentId: M:IntranetModel.DAL.PaginasDAL.GetByTitle(System.String)
+  id: GetByTitle(System.String)
+  parent: IntranetModel.DAL.PaginasDAL
+  langs:
+  - csharp
+  - vb
+  name: GetByTitle(String)
+  nameWithType: PaginasDAL.GetByTitle(String)
+  fullName: IntranetModel.DAL.PaginasDAL.GetByTitle(System.String)
+  type: Method
+  source:
+    remote:
+      path: intranetweb/IntranetModel/DAL/PaginasDAL.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: GetByTitle
+    path: IntranetModel/DAL/PaginasDAL.cs
+    startLine: 38
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel.DAL
+  syntax:
+    content: public List<Paginas> GetByTitle(string titulo)
+    parameters:
+    - id: titulo
+      type: System.String
+    return:
+      type: System.Collections.Generic.List{IntranetModel.Paginas}
+    content.vb: Public Function GetByTitle(titulo As String) As List(Of Paginas)
+  overload: IntranetModel.DAL.PaginasDAL.GetByTitle*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.DAL.PaginasDAL.Remove(System.Int32)
+  commentId: M:IntranetModel.DAL.PaginasDAL.Remove(System.Int32)
+  id: Remove(System.Int32)
+  parent: IntranetModel.DAL.PaginasDAL
+  langs:
+  - csharp
+  - vb
+  name: Remove(Int32)
+  nameWithType: PaginasDAL.Remove(Int32)
+  fullName: IntranetModel.DAL.PaginasDAL.Remove(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: intranetweb/IntranetModel/DAL/PaginasDAL.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Remove
+    path: IntranetModel/DAL/PaginasDAL.cs
+    startLine: 44
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel.DAL
+  syntax:
+    content: public void Remove(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    content.vb: Public Sub Remove(id As Integer)
+  overload: IntranetModel.DAL.PaginasDAL.Remove*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.DAL.PaginasDAL.Update(IntranetModel.Paginas)
+  commentId: M:IntranetModel.DAL.PaginasDAL.Update(IntranetModel.Paginas)
+  id: Update(IntranetModel.Paginas)
+  parent: IntranetModel.DAL.PaginasDAL
+  langs:
+  - csharp
+  - vb
+  name: Update(Paginas)
+  nameWithType: PaginasDAL.Update(Paginas)
+  fullName: IntranetModel.DAL.PaginasDAL.Update(IntranetModel.Paginas)
+  type: Method
+  source:
+    remote:
+      path: intranetweb/IntranetModel/DAL/PaginasDAL.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Update
+    path: IntranetModel/DAL/PaginasDAL.cs
+    startLine: 55
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel.DAL
+  syntax:
+    content: public void Update(Paginas pagina)
+    parameters:
+    - id: pagina
+      type: IntranetModel.Paginas
+    content.vb: Public Sub Update(pagina As Paginas)
+  overload: IntranetModel.DAL.PaginasDAL.Update*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: IntranetModel.DAL
+  commentId: N:IntranetModel.DAL
+  name: IntranetModel.DAL
+  nameWithType: IntranetModel.DAL
+  fullName: IntranetModel.DAL
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IntranetModel.DAL.PaginasDAL.Add*
+  commentId: Overload:IntranetModel.DAL.PaginasDAL.Add
+  name: Add
+  nameWithType: PaginasDAL.Add
+  fullName: IntranetModel.DAL.PaginasDAL.Add
+- uid: IntranetModel.Paginas
+  commentId: T:IntranetModel.Paginas
+  parent: IntranetModel
+  name: Paginas
+  nameWithType: Paginas
+  fullName: IntranetModel.Paginas
+- uid: IntranetModel
+  commentId: N:IntranetModel
+  name: IntranetModel
+  nameWithType: IntranetModel
+  fullName: IntranetModel
+- uid: IntranetModel.DAL.PaginasDAL.GetAll*
+  commentId: Overload:IntranetModel.DAL.PaginasDAL.GetAll
+  name: GetAll
+  nameWithType: PaginasDAL.GetAll
+  fullName: IntranetModel.DAL.PaginasDAL.GetAll
+- uid: System.Collections.Generic.List{IntranetModel.Paginas}
+  commentId: T:System.Collections.Generic.List{IntranetModel.Paginas}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Paginas>
+  nameWithType: List<Paginas>
+  fullName: System.Collections.Generic.List<IntranetModel.Paginas>
+  nameWithType.vb: List(Of Paginas)
+  fullName.vb: System.Collections.Generic.List(Of IntranetModel.Paginas)
+  name.vb: List(Of Paginas)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IntranetModel.Paginas
+    name: Paginas
+    nameWithType: Paginas
+    fullName: IntranetModel.Paginas
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IntranetModel.Paginas
+    name: Paginas
+    nameWithType: Paginas
+    fullName: IntranetModel.Paginas
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: IntranetModel.DAL.PaginasDAL.GetAllByAuthor*
+  commentId: Overload:IntranetModel.DAL.PaginasDAL.GetAllByAuthor
+  name: GetAllByAuthor
+  nameWithType: PaginasDAL.GetAllByAuthor
+  fullName: IntranetModel.DAL.PaginasDAL.GetAllByAuthor
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: IntranetModel.DAL.PaginasDAL.GetById*
+  commentId: Overload:IntranetModel.DAL.PaginasDAL.GetById
+  name: GetById
+  nameWithType: PaginasDAL.GetById
+  fullName: IntranetModel.DAL.PaginasDAL.GetById
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: IntranetModel.DAL.PaginasDAL.GetByTitle*
+  commentId: Overload:IntranetModel.DAL.PaginasDAL.GetByTitle
+  name: GetByTitle
+  nameWithType: PaginasDAL.GetByTitle
+  fullName: IntranetModel.DAL.PaginasDAL.GetByTitle
+- uid: IntranetModel.DAL.PaginasDAL.Remove*
+  commentId: Overload:IntranetModel.DAL.PaginasDAL.Remove
+  name: Remove
+  nameWithType: PaginasDAL.Remove
+  fullName: IntranetModel.DAL.PaginasDAL.Remove
+- uid: IntranetModel.DAL.PaginasDAL.Update*
+  commentId: Overload:IntranetModel.DAL.PaginasDAL.Update
+  name: Update
+  nameWithType: PaginasDAL.Update
+  fullName: IntranetModel.DAL.PaginasDAL.Update

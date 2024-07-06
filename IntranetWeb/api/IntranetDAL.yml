@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: IntranetDAL
+  commentId: N:IntranetDAL
+  id: IntranetDAL
+  children:
+  - IntranetDAL.CorrespondenciasDAL
+  langs:
+  - csharp
+  - vb
+  name: IntranetDAL
+  nameWithType: IntranetDAL
+  fullName: IntranetDAL
+  type: Namespace
+  assemblies:
+  - IntranetModel
+references:
+- uid: IntranetDAL.CorrespondenciasDAL
+  commentId: T:IntranetDAL.CorrespondenciasDAL
+  name: CorrespondenciasDAL
+  nameWithType: CorrespondenciasDAL
+  fullName: IntranetDAL.CorrespondenciasDAL

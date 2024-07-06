@@ -1,0 +1,691 @@
+### YamlMime:ManagedReference
+items:
+- uid: IntranetModel.DAL.HijosDAL
+  commentId: T:IntranetModel.DAL.HijosDAL
+  id: HijosDAL
+  parent: IntranetModel.DAL
+  children:
+  - IntranetModel.DAL.HijosDAL.Add(IntranetModel.Hijos)
+  - IntranetModel.DAL.HijosDAL.GetAll
+  - IntranetModel.DAL.HijosDAL.GetById(System.Int32)
+  - IntranetModel.DAL.HijosDAL.GetByRutUsuario(System.String)
+  - IntranetModel.DAL.HijosDAL.Remove(System.Int32)
+  - IntranetModel.DAL.HijosDAL.Update(IntranetModel.Hijos)
+  langs:
+  - csharp
+  - vb
+  name: HijosDAL
+  nameWithType: HijosDAL
+  fullName: IntranetModel.DAL.HijosDAL
+  type: Class
+  source:
+    remote:
+      path: intranetweb/IntranetModel/DAL/HijosDAL.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: HijosDAL
+    path: IntranetModel/DAL/HijosDAL.cs
+    startLine: 8
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel.DAL
+  syntax:
+    content: public class HijosDAL
+    content.vb: Public Class HijosDAL
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: IntranetModel.DAL.HijosDAL.Add(IntranetModel.Hijos)
+  commentId: M:IntranetModel.DAL.HijosDAL.Add(IntranetModel.Hijos)
+  id: Add(IntranetModel.Hijos)
+  parent: IntranetModel.DAL.HijosDAL
+  langs:
+  - csharp
+  - vb
+  name: Add(Hijos)
+  nameWithType: HijosDAL.Add(Hijos)
+  fullName: IntranetModel.DAL.HijosDAL.Add(IntranetModel.Hijos)
+  type: Method
+  source:
+    remote:
+      path: intranetweb/IntranetModel/DAL/HijosDAL.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Add
+    path: IntranetModel/DAL/HijosDAL.cs
+    startLine: 13
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel.DAL
+  syntax:
+    content: public void Add(Hijos hijo)
+    parameters:
+    - id: hijo
+      type: IntranetModel.Hijos
+    content.vb: Public Sub Add(hijo As Hijos)
+  overload: IntranetModel.DAL.HijosDAL.Add*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.DAL.HijosDAL.GetAll
+  commentId: M:IntranetModel.DAL.HijosDAL.GetAll
+  id: GetAll
+  parent: IntranetModel.DAL.HijosDAL
+  langs:
+  - csharp
+  - vb
+  name: GetAll()
+  nameWithType: HijosDAL.GetAll()
+  fullName: IntranetModel.DAL.HijosDAL.GetAll()
+  type: Method
+  source:
+    remote:
+      path: intranetweb/IntranetModel/DAL/HijosDAL.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: GetAll
+    path: IntranetModel/DAL/HijosDAL.cs
+    startLine: 20
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel.DAL
+  syntax:
+    content: public List<Hijos> GetAll()
+    return:
+      type: System.Collections.Generic.List{IntranetModel.Hijos}
+    content.vb: Public Function GetAll As List(Of Hijos)
+  overload: IntranetModel.DAL.HijosDAL.GetAll*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.DAL.HijosDAL.GetById(System.Int32)
+  commentId: M:IntranetModel.DAL.HijosDAL.GetById(System.Int32)
+  id: GetById(System.Int32)
+  parent: IntranetModel.DAL.HijosDAL
+  langs:
+  - csharp
+  - vb
+  name: GetById(Int32)
+  nameWithType: HijosDAL.GetById(Int32)
+  fullName: IntranetModel.DAL.HijosDAL.GetById(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: intranetweb/IntranetModel/DAL/HijosDAL.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: GetById
+    path: IntranetModel/DAL/HijosDAL.cs
+    startLine: 26
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel.DAL
+  syntax:
+    content: public Hijos GetById(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: IntranetModel.Hijos
+    content.vb: Public Function GetById(id As Integer) As Hijos
+  overload: IntranetModel.DAL.HijosDAL.GetById*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.DAL.HijosDAL.GetByRutUsuario(System.String)
+  commentId: M:IntranetModel.DAL.HijosDAL.GetByRutUsuario(System.String)
+  id: GetByRutUsuario(System.String)
+  parent: IntranetModel.DAL.HijosDAL
+  langs:
+  - csharp
+  - vb
+  name: GetByRutUsuario(String)
+  nameWithType: HijosDAL.GetByRutUsuario(String)
+  fullName: IntranetModel.DAL.HijosDAL.GetByRutUsuario(System.String)
+  type: Method
+  source:
+    remote:
+      path: intranetweb/IntranetModel/DAL/HijosDAL.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: GetByRutUsuario
+    path: IntranetModel/DAL/HijosDAL.cs
+    startLine: 32
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel.DAL
+  syntax:
+    content: public List<Hijos> GetByRutUsuario(string rutUsuario)
+    parameters:
+    - id: rutUsuario
+      type: System.String
+    return:
+      type: System.Collections.Generic.List{IntranetModel.Hijos}
+    content.vb: Public Function GetByRutUsuario(rutUsuario As String) As List(Of Hijos)
+  overload: IntranetModel.DAL.HijosDAL.GetByRutUsuario*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.DAL.HijosDAL.Remove(System.Int32)
+  commentId: M:IntranetModel.DAL.HijosDAL.Remove(System.Int32)
+  id: Remove(System.Int32)
+  parent: IntranetModel.DAL.HijosDAL
+  langs:
+  - csharp
+  - vb
+  name: Remove(Int32)
+  nameWithType: HijosDAL.Remove(Int32)
+  fullName: IntranetModel.DAL.HijosDAL.Remove(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: intranetweb/IntranetModel/DAL/HijosDAL.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Remove
+    path: IntranetModel/DAL/HijosDAL.cs
+    startLine: 38
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel.DAL
+  syntax:
+    content: public void Remove(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    content.vb: Public Sub Remove(id As Integer)
+  overload: IntranetModel.DAL.HijosDAL.Remove*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.DAL.HijosDAL.Update(IntranetModel.Hijos)
+  commentId: M:IntranetModel.DAL.HijosDAL.Update(IntranetModel.Hijos)
+  id: Update(IntranetModel.Hijos)
+  parent: IntranetModel.DAL.HijosDAL
+  langs:
+  - csharp
+  - vb
+  name: Update(Hijos)
+  nameWithType: HijosDAL.Update(Hijos)
+  fullName: IntranetModel.DAL.HijosDAL.Update(IntranetModel.Hijos)
+  type: Method
+  source:
+    remote:
+      path: intranetweb/IntranetModel/DAL/HijosDAL.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Update
+    path: IntranetModel/DAL/HijosDAL.cs
+    startLine: 49
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel.DAL
+  syntax:
+    content: public void Update(Hijos hijo)
+    parameters:
+    - id: hijo
+      type: IntranetModel.Hijos
+    content.vb: Public Sub Update(hijo As Hijos)
+  overload: IntranetModel.DAL.HijosDAL.Update*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: IntranetModel.DAL
+  commentId: N:IntranetModel.DAL
+  name: IntranetModel.DAL
+  nameWithType: IntranetModel.DAL
+  fullName: IntranetModel.DAL
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IntranetModel.DAL.HijosDAL.Add*
+  commentId: Overload:IntranetModel.DAL.HijosDAL.Add
+  name: Add
+  nameWithType: HijosDAL.Add
+  fullName: IntranetModel.DAL.HijosDAL.Add
+- uid: IntranetModel.Hijos
+  commentId: T:IntranetModel.Hijos
+  parent: IntranetModel
+  name: Hijos
+  nameWithType: Hijos
+  fullName: IntranetModel.Hijos
+- uid: IntranetModel
+  commentId: N:IntranetModel
+  name: IntranetModel
+  nameWithType: IntranetModel
+  fullName: IntranetModel
+- uid: IntranetModel.DAL.HijosDAL.GetAll*
+  commentId: Overload:IntranetModel.DAL.HijosDAL.GetAll
+  name: GetAll
+  nameWithType: HijosDAL.GetAll
+  fullName: IntranetModel.DAL.HijosDAL.GetAll
+- uid: System.Collections.Generic.List{IntranetModel.Hijos}
+  commentId: T:System.Collections.Generic.List{IntranetModel.Hijos}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Hijos>
+  nameWithType: List<Hijos>
+  fullName: System.Collections.Generic.List<IntranetModel.Hijos>
+  nameWithType.vb: List(Of Hijos)
+  fullName.vb: System.Collections.Generic.List(Of IntranetModel.Hijos)
+  name.vb: List(Of Hijos)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IntranetModel.Hijos
+    name: Hijos
+    nameWithType: Hijos
+    fullName: IntranetModel.Hijos
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IntranetModel.Hijos
+    name: Hijos
+    nameWithType: Hijos
+    fullName: IntranetModel.Hijos
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: IntranetModel.DAL.HijosDAL.GetById*
+  commentId: Overload:IntranetModel.DAL.HijosDAL.GetById
+  name: GetById
+  nameWithType: HijosDAL.GetById
+  fullName: IntranetModel.DAL.HijosDAL.GetById
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: IntranetModel.DAL.HijosDAL.GetByRutUsuario*
+  commentId: Overload:IntranetModel.DAL.HijosDAL.GetByRutUsuario
+  name: GetByRutUsuario
+  nameWithType: HijosDAL.GetByRutUsuario
+  fullName: IntranetModel.DAL.HijosDAL.GetByRutUsuario
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: IntranetModel.DAL.HijosDAL.Remove*
+  commentId: Overload:IntranetModel.DAL.HijosDAL.Remove
+  name: Remove
+  nameWithType: HijosDAL.Remove
+  fullName: IntranetModel.DAL.HijosDAL.Remove
+- uid: IntranetModel.DAL.HijosDAL.Update*
+  commentId: Overload:IntranetModel.DAL.HijosDAL.Update
+  name: Update
+  nameWithType: HijosDAL.Update
+  fullName: IntranetModel.DAL.HijosDAL.Update

@@ -3,13 +3,13 @@ using System;
 using System.Linq;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Net.Mail;
+using System.Security.Cryptography;
 
 namespace IntranetWeb
 {
     public partial class RegistrarUsuario : System.Web.UI.Page
     {
-        // Variable para indicar si ya se deshabilitó la selección de días futuros
-
         private IntranetEntities db = new IntranetEntities();
 
         protected void Page_Load(object sender, EventArgs e)
@@ -94,6 +94,10 @@ namespace IntranetWeb
             {
                 if (!UsuarioExiste(RutTxt.Text))
                 {
+                    byte[] salt;
+                    string contraseñaSimple = GenerarContraseña();
+                    string hashedPassword = HashPassword(contraseñaSimple, out salt);
+
                     Usuarios nuevoUsuario = new Usuarios
                     {
                         nombre = NombreTxt.Text,
@@ -110,12 +114,16 @@ namespace IntranetWeb
                         idTipoContrato = string.IsNullOrEmpty(ContratoDdl.SelectedValue) ? (int?)null : int.Parse(ContratoDdl.SelectedValue),
                         fechaIngreso = DateTime.Parse(FechaIngresoTxt.Text),
                         email = EmailTxt.Text,
-                        celular = string.IsNullOrEmpty(CelularTxt.Text) ? (int?)null : int.Parse(CelularTxt.Text),
-                        contraseña = GenerarContraseña()
+                        celular = string.IsNullOrEmpty(CelularTxt.Text) ? (int?)null : int.TryParse(CelularTxt.Text, out int celularResult) ? celularResult : (int?)null,
+                        contraseña = hashedPassword,
+                        salt = Convert.ToBase64String(salt)
                     };
 
                     db.Usuarios.Add(nuevoUsuario);
                     db.SaveChanges();
+
+                    // Enviar la contraseña simple por correo
+                    EnviarCorreoContraseñaSimple(contraseñaSimple, nuevoUsuario.email);
 
                     Response.Redirect("VerUsuarios.aspx?mensaje=AgregadoExitosamente");
                 }
@@ -127,6 +135,43 @@ namespace IntranetWeb
             }
         }
 
+        private void EnviarCorreoContraseñaSimple(string contraseñaSimple, string email)
+        {
+            try
+            {
+                var fromAddress = new MailAddress("camilag@gmail.com", "AFC Intranet");
+                var toAddress = new MailAddress(email);
+                const string fromPassword = ""; // Contraseña de aplicación
+                const string subject = "Contraseña Temporal";
+                string body = $"Su contraseña temporal es: {contraseñaSimple}";
+
+                var smtp = new SmtpClient
+                {
+                    Host = "smtp.gmail.com",
+                    Port = 587,
+                    EnableSsl = true,
+                    DeliveryMethod = SmtpDeliveryMethod.Network,
+                    UseDefaultCredentials = false,
+                    Credentials = new System.Net.NetworkCredential(fromAddress.Address, fromPassword)
+                };
+
+                using (var message = new MailMessage(fromAddress, toAddress)
+                {
+                    Subject = subject,
+                    Body = body
+                })
+                {
+                    smtp.Send(message);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejar errores de envío de correo
+                // Puedes registrar el error o mostrar un mensaje de error
+                Console.WriteLine("Error al enviar el correo: " + ex.Message);
+            }
+        }
+
         private bool UsuarioExiste(string rutUsuario)
         {
             return db.Usuarios.Any(u => u.rutUsuario == rutUsuario);
@@ -134,15 +179,15 @@ namespace IntranetWeb
 
         protected void RutCV_ServerValidate(object source, ServerValidateEventArgs args)
         {
-            //Se crea objeto Validador
+            // Se crea objeto Validador
             Validador objValida = new Validador();
 
-            //Entra el dato de rut
+            // Entra el dato de rut
             objValida.ValidaVacio(RutTxt.Text.Trim());
             objValida.ValidaNumDigVerificador(RutTxt.Text.Trim());
             objValida.ValidaDigito(RutTxt.Text.Trim());
 
-            //Se evalúa si estado es "correcto" o "incorrecto"
+            // Se evalúa si estado es "correcto" o "incorrecto"
             if (objValida.xEstado != "Correcto")
             {
                 RutCV.ErrorMessage = "Rut incorrecto.";
@@ -150,7 +195,7 @@ namespace IntranetWeb
             }
         }
 
-       // Método para generar una contraseña aleatoria de 6 caracteres
+        // Método para generar una contraseña aleatoria de 6 caracteres
         private string GenerarContraseña()
         {
             const string caracteresPermitidos = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -158,6 +203,29 @@ namespace IntranetWeb
             string contraseña = new string(Enumerable.Repeat(caracteresPermitidos, 6)
                 .Select(s => s[rnd.Next(s.Length)]).ToArray());
             return contraseña;
+        }
+
+        // Métodos de hash y verificación de contraseñas
+        private static string HashPassword(string password, out byte[] salt)
+        {
+            // Genera una sal
+            salt = new byte[128 / 8];
+            using (var rng = RandomNumberGenerator.Create())
+            {
+                rng.GetBytes(salt);
+            }
+
+            // Hashea la contraseña con la sal usando PBKDF2
+            var pbkdf2 = new Rfc2898DeriveBytes(password, salt, 10000);
+            byte[] hash = pbkdf2.GetBytes(256 / 8);
+            return Convert.ToBase64String(hash);
+        }
+
+        private static bool VerifyPassword(string password, string hashedPassword, byte[] salt)
+        {
+            var pbkdf2 = new Rfc2898DeriveBytes(password, salt, 10000);
+            byte[] hash = pbkdf2.GetBytes(256 / 8);
+            return Convert.ToBase64String(hash) == hashedPassword;
         }
 
         protected void GerenciaDdl_SelectedIndexChanged(object sender, EventArgs e)
@@ -177,6 +245,5 @@ namespace IntranetWeb
             int departamentoId = int.Parse(DepartamentoDdl.SelectedValue);
             CargarUbicaciones(departamentoId);
         }
-
     }
 }

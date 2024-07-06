@@ -4,14 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="469ff27624034a87a1cb9a9e5853e692" Name="Diagram1">
+      <Diagram DiagramId="48465b2ad67e4d2993192af6e3078bf4" Name="Diagram1">
         <EntityTypeShape EntityType="IntranetModel.ArchivosMultimedia" Width="1.5" PointX="12" PointY="2.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="IntranetModel.ComentariosNoticias" Width="1.5" PointX="16.5" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.ComentariosNoticias" Width="1.5" PointX="16.5" PointY="8.25" IsExpanded="true" />
         <EntityTypeShape EntityType="IntranetModel.Correspondencias" Width="1.5" PointX="12" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="IntranetModel.Departamentos" Width="1.5" PointX="5.25" PointY="8.625" IsExpanded="true" />
         <EntityTypeShape EntityType="IntranetModel.Gerencias" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
         <EntityTypeShape EntityType="IntranetModel.Hijos" Width="1.5" PointX="12" PointY="9" IsExpanded="true" />
-        <EntityTypeShape EntityType="IntranetModel.Noticias" Width="1.5" PointX="14.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IntranetModel.Noticias" Width="1.5" PointX="14.25" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="IntranetModel.Paginas" Width="1.5" PointX="12" PointY="11.75" IsExpanded="true" />
         <EntityTypeShape EntityType="IntranetModel.Promociones" Width="1.5" PointX="12" PointY="15.25" IsExpanded="true" />
         <EntityTypeShape EntityType="IntranetModel.RolesUsuario" Width="1.5" PointX="7.5" PointY="5.75" IsExpanded="true" />

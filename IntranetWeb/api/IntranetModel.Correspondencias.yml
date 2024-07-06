@@ -1,0 +1,775 @@
+### YamlMime:ManagedReference
+items:
+- uid: IntranetModel.Correspondencias
+  commentId: T:IntranetModel.Correspondencias
+  id: Correspondencias
+  parent: IntranetModel
+  children:
+  - IntranetModel.Correspondencias.descripcionArchivo
+  - IntranetModel.Correspondencias.fechaCierre
+  - IntranetModel.Correspondencias.fechaIngreso
+  - IntranetModel.Correspondencias.id
+  - IntranetModel.Correspondencias.nombreArchivo
+  - IntranetModel.Correspondencias.rutaArchivo
+  - IntranetModel.Correspondencias.usuario
+  - IntranetModel.Correspondencias.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: Correspondencias
+  nameWithType: Correspondencias
+  fullName: IntranetModel.Correspondencias
+  type: Class
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Correspondencias.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Correspondencias
+    path: IntranetModel/Correspondencias.cs
+    startLine: 14
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public class Correspondencias
+    content.vb: Public Class Correspondencias
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: IntranetModel.Correspondencias.id
+  commentId: P:IntranetModel.Correspondencias.id
+  id: id
+  parent: IntranetModel.Correspondencias
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: Correspondencias.id
+  fullName: IntranetModel.Correspondencias.id
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Correspondencias.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: id
+    path: IntranetModel/Correspondencias.cs
+    startLine: 16
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public int id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property id As Integer
+  overload: IntranetModel.Correspondencias.id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Correspondencias.usuario
+  commentId: P:IntranetModel.Correspondencias.usuario
+  id: usuario
+  parent: IntranetModel.Correspondencias
+  langs:
+  - csharp
+  - vb
+  name: usuario
+  nameWithType: Correspondencias.usuario
+  fullName: IntranetModel.Correspondencias.usuario
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Correspondencias.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: usuario
+    path: IntranetModel/Correspondencias.cs
+    startLine: 17
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public string usuario { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property usuario As String
+  overload: IntranetModel.Correspondencias.usuario*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Correspondencias.nombreArchivo
+  commentId: P:IntranetModel.Correspondencias.nombreArchivo
+  id: nombreArchivo
+  parent: IntranetModel.Correspondencias
+  langs:
+  - csharp
+  - vb
+  name: nombreArchivo
+  nameWithType: Correspondencias.nombreArchivo
+  fullName: IntranetModel.Correspondencias.nombreArchivo
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Correspondencias.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: nombreArchivo
+    path: IntranetModel/Correspondencias.cs
+    startLine: 18
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public string nombreArchivo { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property nombreArchivo As String
+  overload: IntranetModel.Correspondencias.nombreArchivo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Correspondencias.descripcionArchivo
+  commentId: P:IntranetModel.Correspondencias.descripcionArchivo
+  id: descripcionArchivo
+  parent: IntranetModel.Correspondencias
+  langs:
+  - csharp
+  - vb
+  name: descripcionArchivo
+  nameWithType: Correspondencias.descripcionArchivo
+  fullName: IntranetModel.Correspondencias.descripcionArchivo
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Correspondencias.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: descripcionArchivo
+    path: IntranetModel/Correspondencias.cs
+    startLine: 19
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public string descripcionArchivo { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property descripcionArchivo As String
+  overload: IntranetModel.Correspondencias.descripcionArchivo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Correspondencias.fechaIngreso
+  commentId: P:IntranetModel.Correspondencias.fechaIngreso
+  id: fechaIngreso
+  parent: IntranetModel.Correspondencias
+  langs:
+  - csharp
+  - vb
+  name: fechaIngreso
+  nameWithType: Correspondencias.fechaIngreso
+  fullName: IntranetModel.Correspondencias.fechaIngreso
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Correspondencias.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: fechaIngreso
+    path: IntranetModel/Correspondencias.cs
+    startLine: 20
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public DateTime? fechaIngreso { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property fechaIngreso As Date?
+  overload: IntranetModel.Correspondencias.fechaIngreso*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Correspondencias.fechaCierre
+  commentId: P:IntranetModel.Correspondencias.fechaCierre
+  id: fechaCierre
+  parent: IntranetModel.Correspondencias
+  langs:
+  - csharp
+  - vb
+  name: fechaCierre
+  nameWithType: Correspondencias.fechaCierre
+  fullName: IntranetModel.Correspondencias.fechaCierre
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Correspondencias.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: fechaCierre
+    path: IntranetModel/Correspondencias.cs
+    startLine: 21
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public DateTime? fechaCierre { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property fechaCierre As Date?
+  overload: IntranetModel.Correspondencias.fechaCierre*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Correspondencias.rutaArchivo
+  commentId: P:IntranetModel.Correspondencias.rutaArchivo
+  id: rutaArchivo
+  parent: IntranetModel.Correspondencias
+  langs:
+  - csharp
+  - vb
+  name: rutaArchivo
+  nameWithType: Correspondencias.rutaArchivo
+  fullName: IntranetModel.Correspondencias.rutaArchivo
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Correspondencias.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: rutaArchivo
+    path: IntranetModel/Correspondencias.cs
+    startLine: 22
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public string rutaArchivo { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property rutaArchivo As String
+  overload: IntranetModel.Correspondencias.rutaArchivo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IntranetModel.Correspondencias.Usuarios
+  commentId: P:IntranetModel.Correspondencias.Usuarios
+  id: Usuarios
+  parent: IntranetModel.Correspondencias
+  langs:
+  - csharp
+  - vb
+  name: Usuarios
+  nameWithType: Correspondencias.Usuarios
+  fullName: IntranetModel.Correspondencias.Usuarios
+  type: Property
+  source:
+    remote:
+      path: intranetweb/IntranetModel/Correspondencias.cs
+      branch: main
+      repo: https://github.com/camilagonzalezg/Intranet.git
+    id: Usuarios
+    path: IntranetModel/Correspondencias.cs
+    startLine: 24
+  assemblies:
+  - IntranetModel
+  namespace: IntranetModel
+  syntax:
+    content: public virtual Usuarios Usuarios { get; set; }
+    parameters: []
+    return:
+      type: IntranetModel.Usuarios
+    content.vb: Public Overridable Property Usuarios As Usuarios
+  overload: IntranetModel.Correspondencias.Usuarios*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+references:
+- uid: IntranetModel
+  commentId: N:IntranetModel
+  name: IntranetModel
+  nameWithType: IntranetModel
+  fullName: IntranetModel
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IntranetModel.Correspondencias.id*
+  commentId: Overload:IntranetModel.Correspondencias.id
+  name: id
+  nameWithType: Correspondencias.id
+  fullName: IntranetModel.Correspondencias.id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: IntranetModel.Correspondencias.usuario*
+  commentId: Overload:IntranetModel.Correspondencias.usuario
+  name: usuario
+  nameWithType: Correspondencias.usuario
+  fullName: IntranetModel.Correspondencias.usuario
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: IntranetModel.Correspondencias.nombreArchivo*
+  commentId: Overload:IntranetModel.Correspondencias.nombreArchivo
+  name: nombreArchivo
+  nameWithType: Correspondencias.nombreArchivo
+  fullName: IntranetModel.Correspondencias.nombreArchivo
+- uid: IntranetModel.Correspondencias.descripcionArchivo*
+  commentId: Overload:IntranetModel.Correspondencias.descripcionArchivo
+  name: descripcionArchivo
+  nameWithType: Correspondencias.descripcionArchivo
+  fullName: IntranetModel.Correspondencias.descripcionArchivo
+- uid: IntranetModel.Correspondencias.fechaIngreso*
+  commentId: Overload:IntranetModel.Correspondencias.fechaIngreso
+  name: fechaIngreso
+  nameWithType: Correspondencias.fechaIngreso
+  fullName: IntranetModel.Correspondencias.fechaIngreso
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<DateTime>
+  nameWithType: Nullable<DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IntranetModel.Correspondencias.fechaCierre*
+  commentId: Overload:IntranetModel.Correspondencias.fechaCierre
+  name: fechaCierre
+  nameWithType: Correspondencias.fechaCierre
+  fullName: IntranetModel.Correspondencias.fechaCierre
+- uid: IntranetModel.Correspondencias.rutaArchivo*
+  commentId: Overload:IntranetModel.Correspondencias.rutaArchivo
+  name: rutaArchivo
+  nameWithType: Correspondencias.rutaArchivo
+  fullName: IntranetModel.Correspondencias.rutaArchivo
+- uid: IntranetModel.Correspondencias.Usuarios*
+  commentId: Overload:IntranetModel.Correspondencias.Usuarios
+  name: Usuarios
+  nameWithType: Correspondencias.Usuarios
+  fullName: IntranetModel.Correspondencias.Usuarios
+- uid: IntranetModel.Usuarios
+  commentId: T:IntranetModel.Usuarios
+  parent: IntranetModel
+  name: Usuarios
+  nameWithType: Usuarios
+  fullName: IntranetModel.Usuarios
